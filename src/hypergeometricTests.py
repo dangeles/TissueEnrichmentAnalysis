@@ -21,7 +21,7 @@ import os
 
 q_threshold= 0.1
 
-path= "/Users/davidangeles/Documents/research/sternberg/tissue_enrichment_hgf/src"
+path= "./src"
 os.chdir(path)
 gene_file= "../input/20degree_replicates_469_toWormbaseID.txt"
 genes1= pd.read_csv(gene_file)
