@@ -11,6 +11,7 @@ An experimental list of gene names
 
 from __future__ import division, print_function, absolute_import
 import pandas as pd
+<<<<<<< Updated upstream
 from scipy import stats
 import os
 
@@ -24,11 +25,36 @@ genes1= pd.read_csv(gene_file) #this file should be only wormbase ID's!
 gene_list1= genes1[genes1.columns[0]].values
 
 #read in the dictionary
+=======
+import numpy as np
+import matplotlib.pyplot as plt
+import scipy.special
+from scipy import stats
+from scipy import optimize
+from scipy import misc
+import os
+
+q_threshold= 0.1
+
+path= "/Users/davidangeles/Documents/research/sternberg/tissue_enrichment_hgf/src"
+os.chdir(path)
+gene_file= "../input/20degree_replicates_469_toWormbaseID.txt"
+genes1= pd.read_csv(gene_file)
+
+
+#since the files we are using include read information
+#remove the reads and keep only the gene names
+gene_list1= genes1[genes1.columns[0]].values
+>>>>>>> Stashed changes
 tissue_df= pd.read_csv("../input/smalldictionary.txt")
 
 
 #==============================================================================
+<<<<<<< Updated upstream
 # a function that checks which genes given by the user are in the dictionary. 
+=======
+# 
+>>>>>>> Stashed changes
 #==============================================================================
 def pass_list(user_provided, tissue_dictionary):
     """
@@ -60,7 +86,10 @@ def pass_list(user_provided, tissue_dictionary):
     
 #==============================================================================
 #hgf is short for hypergeometric function
+<<<<<<< Updated upstream
 #this function implements a test for enrichment (not depletion!!!)
+=======
+>>>>>>> Stashed changes
 #==============================================================================
 def hgf(gene_list, tissue_dictionary):
     """
@@ -79,11 +108,16 @@ def hgf(gene_list, tissue_dictionary):
     #figure out what genes are in the user provided list
     present= pass_list(gene_list, tissue_dictionary)  
     #slice out only the genes that were present from the user-provided list    
+<<<<<<< Updated upstream
     observed= present.wbid[present.provided==1]
+=======
+    wanted= present.wbid[present.provided==1]
+>>>>>>> Stashed changes
 
     #re-index the dictionary s.t. the wbid is the index
     tissue_dictionary= tissue_dictionary.set_index('wbid')
     
+<<<<<<< Updated upstream
     #figure out the number of labels for each tissue in tissue_df
     sums_of_tissues= tissue_dictionary.sum()[0:] #this object can be identified by 
     #the column names of tissues and excludes gene IDs
@@ -97,10 +131,25 @@ def hgf(gene_list, tissue_dictionary):
     observed_sum= observed_dictionary.sum()
     #get the total number of genes provided by the user that are in the dictionary
     total_observed= observed.shape[0]    
+=======
+    sums_of_tissues= tissue_df.sum()[1:] #this object can be identified by 
+    #the column names of tissues and excludes gene IDs
+    
+    total_genes= tissue_dictionary.shape[0] #total genes in the dictionary
+
+    #slice out the rows from tissue_dictionary that came from the user-provided list
+    wanted_dictionary= tissue_dictionary.loc[wanted]
+    
+    #get the total number of labels from each tissue
+    wanted_sum= wanted_dictionary.sum()
+    #get the total number of genes provided by the user that are in the dictionary
+    total= wanted.shape[0]    
+>>>>>>> Stashed changes
     
     #make a hash with the p-values for enrichment of each tissue. 
     p_hash= {}
     for i, name in enumerate(tissue_dictionary.columns.values): 
+<<<<<<< Updated upstream
 #        print(i, "--", name)
 #        print(sums_of_tissues[name])
     
@@ -112,13 +161,20 @@ def hgf(gene_list, tissue_dictionary):
         #n is the length of the list provided by the user
         p_hash[name]= stats.hypergeom.sf(observed_sum[name],total_genes,\
                         sums_of_tissues[name],total_observed)
+=======
+        p_hash[name]= stats.hypergeom.sf(wanted_sum[name],total_genes, sums_of_tissues[name],total)
+>>>>>>> Stashed changes
         
     #return the p-values. 
     return p_hash
     
     
 #==============================================================================
+<<<<<<< Updated upstream
 #FDR correction
+=======
+#     
+>>>>>>> Stashed changes
 #==============================================================================
 def benjamin_hochberg_stepup(p_vals):
     """
@@ -150,8 +206,12 @@ def benjamin_hochberg_stepup(p_vals):
     
     
 #==============================================================================
+<<<<<<< Updated upstream
 # format the results from benjamin_hochberg_stepup and hgf
 # and return any results that are have q_values below alpha
+=======
+# 
+>>>>>>> Stashed changes
 #==============================================================================
 def return_enriched_tissues(p_hash, alpha):
     """
@@ -199,7 +259,11 @@ def return_enriched_tissues(p_hash, alpha):
         
     return q_hash
 #==============================================================================
+<<<<<<< Updated upstream
 # call everything
+=======
+#     
+>>>>>>> Stashed changes
 #==============================================================================    
 
 def implement_hypergmt_enrichment_tool(gene_list, tissue_df, alpha= 0.01):
@@ -210,16 +274,28 @@ def implement_hypergmt_enrichment_tool(gene_list, tissue_df, alpha= 0.01):
     tissue_df
     alpha: significance threshold, defaults to 0.01
     """
+<<<<<<< Updated upstream
 
     print('Executing script\n')
     #calculate p_vals
     p_hash= hgf(gene_list, tissue_df)
     #calculate q_vals
+=======
+    
+    
+    print('Executing script\n')
+    p_hash= hgf(gene_list, tissue_df)
+    
+>>>>>>> Stashed changes
     q_hash= return_enriched_tissues(p_hash, alpha)
     
     return q_hash
 #==============================================================================
+<<<<<<< Updated upstream
 # end of functions    
+=======
+#     
+>>>>>>> Stashed changes
 #==============================================================================
 
 #Run the whole thing:
