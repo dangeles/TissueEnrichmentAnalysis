@@ -9,22 +9,31 @@ A control list of gene names
 An experimental list of gene names
 """
 
-from __future__ import division, print_function, absolute_import
+
+# from __future__ import division, print_function, absolute_import
 import pandas as pd
 from scipy import stats
 import os
+import sys, getopt
+
+# for arg in sys.argv:
+#     print arg
 
 q_threshold= 0.1
-path= "./src"
+path= "./"
 os.chdir(path)
-gene_file= "../input/20degree_replicates_469_toWormbaseID.txt"
+gene_file= "../input/experimentalGE.txt"
+if sys.argv[1]:
+    gene_file = sys.argv[1]
 genes1= pd.read_csv(gene_file) #this file should be only wormbase ID's!
+print "using file ", gene_file
 
 #extract the first column of the file as a list of strings for analysis
 gene_list1= genes1[genes1.columns[0]].values
 
 #read in the dictionary
-tissue_df= pd.read_csv("../input/smalldictionary.txt")
+# tissue_df= pd.read_csv("../input/smalldictionary.txt")
+tissue_df= pd.read_csv("../input/dictionary.csv")
 
 
 #==============================================================================
@@ -193,7 +202,11 @@ def return_enriched_tissues(p_hash, alpha):
     print("tissue,q_value")
     for key, value in q_hash.iteritems():
         if value < alpha:
-            print("{0},{1:.3}".format(key, value))
+			# there may be value=0, integer
+           if value == 0:
+              print("{0},{1}".format(key, value))
+           else:
+              print("{0},{1:.2e}".format(key, value))
     print("------------------------\n\n")
 
         
