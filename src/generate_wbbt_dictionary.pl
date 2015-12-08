@@ -78,6 +78,7 @@ foreach my $hashRef (@array) {
   my %hash = %$hashRef;
   my $id = $hash{'id'};
   my $name = $hash{'annotation_class_label'};
+  $name =~ tr/,/comma/;  # some names contain ","
   $wbbtName{$id} = $name; }
 
 my @wbbts_header;
