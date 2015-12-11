@@ -22,9 +22,11 @@ import sys, getopt
 q_threshold= 0.1
 path= "./"
 os.chdir(path)
-gene_file= "../input/experimentalGE.txt"
-if sys.argv[1]:
+if len(sys.argv) == 3:
     gene_file = sys.argv[1]
+    q_threashold = sys.argv[2]
+else:
+    exit("Must specify a gene list and a threshold for q. Bye")
 genes1= pd.read_csv(gene_file) #this file should be only wormbase ID's!
 print "using file ", gene_file
 
