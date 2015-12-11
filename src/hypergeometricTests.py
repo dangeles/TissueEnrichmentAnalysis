@@ -112,6 +112,9 @@ def hgf(gene_list, tissue_dictionary):
     #make a hash with the p-values for enrichment of each tissue. 
     p_hash= {}
     for i, name in enumerate(tissue_dictionary.columns.values): 
+		if total_observed == 0:
+			p_hash[name]= 1
+		else:
 #        print(i, "--", name)
 #        print(sums_of_tissues[name])
     
@@ -121,8 +124,8 @@ def hgf(gene_list, tissue_dictionary):
         #k is the number of observed number of genes associated with that tissue
         #N is the total number of associations in the dictionary
         #n is the length of the list provided by the user
-        p_hash[name]= stats.hypergeom.sf(observed_sum[name],total_genes,\
-                        sums_of_tissues[name],total_observed)
+			p_hash[name]= stats.hypergeom.sf(observed_sum[name],total_genes,\
+							sums_of_tissues[name],total_observed)
         
     #return the p-values. 
     return p_hash
