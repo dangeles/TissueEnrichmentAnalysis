@@ -9,12 +9,17 @@ A control list of gene names
 An experimental list of gene names
 """
 
+import os
+import sys, getopt
+os.environ['MPLCONFIGDIR']='/tmp'
+# os.environ['HOME']='/tmp/'
+
+import matplotlib
+matplotlib.use('Agg') 
 
 # from __future__ import division, print_function, absolute_import
 import pandas as pd
 from scipy import stats
-import os
-import sys, getopt
 
 # for arg in sys.argv:
 #     print arg
@@ -22,11 +27,11 @@ import sys, getopt
 q_threshold= 0.1
 path= "./"
 os.chdir(path)
-if len(sys.argv) == 3:
+if len(sys.argv) == 2:
     gene_file = sys.argv[1]
-    q_threashold = sys.argv[2]
+#    q_threashold = sys.argv[2]
 else:
-    exit("Must specify a gene list and a threshold for q. Bye")
+    exit("Must specify a gene list. Bye")
 genes1= pd.read_csv(gene_file) #this file should be only wormbase ID's!
 print "using file ", gene_file
 
@@ -35,7 +40,7 @@ gene_list1= genes1[genes1.columns[0]].values
 
 #read in the dictionary
 # tissue_df= pd.read_csv("../input/smalldictionary.txt")
-tissue_df= pd.read_csv("../input/dictionary.csv")
+tissue_df= pd.read_csv("/home/raymond/local/src/git/tissue_enrichment_tool_hypergeometric_test/input/dictionary.csv")
 
 
 #==============================================================================
