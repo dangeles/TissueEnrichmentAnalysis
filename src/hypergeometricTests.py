@@ -24,7 +24,14 @@ from scipy import stats
 # for arg in sys.argv:
 #     print arg
 
-q_threshold= 0.1
+q_threshold= 0.018
+# in the case of anatomical expression patterns, \
+# there are ~5000 genes total in the dictionary whereas a tissue has \
+# minimally 100 genes. Thus, if the input contains a singleton gene, \
+# the p can be as low as 0.02 for tissues that does not express that \
+# gene at all. It makes no sense to say that the tissue is enriched.
+
+
 path= "./"
 os.chdir(path)
 if len(sys.argv) == 2:
@@ -223,7 +230,7 @@ def return_enriched_tissues(p_hash, alpha):
     print("q-values less than alpha = {0:.2} are considered statistically significant".format(alpha))
     print("\n\n")
     print("------------------------")
-    print("tissue,adjusted p value (< 0.1)")
+    print 'tissue,adjusted p value (<{})'.format(q_threshold)
     for key, value in q_hash.iteritems():
         if value < alpha:
 			# there may be value=0, integer
