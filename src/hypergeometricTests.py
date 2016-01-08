@@ -40,7 +40,7 @@ gene_list1= genes1[genes1.columns[0]].values
 
 #read in the dictionary
 # tissue_df= pd.read_csv("../input/smalldictionary.txt")
-tissue_df= pd.read_csv("/home/raymond/local/src/git/tissue_enrichment_tool_hypergeometric_test/input/dictionary.csv")
+tissue_df= pd.read_csv("/home/raymond/local/src/git/tissue_enrichment_tool_hypergeometric_test/input/dictionary_anatomy.csv")
 
 
 #==============================================================================
@@ -119,18 +119,32 @@ def hgf(gene_list, tissue_dictionary):
     for i, name in enumerate(tissue_dictionary.columns.values): 
 		if total_observed == 0:
 			p_hash[name]= 1
+		elif observed_sum[name] >= total_observed:
+			p_hash[name]= 0
 		else:
 #        print(i, "--", name)
 #        print(sums_of_tissues[name])
     
-        #sf = survival function
-        #function params= k, K, n, N
-        #K is number of genes associated with the current tissue
-        #k is the number of observed number of genes associated with that tissue
-        #N is the total number of associations in the dictionary
-        #n is the length of the list provided by the user
+        # sf: survival function = (1 - CDF)
+        # CDF(cumulative density function): the probability that a \
+        # real-valued random variable X with a given probability \
+        # distribution will be found to have a value less than or equal to x.
+        # function params = x, M, n, N
+        # x: Genes of focus tissue in user list (ball of type in sample)
+        # M: Total genes in dictionary (pool)
+        # n: Genes positive for focus tissue in dict (ball of type in pool)
+        # N: Total (valid) genes in user list (sample)
+        
+        ##function params= k, K, n, N
+        ##k is the number of observed number of genes associated with that tissue
+        ##K is number of genes associated with the current tissue
+        ##n is the length of the list provided by the user
+        ##N is the total number of associations in the dictionary
+        
 			p_hash[name]= stats.hypergeom.sf(observed_sum[name],total_genes,\
 							sums_of_tissues[name],total_observed)
+#		print(name, p_hash[name], observed_sum[name],total_genes,\
+#							sums_of_tissues[name],total_observed)
         
     #return the p-values. 
     return p_hash
