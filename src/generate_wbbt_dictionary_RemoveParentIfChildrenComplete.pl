@@ -27,7 +27,12 @@ my $solr_url = 'http://wobr.caltech.edu:8082/solr/anatomy/';
 
 my $json = JSON->new->allow_nonref;
 
-my $url = $solr_url . "select?qt=standard&indent=on&wt=json&version=2.2&fl=id&start=0&rows=0&q=document_category:bioentity&facet=true&facet.field=regulates_closure&facet.limit=-1&facet.mincount=100&facet.sort=count&fq=source:%22WB%22&fq=-qualifier:%22not%22";
+my $annot_cutoff = 100;
+if ($ARGV[0]) {$annot_cutoff = $ARGV[0]}
+my $url = $solr_url . "select?qt=standard&indent=on&wt=json&version=2.2&fl=id&start=0&rows=0&q=document_category:bioentity&facet=true&facet.field=regulates_closure&facet.limit=-1&facet.mincount=$annot_cutoff&facet.sort=count&fq=source:%22WB%22&fq=-qualifier:%22not%22";
+
+
+
 
 my $page_data = get $url;
 
@@ -91,11 +96,11 @@ foreach my $wbbt (sort { $wbbt{$a} <=> $wbbt{$b} } keys %wbbt) {
     else {                     $keep{$wbbt}++;    }
 }
 
-=for testing
-foreach my $wbbt (sort keys %discard) { print qq(DISCARD $wbbt DISC\n); }
-foreach my $wbbt (sort keys %keep) { print qq(KEEP $wbbt KEEP\n); }
-foreach my $wbbt (sort keys %wbbt) { print qq(GOOD $wbbt GOOD\n); }
-=cut
+# =for testing
+# foreach my $wbbt (sort keys %discard) { print qq(DISCARD $wbbt DISC\n); }
+# foreach my $wbbt (sort keys %keep) { print qq(KEEP $wbbt KEEP\n); }
+# foreach my $wbbt (sort keys %wbbt) { print qq(GOOD $wbbt GOOD\n); }
+# =cut
 
 
 ## Fetch genes annotated to each KEEP anatomy term
