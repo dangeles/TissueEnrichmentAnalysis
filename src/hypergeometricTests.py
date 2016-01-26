@@ -24,7 +24,8 @@ from scipy import stats
 # for arg in sys.argv:
 #     print arg
 
-q_threshold= 0.018
+q_threshold=0.1
+# q_threshold= 0.018
 # in the case of anatomical expression patterns, \
 # there are ~5000 genes total in the dictionary whereas a tissue has \
 # minimally 100 genes. Thus, if the input contains a singleton gene, \
