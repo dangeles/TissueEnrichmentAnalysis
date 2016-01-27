@@ -99,18 +99,27 @@ def hgf(gene_list, tissue_df, f= ''):
         if total == 0:
             p_hash[name]= 1
         else:
-            #give entries as total no. of colors
-            #total number of balls in urn
-            #total number of colors measured
-            #total number of balls picked out
-            p_hash[name]= \
-            stats.hypergeom.sf(\
-            wanted_sum[name],\
-            total_genes, \
-            sums_of_tissues[name],\
-            total)
-            
-            exp_hash[name]= stats.hypergeom.mean(total_genes, sums_of_tissues[name], total)	
+            #if a certain tissue has never been called, don't test it
+            #in certain pathological cases where the list size is small
+            #ie. close to 1, probability of never drawing a given label
+            #can be close to 1, so survival function can be less than 0.05
+            #although the math is right, this behaviour is clearl undesirable
+            if wanted_sum[name] == 0:
+                p_hash[name]= 1
+            else:
+                
+                #no. of balls of color name picked
+                #total number of balls in urn
+                #total number of balls of color name in urn
+                #total number of balls picked out
+                n= wanted_sum[name]
+                tg= total_genes
+                sx= sums_of_tissues[name]
+                tl= total
+                
+                p_hash[name]= stats.hypergeom.sf(n,tg,sx,tl)
+                
+        exp_hash[name]= stats.hypergeom.mean(total_genes, sums_of_tissues[name], total)	
             
                     
     #return the p-values, the genes associated with each tissue and the user
@@ -209,7 +218,7 @@ def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
     print('Executing script\n')
     
     #always make iterable
-    if gene_list in [str]:
+    if type(gene_list) in [str]:
         gene_list = [gene_list]
     
     #create the directories where the results will go
