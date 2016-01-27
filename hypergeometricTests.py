@@ -263,6 +263,7 @@ def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
     df_final['Fold Change']= df_final['Fold Change'].astype(float)    
     df_final['Q value']= df_final['Q value'].astype(float)    
         
+    print(df_final) #print statement for raymond
     return df_final#, p_hash
 #==============================================================================
 #     
