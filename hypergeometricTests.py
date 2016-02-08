@@ -15,6 +15,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from scipy import stats
 import os
+import seaborn as sns
 
 def pass_list(user_provided, tissue_dictionary):
     """
@@ -68,7 +69,6 @@ def hgf(gene_list, tissue_df, f= ''):
     if f:
         present[present.provided == 0].wbid.to_csv(f[:-4]+'_unused_genes.csv', index= False)
     
-    
     #slice out only the genes that were present from the user-provided list    
     wanted= present.wbid[present.provided==1]
 
@@ -119,7 +119,7 @@ def hgf(gene_list, tissue_df, f= ''):
                 
                 p_hash[name]= stats.hypergeom.sf(n,tg,sx,tl)
                 
-        exp_hash[name]= stats.hypergeom.mean(total_genes, sums_of_tissues[name], total)	
+                exp_hash[name]= stats.hypergeom.mean(tg, sx, tl)	
             
                     
     #return the p-values, the genes associated with each tissue and the user
@@ -199,7 +199,7 @@ def return_enriched_tissues(p_hash, alpha, analysis_name):
 #     
 #==============================================================================    
 def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
-    tissue_df, alpha= 0.1, f_unused='', \
+    tissue_df, alpha= 0.05, f_unused='', \
     dirUnused= '../output/EnrichmentAnalysisUnusedGenes'):
     """
     Calls all the above functions
@@ -285,32 +285,33 @@ def plotting_and_formatting(df, y= 'Fold Change', ytitle= '', n_bars= 15, dirGra
         os.makedirs(dirGraphs)
     
     
-    df.set_index('Tissue', inplace= True)
+#    df.set_index('Tissue', inplace= True)
     #sort by fold change
     df.sort_values(y, ascending= False, inplace= True)
     #plot first n_bars
-    df[y][:n_bars].plot(kind= 'bar', figsize= (10,10))
+#    df[y][:n_bars].plot(kind= 'bar', figsize= (10,10))
+    sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars])    
     
     #fix the plot to prettify it
-    plt.gca().set_xlabel('Tissue', fontsize= 18)
-    plt.gca().set_ylabel(y, fontsize= 18)
+    plt.gca().set_ylabel('Tissue', fontsize= 18)
+    plt.gca().set_xlabel(y, fontsize= 18)
     plt.gca().tick_params(axis= 'x', labelsize= 14)
     plt.gca().tick_params(axis= 'y', labelsize= 14)
     
-    if ytitle:
-        plt.gca().set_title(
-        '{0} Most Enriched Tissues by {1} for\nGenes with {2}'\
-        .format(n_bars, y, ytitle),
-        fontsize= 20,
-        y= 1.08
-        )    
-    else:
-        plt.gca().set_title(
-        '{0} Most Enriched Tissues by {1}'\
-        .format(n_bars, y),
-        fontsize= 20,
-        y= 1.08
-        )    
+#    if ytitle:
+#        plt.gca().set_title(
+#        '{0} Most Enriched Tissues by {1} for\nGenes with {2}'\
+#        .format(n_bars, y, ytitle),
+#        fontsize= 20,
+#        y= 1.08
+#        )    
+#    else:
+#        plt.gca().set_title(
+#        '{0} Most Enriched Tissues by {1}'\
+#        .format(n_bars, y),
+#        fontsize= 20,
+#        y= 1.08
+#        )    
     plt.tight_layout()
     
     #save
