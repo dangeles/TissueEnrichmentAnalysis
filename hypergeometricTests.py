@@ -67,7 +67,8 @@ def hgf(gene_list, tissue_df, f= ''):
     
     #make a file to let user know what genes were not used for the analysis
     if f:
-        present[present.provided == 0].wbid.to_csv(f[:-4]+'_unused_genes.csv', index= False)
+        present[present.provided == 0].wbid.to_csv(f[:-4]+'_unused_genes.csv', 
+            index= False)
     
     #slice out only the genes that were present from the user-provided list    
     wanted= present.wbid[present.provided==1]
@@ -253,14 +254,17 @@ def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
             df_final['Tissue'].ix[i]= tissue
             df_final['Expected'].ix[i]= expected
             df_final['Observed'].ix[i]= observed
-            df_final['Fold Change'].ix[i]= observed/expected
+            if expected != 0:
+                df_final['Fold Change'].ix[i]= observed/expected
+            else:
+                df_final['Fold Change'].ix[i]= np.inf
             df_final['Q value'].ix[i]= qval
             i+=1
             
     df_final.dropna(inplace= True)
     df_final['Expected']= df_final['Expected'].astype(float)    
     df_final['Observed']= df_final['Observed'].astype(float)    
-    df_final['Fold Change']= df_final['Fold Change'].astype(float)    
+    df_final['Enrichment Fold Change']= df_final['Fold Change'].astype(float)    
     df_final['Q value']= df_final['Q value'].astype(float)    
         
     print(df_final) #print statement for raymond
@@ -269,7 +273,8 @@ def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
 #     
 #==============================================================================
 
-def plotting_and_formatting(df, y= 'Fold Change', ytitle= '', n_bars= 15, dirGraphs= '../output/Graphs', save= True):
+def plotting_and_formatting(df, y= 'Enrichment Fold Change', ytitle= '', n_bars= 15, 
+                            dirGraphs= '../output/Graphs', save= True):
     """
     df: dataframe as output by implement_hypergmt_enrichment_tool
     y: One of 'Fold Change', 'Q value' or a user generated column
@@ -317,11 +322,11 @@ def plotting_and_formatting(df, y= 'Fold Change', ytitle= '', n_bars= 15, dirGra
     #save
     if save:
         if dirGraphs[len(dirGraphs)-1] != '/':
-            plt.savefig(dirGraphs+'/{0} Enriched Tissues {1} {2}.png'\
-                            .format(n_bars, y, ytitle))
+            plt.savefig(dirGraphs+'/{1} {0}.png'\
+                            .format(y, ytitle))
         else:
-            plt.savefig(dirGraphs+'{0} Enriched Tissues {1} {2}.png'\
-                            .format(n_bars, y, ytitle))
+            plt.savefig(dirGraphs+'{1} {0}.png'\
+                            .format(ytitle))
     
     plt.close()
 #==============================================================================
