@@ -342,6 +342,7 @@ if __name__ == '__main__':
     
     tissue_df= pd.read_csv('../input/dictionary.csv')
     gene_list= pd.read_csv('../input/gene_list.csv')
+    ytitle= ''
     
     df_results= implement_hypergmt_enrichment_tool('', gene_list, tissue_df, alpha= q)
     plotting_and_formatting(df_results, ytitle= ytitle, save= save)
