@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 from scipy import stats
 import os
 import seaborn as sns
+import sys
 
 def pass_list(user_provided, tissue_dictionary):
     """
@@ -338,12 +339,20 @@ def plotting_and_formatting(df, y= 'Enrichment Fold Change', ytitle= '', n_bars=
 if __name__ == '__main__':
     path= './'
     os.chdir(path)
-
-    tissue_df= pd.read_csv("../input/dictionary.csv")
-    gene_list= pd.read_csv('../input/gene_list.csv')
-    ytitle= 'Graph Title'
-    q= 0.1
     
-    df_results= implement_hypergmt_enrichment_tool('', gene_list, alpha= q)
-    plotting_and_formatting(df_results, ytitle= ytitle, save= True)
+    tissue_f= sys.argv[0]
+    gene_list_f= sys.argv[1]
+    q= sys.argv[2]
+    ytitle= sys.argv[3]
+    
+    if sys.argv[4]:
+        save= sys.argv[4]
+    else:
+        save= False
+    
+    tissue_df= pd.read_csv(tissue_f)
+    gene_list= pd.read_csv(gene_list_f)
+    
+    df_results= implement_hypergmt_enrichment_tool('', gene_list, tissue_df, alpha= q)
+    plotting_and_formatting(df_results, ytitle= ytitle, save= save)
 
