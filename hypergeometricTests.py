@@ -335,16 +335,15 @@ def plotting_and_formatting(df, y= 'Enrichment Fold Change', ytitle= '', n_bars=
 #==============================================================================
 
 #
-#if __name__ == '__main__':
-#    path= './'
-#    os.chdir(path)
-#
-#    tissue_df= pd.read_csv("../input/dictionary.csv")
-#    
+if __name__ == '__main__':
+    path= './'
+    os.chdir(path)
 
+    tissue_df= pd.read_csv("../input/dictionary.csv")
+    gene_list= pd.read_csv('../input/gene_list.csv')
+    ytitle= 'Graph Title'
+    q= 0.1
+    
+    df_results= implement_hypergmt_enrichment_tool('', gene_list, alpha= q)
+    plotting_and_formatting(df_results, ytitle= ytitle, save= True)
 
-
-#test functions:
-#Run the whole thing:
-#q1= implement_hypergmt_enrichment_tool(gene_list1, tissue_df)
-#q2= implement_hypergmt_enrichment_tool(gene_list2, tissue_df)
