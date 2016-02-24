@@ -105,7 +105,7 @@ def hgf(gene_list, tissue_df, f= ''):
             #in certain pathological cases where the list size is small
             #ie. close to 1, probability of never drawing a given label
             #can be close to 1, so survival function can be less than 0.05
-            #although the math is right, this behaviour is clearl undesirable
+            #although the math is right, this behaviour is clearly undesirable
             if wanted_sum[name] == 0:
                 p_hash[name]= 1
             else:
@@ -164,7 +164,7 @@ def benjamin_hochberg_stepup(p_vals):
 #==============================================================================
 # 
 #==============================================================================
-def return_enriched_tissues(p_hash, alpha, analysis_name):
+def return_enriched_tissues(p_hash, alpha):
     """
     Given a hash of p-values
     (tissue -> p-values)
@@ -200,9 +200,9 @@ def return_enriched_tissues(p_hash, alpha, analysis_name):
 #==============================================================================
 #     
 #==============================================================================    
-def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
+def implement_hypergmt_enrichment_tool(gene_list, \
     tissue_df, alpha= 0.05, f_unused='', \
-    dirUnused= '../output/EnrichmentAnalysisUnusedGenes'):
+    dirUnused= '../output/EnrichmentAnalysisUnusedGenes', aname= '', show= True):
     """
     Calls all the above functions
     
@@ -216,6 +216,15 @@ def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
     
     The directories are useful to specify when users provide multiple analyses 
     in batch
+    
+    gene_list= a list or list-like of WBIDs
+    tissue_df= the tissue df from WormBase
+    alpha= significance value post-FDR
+    f_unused= filename for unused genes, use only if you want to 
+    see what genes were discarded
+    dirUnused= directory to store the unused genes in
+    aname= analysis name -- only useful if printing results inline
+    show= Whether to print results or not. 
     """
     print('Executing script\n')
     
@@ -239,7 +248,7 @@ def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
     p_hash, exp_hash, wanted_dic= hgf(gene_list, tissue_df)
 
     #FDR correct
-    q_hash= return_enriched_tissues(p_hash, alpha, analysis_name)
+    q_hash= return_enriched_tissues(p_hash, alpha)
                                 
     #write results to a dataframe. 
     columns= ['Tissue', 'Expected', 'Observed', 'Fold Change', 'Q value']
@@ -268,13 +277,17 @@ def implement_hypergmt_enrichment_tool(analysis_name, gene_list, \
     df_final['Enrichment Fold Change']= df_final['Fold Change'].astype(float)    
     df_final['Q value']= df_final['Q value'].astype(float)    
         
-    print(df_final) #print statement for raymond
+    if show == True:
+        print(df_final) #print statement for raymond
+        if len(df_final) == 0:
+            print('Analysis returned no enriched tissues. Sorry!')
+        
     return df_final#, p_hash
 #==============================================================================
 #     
 #==============================================================================
 
-def plotting_and_formatting(df, y= 'Enrichment Fold Change', ytitle= '', n_bars= 15, 
+def plotting_and_formatting(df, y= 'Enrichment Fold Change', title= '', n_bars= 15, 
                             dirGraphs= '../output/Graphs', save= True):
     """
     df: dataframe as output by implement_hypergmt_enrichment_tool
@@ -304,10 +317,10 @@ def plotting_and_formatting(df, y= 'Enrichment Fold Change', ytitle= '', n_bars=
     plt.gca().tick_params(axis= 'x', labelsize= 14)
     plt.gca().tick_params(axis= 'y', labelsize= 14)
     
-#    if ytitle:
+#    if title:
 #        plt.gca().set_title(
 #        '{0} Most Enriched Tissues by {1} for\nGenes with {2}'\
-#        .format(n_bars, y, ytitle),
+#        .format(n_bars, y, title),
 #        fontsize= 20,
 #        y= 1.08
 #        )    
@@ -318,17 +331,20 @@ def plotting_and_formatting(df, y= 'Enrichment Fold Change', ytitle= '', n_bars=
 #        fontsize= 20,
 #        y= 1.08
 #        )    
+    
+#    if tight:
+#        plt.tight_layout()
     plt.tight_layout()
     
     #save
     if save:
         if dirGraphs[len(dirGraphs)-1] != '/':
-            plt.savefig(dirGraphs+'/{1} {0}.png'\
-                            .format(y, ytitle))
+            plt.savefig(dirGraphs+'/{0}.png'\
+                            .format(y, title))
         else:
-            plt.savefig(dirGraphs+'{1} {0}.png'\
-                            .format(ytitle))
-    
+            plt.savefig(dirGraphs+'{0}.png'\
+                            .format(title))
+    plt.show()
     plt.close()
 #==============================================================================
 #==============================================================================
@@ -337,15 +353,62 @@ def plotting_and_formatting(df, y= 'Enrichment Fold Change', ytitle= '', n_bars=
 
 #
 if __name__ == '__main__':
+    
     path= './'
     os.chdir(path)
     
-    tissue_df= pd.read_csv('../input/dictionary.csv')
-    gene_list= pd.read_csv('../input/gene_list.csv')
-    ytitle= ''
-    q= 0.1
-    save= False
+    import argparse
+    from matplotlib.pylab import * 
     
-    df_results= implement_hypergmt_enrichment_tool('', gene_list, tissue_df, alpha= q)
-    plotting_and_formatting(df_results, ytitle= ytitle, save= save)
+    defQ= 0.1    
+    
+    parser = argparse.ArgumentParser(description='Run TEA.')
+    parser = argparse.ArgumentParser()
+    parser.add_argument("tissue_dictionary", help= 'The full path to the tissue dictionary provided by WormBase')
+    parser.add_argument("gene_list", help= 'The full path to the gene list (WBIDs) you would like to analyse in .csv format')
+    parser.add_argument("-q", help= 'Qvalue threshold for significance. Default is {0} if not provided'.format(defQ), type= float)
+    parser.add_argument('-p','--print', help= 'Indicate whether you would like to print results', action= 'store_true')    
+    parser.add_argument('-pl', "--plot", help= 'Indicate whether you would like to plot results.', action= 'store_true')
+    parser.add_argument('-s', "--save", help= 'Boolean variable indicating whether to save your plot or not.', action= 'store_true')
+    parser.add_argument('-t', "--title", nargs= '?', help= 'Title for your plot')
+    args = parser.parse_args()
+    
+    tdf_name= args.tissue_dictionary
+    gl_name= args.gene_list
+    
+    if args.q:   
+        q= args.q
+    else:
+        q= defQ
+    
+    if args.print:
+        show= True
+    else:
+        show= False
+        
+    if args.plot:
+        plot= True
+    else:
+        plot= False
+    
+    if args.save:
+        save= True
+        if args.title:
+            title= args.title
+        else:
+            raise Warning('You must provide a title for your filename')
+            sys.quit()
+    else:
+        save= False
+        title= ''
+        
+    tissue_df= pd.read_csv(tdf_name)
+    gene_list= pd.read_csv(gl_name)
+    
+    
+    df_results= implement_hypergmt_enrichment_tool(gene_list.gene, tissue_df, alpha= q, show= show)
+    
+    if plot:
+        plotting_and_formatting(df_results, title= title, save= save)
 
+    sys.exit()
