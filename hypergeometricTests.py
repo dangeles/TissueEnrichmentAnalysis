@@ -17,6 +17,8 @@ from scipy import stats
 import os
 import seaborn as sns
 import sys
+from urllib.request import urlopen
+
 
 def pass_list(user_provided, tissue_dictionary):
     """
@@ -49,7 +51,7 @@ def pass_list(user_provided, tissue_dictionary):
 #==============================================================================
 #hgf is short for hypergeometric function
 #==============================================================================
-def hgf(gene_list, tissue_df, f= ''):
+def hgf(gene_list, tissue_df):
     """
     Given a list of tissues and a gene-tissue dictionary,
     returns a p-dictionary for the enrichment of every tissue
@@ -62,14 +64,10 @@ def hgf(gene_list, tissue_df, f= ''):
     gene_list should be a list or list-like
     tissue_dictionary should be a pandas df
     """    
-    
     #figure out what genes are in the user provided list
     present= pass_list(gene_list, tissue_df)  
     
-    #make a file to let user know what genes were not used for the analysis
-    if f:
-        present[present.provided == 0].wbid.to_csv(f[:-4]+'_unused_genes.csv', 
-            index= False)
+    unused= present[present.provided == 0].wbid
     
     #slice out only the genes that were present from the user-provided list    
     wanted= present.wbid[present.provided==1]
@@ -114,19 +112,23 @@ def hgf(gene_list, tissue_df, f= ''):
                 #total number of balls in urn
                 #total number of balls of color name in urn
                 #total number of balls picked out
-                n= wanted_sum[name]
-                tg= total_genes
-                sx= sums_of_tissues[name]
-                tl= total
+                n_obs= wanted_sum[name]
+                t_dict= total_genes
+                s_tissue= sums_of_tissues[name]
+                t_picked= total
+#                print(n_obs,t_dict,s_tissue,t_picked)
+                p_hash[name]= stats.hypergeom.sf(n_obs,t_dict,s_tissue,t_picked)
                 
-                p_hash[name]= stats.hypergeom.sf(n,tg,sx,tl)
+                exp_hash[name]= stats.hypergeom.mean(t_dict,s_tissue,t_picked)
                 
-                exp_hash[name]= stats.hypergeom.mean(tg, sx, tl)	
-            
+#                if RuntimeWarning:
+#                    print('w')
+#                    print(n_obs,t_dict,s_tissue,t_picked)
+#            
                     
     #return the p-values, the genes associated with each tissue and the user
     #provided genes associate with each tissue. 
-    return p_hash, exp_hash, wanted_dictionary
+    return p_hash, exp_hash, wanted_dictionary, unused
     
     
 #==============================================================================
@@ -200,9 +202,7 @@ def return_enriched_tissues(p_hash, alpha):
 #==============================================================================
 #     
 #==============================================================================    
-def implement_hypergmt_enrichment_tool(gene_list, \
-    tissue_df, alpha= 0.05, f_unused='', \
-    dirUnused= '../output/EnrichmentAnalysisUnusedGenes', aname= '', show= True):
+def enrichment_analysis(gene_list, tissue_df, alpha= 0.05, aname= '', save= False, show= True):
     """
     Calls all the above functions
     
@@ -232,20 +232,9 @@ def implement_hypergmt_enrichment_tool(gene_list, \
     if type(gene_list) in [str]:
         gene_list = [gene_list]
     
-    #create the directories where the results will go
-    if f_unused:
-        if f_unused[-4:] != '.csv':
-            if f_unused[-4:] != '.txt':
-                f_unused= f_unused+'.csv'
-                
-        if not os.path.exists(dirUnused):
-            os.makedirs(dirUnused)
-        
-        #calculat the enrichment
-        p_hash, exp_hash, wanted_dic= hgf(gene_list, tissue_df, dirUnused+'/'+f_unused)
-        
+    
     #calculat the enrichment
-    p_hash, exp_hash, wanted_dic= hgf(gene_list, tissue_df)
+    p_hash, exp_hash, wanted_dic, unused= hgf(gene_list, tissue_df)
 
     #FDR correct
     q_hash= return_enriched_tissues(p_hash, alpha)
@@ -280,35 +269,34 @@ def implement_hypergmt_enrichment_tool(gene_list, \
     if show == True:
         print(df_final) #print statement for raymond
         if len(df_final) == 0:
-            print('Analysis returned no enriched tissues. Sorry!')
+            print('Analysis returned no enriched tissues.')
+            
+    if save:
+        df_final.to_csv(aname)
         
-    return df_final#, p_hash
+    
+    return df_final, unused#, p_hash
 #==============================================================================
 #     
 #==============================================================================
 
-def plotting_and_formatting(df, y= 'Enrichment Fold Change', title= '', n_bars= 15, 
-                            dirGraphs= '../output/Graphs', save= True):
+def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 15, 
+                            dirGraphs= '', save= True):
     """
     df: dataframe as output by implement_hypergmt_enrichment_tool
     y: One of 'Fold Change', 'Q value' or a user generated column
     n_bars: number of bars to be shown, defaults to 15
     dirGraps: directory to save figures to. if not existent, generates a new folder
-    """
-    
+    """    
     if df.empty:
         print('dataframe is empty!')
         return
     
     if not os.path.exists(dirGraphs):
         os.makedirs(dirGraphs)
-    
-    
-#    df.set_index('Tissue', inplace= True)
     #sort by fold change
     df.sort_values(y, ascending= False, inplace= True)
     #plot first n_bars
-#    df[y][:n_bars].plot(kind= 'bar', figsize= (10,10))
     sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars])    
     
     #fix the plot to prettify it
@@ -316,36 +304,40 @@ def plotting_and_formatting(df, y= 'Enrichment Fold Change', title= '', n_bars= 
     plt.gca().set_xlabel(y, fontsize= 18)
     plt.gca().tick_params(axis= 'x', labelsize= 14)
     plt.gca().tick_params(axis= 'y', labelsize= 14)
-    
-#    if title:
-#        plt.gca().set_title(
-#        '{0} Most Enriched Tissues by {1} for\nGenes with {2}'\
-#        .format(n_bars, y, title),
-#        fontsize= 20,
-#        y= 1.08
-#        )    
-#    else:
-#        plt.gca().set_title(
-#        '{0} Most Enriched Tissues by {1}'\
-#        .format(n_bars, y),
-#        fontsize= 20,
-#        y= 1.08
-#        )    
-    
-#    if tight:
-#        plt.tight_layout()
     plt.tight_layout()
     
     #save
     if save:
-        if dirGraphs[len(dirGraphs)-1] != '/':
-            plt.savefig(dirGraphs+'/{0}.png'\
-                            .format(y, title))
+        if dirGraphs:
+            if dirGraphs[len(dirGraphs)-1] != '/':
+                plt.savefig(dirGraphs+'/{0}.png'\
+                                .format(title))
+            else:
+                plt.savefig(dirGraphs+'{0}.png'\
+                                .format(title))
         else:
-            plt.savefig(dirGraphs+'{0}.png'\
-                            .format(title))
+            plt.savefig('{0}.png'.format(title))
+            
     plt.show()
     plt.close()
+    
+#==============================================================================
+# 
+#==============================================================================
+def fetch_dictionary():
+    """
+    Fetch the dictionary we want.
+    """
+    
+    url_tissue= 'http://131.215.12.204/~azurebrd/work/tissue_enrichment_tool_hypergeometric_test/dict.20151208'
+    try:
+        conn= urlopen(url_tissue)
+        data = pd.read_csv(conn)
+        return data
+    except:
+        print('Cannot fetch dictionary. Please check internet connection.')
+        
+    
 #==============================================================================
 #==============================================================================
 #==============================================================================
@@ -403,10 +395,10 @@ if __name__ == '__main__':
         title= ''
         
     tissue_df= pd.read_csv(tdf_name)
-    gene_list= pd.read_csv(gl_name)
+    gene_list, unused= pd.read_csv(gl_name)
     
     
-    df_results= implement_hypergmt_enrichment_tool(gene_list.gene, tissue_df, alpha= q, show= show)
+    df_results= enrichment_analysis(gene_list.gene, tissue_df, alpha= q, show= show)
     
     if plot:
         plotting_and_formatting(df_results, title= title, save= save)
