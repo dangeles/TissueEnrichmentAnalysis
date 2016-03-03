@@ -19,6 +19,7 @@ import seaborn as sns
 import sys
 from urllib.request import urlopen
 
+sns.set_context('paper')
 
 def pass_list(user_provided, tissue_dictionary):
     """
@@ -266,11 +267,12 @@ def enrichment_analysis(gene_list, tissue_df, alpha= 0.05, aname= '', save= Fals
     df_final['Enrichment Fold Change']= df_final['Fold Change'].astype(float)    
     df_final['Q value']= df_final['Q value'].astype(float)    
         
-    if show == True:
-        print(df_final) #print statement for raymond
+    if show:
         if len(df_final) == 0:
             print('Analysis returned no enriched tissues.')
-            
+        else:
+            print(df_final) #print statement for raymond
+
     if save:
         df_final.to_csv(aname)
         
@@ -292,23 +294,24 @@ def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 
         print('dataframe is empty!')
         return
     
-    if not os.path.exists(dirGraphs):
-        os.makedirs(dirGraphs)
+
     #sort by fold change
     df.sort_values(y, ascending= False, inplace= True)
     #plot first n_bars
     sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars])    
     
     #fix the plot to prettify it
-    plt.gca().set_ylabel('Tissue', fontsize= 18)
-    plt.gca().set_xlabel(y, fontsize= 18)
-    plt.gca().tick_params(axis= 'x', labelsize= 14)
-    plt.gca().tick_params(axis= 'y', labelsize= 14)
+    plt.gca().set_ylabel('Tissue', fontsize= 15)
+    plt.gca().set_xlabel(y, fontsize= 15)
+    plt.gca().tick_params(axis= 'x', labelsize= 11)
+    plt.gca().tick_params(axis= 'y', labelsize= 11)
     plt.tight_layout()
     
     #save
     if save:
         if dirGraphs:
+            if not os.path.exists(dirGraphs):
+                os.makedirs(dirGraphs)
             if dirGraphs[len(dirGraphs)-1] != '/':
                 plt.savefig(dirGraphs+'/{0}.png'\
                                 .format(title))
