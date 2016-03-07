@@ -302,19 +302,18 @@ def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 
 #    
     if ax== None:
         ax= plt.gca()
-    
-    ax= plt.gca()
+        
     #sort by fold change
     df.sort_values(y, ascending= False, inplace= True)
     #plot first n_bars
-    sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars], ax= ax)    
+    ax= sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars], ax= ax)    
     
     #fix the plot to prettify it
     ax.set_ylabel('Tissue', fontsize= 15)
     ax.set_xlabel(y, fontsize= 15)
     ax.tick_params(axis= 'x', labelsize= 11)
     ax.tick_params(axis= 'y', labelsize= 11)
-#    plt.tight_layout()
+    plt.tight_layout()
     
     #save
     if save:
@@ -415,7 +414,6 @@ if __name__ == '__main__':
     
     if plot:
         plot_enrichment_results(df_results, title= title, save= save)
-    plt.tight_layout()
     plt.show()
 
     sys.exit()
