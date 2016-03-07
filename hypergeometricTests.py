@@ -18,8 +18,12 @@ import os
 import seaborn as sns
 import sys
 from urllib.request import urlopen
+import contextlib
 
 sns.set_context('paper')
+sns.set_style('whitegrid')
+sns.despine(left= True)
+sns.despine(trim= True)
 
 def pass_list(user_provided, tissue_dictionary):
     """
@@ -283,7 +287,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha= 0.05, aname= '', save= Fals
 #==============================================================================
 
 def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 15, 
-                            dirGraphs= '', save= True):
+                            dirGraphs= '', save= True, **kwargs):
     """
     df: dataframe as output by implement_hypergmt_enrichment_tool
     y: One of 'Fold Change', 'Q value' or a user generated column
@@ -293,19 +297,24 @@ def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 
     if df.empty:
         print('dataframe is empty!')
         return
+        
+    ax= kwargs.pop('ax', None)
+#    
+    if ax== None:
+        ax= plt.gca()
     
-
+    ax= plt.gca()
     #sort by fold change
     df.sort_values(y, ascending= False, inplace= True)
     #plot first n_bars
-    sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars])    
+    sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars], ax= ax)    
     
     #fix the plot to prettify it
-    plt.gca().set_ylabel('Tissue', fontsize= 15)
-    plt.gca().set_xlabel(y, fontsize= 15)
-    plt.gca().tick_params(axis= 'x', labelsize= 11)
-    plt.gca().tick_params(axis= 'y', labelsize= 11)
-    plt.tight_layout()
+    ax.set_ylabel('Tissue', fontsize= 15)
+    ax.set_xlabel(y, fontsize= 15)
+    ax.tick_params(axis= 'x', labelsize= 11)
+    ax.tick_params(axis= 'y', labelsize= 11)
+#    plt.tight_layout()
     
     #save
     if save:
@@ -320,9 +329,10 @@ def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 
                                 .format(title))
         else:
             plt.savefig('{0}.png'.format(title))
-            
-    plt.show()
-    plt.close()
+    
+    return ax
+#    plt.show()
+#    plt.close()
     
 #==============================================================================
 # 
@@ -334,9 +344,9 @@ def fetch_dictionary():
     
     url_tissue= 'http://131.215.12.204/~azurebrd/work/tissue_enrichment_tool_hypergeometric_test/dict.20151208'
     try:
-        conn= urlopen(url_tissue)
-        data = pd.read_csv(conn)
-        return data
+        with contextlib.closing(urlopen(url_tissue)) as conn:
+            data = pd.read_csv(conn)
+            return data
     except:
         print('Cannot fetch dictionary. Please check internet connection.')
         
@@ -398,12 +408,14 @@ if __name__ == '__main__':
         title= ''
         
     tissue_df= pd.read_csv(tdf_name)
-    gene_list, unused= pd.read_csv(gl_name)
+    gene_list= pd.read_csv(gl_name)
     
-    
-    df_results= enrichment_analysis(gene_list.gene, tissue_df, alpha= q, show= show)
+#    print(gene_list)
+    df_results, unused= enrichment_analysis(gene_list, tissue_df, alpha= q, show= show)
     
     if plot:
-        plotting_and_formatting(df_results, title= title, save= save)
+        plot_enrichment_results(df_results, title= title, save= save)
+    plt.tight_layout()
+    plt.show()
 
     sys.exit()
