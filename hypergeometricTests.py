@@ -12,6 +12,8 @@ An experimental list of gene names
 
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from scipy import stats
 import os
@@ -414,6 +416,10 @@ if __name__ == '__main__':
     
     if plot:
         plot_enrichment_results(df_results, title= title, save= save)
-    plt.show()
+        plt.show()
+
+    if save:
+        plot_enrichment_results(df_results, title= title, save= save)
+
 
     sys.exit()
