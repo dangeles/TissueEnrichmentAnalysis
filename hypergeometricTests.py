@@ -12,20 +12,22 @@ An experimental list of gene names
 
 import pandas as pd
 import numpy as np
-import matplotlib
-matplotlib.use('Agg')
-import matplotlib.pyplot as plt
 from scipy import stats
 import os
-import seaborn as sns
 import sys
 from urllib.request import urlopen
 import contextlib
 
-sns.set_context('paper')
-sns.set_style('whitegrid')
-sns.despine(left= True)
-sns.despine(trim= True)
+if __name__ != '__main__':
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    sns.set_context('paper')
+    sns.set_style('whitegrid')
+    sns.despine(left= True)
+    sns.despine(trim= True)
+
+
+
 
 def pass_list(user_provided, tissue_dictionary):
     """
@@ -305,8 +307,8 @@ def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 
     if ax== None:
         ax= plt.gca()
         
-    #sort by fold change
-    df.sort_values(y, ascending= False, inplace= True)
+    #sort by q value change
+    df.sort_values('Q value', ascending= True, inplace= True)
     #plot first n_bars
     ax= sns.barplot(x= df[y][:n_bars], y= df['Tissue'][:n_bars], ax= ax)    
     
@@ -360,27 +362,38 @@ def fetch_dictionary():
 #
 if __name__ == '__main__':
     
+    import re
+    
     path= './'
     os.chdir(path)
     
     import argparse
-    from matplotlib.pylab import * 
-    
+    import matplotlib
+    matplotlib.use('Agg')
+#    from matplotlib.pylab import * 
+    import matplotlib.pyplot as plt
+    import seaborn as sns
+    sns.set_context('paper')
+    sns.set_style('whitegrid')
+    sns.despine(left= True)
+    sns.despine(trim= True)
+
     defQ= 0.1    
     
     parser = argparse.ArgumentParser(description='Run TEA.')
     parser = argparse.ArgumentParser()
     parser.add_argument("tissue_dictionary", help= 'The full path to the tissue dictionary provided by WormBase')
     parser.add_argument("gene_list", help= 'The full path to the gene list (WBIDs) you would like to analyse in .csv format')
+    parser.add_argument('-t', "--title", help= 'Title for your analysis (shouldn\'t include file extension', type= str)
     parser.add_argument("-q", help= 'Qvalue threshold for significance. Default is {0} if not provided'.format(defQ), type= float)
     parser.add_argument('-p','--print', help= 'Indicate whether you would like to print results', action= 'store_true')    
     parser.add_argument('-pl', "--plot", help= 'Indicate whether you would like to plot results.', action= 'store_true')
     parser.add_argument('-s', "--save", help= 'Boolean variable indicating whether to save your plot or not.', action= 'store_true')
-    parser.add_argument('-t', "--title", nargs= '?', help= 'Title for your plot')
     args = parser.parse_args()
     
     tdf_name= args.tissue_dictionary
     gl_name= args.gene_list
+    title= args.title
     
     if args.q:   
         q= args.q
@@ -399,20 +412,38 @@ if __name__ == '__main__':
     
     if args.save:
         save= True
-        if args.title:
-            title= args.title
-        else:
-            raise Warning('You must provide a title for your filename')
-            sys.quit()
+                    
     else:
         save= False
-        title= ''
-        
+            
     tissue_df= pd.read_csv(tdf_name)
-    gene_list= pd.read_csv(gl_name)
     
-#    print(gene_list)
-    df_results, unused= enrichment_analysis(gene_list, tissue_df, alpha= q, show= show)
+    gene_list= []
+    with open(gl_name, 'r') as f:
+        gene_list= [x.strip() for x in f.readlines()]
+    
+    df_results, unused= enrichment_analysis(gene_list, tissue_df, alpha= q, show= False)
+    
+    dfname= title+'.csv'
+    df_results.to_csv(dfname, index= False)
+    
+    if show:        
+        with open(dfname, 'r') as f:
+            printer= f.readlines()
+            
+        for value in printer:
+            value= value.split(',')
+            for val in value:
+                if re.findall("\d+\.\d+", val):
+                    ind= value.index(val)
+                    x= float(val)
+                    if x < 10**-6:
+                        value[ind]= '<10^-6'
+                    else:
+                        value[ind]= '{0:.2f}'.format(x)
+
+            value= '\t'.join(value)
+            print(value)
     
     if plot:
         plot_enrichment_results(df_results, title= title, save= save)
