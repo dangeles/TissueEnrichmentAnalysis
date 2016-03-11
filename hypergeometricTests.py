@@ -393,8 +393,8 @@ if __name__ == '__main__':
     
     tdf_name= args.tissue_dictionary
     gl_name= args.gene_list
-    title= args.title
-    
+    title= str(args.title)
+
     if args.q:   
         q= args.q
     else:
