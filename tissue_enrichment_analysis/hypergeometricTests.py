@@ -275,7 +275,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha= 0.05, aname= '', save= Fals
     df_final['Enrichment Fold Change']= df_final['Enrichment Fold Change'].astype(float)    
     df_final['Q value']= df_final['Q value'].astype(float)    
     
-    df_final.sort_valeus('Q value', inplace= True)
+    df_final.sort_values('Q value', inplace= True)
     if show:
         if len(df_final) == 0:
             print('Analysis returned no enriched tissues.')
