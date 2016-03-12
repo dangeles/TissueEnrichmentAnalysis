@@ -10,6 +10,16 @@ A control list of gene names
 An experimental list of gene names
 """
 
+
+__author__ = "David Angeles-Albores"
+__copyright__ = "Copyright 2016, Tissue Enrichment Analysis"
+__credits__ = ["David Angeles-Albores", "Raymond Y. Lee", "Juancarlos Chan"]
+__license__ = "MIT"
+__version__ = "0.13"
+__maintainer__ = "David Angeles-Albores"
+__email__ = "dangeles@caltech.edu"
+__status__ = "Production"
+
 import pandas as pd
 import numpy as np
 from scipy import stats
@@ -23,8 +33,8 @@ if __name__ != '__main__':
     import seaborn as sns
     sns.set_context('paper')
     sns.set_style('whitegrid')
-    sns.despine(left= True)
-    sns.despine(trim= True)
+#    sns.despine(left= True)
+#    sns.despine(trim= True)
 
 
 
@@ -213,26 +223,13 @@ def return_enriched_tissues(p_hash, alpha):
 #==============================================================================    
 def enrichment_analysis(gene_list, tissue_df, alpha= 0.05, aname= '', save= False, show= True):
     """
-    Calls all the above functions
+    executes a complete enrichment analysis (hypergeometric test, BH correction)
     
-    gene_list: a list of non-redundant gene names
-    tissue_df
-    alpha: significance threshold, defaults to 0.01
+    gene_list: a list of non-redundant WBIDs
+    tissue_df: as provided by WormBase (use fetch_dictionary)
+    alpha: significance threshold, defaults to 0.05
     f: filename for the enrichment analysis
-    
-    dirEnrichment: directory where the enrichment analysis will be placed
-    dirUnusued: directory where the lists of unused genes will be deposited
-    
-    The directories are useful to specify when users provide multiple analyses 
-    in batch
-    
-    gene_list= a list or list-like of WBIDs
-    tissue_df= the tissue df from WormBase
-    alpha= significance value post-FDR
-    f_unused= filename for unused genes, use only if you want to 
-    see what genes were discarded
-    dirUnused= directory to store the unused genes in
-    aname= analysis name -- only useful if printing results inline
+    aname= filename to use to save results
     show= Whether to print results or not. 
     """
     print('Executing script\n')
@@ -299,6 +296,8 @@ def plot_enrichment_results(df, y= 'Enrichment Fold Change', title= '', n_bars= 
     n_bars: number of bars to be shown, defaults to 15
     dirGraps: directory to save figures to. if not existent, generates a new folder
     """    
+    
+    
     if df.empty:
         print('dataframe is empty!')
         return
@@ -376,8 +375,8 @@ if __name__ == '__main__':
     import seaborn as sns
     sns.set_context('paper')
     sns.set_style('whitegrid')
-    sns.despine(left= True)
-    sns.despine(trim= True)
+#    sns.despine(left= True)
+#    sns.despine(trim= True)
 
     defQ= 0.1    
     
