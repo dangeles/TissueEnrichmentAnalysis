@@ -263,18 +263,19 @@ def enrichment_analysis(gene_list, tissue_df, alpha= 0.05, aname= '', save= Fals
             df_final['Expected'].ix[i]= expected
             df_final['Observed'].ix[i]= observed
             if expected != 0:
-                df_final['Fold Change'].ix[i]= observed/expected
+                df_final['Enrichment Fold Change'].ix[i]= observed/expected
             else:
-                df_final['Fold Change'].ix[i]= np.inf
+                df_final['Enrichment Fold Change'].ix[i]= np.inf
             df_final['Q value'].ix[i]= qval
             i+=1
             
     df_final.dropna(inplace= True)
     df_final['Expected']= df_final['Expected'].astype(float)    
     df_final['Observed']= df_final['Observed'].astype(float)    
-    df_final['Enrichment Fold Change']= df_final['Fold Change'].astype(float)    
+    df_final['Enrichment Fold Change']= df_final['Enrichment Fold Change'].astype(float)    
     df_final['Q value']= df_final['Q value'].astype(float)    
-        
+    
+    df_final.sort_valeus('Q value', inplace= True)
     if show:
         if len(df_final) == 0:
             print('Analysis returned no enriched tissues.')

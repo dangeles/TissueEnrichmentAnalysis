@@ -7,8 +7,8 @@ Created on Fri Mar 11 11:27:39 2016
 
 from distutils.core import setup
 setup(
-  name = 'TEA',
-  packages = ['TEA'], # this must be the same as the name above
+  name = 'tissue_enrichment_analysis',
+  packages = ['tissue_enrichment_analysis'], # this must be the same as the name above
   version = '0.1',
   description = 'This package contains all the software used to implement TEA in WormBase and remotely',
   author = 'David Angeles-Albores',
