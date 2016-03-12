@@ -249,7 +249,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha= 0.05, aname= '', save= Fals
     q_hash= return_enriched_tissues(p_hash, alpha)
                                 
     #write results to a dataframe. 
-    columns= ['Tissue', 'Expected', 'Observed', 'Fold Change', 'Q value']
+    columns= ['Tissue', 'Expected', 'Observed', 'Enrichment Fold Change', 'Q value']
     df_final= pd.DataFrame(index=np.arange(len(q_hash)), columns=columns)
 
     i=0    
