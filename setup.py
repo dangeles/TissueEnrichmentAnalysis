@@ -10,7 +10,7 @@ from setuptools import setup, find_packages
 import os
 import sys
 
-version= '0.13.2'
+version= '0.13.4'
 
 #just type in python setup.py publish and this takes care of publishing to to pypi!
 
@@ -56,7 +56,8 @@ def readme():
 
 setup(
   name = 'tissue_enrichment_analysis',
-  packages = ['tissue_enrichment_analysis'], # this must be the same as the name above
+#  packages = ['tissue_enrichment_analysis'], # this must be the same as the name above
+  packages=find_packages(exclude=("tests",)),
   version = version,
   description = 'This package contains all the software used to implement\
   TEA in WormBase and remotely',

@@ -1,0 +1,663 @@
+%% BioMed_Central_Bib_Style_v1.01
+
+\begin{thebibliography}{18}
+% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
+\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
+\ifx \binits  \undefined \def \binits#1{#1}\fi
+\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
+\ifx \batitle  \undefined \def \batitle#1{#1}\fi
+\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
+\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
+\ifx \byear  \undefined \def \byear#1{#1}\fi
+\ifx \bissue  \undefined \def \bissue#1{#1}\fi
+\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
+\ifx \blpage  \undefined \def \blpage #1{#1}\fi
+\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
+\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
+\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
+\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
+\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
+\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
+\ifx \beditor  \undefined \def \beditor#1{#1}\fi
+\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
+\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
+\ifx \bedition  \undefined \def \bedition#1{#1}\fi
+\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
+\ifx \blocation  \undefined \def \blocation#1{#1}\fi
+\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
+\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
+\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
+\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
+\ifx \barticle \undefined \def \barticle#1{#1}\fi
+\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
+\ifx \botherref \undefined \def \botherref #1{#1}\fi
+\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
+\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
+\ifx \bbook \undefined \def \bbook#1{#1}\fi
+\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
+\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
+\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
+\ifx \endbibitem  \undefined \def \endbibitem {}\fi
+\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
+\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
+\csname PreBibitemsHook\endcsname
+
+%%% 1
+\bibitem{TheGeneOntologyConsortium2000}
+\begin{barticle}
+\bauthor{\bsnm{{The Gene Ontology Consortium}}}:
+\batitle{{Gene Ontology: tool for the unification of biology}}.
+\bjtitle{Nature Genetics}
+\bvolume{25}(\bissue{may}),
+\bfpage{25}--\blpage{29}
+(\byear{2000}).
+doi:\doiurl{10.1038/75556}.
+\arxivurl{10614036}
+\end{barticle}
+\endbibitem
+
+%%% 2
+\bibitem{Ontology2009}
+\begin{barticle}
+\bauthor{\bsnm{Ontology}, \binits{G.}}:
+\batitle{{Gene Ontology}}.
+\bjtitle{Nature Reviews Genetics}
+\bvolume{2009},
+\bfpage{1}--\blpage{13}
+(\byear{2009})
+\end{barticle}
+\endbibitem
+
+%%% 3
+\bibitem{TheGeneOntologyConsortium2015}
+\begin{barticle}
+\bauthor{\bsnm{{The Gene Ontology Consortium}}}:
+\batitle{{Gene Ontology Consortium: going forward}}.
+\bjtitle{Nucleic Acids Research}
+\bvolume{43}(\bissue{D1}),
+\bfpage{1049}--\blpage{1056}
+(\byear{2015}).
+doi:\doiurl{10.1093/nar/gku1179}
+\end{barticle}
+\endbibitem
+
+%%% 4
+\bibitem{Mi2009}
+\begin{botherref}
+\oauthor{\bsnm{Mi}, \binits{H.}},
+\oauthor{\bsnm{Dong}, \binits{Q.}},
+\oauthor{\bsnm{Muruganujan}, \binits{A.}},
+\oauthor{\bsnm{Gaudet}, \binits{P.}},
+\oauthor{\bsnm{Lewis}, \binits{S.}},
+\oauthor{\bsnm{Thomas}, \binits{P.D.}}:
+{PANTHER version 7: Improved phylogenetic trees, orthologs and collaboration
+  with the Gene Ontology Consortium}.
+Nucleic Acids Research
+\textbf{38}(SUPPL.1)
+(2009).
+doi:\doiurl{10.1093/nar/gkp1019}
+\end{botherref}
+\endbibitem
+
+%%% 5
+\bibitem{McLean2010}
+\begin{barticle}
+\bauthor{\bsnm{McLean}, \binits{C.Y.}},
+\bauthor{\bsnm{Bristor}, \binits{D.}},
+\bauthor{\bsnm{Hiller}, \binits{M.}},
+\bauthor{\bsnm{Clarke}, \binits{S.L.}},
+\bauthor{\bsnm{Schaar}, \binits{B.T.}},
+\bauthor{\bsnm{Lowe}, \binits{C.B.}},
+\bauthor{\bsnm{Wenger}, \binits{A.M.}},
+\bauthor{\bsnm{Bejerano}, \binits{G.}}:
+\batitle{{GREAT improves functional interpretation of cis-regulatory regions.}}
+\bjtitle{Nature biotechnology}
+\bvolume{28}(\bissue{5}),
+\bfpage{495}--\blpage{501}
+(\byear{2010}).
+doi:\doiurl{10.1038/nbt.1630}
+\end{barticle}
+\endbibitem
+
+%%% 6
+\bibitem{Huang2009}
+\begin{barticle}
+\bauthor{\bsnm{Huang}, \binits{D.W.}},
+\bauthor{\bsnm{Lempicki}, \binits{R.a.}},
+\bauthor{\bsnm{Sherman}, \binits{B.T.}}:
+\batitle{{Systematic and integrative analysis of large gene lists using DAVID
+  bioinformatics resources.}}
+\bjtitle{Nature Protocols}
+\bvolume{4}(\bissue{1}),
+\bfpage{44}--\blpage{57}
+(\byear{2009}).
+doi:\doiurl{10.1038/nprot.2008.211}
+\end{barticle}
+\endbibitem
+
+%%% 7
+\bibitem{Huang2007}
+\begin{botherref}
+\oauthor{\bsnm{Huang}, \binits{D.W.}},
+\oauthor{\bsnm{Sherman}, \binits{B.T.}},
+\oauthor{\bsnm{Tan}, \binits{Q.}},
+\oauthor{\bsnm{Kir}, \binits{J.}},
+\oauthor{\bsnm{Liu}, \binits{D.}},
+\oauthor{\bsnm{Bryant}, \binits{D.}},
+\oauthor{\bsnm{Guo}, \binits{Y.}},
+\oauthor{\bsnm{Stephens}, \binits{R.}},
+\oauthor{\bsnm{Baseler}, \binits{M.W.}},
+\oauthor{\bsnm{Lane}, \binits{H.C.}},
+\oauthor{\bsnm{Lempicki}, \binits{R.A.}}:
+{DAVID Bioinformatics Resources: Expanded annotation database and novel
+  algorithms to better extract biology from large gene lists}.
+Nucleic Acids Research
+\textbf{35}(SUPPL.2)
+(2007).
+doi:\doiurl{10.1093/nar/gkm415}
+\end{botherref}
+\endbibitem
+
+%%% 8
+\bibitem{Mi2013}
+\begin{botherref}
+\oauthor{\bsnm{Mi}, \binits{H.}},
+\oauthor{\bsnm{Muruganujan}, \binits{A.}},
+\oauthor{\bsnm{Thomas}, \binits{P.D.}}:
+{PANTHER in 2013: Modeling the evolution of gene function, and other gene
+  attributes, in the context of phylogenetic trees}.
+Nucleic Acids Research
+\textbf{41}(D1)
+(2013).
+doi:\doiurl{10.1093/nar/gks1118}
+\end{botherref}
+\endbibitem
+
+%%% 9
+\bibitem{Lee2003}
+\begin{botherref}
+\oauthor{\bsnm{Lee}, \binits{R.Y.N.}},
+\oauthor{\bsnm{Sternberg}, \binits{P.W.}}:
+{Building a cell and anatomy ontology of Caenorhabditis elegans}
+(2003).
+doi:\doiurl{10.1002/cfg.248}
+\end{botherref}
+\endbibitem
+
+%%% 10
+\bibitem{Harris2014}
+\begin{botherref}
+\oauthor{\bsnm{Harris}, \binits{T.W.}},
+\oauthor{\bsnm{Baran}, \binits{J.}},
+\oauthor{\bsnm{Bieri}, \binits{T.}},
+\oauthor{\bsnm{Cabunoc}, \binits{A.}},
+\oauthor{\bsnm{Chan}, \binits{J.}},
+\oauthor{\bsnm{Chen}, \binits{W.J.}},
+\oauthor{\bsnm{Davis}, \binits{P.}},
+\oauthor{\bsnm{Done}, \binits{J.}},
+\oauthor{\bsnm{Grove}, \binits{C.}},
+\oauthor{\bsnm{Howe}, \binits{K.}},
+\oauthor{\bsnm{Kishore}, \binits{R.}},
+\oauthor{\bsnm{Lee}, \binits{R.}},
+\oauthor{\bsnm{Li}, \binits{Y.}},
+\oauthor{\bsnm{Muller}, \binits{H.M.}},
+\oauthor{\bsnm{Nakamura}, \binits{C.}},
+\oauthor{\bsnm{Ozersky}, \binits{P.}},
+\oauthor{\bsnm{Paulini}, \binits{M.}},
+\oauthor{\bsnm{Raciti}, \binits{D.}},
+\oauthor{\bsnm{Schindelman}, \binits{G.}},
+\oauthor{\bsnm{Tuli}, \binits{M.A.}},
+\oauthor{\bsnm{Auken}, \binits{K.V.}},
+\oauthor{\bsnm{Wang}, \binits{D.}},
+\oauthor{\bsnm{Wang}, \binits{X.}},
+\oauthor{\bsnm{Williams}, \binits{G.}},
+\oauthor{\bsnm{Wong}, \binits{J.D.}},
+\oauthor{\bsnm{Yook}, \binits{K.}},
+\oauthor{\bsnm{Schedl}, \binits{T.}},
+\oauthor{\bsnm{Hodgkin}, \binits{J.}},
+\oauthor{\bsnm{Berriman}, \binits{M.}},
+\oauthor{\bsnm{Kersey}, \binits{P.}},
+\oauthor{\bsnm{Spieth}, \binits{J.}},
+\oauthor{\bsnm{Stein}, \binits{L.}},
+\oauthor{\bsnm{Sternberg}, \binits{P.W.}}:
+{WormBase 2014: New views of curated biology}.
+Nucleic Acids Research
+\textbf{42}(D1)
+(2014).
+doi:\doiurl{10.1093/nar/gkt1063}
+\end{botherref}
+\endbibitem
+
+%%% 11
+\bibitem{Benjamini1995}
+\begin{botherref}
+\oauthor{\bsnm{Benjamini}, \binits{Y.}},
+\oauthor{\bsnm{Hochberg}, \binits{Y.}}:
+{Controlling the False Discovery Rate: A Practical and Powerful Approach to
+  Multiple Testing}
+(1995).
+\arxivurl{95/57289}.
+doi:\doiurl{10.2307/2346101}.
+\url{http://www.jstor.org/stable/2346101}
+\end{botherref}
+\endbibitem
+
+%%% 12
+\bibitem{McKinney2011}
+\begin{botherref}
+\oauthor{\bsnm{McKinney}, \binits{W.}}:
+{pandas: a Foundational Python Library for Data Analysis and Statistics}.
+Python for High Performance and Scientific Computing,
+1--9
+(2011)
+\end{botherref}
+\endbibitem
+
+%%% 13
+\bibitem{VanDerWalt2011}
+\begin{barticle}
+\bauthor{\bsnm{{Van Der Walt}}, \binits{S.}},
+\bauthor{\bsnm{Colbert}, \binits{S.C.}},
+\bauthor{\bsnm{Varoquaux}, \binits{G.}}:
+\batitle{{The NumPy array: A structure for efficient numerical computation}}.
+\bjtitle{Computing in Science and Engineering}
+\bvolume{13}(\bissue{2}),
+\bfpage{22}--\blpage{30}
+(\byear{2011}).
+doi:\doiurl{10.1109/MCSE.2011.37}.
+\arxivurl{1102.1523}
+\end{barticle}
+\endbibitem
+
+%%% 14
+\bibitem{Oliphant2007}
+\begin{barticle}
+\bauthor{\bsnm{Oliphant}, \binits{T.E.}}:
+\batitle{{SciPy: Open source scientific tools for Python}}.
+\bjtitle{Computing in Science and Engineering}
+\bvolume{9},
+\bfpage{10}--\blpage{20}
+(\byear{2007})
+\end{barticle}
+\endbibitem
+
+%%% 15
+\bibitem{Engelmann2010}
+\begin{botherref}
+\oauthor{\bsnm{Engelmann}, \binits{I.}},
+\oauthor{\bsnm{Pujol}, \binits{N.}}:
+{Innate Immunity in C . Elegans}.
+Inverrtebrate Immunity,
+105--121
+(2010)
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem{Meisel2014}
+\begin{barticle}
+\bauthor{\bsnm{Meisel}, \binits{J.D.}},
+\bauthor{\bsnm{Kim}, \binits{D.H.}}:
+\batitle{{Behavioral avoidance of pathogenic bacteria by Caenorhabditis
+  elegans}}.
+\bjtitle{Trends in Immunology}
+\bvolume{35}(\bissue{10}),
+\bfpage{465}--\blpage{470}
+(\byear{2014}).
+doi:\doiurl{10.1016/j.it.2014.08.008}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem{Zhang2005}
+\begin{barticle}
+\bauthor{\bsnm{Zhang}, \binits{Y.}},
+\bauthor{\bsnm{Lu}, \binits{H.}},
+\bauthor{\bsnm{Bargmann}, \binits{C.I.}}:
+\batitle{{Pathogenic bacteria induce aversive olfactory learning in
+  Caenorhabditis elegans}}.
+\bjtitle{Nature}
+\bvolume{438}(\bissue{7065}),
+\bfpage{179}--\blpage{184}
+(\byear{2005}).
+doi:\doiurl{10.1038/nature04216}
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem{Chikina2009}
+\begin{botherref}
+\oauthor{\bsnm{Chikina}, \binits{M.D.}},
+\oauthor{\bsnm{Huttenhower}, \binits{C.}},
+\oauthor{\bsnm{Murphy}, \binits{C.T.}},
+\oauthor{\bsnm{Troyanskaya}, \binits{O.G.}}:
+{Global prediction of tissue-specific gene expression and context-dependent
+  gene networks in Caenorhabditis elegans}.
+PLoS Computational Biology
+\textbf{5}(6)
+(2009).
+doi:\doiurl{10.1371/journal.pcbi.1000417}
+\end{botherref}
+\endbibitem
+
+\end{thebibliography}
+
+\newcommand{\BMCxmlcomment}[1]{}
+
+\BMCxmlcomment{
+
+<refgrp>
+
+<bibl id="B1">
+  <title><p>{Gene Ontology: tool for the unification of biology}</p></title>
+  <aug>
+    <au><cnm>{The Gene Ontology Consortium}</cnm></au>
+  </aug>
+  <source>Nature Genetics</source>
+  <pubdate>2000</pubdate>
+  <volume>25</volume>
+  <issue>may</issue>
+  <fpage>25</fpage>
+  <lpage>-29</lpage>
+  <url>http://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Gene+Ontology:+tool+for+the+unification+of+biology{\#}0</url>
+</bibl>
+
+<bibl id="B2">
+  <title><p>{Gene Ontology}</p></title>
+  <aug>
+    <au><snm>Ontology</snm><fnm>G</fnm></au>
+  </aug>
+  <source>Nature Reviews Genetics</source>
+  <pubdate>2009</pubdate>
+  <volume>2009</volume>
+  <fpage>1</fpage>
+  <lpage>-13</lpage>
+  <url>http://www.geneontology.org/</url>
+</bibl>
+
+<bibl id="B3">
+  <title><p>{Gene Ontology Consortium: going forward}</p></title>
+  <aug>
+    <au><cnm>{The Gene Ontology Consortium}</cnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2015</pubdate>
+  <volume>43</volume>
+  <issue>D1</issue>
+  <fpage>D1049</fpage>
+  <lpage>-D1056</lpage>
+  <url>http://nar.oxfordjournals.org/lookup/doi/10.1093/nar/gku1179</url>
+</bibl>
+
+<bibl id="B4">
+  <title><p>{PANTHER version 7: Improved phylogenetic trees, orthologs and
+  collaboration with the Gene Ontology Consortium}</p></title>
+  <aug>
+    <au><snm>Mi</snm><fnm>H</fnm></au>
+    <au><snm>Dong</snm><fnm>Q</fnm></au>
+    <au><snm>Muruganujan</snm><fnm>A</fnm></au>
+    <au><snm>Gaudet</snm><fnm>P</fnm></au>
+    <au><snm>Lewis</snm><fnm>S</fnm></au>
+    <au><snm>Thomas</snm><fnm>PD</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2009</pubdate>
+  <volume>38</volume>
+  <issue>SUPPL.1</issue>
+</bibl>
+
+<bibl id="B5">
+  <title><p>{GREAT improves functional interpretation of cis-regulatory
+  regions.}</p></title>
+  <aug>
+    <au><snm>McLean</snm><fnm>CY</fnm></au>
+    <au><snm>Bristor</snm><fnm>D</fnm></au>
+    <au><snm>Hiller</snm><fnm>M</fnm></au>
+    <au><snm>Clarke</snm><fnm>SL</fnm></au>
+    <au><snm>Schaar</snm><fnm>BT</fnm></au>
+    <au><snm>Lowe</snm><fnm>CB</fnm></au>
+    <au><snm>Wenger</snm><fnm>AM</fnm></au>
+    <au><snm>Bejerano</snm><fnm>G</fnm></au>
+  </aug>
+  <source>Nature biotechnology</source>
+  <publisher>Nature Publishing Group</publisher>
+  <pubdate>2010</pubdate>
+  <volume>28</volume>
+  <issue>5</issue>
+  <fpage>495</fpage>
+  <lpage>-501</lpage>
+  <url>http://dx.doi.org/10.1038/nbt.1630</url>
+</bibl>
+
+<bibl id="B6">
+  <title><p>{Systematic and integrative analysis of large gene lists using
+  DAVID bioinformatics resources.}</p></title>
+  <aug>
+    <au><snm>Huang</snm><fnm>DW</fnm></au>
+    <au><snm>Lempicki</snm><fnm>Ra</fnm></au>
+    <au><snm>Sherman</snm><fnm>BT</fnm></au>
+  </aug>
+  <source>Nature Protocols</source>
+  <pubdate>2009</pubdate>
+  <volume>4</volume>
+  <issue>1</issue>
+  <fpage>44</fpage>
+  <lpage>-57</lpage>
+</bibl>
+
+<bibl id="B7">
+  <title><p>{DAVID Bioinformatics Resources: Expanded annotation database and
+  novel algorithms to better extract biology from large gene lists}</p></title>
+  <aug>
+    <au><snm>Huang</snm><fnm>DW</fnm></au>
+    <au><snm>Sherman</snm><fnm>BT</fnm></au>
+    <au><snm>Tan</snm><fnm>Q</fnm></au>
+    <au><snm>Kir</snm><fnm>J</fnm></au>
+    <au><snm>Liu</snm><fnm>D</fnm></au>
+    <au><snm>Bryant</snm><fnm>D</fnm></au>
+    <au><snm>Guo</snm><fnm>Y</fnm></au>
+    <au><snm>Stephens</snm><fnm>R</fnm></au>
+    <au><snm>Baseler</snm><fnm>MW</fnm></au>
+    <au><snm>Lane</snm><fnm>HC</fnm></au>
+    <au><snm>Lempicki</snm><fnm>RA</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2007</pubdate>
+  <volume>35</volume>
+  <issue>SUPPL.2</issue>
+</bibl>
+
+<bibl id="B8">
+  <title><p>{PANTHER in 2013: Modeling the evolution of gene function, and
+  other gene attributes, in the context of phylogenetic trees}</p></title>
+  <aug>
+    <au><snm>Mi</snm><fnm>H</fnm></au>
+    <au><snm>Muruganujan</snm><fnm>A</fnm></au>
+    <au><snm>Thomas</snm><fnm>PD</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2013</pubdate>
+  <volume>41</volume>
+  <issue>D1</issue>
+</bibl>
+
+<bibl id="B9">
+  <title><p>{Building a cell and anatomy ontology of Caenorhabditis
+  elegans}</p></title>
+  <aug>
+    <au><snm>Lee</snm><fnm>R. Y N</fnm></au>
+    <au><snm>Sternberg</snm><fnm>PW</fnm></au>
+  </aug>
+  <source>Comparative and Functional Genomics</source>
+  <pubdate>2003</pubdate>
+  <volume>4</volume>
+  <issue>1</issue>
+  <fpage>121</fpage>
+  <lpage>-126</lpage>
+</bibl>
+
+<bibl id="B10">
+  <title><p>{WormBase 2014: New views of curated biology}</p></title>
+  <aug>
+    <au><snm>Harris</snm><fnm>TW</fnm></au>
+    <au><snm>Baran</snm><fnm>J</fnm></au>
+    <au><snm>Bieri</snm><fnm>T</fnm></au>
+    <au><snm>Cabunoc</snm><fnm>A</fnm></au>
+    <au><snm>Chan</snm><fnm>J</fnm></au>
+    <au><snm>Chen</snm><fnm>WJ</fnm></au>
+    <au><snm>Davis</snm><fnm>P</fnm></au>
+    <au><snm>Done</snm><fnm>J</fnm></au>
+    <au><snm>Grove</snm><fnm>C</fnm></au>
+    <au><snm>Howe</snm><fnm>K</fnm></au>
+    <au><snm>Kishore</snm><fnm>R</fnm></au>
+    <au><snm>Lee</snm><fnm>R</fnm></au>
+    <au><snm>Li</snm><fnm>Y</fnm></au>
+    <au><snm>Muller</snm><fnm>HM</fnm></au>
+    <au><snm>Nakamura</snm><fnm>C</fnm></au>
+    <au><snm>Ozersky</snm><fnm>P</fnm></au>
+    <au><snm>Paulini</snm><fnm>M</fnm></au>
+    <au><snm>Raciti</snm><fnm>D</fnm></au>
+    <au><snm>Schindelman</snm><fnm>G</fnm></au>
+    <au><snm>Tuli</snm><fnm>MA</fnm></au>
+    <au><snm>Auken</snm><fnm>KV</fnm></au>
+    <au><snm>Wang</snm><fnm>D</fnm></au>
+    <au><snm>Wang</snm><fnm>X</fnm></au>
+    <au><snm>Williams</snm><fnm>G</fnm></au>
+    <au><snm>Wong</snm><fnm>J. D.</fnm></au>
+    <au><snm>Yook</snm><fnm>K</fnm></au>
+    <au><snm>Schedl</snm><fnm>T</fnm></au>
+    <au><snm>Hodgkin</snm><fnm>J</fnm></au>
+    <au><snm>Berriman</snm><fnm>M</fnm></au>
+    <au><snm>Kersey</snm><fnm>P</fnm></au>
+    <au><snm>Spieth</snm><fnm>J</fnm></au>
+    <au><snm>Stein</snm><fnm>L</fnm></au>
+    <au><snm>Sternberg</snm><fnm>PW</fnm></au>
+  </aug>
+  <source>Nucleic Acids Research</source>
+  <pubdate>2014</pubdate>
+  <volume>42</volume>
+  <issue>D1</issue>
+</bibl>
+
+<bibl id="B11">
+  <title><p>{Controlling the False Discovery Rate: A Practical and Powerful
+  Approach to Multiple Testing}</p></title>
+  <aug>
+    <au><snm>Benjamini</snm><fnm>Y</fnm></au>
+    <au><snm>Hochberg</snm><fnm>Y</fnm></au>
+  </aug>
+  <source>Journal of the Royal Statistical Society. Series B
+  (Methodological)</source>
+  <pubdate>1995</pubdate>
+  <volume>57</volume>
+  <issue>1</issue>
+  <fpage>289</fpage>
+  <lpage>-300</lpage>
+  <url>http://www.jstor.org/stable/2346101</url>
+</bibl>
+
+<bibl id="B12">
+  <title><p>{pandas: a Foundational Python Library for Data Analysis and
+  Statistics}</p></title>
+  <aug>
+    <au><snm>McKinney</snm><fnm>W</fnm></au>
+  </aug>
+  <source>Python for High Performance and Scientific Computing</source>
+  <pubdate>2011</pubdate>
+  <fpage>1</fpage>
+  <lpage>-9</lpage>
+</bibl>
+
+<bibl id="B13">
+  <title><p>{The NumPy array: A structure for efficient numerical
+  computation}</p></title>
+  <aug>
+    <au><snm>{Van Der Walt}</snm><fnm>S</fnm></au>
+    <au><snm>Colbert</snm><fnm>SC</fnm></au>
+    <au><snm>Varoquaux</snm><fnm>G</fnm></au>
+  </aug>
+  <source>Computing in Science and Engineering</source>
+  <pubdate>2011</pubdate>
+  <volume>13</volume>
+  <issue>2</issue>
+  <fpage>22</fpage>
+  <lpage>-30</lpage>
+</bibl>
+
+<bibl id="B14">
+  <title><p>{SciPy: Open source scientific tools for Python}</p></title>
+  <aug>
+    <au><snm>Oliphant</snm><fnm>TE</fnm></au>
+  </aug>
+  <source>Computing in Science and Engineering</source>
+  <pubdate>2007</pubdate>
+  <volume>9</volume>
+  <fpage>10</fpage>
+  <lpage>-20</lpage>
+  <url>http://www.scipy.org/</url>
+</bibl>
+
+<bibl id="B15">
+  <title><p>{Innate Immunity in C . Elegans}</p></title>
+  <aug>
+    <au><snm>Engelmann</snm><fnm>I</fnm></au>
+    <au><snm>Pujol</snm><fnm>N</fnm></au>
+  </aug>
+  <source>Inverrtebrate Immunity</source>
+  <pubdate>2010</pubdate>
+  <fpage>105</fpage>
+  <lpage>-121</lpage>
+</bibl>
+
+<bibl id="B16">
+  <title><p>{Behavioral avoidance of pathogenic bacteria by Caenorhabditis
+  elegans}</p></title>
+  <aug>
+    <au><snm>Meisel</snm><fnm>JD</fnm></au>
+    <au><snm>Kim</snm><fnm>DH</fnm></au>
+  </aug>
+  <source>Trends in Immunology</source>
+  <publisher>Elsevier Ltd</publisher>
+  <pubdate>2014</pubdate>
+  <volume>35</volume>
+  <issue>10</issue>
+  <fpage>465</fpage>
+  <lpage>-470</lpage>
+  <url>http://dx.doi.org/10.1016/j.it.2014.08.008</url>
+</bibl>
+
+<bibl id="B17">
+  <title><p>{Pathogenic bacteria induce aversive olfactory learning in
+  Caenorhabditis elegans}</p></title>
+  <aug>
+    <au><snm>Zhang</snm><fnm>Y</fnm></au>
+    <au><snm>Lu</snm><fnm>H</fnm></au>
+    <au><snm>Bargmann</snm><fnm>C I</fnm></au>
+  </aug>
+  <source>Nature</source>
+  <pubdate>2005</pubdate>
+  <volume>438</volume>
+  <issue>7065</issue>
+  <fpage>179</fpage>
+  <lpage>-184</lpage>
+  <url><Go to
+  ISI>://WOS:000233133500039$\backslash$nhttp://www.nature.com/nature/journal/v438/n7065/pdf/nature04216.pdf</url>
+</bibl>
+
+<bibl id="B18">
+  <title><p>{Global prediction of tissue-specific gene expression and
+  context-dependent gene networks in Caenorhabditis elegans}</p></title>
+  <aug>
+    <au><snm>Chikina</snm><fnm>MD</fnm></au>
+    <au><snm>Huttenhower</snm><fnm>C</fnm></au>
+    <au><snm>Murphy</snm><fnm>CT</fnm></au>
+    <au><snm>Troyanskaya</snm><fnm>OG</fnm></au>
+  </aug>
+  <source>PLoS Computational Biology</source>
+  <pubdate>2009</pubdate>
+  <volume>5</volume>
+  <issue>6</issue>
+</bibl>
+
+</refgrp>
+} % end of \BMCxmlcomment
