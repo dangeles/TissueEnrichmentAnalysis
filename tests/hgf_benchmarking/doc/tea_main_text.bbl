@@ -44,11 +44,16 @@
 
 %%% 1
 \bibitem{TheGeneOntologyConsortium2000}
-\begin{botherref}
-\oauthor{\bsnm{{The Gene Ontology Consortium}}}
+\begin{barticle}
+\bauthor{\bsnm{{The Gene Ontology Consortium}}}:
+\batitle{{Gene Ontology: tool for the unification of biology}}.
+\bjtitle{Nature Genetics}
+\bvolume{25}(\bissue{may}),
+\bfpage{25}--\blpage{29}
+(\byear{2000}).
 doi:\doiurl{10.1038/75556}.
 \arxivurl{10614036}
-\end{botherref}
+\end{barticle}
 \endbibitem
 
 %%% 2
@@ -227,9 +232,13 @@ doi:\doiurl{10.1093/nar/gkt1063}
 \bibitem{Benjamini1995}
 \begin{botherref}
 \oauthor{\bsnm{Benjamini}, \binits{Y.}},
-\oauthor{\bsnm{Hochberg}, \binits{Y.}}
+\oauthor{\bsnm{Hochberg}, \binits{Y.}}:
+{Controlling the False Discovery Rate: A Practical and Powerful Approach to
+  Multiple Testing}
+(1995).
 \arxivurl{95/57289}.
-doi:\doiurl{10.2307/2346101}
+doi:\doiurl{10.2307/2346101}.
+\url{http://www.jstor.org/stable/2346101}
 \end{botherref}
 \endbibitem
 
@@ -273,7 +282,7 @@ doi:\doiurl{10.1109/MCSE.2011.37}.
 \endbibitem
 
 %%% 15
-\bibitem{Gaudet2004}
+\bibitem{Gaudet2004a}
 \begin{botherref}
 \oauthor{\bsnm{Gaudet}, \binits{J.}},
 \oauthor{\bsnm{Muttumu}, \binits{S.}},
@@ -438,7 +447,7 @@ doi:\doiurl{10.1016/j.ydbio.2010.05.502}
 \oauthor{\bsnm{Engelmann}, \binits{I.}},
 \oauthor{\bsnm{Pujol}, \binits{N.}}:
 {Innate Immunity in C . Elegans}.
-Inverrtebrate Immunity,
+Invertebrate Immunity,
 105--121
 (2010)
 \end{botherref}
@@ -500,9 +509,17 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
 <refgrp>
 
 <bibl id="B1">
+  <title><p>{Gene Ontology: tool for the unification of biology}</p></title>
   <aug>
     <au><cnm>{The Gene Ontology Consortium}</cnm></au>
   </aug>
+  <source>Nature Genetics</source>
+  <pubdate>2000</pubdate>
+  <volume>25</volume>
+  <issue>may</issue>
+  <fpage>25</fpage>
+  <lpage>-29</lpage>
+  <url>http://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Gene+Ontology:+tool+for+the+unification+of+biology{\#}0</url>
 </bibl>
 
 <bibl id="B2">
@@ -683,12 +700,20 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
 </bibl>
 
 <bibl id="B11">
+  <title><p>{Controlling the False Discovery Rate: A Practical and Powerful
+  Approach to Multiple Testing}</p></title>
   <aug>
     <au><snm>Benjamini</snm><fnm>Y</fnm></au>
     <au><snm>Hochberg</snm><fnm>Y</fnm></au>
   </aug>
   <source>Journal of the Royal Statistical Society. Series B
   (Methodological)</source>
+  <pubdate>1995</pubdate>
+  <volume>57</volume>
+  <issue>1</issue>
+  <fpage>289</fpage>
+  <lpage>-300</lpage>
+  <url>http://www.jstor.org/stable/2346101</url>
 </bibl>
 
 <bibl id="B12">
@@ -900,7 +925,7 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
     <au><snm>Engelmann</snm><fnm>I</fnm></au>
     <au><snm>Pujol</snm><fnm>N</fnm></au>
   </aug>
-  <source>Inverrtebrate Immunity</source>
+  <source>Invertebrate Immunity</source>
   <pubdate>2010</pubdate>
   <fpage>105</fpage>
   <lpage>-121</lpage>

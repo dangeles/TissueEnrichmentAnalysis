@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: tea_main_text.aux
+The top-level auxiliary file: ./tea_main_text.aux
 The style file: bmc-mathphys.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -20,135 +20,54 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bmc_article.bib
-I was expecting a `,' or a `}'---line 136 of file bmc_article.bib
- : 
- : =======
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 182 of file bmc_article.bib
- : 
- : >>>>>>> master
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting an "="---line 192 of file bmc_article.bib
- : <<<<<<< 
- :         HEAD
-I'm skipping whatever remains of this entry
-Repeated entry---line 244 of file bmc_article.bib
- : @misc{Lee2003
- :              ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 284 of file bmc_article.bib
- : 
- : =======
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 285 of file bmc_article.bib
+Repeated entry---line 122 of file bmc_article.bib
  : @misc{Benjamini1995
  :                    ,
 I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 333 of file bmc_article.bib
- : 
- : =======
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 347 of file bmc_article.bib
- : 
- : >>>>>>> master
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-I was expecting an "="---line 401 of file bmc_article.bib
- : <<<<<<< 
- :         HEAD
-I'm skipping whatever remains of this entry
-Repeated entry---line 446 of file bmc_article.bib
- : @article{Chikina2009
- :                     ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 460 of file bmc_article.bib
- : @article{McLean2010
- :                    ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 492 of file bmc_article.bib
- : @article{Engelmann2010
- :                       ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 523 of file bmc_article.bib
- : @article{McKinney2011
- :                      ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 531 of file bmc_article.bib
- : @article{Mi2009
- :                ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 544 of file bmc_article.bib
- : @article{Zhang2005
- :                   ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 571 of file bmc_article.bib
- : @article{Huang2009
- :                   ,
-I'm skipping whatever remains of this entry
-I was expecting a `,' or a `}'---line 600 of file bmc_article.bib
- : 
- : >>>>>>> master
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 621 of file bmc_article.bib
- : @article{Oliphant2007
- :                      ,
-I'm skipping whatever remains of this entry
-Repeated entry---line 690 of file bmc_article.bib
- : @article{Harris2014
- :                    ,
-I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for ""
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--empty title in TheGeneOntologyConsortium2000
-Warning--empty title in Benjamini1995
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 26 entries,
             7128 wiz_defined-function locations,
-            1340 strings with 16653 characters,
-and the built_in function-call counts, 170261 in all, are:
-= -- 19996
-> -- 1081
-< -- 534
-+ -- 3452
+            1353 strings with 17021 characters,
+and the built_in function-call counts, 173543 in all, are:
+= -- 20347
+> -- 1097
+< -- 550
++ -- 3482
 - -- 388
-* -- 14568
-:= -- 34714
-add.period$ -- 48
+* -- 14937
+:= -- 35312
+add.period$ -- 50
 call.type$ -- 26
-change.case$ -- 288
-chr.to.int$ -- 959
-cite$ -- 28
-duplicate$ -- 2937
-empty$ -- 10951
+change.case$ -- 289
+chr.to.int$ -- 1007
+cite$ -- 26
+duplicate$ -- 2970
+empty$ -- 11197
 format.name$ -- 1417
-if$ -- 36624
+if$ -- 37343
 int.to.chr$ -- 1
 int.to.str$ -- 68
-missing$ -- 1014
-newline$ -- 924
+missing$ -- 1018
+newline$ -- 947
 num.names$ -- 130
-pop$ -- 1331
+pop$ -- 1289
 preamble$ -- 1
 purify$ -- 119
 quote$ -- 52
-skip$ -- 8811
+skip$ -- 8905
 stack$ -- 0
-substring$ -- 25068
-swap$ -- 889
-text.length$ -- 411
+substring$ -- 25722
+swap$ -- 929
+text.length$ -- 420
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 959
-warning$ -- 2
-while$ -- 1088
+type$ -- 994
+warning$ -- 0
+while$ -- 1105
 width$ -- 0
-write$ -- 1382
-(There were 19 error messages)
+write$ -- 1405
+(There was 1 error message)

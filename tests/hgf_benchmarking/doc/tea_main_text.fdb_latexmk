@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex tea_main_text"] 1457944878 "tea_main_text.aux" "tea_main_text.bbl" "tea_main_text" 1457944878
+["bibtex tea_main_text"] 1457945610 "tea_main_text.aux" "tea_main_text.bbl" "tea_main_text" 1457945985
   "./bmc-mathphys.bst" 1457943592 61107 bd6c4e69bfcd6c29573298df46cec934 ""
-  "bmc_article.bib" 1457944877 76940 7f58e197d7f068d7d39af20f1575603c ""
-  "tea_main_text.aux" 1457944877 10140 a13ca2d34203676165213b8e7ec970ae ""
+  "bmc_article.bib" 1457945469 53242 5013e9496f32db2756e24b02e02bb6c8 ""
+  "tea_main_text.aux" 1457945848 6181 5c30245921e9c2aa8f04eccd6619a74e ""
   "tea_main_text.bcf" 0 -1 0 ""
   (generated)
-  "tea_main_text.bbl"
   "tea_main_text.blg"
-["pdflatex"] 1457944878 "./tea_main_text.tex" "tea_main_text.pdf" "tea_main_text" 1457944878
-  "./tea_main_text.tex" 1457944877 45041 edd992b2eb4d24790ed73fa2f62f374d ""
+  "tea_main_text.bbl"
+["pdflatex"] 1457945610 "./tea_main_text.tex" "tea_main_text.pdf" "tea_main_text" 1457945985
+  "./tea_main_text.tex" 1457945985 41034 2854473bdd7d3e78ce56b9d217aa228e ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -27,7 +27,6 @@
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/lmsy6.tfm" 1148093231 1300 b0605d44c16c22d99dc001808e4f24ea ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/lmsy7.tfm" 1148093231 1304 32f22a15acc296b2a4e15698403dcb88 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/lmsy8.tfm" 1148093231 1304 cdc9a17df9ef0d2dc320eff37bbab1c4 ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm" 1254269338 11880 35fcf136a2198418dfc53c83e9e2a07f ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm" 1254269338 11868 4f81e9b6033c032bdaf9884f4d7ef412 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm" 1254269338 11888 6841b91e46b65cf41a49b160e6e74130 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmr5.tfm" 1254269338 11804 aefb10c002e6492c25236524a447f969 ""
@@ -45,8 +44,6 @@
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmsso8.tfm" 1254269338 11116 d670ad90f18594ffaf944880fa74d3a0 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm" 1254269338 1340 adaa94f9add991a099a6fc98bbb5f02c ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmtt8.tfm" 1254269338 1348 e9ce72e654d76f23fb9e1b8842e0576a ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1248133631 35752 024fb6c41858982481f6968b5fc26508 ""
-  "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx10.pfb" 1255129361 121021 1bf809ce4a594679006bd72263eba59b ""
   "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb" 1254269338 23055 2e5b42921de910eaa97b85df04ca4891 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb" 1254269338 30388 702fae6a5f0e6e9c48a1d872b442ffcf ""
   "/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi7.pfb" 1254269338 30789 be3ebdf20b6442cc4aaf81a81e17daf4 ""
@@ -98,12 +95,12 @@
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
   "bmcart.cls" 1457943592 55703 b06dccfb46d680f7fe8bbd6c37bd3c40 ""
-  "tea_main_text.aux" 1457944877 10140 a13ca2d34203676165213b8e7ec970ae ""
-  "tea_main_text.bbl" 1457944878 28743 459839dc9634991fee7150af9f9a813e "bibtex tea_main_text"
-  "tea_main_text.tex" 1457944877 45041 edd992b2eb4d24790ed73fa2f62f374d ""
+  "tea_main_text.aux" 1457945848 6181 5c30245921e9c2aa8f04eccd6619a74e ""
+  "tea_main_text.bbl" 1457945768 29686 a7f256573aae6d70341edd0bcffebbb5 "bibtex tea_main_text"
+  "tea_main_text.tex" 1457945985 41034 2854473bdd7d3e78ce56b9d217aa228e ""
   (generated)
-  "tea_main_text.tex"
-  "tea_main_text.pdf"
-  "tea_main_text.bbl"
-  "tea_main_text.log"
   "tea_main_text.aux"
+  "tea_main_text.log"
+  "tea_main_text.tex"
+  "tea_main_text.bbl"
+  "tea_main_text.pdf"

@@ -105,7 +105,6 @@ INPUT /usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmri10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmssbx10.tfm
 INPUT tea_main_text.bbl
@@ -124,8 +123,6 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi7.pfb

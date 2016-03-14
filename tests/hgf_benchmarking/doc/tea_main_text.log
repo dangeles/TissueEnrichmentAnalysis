@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 MAR 2016 01:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 MAR 2016 01:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**./tea_main_text.tex
+**tea_main_text.tex
 (./tea_main_text.tex
 LaTeX2e <2015/01/01>
 Babel <3.9l> and hyphenation patterns for 79 languages loaded.
@@ -407,71 +407,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
-(./tea_main_text.aux
-
-./tea_main_text.aux:22: LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.22 <
-      <<<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-LaTeX Warning: Label `aff1thanks' multiply defined.
-
-
-LaTeX Warning: Label `aff2thanks' multiply defined.
-
-
-Package natbib Warning: Citation `VanDerWalt2011' multiply defined.
-
-
-Package natbib Warning: Citation `Oliphant2007' multiply defined.
-
-
-Package natbib Warning: Citation `Engelmann2010' multiply defined.
-
-
-Package natbib Warning: Citation `Meisel2014' multiply defined.
-
-
-Package natbib Warning: Citation `Zhang2005' multiply defined.
-
-
-Package natbib Warning: Citation `Chikina2009' multiply defined.
-
-
-LaTeX Warning: Label `fig:simdiagram' multiply defined.
-
-
-LaTeX Warning: Label `fig:trim_ends' multiply defined.
-
-
-LaTeX Warning: Label `fig:trim_roots' multiply defined.
-
-
-LaTeX Warning: Label `fig:GUI' multiply defined.
-
-
-LaTeX Warning: Label `fig:GUIresults' multiply defined.
-
-
-LaTeX Warning: Label `fig:qvals' multiply defined.
-
-
-LaTeX Warning: Label `fig:ovdoll' multiply defined.
-
-
-LaTeX Warning: Label `tab:DictionarySpecs' multiply defined.
-
-
-LaTeX Warning: Label `LastPage' multiply defined.
-
-)
+(./tea_main_text.aux)
 \openout1 = `tea_main_text.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 91.
@@ -487,7 +423,8 @@ LaTeX Font Info:    ... okay on input line 91.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 91.
 LaTeX Font Info:    ... okay on input line 91.
 LaTeX Font Info:    Try loading font information for OT1+lmr on input line 91.
- (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -569,63 +506,22 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 268.
 
-[3] [4] [5] [6]
-Underfull \vbox (badness 2293) has occurred while \output is active []
-
- [7]
-
-LaTeX Warning: Reference `WBPaper00037950' on page 8 undefined on input line 32
-2.
-
-
-LaTeX Warning: Reference `WBPaper00037950' on page 8 undefined on input line 32
-2.
-
-
-LaTeX Warning: Reference `WBPaper00037950' on page 8 undefined on input line 32
-4.
-
-
-LaTeX Warning: Reference `WBPaper00026980, WBPaper00037950' on page 8 undefined
- on input line 326.
-
-
-LaTeX Warning: Reference `' on page 8 undefined on input line 328.
-
-
-LaTeX Warning: Reference `' on page 8 undefined on input line 328.
-
-
-LaTeX Warning: Reference `' on page 8 undefined on input line 328.
-
-
-LaTeX Warning: Reference `' on page 8 undefined on input line 328.
-
-
-Underfull \vbox (badness 2293) has occurred while \output is active []
+[3] [4] [5] [6] [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [8]
-Underfull \vbox (badness 2293) has occurred while \output is active []
+[9] [10] (./tea_main_text.bbl [11]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [9]
-[10] [11] (./tea_main_text.bbl [12] [13])
+ [12])
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 437.
+(Font)              <8> on input line 417.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 437.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
+(Font)              <6> on input line 417.
 LaTeX Font Info:    Font shape `OT1/lmss/bx/it' in size <8> not available
-(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 489
+(Font)              Font shape `OT1/lmss/bx/sl' tried instead on input line 469
 .
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
@@ -638,54 +534,41 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[14] 
+[13] 
 AED: lastpage setting LastPage
-[15]
-
-Package natbib Warning: There were multiply defined citations.
-
-(./tea_main_text.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[14] (./tea_main_text.aux) ) 
 Here is how much of TeX's memory you used:
- 3546 strings out of 493089
- 45218 string characters out of 6134842
- 123468 words of memory out of 5000000
- 6988 multiletter control sequences out of 15000+600000
- 87017 words of font info for 60 fonts, out of 8000000 for 9000
+ 3541 strings out of 493089
+ 45142 string characters out of 6134842
+ 119368 words of memory out of 5000000
+ 6984 multiletter control sequences out of 15000+600000
+ 84071 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 30i,10n,37p,1894b,481s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/
-texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2015
-/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dis
-t/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texlive/2015/texmf-dist/fonts/en
-c/dvips/lm/lm-mathit.enc}</usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/l
-m/lmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmex10.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/l
-ocal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/local/texliv
-e/2015/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts
-/type1/public/lm/lmri10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pub
-lic/lm/lmss10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lms
-s12.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss17.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss8.pfb></usr/local/t
-exlive/2015/texmf-dist/fonts/type1/public/lm/lmssbo10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/lm/lmssbx10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/lm/lmsso10.pfb></usr/local/texlive/2015/texmf-dist/fo
-nts/type1/public/lm/lmsso8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/lm/lmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/
-lmtt10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
-
-Output written on tea_main_text.pdf (15 pages, 376256 bytes).
+ 30i,9n,37p,1892b,515s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips
+/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-rmtt.en
+c}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/lo
+cal/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/local/texliv
+e/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
+public/lm/lmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/l
+mr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/lm/lmss8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/lm/lmssbo10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss
+bx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on tea_main_text.pdf (14 pages, 344340 bytes).
 PDF statistics:
- 134 PDF objects out of 1000 (max. 8388607)
- 97 compressed objects within 1 object stream
+ 123 PDF objects out of 1000 (max. 8388607)
+ 89 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
