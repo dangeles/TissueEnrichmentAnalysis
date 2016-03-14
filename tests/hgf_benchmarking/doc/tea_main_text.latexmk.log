@@ -1,2 +1,239 @@
 Latexmk: This is Latexmk, John Collins, 5 February 2015, version: 4.43a.
-Latexmk: All targets (tea_main_text.pdf) are up-to-date
+Rule 'pdflatex': File changes, etc:
+   Changed files, or newly in use since previous run(s):
+      './tea_main_text.tex'
+      'tea_main_text.aux'
+      'tea_main_text.bbl'
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -synctex=1 -file-line-error-style  -interaction=nonstopmode -recorder  "./tea_main_text.tex"'
+------------
+Latexmk: applying rule 'pdflatex'...
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./tea_main_text.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./bmcart.cls
+Document Class: bmcart 2014/01/24BioMed Central class (VS)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lastpage/lastpage.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/utf8.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/t1enc.dfu)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ot1enc.dfu)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/omsenc.dfu)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/lmodern.sty)
+(./tea_main_text.aux
+
+./tea_main_text.aux:22: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 <
+      <<<<<< HEAD
+
+LaTeX Warning: Label `aff1thanks' multiply defined.
+
+
+LaTeX Warning: Label `aff2thanks' multiply defined.
+
+
+Package natbib Warning: Citation `VanDerWalt2011' multiply defined.
+
+
+Package natbib Warning: Citation `Oliphant2007' multiply defined.
+
+
+Package natbib Warning: Citation `Engelmann2010' multiply defined.
+
+
+Package natbib Warning: Citation `Meisel2014' multiply defined.
+
+
+Package natbib Warning: Citation `Zhang2005' multiply defined.
+
+
+Package natbib Warning: Citation `Chikina2009' multiply defined.
+
+
+LaTeX Warning: Label `fig:simdiagram' multiply defined.
+
+
+LaTeX Warning: Label `fig:trim_ends' multiply defined.
+
+
+LaTeX Warning: Label `fig:trim_roots' multiply defined.
+
+
+LaTeX Warning: Label `fig:GUI' multiply defined.
+
+
+LaTeX Warning: Label `fig:GUIresults' multiply defined.
+
+
+LaTeX Warning: Label `fig:qvals' multiply defined.
+
+
+LaTeX Warning: Label `fig:ovdoll' multiply defined.
+
+
+LaTeX Warning: Label `tab:DictionarySpecs' multiply defined.
+
+
+LaTeX Warning: Label `LastPage' multiply defined.
+
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmtt.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmss.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omxlmex.fd)
+Overfull \hbox (1.0pt too wide) has occurred while \output is active
+ [] []
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \vbox (badness 10000) has occurred while \output is active [2]
+[3] [4] [5] [6]
+Underfull \vbox (badness 2293) has occurred while \output is active [7]
+
+LaTeX Warning: Reference `WBPaper00037950' on page 8 undefined on input line 32
+2.
+
+
+LaTeX Warning: Reference `WBPaper00037950' on page 8 undefined on input line 32
+2.
+
+
+LaTeX Warning: Reference `WBPaper00037950' on page 8 undefined on input line 32
+4.
+
+
+LaTeX Warning: Reference `WBPaper00026980, WBPaper00037950' on page 8 undefined
+ on input line 326.
+
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 328.
+
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 328.
+
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 328.
+
+
+LaTeX Warning: Reference `' on page 8 undefined on input line 328.
+
+
+Underfull \vbox (badness 2293) has occurred while \output is active [8]
+Underfull \vbox (badness 2293) has occurred while \output is active [9]
+[10] [11] (./tea_main_text.bbl [12] [13])
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[14] 
+AED: lastpage setting LastPage
+[15]
+
+Package natbib Warning: There were multiply defined citations.
+
+(./tea_main_text.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2015/te
+xmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/fonts
+/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/l
+m/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-maths
+y.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/lm/lmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1
+/public/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/
+lmr7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local
+/texlive/2015/texmf-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2
+015/texmf-dist/fonts/type1/public/lm/lmss17.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/lm/lmss8.pfb></usr/local/texlive/2015/texmf-dist/fonts/
+type1/public/lm/lmssbo10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/lm/lmssbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/
+lmsso10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso8.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texliv
+e/2015/texmf-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on tea_main_text.pdf (15 pages, 376256 bytes).
+SyncTeX written on tea_main_text.synctex.gz.
+Transcript written on tea_main_text.log.
+Latexmk: Found input bbl file 'tea_main_text.bbl'
+Latexmk: Log file says output to 'tea_main_text.pdf'
+Latexmk: List of undefined refs and citations:
+  Label `LastPage' multiply defined
+  Label `aff1thanks' multiply defined
+  Label `aff2thanks' multiply defined
+  Label `fig:GUI' multiply defined
+  Label `fig:GUIresults' multiply defined
+  Label `fig:ovdoll' multiply defined
+  Label `fig:qvals' multiply defined
+  Label `fig:simdiagram' multiply defined
+  Label `fig:trim_ends' multiply defined
+  Label `fig:trim_roots' multiply defined
+  Label `tab:DictionarySpecs' multiply defined
+  Reference `' on page 8 undefined on input line 328
+  Reference `WBPaper00026980, WBPaper00037950' on page 8 undefined on input line 326
+  Reference `WBPaper00037950' on page 8 undefined on input line 322
+  Reference `WBPaper00037950' on page 8 undefined on input line 324
+Latexmk: Found bibliography file(s) [bmc_article.bib]
+Latexmk: Summary of warnings:
+  Latex failed to resolve 8 reference(s)
+  Latex found 11 multiply defined reference(s)
+Collected error summary (may duplicate other messages):
+  pdflatex: Command for 'pdflatex' gave return code 256
+Latexmk: Use the -f option to force complete processing,
+ unless error was exceeding maximum runs of latex/pdflatex.
+Latexmk: Errors, so I did not complete making targets

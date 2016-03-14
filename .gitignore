@@ -15,3 +15,5 @@
 =======
 tests/hgf_benchmarking/doc/.Rhistory
 >>>>>>> master
+
+*.log
