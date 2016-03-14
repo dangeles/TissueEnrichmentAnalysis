@@ -20,51 +20,135 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bmc_article.bib
+I was expecting a `,' or a `}'---line 136 of file bmc_article.bib
+ : 
+ : =======
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 182 of file bmc_article.bib
+ : 
+ : >>>>>>> master
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 192 of file bmc_article.bib
+ : <<<<<<< 
+ :         HEAD
+I'm skipping whatever remains of this entry
+Repeated entry---line 244 of file bmc_article.bib
+ : @misc{Lee2003
+ :              ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 284 of file bmc_article.bib
+ : 
+ : =======
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 285 of file bmc_article.bib
+ : @misc{Benjamini1995
+ :                    ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 333 of file bmc_article.bib
+ : 
+ : =======
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 347 of file bmc_article.bib
+ : 
+ : >>>>>>> master
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+I was expecting an "="---line 401 of file bmc_article.bib
+ : <<<<<<< 
+ :         HEAD
+I'm skipping whatever remains of this entry
+Repeated entry---line 446 of file bmc_article.bib
+ : @article{Chikina2009
+ :                     ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 460 of file bmc_article.bib
+ : @article{McLean2010
+ :                    ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 492 of file bmc_article.bib
+ : @article{Engelmann2010
+ :                       ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 523 of file bmc_article.bib
+ : @article{McKinney2011
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 531 of file bmc_article.bib
+ : @article{Mi2009
+ :                ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 544 of file bmc_article.bib
+ : @article{Zhang2005
+ :                   ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 571 of file bmc_article.bib
+ : @article{Huang2009
+ :                   ,
+I'm skipping whatever remains of this entry
+I was expecting a `,' or a `}'---line 600 of file bmc_article.bib
+ : 
+ : >>>>>>> master
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Repeated entry---line 621 of file bmc_article.bib
+ : @article{Oliphant2007
+ :                      ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 690 of file bmc_article.bib
+ : @article{Harris2014
+ :                    ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for ""
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--empty title in TheGeneOntologyConsortium2000
+Warning--empty title in Benjamini1995
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 18 entries,
+You've used 26 entries,
             7128 wiz_defined-function locations,
-            1281 strings with 14117 characters,
-and the built_in function-call counts, 109244 in all, are:
-= -- 12944
-> -- 691
-< -- 355
-+ -- 2365
-- -- 241
-* -- 9100
-:= -- 22326
-add.period$ -- 34
-call.type$ -- 18
-change.case$ -- 187
-chr.to.int$ -- 651
-cite$ -- 18
-duplicate$ -- 1923
-empty$ -- 6859
-format.name$ -- 857
-if$ -- 23676
+            1340 strings with 16653 characters,
+and the built_in function-call counts, 170261 in all, are:
+= -- 19996
+> -- 1081
+< -- 534
++ -- 3452
+- -- 388
+* -- 14568
+:= -- 34714
+add.period$ -- 48
+call.type$ -- 26
+change.case$ -- 288
+chr.to.int$ -- 959
+cite$ -- 28
+duplicate$ -- 2937
+empty$ -- 10951
+format.name$ -- 1417
+if$ -- 36624
 int.to.chr$ -- 1
-int.to.str$ -- 49
-missing$ -- 676
-newline$ -- 641
-num.names$ -- 90
-pop$ -- 844
+int.to.str$ -- 68
+missing$ -- 1014
+newline$ -- 924
+num.names$ -- 130
+pop$ -- 1331
 preamble$ -- 1
-purify$ -- 84
-quote$ -- 36
-skip$ -- 5774
+purify$ -- 119
+quote$ -- 52
+skip$ -- 8811
 stack$ -- 0
-substring$ -- 15644
-swap$ -- 587
-text.length$ -- 290
+substring$ -- 25068
+swap$ -- 889
+text.length$ -- 411
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 651
-warning$ -- 0
-while$ -- 717
+type$ -- 959
+warning$ -- 2
+while$ -- 1088
 width$ -- 0
-write$ -- 914
-(There was 1 warning)
+write$ -- 1382
+(There were 19 error messages)

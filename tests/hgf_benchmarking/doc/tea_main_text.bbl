@@ -1,6 +1,6 @@
 %% BioMed_Central_Bib_Style_v1.01
 
-\begin{thebibliography}{18}
+\begin{thebibliography}{26}
 % BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
 \ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
 \ifx \binits  \undefined \def \binits#1{#1}\fi
@@ -44,16 +44,11 @@
 
 %%% 1
 \bibitem{TheGeneOntologyConsortium2000}
-\begin{barticle}
-\bauthor{\bsnm{{The Gene Ontology Consortium}}}:
-\batitle{{Gene Ontology: tool for the unification of biology}}.
-\bjtitle{Nature Genetics}
-\bvolume{25}(\bissue{may}),
-\bfpage{25}--\blpage{29}
-(\byear{2000}).
+\begin{botherref}
+\oauthor{\bsnm{{The Gene Ontology Consortium}}}
 doi:\doiurl{10.1038/75556}.
 \arxivurl{10614036}
-\end{barticle}
+\end{botherref}
 \endbibitem
 
 %%% 2
@@ -232,13 +227,9 @@ doi:\doiurl{10.1093/nar/gkt1063}
 \bibitem{Benjamini1995}
 \begin{botherref}
 \oauthor{\bsnm{Benjamini}, \binits{Y.}},
-\oauthor{\bsnm{Hochberg}, \binits{Y.}}:
-{Controlling the False Discovery Rate: A Practical and Powerful Approach to
-  Multiple Testing}
-(1995).
+\oauthor{\bsnm{Hochberg}, \binits{Y.}}
 \arxivurl{95/57289}.
-doi:\doiurl{10.2307/2346101}.
-\url{http://www.jstor.org/stable/2346101}
+doi:\doiurl{10.2307/2346101}
 \end{botherref}
 \endbibitem
 
@@ -282,6 +273,166 @@ doi:\doiurl{10.1109/MCSE.2011.37}.
 \endbibitem
 
 %%% 15
+\bibitem{Gaudet2004}
+\begin{botherref}
+\oauthor{\bsnm{Gaudet}, \binits{J.}},
+\oauthor{\bsnm{Muttumu}, \binits{S.}},
+\oauthor{\bsnm{Horner}, \binits{M.}},
+\oauthor{\bsnm{Mango}, \binits{S.E.}}:
+{Whole-genome analysis of temporal gene expression during foregut development}.
+PLoS Biology
+\textbf{2}(11)
+(2004).
+doi:\doiurl{10.1371/journal.pbio.0020352}
+\end{botherref}
+\endbibitem
+
+%%% 16
+\bibitem{Spencer2011}
+\begin{barticle}
+\bauthor{\bsnm{Spencer}, \binits{W.C.}},
+\bauthor{\bsnm{Zeller}, \binits{G.}},
+\bauthor{\bsnm{Watson}, \binits{J.D.}},
+\bauthor{\bsnm{Henz}, \binits{S.R.}},
+\bauthor{\bsnm{Watkins}, \binits{K.L.}},
+\bauthor{\bsnm{McWhirter}, \binits{R.D.}},
+\bauthor{\bsnm{Petersen}, \binits{S.}},
+\bauthor{\bsnm{Sreedharan}, \binits{V.T.}},
+\bauthor{\bsnm{Widmer}, \binits{C.}},
+\bauthor{\bsnm{Jo}, \binits{J.}},
+\bauthor{\bsnm{Reinke}, \binits{V.}},
+\bauthor{\bsnm{Petrella}, \binits{L.}},
+\bauthor{\bsnm{Strome}, \binits{S.}},
+\bauthor{\bsnm{{Von Stetina}}, \binits{S.E.}},
+\bauthor{\bsnm{Katz}, \binits{M.}},
+\bauthor{\bsnm{Shaham}, \binits{S.}},
+\bauthor{\bsnm{R{\"{a}}tsch}, \binits{G.}},
+\bauthor{\bsnm{Miller}, \binits{D.M.}}:
+\batitle{{A spatial and temporal map of C. elegans gene expression}}.
+\bjtitle{Genome Research}
+\bvolume{21}(\bissue{2}),
+\bfpage{325}--\blpage{341}
+(\byear{2011}).
+doi:\doiurl{10.1101/gr.114595.110}
+\end{barticle}
+\endbibitem
+
+%%% 17
+\bibitem{Cinar2005}
+\begin{barticle}
+\bauthor{\bsnm{Cinar}, \binits{H.}},
+\bauthor{\bsnm{Keles}, \binits{S.}},
+\bauthor{\bsnm{Jin}, \binits{Y.}}:
+\batitle{{Expression profiling of GABAergic motor neurons in Caenorhabditis
+  elegans}}.
+\bjtitle{Current Biology}
+\bvolume{15}(\bissue{4}),
+\bfpage{340}--\blpage{346}
+(\byear{2005}).
+doi:\doiurl{10.1016/j.cub.2005.02.025}
+\end{barticle}
+\endbibitem
+
+%%% 18
+\bibitem{Watson2008a}
+\begin{barticle}
+\bauthor{\bsnm{Watson}, \binits{J.D.}},
+\bauthor{\bsnm{Wang}, \binits{S.}},
+\bauthor{\bsnm{{Von Stetina}}, \binits{S.E.}},
+\bauthor{\bsnm{Spencer}, \binits{W.C.}},
+\bauthor{\bsnm{Levy}, \binits{S.}},
+\bauthor{\bsnm{Dexheimer}, \binits{P.J.}},
+\bauthor{\bsnm{Kurn}, \binits{N.}},
+\bauthor{\bsnm{Heath}, \binits{J.D.}},
+\bauthor{\bsnm{{Miller 3rd}}, \binits{D.M.}},
+\bauthor{\bsnm{Miller}, \binits{D.M.}}:
+\batitle{{Complementary RNA amplification methods enhance microarray
+  identification of transcripts expressed in the C. elegans nervous system}}.
+\bjtitle{BMC Genomics}
+\bvolume{9},
+\bfpage{84}
+(\byear{2008}).
+doi:\doiurl{10.1186/1471-2164-9-84}
+\end{barticle}
+\endbibitem
+
+%%% 19
+\bibitem{Pauli2006}
+\begin{barticle}
+\bauthor{\bsnm{Pauli}, \binits{F.}},
+\bauthor{\bsnm{Liu}, \binits{Y.}},
+\bauthor{\bsnm{Kim}, \binits{Y.a.}},
+\bauthor{\bsnm{Chen}, \binits{P.-J.}},
+\bauthor{\bsnm{Kim}, \binits{S.K.}}:
+\batitle{{Chromosomal clustering and GATA transcriptional regulation of
+  intestine-expressed genes in C. elegans.}}
+\bjtitle{Development (Cambridge, England)}
+\bvolume{133}(\bissue{2}),
+\bfpage{287}--\blpage{295}
+(\byear{2006}).
+doi:\doiurl{10.1242/dev.02185}
+\end{barticle}
+\endbibitem
+
+%%% 20
+\bibitem{Portman2004}
+\begin{barticle}
+\bauthor{\bsnm{Portman}, \binits{D.S.}},
+\bauthor{\bsnm{Emmons}, \binits{S.W.}}:
+\batitle{{Identification of C. elegans sensory ray genes using whole-genome
+  expression profiling}}.
+\bjtitle{Developmental Biology}
+\bvolume{270}(\bissue{2}),
+\bfpage{499}--\blpage{512}
+(\byear{2004}).
+doi:\doiurl{10.1016/j.ydbio.2004.02.020}
+\end{barticle}
+\endbibitem
+
+%%% 21
+\bibitem{Fox2007}
+\begin{barticle}
+\bauthor{\bsnm{Fox}, \binits{R.M.}},
+\bauthor{\bsnm{Watson}, \binits{J.D.}},
+\bauthor{\bsnm{{Von Stetina}}, \binits{S.E.}},
+\bauthor{\bsnm{McDermott}, \binits{J.}},
+\bauthor{\bsnm{Brodigan}, \binits{T.M.}},
+\bauthor{\bsnm{Fukushige}, \binits{T.}},
+\bauthor{\bsnm{Krause}, \binits{M.}},
+\bauthor{\bsnm{{Miller 3rd}}, \binits{D.M.}},
+\bauthor{\bsnm{Miller}, \binits{D.M.}}:
+\batitle{{The embryonic muscle transcriptome of Caenorhabditis elegans}}.
+\bjtitle{Genome Biol}
+\bvolume{8}(\bissue{9}),
+\bfpage{188}
+(\byear{2007}).
+doi:\doiurl{10.1186/gb-2007-8-9-r188}
+\end{barticle}
+\endbibitem
+
+%%% 22
+\bibitem{Smith2010}
+\begin{barticle}
+\bauthor{\bsnm{Smith}, \binits{C.J.}},
+\bauthor{\bsnm{Watson}, \binits{J.D.}},
+\bauthor{\bsnm{Spencer}, \binits{W.C.}},
+\bauthor{\bsnm{O{\&}apos;Brien}, \binits{T.}},
+\bauthor{\bsnm{Cha}, \binits{B.}},
+\bauthor{\bsnm{Albeg}, \binits{A.}},
+\bauthor{\bsnm{Treinin}, \binits{M.}},
+\bauthor{\bsnm{Miller}, \binits{D.M.}}:
+\batitle{{Time-lapse imaging and cell-specific expression profiling reveal
+  dynamic branching and molecular determinants of a multi-dendritic nociceptor
+  in C. elegans}}.
+\bjtitle{Developmental Biology}
+\bvolume{345}(\bissue{1}),
+\bfpage{18}--\blpage{33}
+(\byear{2010}).
+doi:\doiurl{10.1016/j.ydbio.2010.05.502}
+\end{barticle}
+\endbibitem
+
+%%% 23
 \bibitem{Engelmann2010}
 \begin{botherref}
 \oauthor{\bsnm{Engelmann}, \binits{I.}},
@@ -293,7 +444,7 @@ Inverrtebrate Immunity,
 \end{botherref}
 \endbibitem
 
-%%% 16
+%%% 24
 \bibitem{Meisel2014}
 \begin{barticle}
 \bauthor{\bsnm{Meisel}, \binits{J.D.}},
@@ -308,7 +459,7 @@ doi:\doiurl{10.1016/j.it.2014.08.008}
 \end{barticle}
 \endbibitem
 
-%%% 17
+%%% 25
 \bibitem{Zhang2005}
 \begin{barticle}
 \bauthor{\bsnm{Zhang}, \binits{Y.}},
@@ -324,7 +475,7 @@ doi:\doiurl{10.1038/nature04216}
 \end{barticle}
 \endbibitem
 
-%%% 18
+%%% 26
 \bibitem{Chikina2009}
 \begin{botherref}
 \oauthor{\bsnm{Chikina}, \binits{M.D.}},
@@ -349,17 +500,9 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
 <refgrp>
 
 <bibl id="B1">
-  <title><p>{Gene Ontology: tool for the unification of biology}</p></title>
   <aug>
     <au><cnm>{The Gene Ontology Consortium}</cnm></au>
   </aug>
-  <source>Nature Genetics</source>
-  <pubdate>2000</pubdate>
-  <volume>25</volume>
-  <issue>may</issue>
-  <fpage>25</fpage>
-  <lpage>-29</lpage>
-  <url>http://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Gene+Ontology:+tool+for+the+unification+of+biology{\#}0</url>
 </bibl>
 
 <bibl id="B2">
@@ -540,20 +683,12 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
 </bibl>
 
 <bibl id="B11">
-  <title><p>{Controlling the False Discovery Rate: A Practical and Powerful
-  Approach to Multiple Testing}</p></title>
   <aug>
     <au><snm>Benjamini</snm><fnm>Y</fnm></au>
     <au><snm>Hochberg</snm><fnm>Y</fnm></au>
   </aug>
   <source>Journal of the Royal Statistical Society. Series B
   (Methodological)</source>
-  <pubdate>1995</pubdate>
-  <volume>57</volume>
-  <issue>1</issue>
-  <fpage>289</fpage>
-  <lpage>-300</lpage>
-  <url>http://www.jstor.org/stable/2346101</url>
 </bibl>
 
 <bibl id="B12">
@@ -598,6 +733,168 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
 </bibl>
 
 <bibl id="B15">
+  <title><p>{Whole-genome analysis of temporal gene expression during foregut
+  development}</p></title>
+  <aug>
+    <au><snm>Gaudet</snm><fnm>J</fnm></au>
+    <au><snm>Muttumu</snm><fnm>S</fnm></au>
+    <au><snm>Horner</snm><fnm>M</fnm></au>
+    <au><snm>Mango</snm><fnm>SE</fnm></au>
+  </aug>
+  <source>PLoS Biology</source>
+  <pubdate>2004</pubdate>
+  <volume>2</volume>
+  <issue>11</issue>
+</bibl>
+
+<bibl id="B16">
+  <title><p>{A spatial and temporal map of C. elegans gene
+  expression}</p></title>
+  <aug>
+    <au><snm>Spencer</snm><fnm>WC</fnm></au>
+    <au><snm>Zeller</snm><fnm>G</fnm></au>
+    <au><snm>Watson</snm><fnm>JD</fnm></au>
+    <au><snm>Henz</snm><fnm>SR</fnm></au>
+    <au><snm>Watkins</snm><fnm>KL</fnm></au>
+    <au><snm>McWhirter</snm><fnm>RD</fnm></au>
+    <au><snm>Petersen</snm><fnm>S</fnm></au>
+    <au><snm>Sreedharan</snm><fnm>VT</fnm></au>
+    <au><snm>Widmer</snm><fnm>C</fnm></au>
+    <au><snm>Jo</snm><fnm>J</fnm></au>
+    <au><snm>Reinke</snm><fnm>V</fnm></au>
+    <au><snm>Petrella</snm><fnm>L</fnm></au>
+    <au><snm>Strome</snm><fnm>S</fnm></au>
+    <au><snm>{Von Stetina}</snm><fnm>SE</fnm></au>
+    <au><snm>Katz</snm><fnm>M</fnm></au>
+    <au><snm>Shaham</snm><fnm>S</fnm></au>
+    <au><snm>R{\"{a}}tsch</snm><fnm>G</fnm></au>
+    <au><snm>Miller</snm><fnm>DM</fnm></au>
+  </aug>
+  <source>Genome Research</source>
+  <pubdate>2011</pubdate>
+  <volume>21</volume>
+  <issue>2</issue>
+  <fpage>325</fpage>
+  <lpage>-341</lpage>
+</bibl>
+
+<bibl id="B17">
+  <title><p>{Expression profiling of GABAergic motor neurons in Caenorhabditis
+  elegans}</p></title>
+  <aug>
+    <au><snm>Cinar</snm><fnm>H</fnm></au>
+    <au><snm>Keles</snm><fnm>S</fnm></au>
+    <au><snm>Jin</snm><fnm>Y</fnm></au>
+  </aug>
+  <source>Current Biology</source>
+  <pubdate>2005</pubdate>
+  <volume>15</volume>
+  <issue>4</issue>
+  <fpage>340</fpage>
+  <lpage>-346</lpage>
+</bibl>
+
+<bibl id="B18">
+  <title><p>{Complementary RNA amplification methods enhance microarray
+  identification of transcripts expressed in the C. elegans nervous
+  system}</p></title>
+  <aug>
+    <au><snm>Watson</snm><fnm>JD</fnm></au>
+    <au><snm>Wang</snm><fnm>S</fnm></au>
+    <au><snm>{Von Stetina}</snm><fnm>SE</fnm></au>
+    <au><snm>Spencer</snm><fnm>WC</fnm></au>
+    <au><snm>Levy</snm><fnm>S</fnm></au>
+    <au><snm>Dexheimer</snm><fnm>PJ</fnm></au>
+    <au><snm>Kurn</snm><fnm>N</fnm></au>
+    <au><snm>Heath</snm><fnm>JD</fnm></au>
+    <au><snm>{Miller 3rd}</snm><fnm>D M</fnm></au>
+    <au><snm>Miller</snm><fnm>DM</fnm></au>
+  </aug>
+  <source>BMC Genomics</source>
+  <pubdate>2008</pubdate>
+  <volume>9</volume>
+  <fpage>84</fpage>
+  <url>http://www.ncbi.nlm.nih.gov/pubmed/18284693</url>
+</bibl>
+
+<bibl id="B19">
+  <title><p>{Chromosomal clustering and GATA transcriptional regulation of
+  intestine-expressed genes in C. elegans.}</p></title>
+  <aug>
+    <au><snm>Pauli</snm><fnm>F</fnm></au>
+    <au><snm>Liu</snm><fnm>Y</fnm></au>
+    <au><snm>Kim</snm><fnm>Ya</fnm></au>
+    <au><snm>Chen</snm><fnm>PJ</fnm></au>
+    <au><snm>Kim</snm><fnm>SK</fnm></au>
+  </aug>
+  <source>Development (Cambridge, England)</source>
+  <pubdate>2006</pubdate>
+  <volume>133</volume>
+  <issue>2</issue>
+  <fpage>287</fpage>
+  <lpage>-295</lpage>
+</bibl>
+
+<bibl id="B20">
+  <title><p>{Identification of C. elegans sensory ray genes using whole-genome
+  expression profiling}</p></title>
+  <aug>
+    <au><snm>Portman</snm><fnm>DS</fnm></au>
+    <au><snm>Emmons</snm><fnm>SW</fnm></au>
+  </aug>
+  <source>Developmental Biology</source>
+  <pubdate>2004</pubdate>
+  <volume>270</volume>
+  <issue>2</issue>
+  <fpage>499</fpage>
+  <lpage>-512</lpage>
+</bibl>
+
+<bibl id="B21">
+  <title><p>{The embryonic muscle transcriptome of Caenorhabditis
+  elegans}</p></title>
+  <aug>
+    <au><snm>Fox</snm><fnm>RM</fnm></au>
+    <au><snm>Watson</snm><fnm>JD</fnm></au>
+    <au><snm>{Von Stetina}</snm><fnm>SE</fnm></au>
+    <au><snm>McDermott</snm><fnm>J</fnm></au>
+    <au><snm>Brodigan</snm><fnm>TM</fnm></au>
+    <au><snm>Fukushige</snm><fnm>T</fnm></au>
+    <au><snm>Krause</snm><fnm>M</fnm></au>
+    <au><snm>{Miller 3rd}</snm><fnm>D M</fnm></au>
+    <au><snm>Miller</snm><fnm>DM</fnm></au>
+  </aug>
+  <source>Genome Biol</source>
+  <pubdate>2007</pubdate>
+  <volume>8</volume>
+  <issue>9</issue>
+  <fpage>R188</fpage>
+  <url>http://www.ncbi.nlm.nih.gov/pubmed/17848203</url>
+</bibl>
+
+<bibl id="B22">
+  <title><p>{Time-lapse imaging and cell-specific expression profiling reveal
+  dynamic branching and molecular determinants of a multi-dendritic nociceptor
+  in C. elegans}</p></title>
+  <aug>
+    <au><snm>Smith</snm><fnm>CJ</fnm></au>
+    <au><snm>Watson</snm><fnm>JD</fnm></au>
+    <au><snm>Spencer</snm><fnm>WC</fnm></au>
+    <au><snm>O{\&}apos;Brien</snm><fnm>T</fnm></au>
+    <au><snm>Cha</snm><fnm>B</fnm></au>
+    <au><snm>Albeg</snm><fnm>A</fnm></au>
+    <au><snm>Treinin</snm><fnm>M</fnm></au>
+    <au><snm>Miller</snm><fnm>DM</fnm></au>
+  </aug>
+  <source>Developmental Biology</source>
+  <pubdate>2010</pubdate>
+  <volume>345</volume>
+  <issue>1</issue>
+  <fpage>18</fpage>
+  <lpage>-33</lpage>
+</bibl>
+
+<bibl id="B23">
   <title><p>{Innate Immunity in C . Elegans}</p></title>
   <aug>
     <au><snm>Engelmann</snm><fnm>I</fnm></au>
@@ -609,7 +906,7 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
   <lpage>-121</lpage>
 </bibl>
 
-<bibl id="B16">
+<bibl id="B24">
   <title><p>{Behavioral avoidance of pathogenic bacteria by Caenorhabditis
   elegans}</p></title>
   <aug>
@@ -626,7 +923,7 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
   <url>http://dx.doi.org/10.1016/j.it.2014.08.008</url>
 </bibl>
 
-<bibl id="B17">
+<bibl id="B25">
   <title><p>{Pathogenic bacteria induce aversive olfactory learning in
   Caenorhabditis elegans}</p></title>
   <aug>
@@ -644,7 +941,7 @@ doi:\doiurl{10.1371/journal.pcbi.1000417}
   ISI>://WOS:000233133500039$\backslash$nhttp://www.nature.com/nature/journal/v438/n7065/pdf/nature04216.pdf</url>
 </bibl>
 
-<bibl id="B18">
+<bibl id="B26">
   <title><p>{Global prediction of tissue-specific gene expression and
   context-dependent gene networks in Caenorhabditis elegans}</p></title>
   <aug>
