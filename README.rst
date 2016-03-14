@@ -15,8 +15,7 @@ distribution. Requirements include ``pandas``, ``matplotlib``, ``numpy``,
 
 Installation
 ================================
-Use ``pip install tissue_enrichment_analysis`` should be enough! I think....
-
+Use ``pip install tissue_enrichment_analysis``
 
 Basic Usage
 ================================
@@ -31,7 +30,7 @@ and enjoy the results!
 Within a Python Script
 ----------------------
 
-There are really two main functions that are provided in TEA:
+There are really just two main functions that are provided in TEA:
 ``enrichment_analysis`` and ``plot_enrichment_results``. 
 
 A standard call to this library would be as follows:

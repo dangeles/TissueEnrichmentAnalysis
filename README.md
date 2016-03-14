@@ -11,7 +11,7 @@ This library has been developed in Python &gt;= 3.5, using the Anaconda distribu
 Installation
 ============
 
-Use `pip install tissue_enrichment_analysis` should be enough! I think....
+Use `pip install tissue_enrichment_analysis`
 
 Basic Usage
 ===========
@@ -24,7 +24,7 @@ Go to [www.wormbase.org/tea](http://www.wormbase.org/tea), input your gene list 
 Within a Python Script
 ----------------------
 
-There are really two main functions that are provided in TEA: `enrichment_analysis` and `plot_enrichment_results`.
+There are really just two main functions that are provided in TEA: `enrichment_analysis` and `plot_enrichment_results`.
 
 A standard call to this library would be as follows:
 
