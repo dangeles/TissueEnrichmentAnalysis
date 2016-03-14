@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: tissue-enrichment-analysis
+Version: 0.13.4
+Summary: This package contains all the software used to implement  TEA in WormBase and remotely
+Home-page: https://github.com/dangeles/TissueEnrichmentAnalysis
+Author: David Angeles-Albores
+Author-email: dangeles@caltech.edu
+License: UNKNOWN
+Download-URL: https://github.com/dangeles/TissueEnrichmentAnalysis/tarball/0.13.4
+Description: UNKNOWN
+Keywords: tissue enrichment analysis,TEA,RNAseq,celegans,biology
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5

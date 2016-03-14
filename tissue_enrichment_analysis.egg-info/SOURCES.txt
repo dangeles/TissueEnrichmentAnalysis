@@ -1,0 +1,12 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+bin/tea
+tissue_enrichment_analysis/__init__.py
+tissue_enrichment_analysis/hypergeometricTests.py
+tissue_enrichment_analysis.egg-info/PKG-INFO
+tissue_enrichment_analysis.egg-info/SOURCES.txt
+tissue_enrichment_analysis.egg-info/dependency_links.txt
+tissue_enrichment_analysis.egg-info/requires.txt
+tissue_enrichment_analysis.egg-info/top_level.txt
