@@ -1,2 +1,320 @@
 Latexmk: This is Latexmk, John Collins, 5 February 2015, version: 4.43a.
+Rule 'pdflatex': File changes, etc:
+   Changed files, or newly in use since previous run(s):
+      './tea_main_text.tex'
+      'tea_main_text.tex'
+------------
+Run number 1 of rule 'pdflatex'
+------------
+------------
+Running 'pdflatex  -synctex=1 -file-line-error-style  -interaction=nonstopmode -recorder  "./tea_main_text.tex"'
+------------
+Latexmk: applying rule 'pdflatex'...
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex)
+ restricted \write18 enabled.
+entering extended mode
+(./tea_main_text.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./bmcart.cls
+Document Class: bmcart 2014/01/24BioMed Central class (VS)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/size10.clo))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/xcolor/xcolor.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lastpage/lastpage.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/natbib/natbib.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hyperref.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/hobsub-generic.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/ifxetex/ifxetex.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/auxhook.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/pd1enc.def)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/hyperref.cfg)
+
+Package hyperref Warning: Option `pagecolor' is not available anymore.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/url/url.sty))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/hpdftex.def
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/lmodern.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/subcaption.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg)))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/csvsimple/csvsimple.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pgf/utilities/pgfkeys.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeys.code.tex
+(/usr/local/texlive/2015/texmf-dist/tex/generic/pgf/utilities/pgfkeysfiltered.c
+ode.tex))) (/usr/local/texlive/2015/texmf-dist/tex/latex/base/ifthen.sty))
+(./tea_main_text.aux)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmr.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/hyperref/nameref.sty
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/gettitlestring.sty))
+(./tea_main_text.out) (./tea_main_text.out)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmss.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omllmm.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omslmsy.fd)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/lm/omxlmex.fd)
+Overfull \hbox (1.0pt too wide) has occurred while \output is active
+ [] 
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+[2] [3] [4] [5]
+
+LaTeX Warning: Reference `fig:Dcon, fig:Hsp, fig:Smar' on page 6 undefined on i
+nput line 324.
+
+[6] [7] (/usr/local/texlive/2015/texmf-dist/tex/latex/lm/ot1lmtt.fd)
+(./tea_main_text.bbl [8]
+Underfull \vbox (badness 10000) has occurred while \output is active [9])
+
+Package natbib Warning: Citation `label' undefined on input line 404.
+
+<figures/RedundancyTrimmingOntogeny.png, id=233, 683.55376pt x 666.49pt>
+<use figures/RedundancyTrimmingOntogeny.png>
+<figures/FloorTrimmingOntogeny.png, id=235, 717.68124pt x 899.36pt>
+<use figures/FloorTrimmingOntogeny.png>
+<figures/CeilingTrimmingOntogeny.png, id=236, 716.6775pt x 909.3975pt>
+<use figures/CeilingTrimmingOntogeny.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 453.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 453--453
+[] [] 
+<figures/guiresults.png, id=237, 435.6275pt x 652.4375pt>
+<use figures/guiresults.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 498.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 488--498
+ [][] 
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 498--498
+[] [] 
+<figures/avgQKDE_method=any.png, id=238, 461.725pt x 317.185pt>
+<use figures/avgQKDE_method=any.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 521.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 518--521
+ [][] 
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 521--521
+[] [] 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<figures/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603_33cutoff
+.png, id=239, 461.725pt x 317.185pt>
+<use figures/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603_33cu
+toff.png>
+<figures/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603_50cutoff
+.png, id=240, 461.725pt x 317.185pt>
+<use figures/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603_50cu
+toff.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 542.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 542--542
+[] [] 
+
+<figures/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247_33cutoff.pn
+g, id=243, 461.725pt x 317.185pt>
+<use figures/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247_33cutof
+f.png>
+<figures/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_13
+2_33cutoff.png, id=244, 461.725pt x 317.185pt>
+<use figures/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_000519
+0_132_33cutoff.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 562.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 562--562
+[] [] 
+
+<figures/DrechmeriaconiosporaEnrichment.png, id=249, 426.59375pt x 284.06125pt>
+<use figures/DrechmeriaconiosporaEnrichment.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 574.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 570--574
+ [][] 
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 574--574
+[] [] 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/HarposporiumspEnrichment.png, id=250, 426.59375pt x 284.06125pt>
+<use figures/HarposporiumspEnrichment.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 585.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 579--585
+ [][] 
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 585--585
+[] [] 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<figures/SerratiamarcescensEnrichment.png, id=251, 426.59375pt x 573.14125pt>
+<use figures/SerratiamarcescensEnrichment.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 596.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 590--596
+ [][] 
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 596--596
+[] [] 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<figures/EnterococcusfaecalisEnrichment.png, id=252, 426.59375pt x 284.06125pt>
+<use figures/EnterococcusfaecalisEnrichment.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 608.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 601--608
+ [][] 
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 608--608
+[] [] 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+<figures/OtorhabdusluminescensEnrichment.png, id=253, 426.59375pt x 284.06125pt
+> <use figures/OtorhabdusluminescensEnrichment.png>
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 619.
+See the caption package documentation for explanation.
+
+
+Overfull \hbox (12.5pt too wide) in paragraph at lines 613--619
+ [][] 
+
+Overfull \hbox (3.47444pt too wide) in paragraph at lines 619--619
+[] [] 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+AED: lastpage setting LastPage
+[10 <./figures/RedundancyTrimmingOntogeny.png> <./figures/FloorTrimmingOntogeny
+.png> <./figures/CeilingTrimmingOntogeny.png>] [11] [12 <./figures/guiresults.p
+ng>] [13 <./figures/avgQKDE_method=any.png>] [14 <./figures/WBPaper00031532_Lar
+va_Pan_Neuronal_Enriched_WBbt_0003679_1603_33cutoff.png> <./figures/WBPaper0003
+1532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603_50cutoff.png>] [15 <./figure
+s/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247_33cutoff.png> <./f
+igures/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132_
+33cutoff.png>] [16 <./figures/DrechmeriaconiosporaEnrichment.png>] [17 <./figur
+es/HarposporiumspEnrichment.png>] [18 <./figures/SerratiamarcescensEnrichment.p
+ng>] [19 <./figures/EnterococcusfaecalisEnrichment.png>] [20 <./figures/Otorhab
+dusluminescensEnrichment.png>]
+
+Package natbib Warning: There were undefined citations.
+
+(./tea_main_text.aux)
+
+LaTeX Warning: There were undefined references.
+
+ )
+(see the transcript file for additional information){/usr/local/texlive/2015/te
+xmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/local/texlive/2015/texmf-dist/fonts
+/enc/dvips/lm/lm-rmtt.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/l
+m/lm-mathex.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-maths
+y.enc}{/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/local/te
+xlive/2015/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/lm/lmmi10.pfb></usr/local/texlive/2015/texmf-dist/fonts/t
+ype1/public/lm/lmmi7.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/lm/lmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr7.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmr9.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/lm/lmss10.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/lm/lmss12.pfb></usr/local/texlive/2015/texmf-dist/font
+s/type1/public/lm/lmss17.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/pu
+blic/lm/lmss8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lms
+sbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsso8.pfb></usr/loc
+al/texlive/2015/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/local/texlive/2015/texm
+f-dist/fonts/type1/public/lm/lmtt8.pfb>
+Output written on tea_main_text.pdf (20 pages, 901302 bytes).
+SyncTeX written on tea_main_text.synctex.gz.
+Transcript written on tea_main_text.log.
+Latexmk: Found input bbl file 'tea_main_text.bbl'
+Latexmk: Log file says output to 'tea_main_text.pdf'
+Latexmk: List of undefined refs and citations:
+  Citation `label' undefined on input line 404
+  Reference `fig:Dcon, fig:Hsp, fig:Smar' on page 6 undefined on input line 324
+Latexmk: Found bibliography file(s) [bmc_article.bib]
+Latexmk: Summary of warnings:
+  Latex failed to resolve 1 reference(s)
+  Latex failed to resolve 1 citation(s)
 Latexmk: All targets (tea_main_text.pdf) are up-to-date
