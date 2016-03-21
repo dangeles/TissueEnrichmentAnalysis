@@ -19,3 +19,9 @@ tests/hgf_benchmarking/doc/.Rhistory
 *.log
 
 .cache/v/cache/lastfailed
+
+*.aux
+
+*.fls
+
+*.gz

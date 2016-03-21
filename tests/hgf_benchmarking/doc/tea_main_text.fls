@@ -158,7 +158,6 @@ INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmsso8.tfm
 INPUT /usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmtt10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmssbx10.tfm
 INPUT tea_main_text.bbl
@@ -173,6 +172,7 @@ INPUT ./figures/FloorTrimmingOntogeny.png
 INPUT figures/CeilingTrimmingOntogeny.png
 INPUT ./figures/CeilingTrimmingOntogeny.png
 INPUT ./figures/CeilingTrimmingOntogeny.png
+INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/lm/rm-lmr8.tfm
 INPUT figures/guiresults.png
 INPUT ./figures/guiresults.png

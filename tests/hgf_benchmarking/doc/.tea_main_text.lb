@@ -28,23 +28,25 @@ Rp14
 sVmessages
 p15
 (lp16
-VWARNING tea_main_text.tex:313 \u2014 LaTeX Warning: Reference `fig:Dcon, fig:Hsp, fig:Smar' on page 8 undefined on input line 313.
+VCould not find any messages containing line information.
 p17
-asVfiles_with_guttermarks
+aVPlease take a look at the log file tea_main_text.latexmk.log to find the source of the problem.
 p18
+asVfiles_with_guttermarks
+p19
 g4
-((lp19
+((lp20
 V/Users/dangeles/TissueEnrichmentAnalysis/tests/hgf_benchmarking/doc/tea_main_text.tex
-p20
-aV/Users/dangeles/TissueEnrichmentAnalysis/tests/hgf_benchmarking/doc/./tea_main_text.aux
 p21
-aS'tea_main_text.tex'
+aV/Users/dangeles/TissueEnrichmentAnalysis/tests/hgf_benchmarking/doc/./tea_main_text.aux
 p22
-aV/Users/dangeles/TissueEnrichmentAnalysis/tests/hgf_benchmarking/doc/./tea_main_text.tex
+aS'tea_main_text.tex'
 p23
-atp24
-Rp25
+aV/Users/dangeles/TissueEnrichmentAnalysis/tests/hgf_benchmarking/doc/./tea_main_text.tex
+p24
+atp25
+Rp26
 sVsynctex
-p26
+p27
 I01
 s.
