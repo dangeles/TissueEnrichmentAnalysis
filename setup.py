@@ -10,25 +10,34 @@ from setuptools import setup, find_packages
 import os
 import sys
 
-version= '0.13.4'
+version= '0.13.9'
 
 #just type in python setup.py publish and this takes care of publishing to to pypi!
 
 
 #tag with git
-if sys.argv[-1] == 'tag':
-    os.system("git tag -a %s -m 'version %s'" % (version, version))
+if sys.argv[1] == 'tag':
+    
+    if len(sys.argv) > 2:   
+        if sys.argv[2] == '-m':
+            print(sys.argv[2])
+            print('please input your commit message')
+            message= sys.stdin.readline().strip()
+            print("git tag -a %s -m '%s'" % (version, message))
+            os.system("git tag -a %s -m '%s'" % (version, message))
+    else:    
+        os.system("git tag -a %s -m 'version %s'" % (version, version))
+        
     os.system("git push --tags")
     sys.exit()
-
 
 #publish to pypi
 if sys.argv[-1] == 'publish':
     os.system("python setup.py sdist upload")
     os.system("python setup.py bdist_wheel upload")
-    print("You probably want to also tag the version now:")
-    print("  git tag -a %s -m 'version %s'" % (version, version))
-    print("  git push --tags")
+#    print("You probably want to also tag the version now:")
+#    print("  git tag -a %s -m 'version %s'" % (version, version))
+#    print("  git push --tags")
     sys.exit()
 
 
