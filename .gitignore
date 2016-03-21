@@ -9,3 +9,7 @@
 /*.egg-info
 /*.egg
 tests/hgf_benchmarking/doc/.Rhistory
+
+.cache/v/cache/lastfailed
+
+*.fdb_latexmk
