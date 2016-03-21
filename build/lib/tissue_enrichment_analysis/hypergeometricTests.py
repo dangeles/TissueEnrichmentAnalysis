@@ -338,7 +338,8 @@ def fetch_dictionary():
     Fetch the dictionary we want.
     """
     
-    url_tissue= 'http://131.215.12.204/~azurebrd/work/tissue_enrichment_tool_hypergeometric_test/dict.20151208'
+    url_tissue= 'ftp://caltech.wormbase.org/pub/TissueEnrichmentAnalysis/anat_dict.csv'
+
     try:
         with contextlib.closing(urlopen(url_tissue)) as conn:
             data = pd.read_csv(conn)
@@ -375,18 +376,24 @@ if __name__ == '__main__':
     
     parser = argparse.ArgumentParser(description='Run TEA.')
     parser = argparse.ArgumentParser()
-    parser.add_argument("tissue_dictionary", help= 'The full path to the tissue dictionary provided by WormBase')
     parser.add_argument("gene_list", help= 'The full path to the gene list (WBIDs) you would like to analyse in .csv format')
     parser.add_argument('title', help= 'Title for your analysis (shouldn\'t include file extension)', type= str)
+    parser.add_argument("-d", '--dictionary', nargs= '?', help= 'Provide a dictionary to test. If none given, WormBase URL will be used to download the corresponding file')
     parser.add_argument("-q", help= 'Qvalue threshold for significance. Default is {0} if not provided'.format(defQ), type= float)
     parser.add_argument('-p','--print', help= 'Indicate whether you would like to print results', action= 'store_true')    
     parser.add_argument('-s', "--save", help= 'Indicate whether to save your plot.', action= 'store_true')
     args = parser.parse_args()
-    
-    tdf_name= args.tissue_dictionary
+
     gl_name= args.gene_list
     title= args.title
     
+    #optional args
+    if args.dictionary:
+        tdf_name= args.tissue_dictionary
+        tissue_df= pd.read_csv(tdf_name)
+    else:
+        tissue_df= fetch_dictionary()
+
     if args.q:   
         q= args.q
     else:
@@ -403,7 +410,7 @@ if __name__ == '__main__':
     else:
         save= False
             
-    tissue_df= pd.read_csv(tdf_name)
+    
     
     gene_list= []
     with open(gl_name, 'r') as f:

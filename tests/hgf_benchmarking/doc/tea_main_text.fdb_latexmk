@@ -1,12 +1,12 @@
 # Fdb version 3
-["bibtex tea_main_text"] 1457944581 "tea_main_text.aux" "tea_main_text.bbl" "tea_main_text" 1458603749
+["bibtex tea_main_text"] 1458603819 "tea_main_text.aux" "tea_main_text.bbl" "tea_main_text" 1458603819
   "./bmc-mathphys.bst" 1457943592 61107 bd6c4e69bfcd6c29573298df46cec934 ""
-  "bmc_article.bib" 1458603748 54788 f53bae55d67434b3ab7503ccba994087 ""
-  "tea_main_text.aux" 1458603748 6080 fc8a9ae76d4d2285b4a27bb2a387e5ea ""
+  "bmc_article.bib" 1458603819 60500 aefd2e2bdc9bbc040ce5f84b1bd7e560 ""
+  "tea_main_text.aux" 1458603819 15994 4484c4716e4cdd5ec89ca28593ae363a ""
   "tea_main_text.bcf" 0 -1 0 ""
   (generated)
-  "tea_main_text.blg"
   "tea_main_text.bbl"
+  "tea_main_text.blg"
 ["pdflatex"] 1457944582 "./tea_main_text.tex" "tea_main_text.pdf" "tea_main_text" 1458603749
   "./tea_main_text.tex" 1458603748 40928 0c51e83d989b7f9b5519eb9a20d609bc ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
@@ -99,6 +99,6 @@
   "tea_main_text.bbl" 1458603748 29685 4cb212eb2b43e98405b50d688076d5b0 "bibtex tea_main_text"
   "tea_main_text.tex" 1458603748 40928 0c51e83d989b7f9b5519eb9a20d609bc ""
   (generated)
-  "tea_main_text.aux"
   "tea_main_text.pdf"
+  "tea_main_text.aux"
   "tea_main_text.log"
