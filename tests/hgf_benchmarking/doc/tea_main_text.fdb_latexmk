@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex tea_main_text"] 1457944581 "tea_main_text.aux" "tea_main_text.bbl" "tea_main_text" 1457944608
+["bibtex tea_main_text"] 1457944581 "tea_main_text.aux" "tea_main_text.bbl" "tea_main_text" 1458603749
   "./bmc-mathphys.bst" 1457943592 61107 bd6c4e69bfcd6c29573298df46cec934 ""
-  "bmc_article.bib" 1457943894 54788 f53bae55d67434b3ab7503ccba994087 ""
-  "tea_main_text.aux" 1457944582 6080 fc8a9ae76d4d2285b4a27bb2a387e5ea ""
+  "bmc_article.bib" 1458603748 54788 f53bae55d67434b3ab7503ccba994087 ""
+  "tea_main_text.aux" 1458603748 6080 fc8a9ae76d4d2285b4a27bb2a387e5ea ""
   "tea_main_text.bcf" 0 -1 0 ""
   (generated)
   "tea_main_text.blg"
   "tea_main_text.bbl"
-["pdflatex"] 1457944582 "./tea_main_text.tex" "tea_main_text.pdf" "tea_main_text" 1457944608
-  "./tea_main_text.tex" 1457944608 40928 0c51e83d989b7f9b5519eb9a20d609bc ""
+["pdflatex"] 1457944582 "./tea_main_text.tex" "tea_main_text.pdf" "tea_main_text" 1458603749
+  "./tea_main_text.tex" 1458603748 40928 0c51e83d989b7f9b5519eb9a20d609bc ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc" 1202520719 3486 c7eadf5dcc57b3b2d11736679f6636ba ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc" 1202520719 2405 5dcf2c1b967ee25cc46c58cd52244aed ""
   "/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc" 1202520719 2840 216e6e45ad352e2456e1149f28885bee ""
@@ -95,10 +95,10 @@
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1432479681 3849859 39a7d258195bde2394e244961601fbc5 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
   "bmcart.cls" 1457943592 55703 b06dccfb46d680f7fe8bbd6c37bd3c40 ""
-  "tea_main_text.aux" 1457944582 6080 fc8a9ae76d4d2285b4a27bb2a387e5ea ""
-  "tea_main_text.bbl" 1457944581 29685 4cb212eb2b43e98405b50d688076d5b0 "bibtex tea_main_text"
-  "tea_main_text.tex" 1457944608 40928 0c51e83d989b7f9b5519eb9a20d609bc ""
+  "tea_main_text.aux" 1458603748 6080 fc8a9ae76d4d2285b4a27bb2a387e5ea ""
+  "tea_main_text.bbl" 1458603748 29685 4cb212eb2b43e98405b50d688076d5b0 "bibtex tea_main_text"
+  "tea_main_text.tex" 1458603748 40928 0c51e83d989b7f9b5519eb9a20d609bc ""
   (generated)
+  "tea_main_text.aux"
   "tea_main_text.pdf"
   "tea_main_text.log"
-  "tea_main_text.aux"
