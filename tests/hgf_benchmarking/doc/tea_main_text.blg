@@ -1,6 +1,6 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: tea_main_text.aux
+The top-level auxiliary file: ./tea_main_text.aux
 The style file: bmc-mathphys.bst
 Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
 Reallocated global_strs (elt_size=20001) to 20 items from 10.
@@ -20,7 +20,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bmc_article.bib
-Repeated entry---line 206 of file bmc_article.bib
+Repeated entry---line 28 of file bmc_article.bib
  : @misc{Benjamini1995
  :                    ,
 I'm skipping whatever remains of this entry
@@ -32,24 +32,24 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 You've used 29 entries,
             7128 wiz_defined-function locations,
-            1373 strings with 18028 characters,
-and the built_in function-call counts, 204274 in all, are:
-= -- 24960
+            1373 strings with 18052 characters,
+and the built_in function-call counts, 204729 in all, are:
+= -- 25013
 > -- 1221
 < -- 594
-+ -- 5357
++ -- 5359
 - -- 426
-* -- 16694
-:= -- 41074
+* -- 16732
+:= -- 41165
 add.period$ -- 55
 call.type$ -- 29
 change.case$ -- 317
 chr.to.int$ -- 1088
 cite$ -- 30
 duplicate$ -- 3296
-empty$ -- 12512
+empty$ -- 12550
 format.name$ -- 1584
-if$ -- 44646
+if$ -- 44737
 int.to.chr$ -- 1
 int.to.str$ -- 74
 missing$ -- 1132
@@ -59,9 +59,9 @@ pop$ -- 1450
 preamble$ -- 1
 purify$ -- 131
 quote$ -- 58
-skip$ -- 11306
+skip$ -- 11336
 stack$ -- 0
-substring$ -- 29577
+substring$ -- 29689
 swap$ -- 1015
 text.length$ -- 483
 text.prefix$ -- 0

@@ -44,8 +44,8 @@
 %%% loading packages, author definitions
 
 %\documentclass[twocolumn]{bmcart}% uncomment this for twocolumn layout and comment line below
-\documentclass[linenumbers, doublespacing]{bmcart}
-% \documentclass{bmcart}
+% \documentclass[linenumbers, doublespacing]{bmcart}
+\documentclass{bmcart}
 
 %%% Load packages
 \usepackage{amsthm,amsmath}
@@ -184,23 +184,30 @@
 \begin{abstract} % abstract
 \parttitle{Background} %if any
 Over the last ten years, there has been an explosive development in tools
-capable of measuring gene expression. These tools generate a large number
-of gene targets, but understanding these datasets, and forming hypotheses
+capable of measuring gene expression. These tools can identify thousands of altered 
+genes between conditions, but understanding these datasets and forming hypotheses
 based on them remains challenging. One way to analyze these datasets is to
-associate ontologies, which are controlled, hierarchical, descriptive vocabularies
+associate ontologies (which are controlled, hierarchical, descriptive vocabularies
+with controlled relations)
 with genes and to look for enrichment of specific terms. Although gene ontology
-(GO) is available for   \emph{Caenorhabditis elegans}, this ontology does not include
-anatomy or physiology information.
+(GO) is available for   \emph{Caenorhabditis elegans}, it does not include
+anatomy information.
 \parttitle{Results} %if any
-We have developed an enrichment analysis tool for the   \emph{C. elegans} tissue
-ontology, is available on the web via WormBase and is available for download 
-using Python's standard pip installer. In order to cut down on verbosity, we
+We have developed an  tool for identifying  enrichment of \emph{C. elegans} tissues. We
+applied a hypergeometric model to a pre-existing anatomy ontology for the worm in order to
+identify enriched tissues and generated a website GUI. To cut down on verbosity, we
 have come up with three straightforward filtering criteria that slim the ontology
-by almost tenfold. 
+by almost tenfold. One filter removes all terms with less than an arbitrary number
+of annotating genes; a second filter removes all sister terms that have identical
+gene annotations; and the third filter removes all parents whose daughters all survived
+the previous two filters. We adjusted these filters and validated our tool using a set of 30 
+gold standards from Expression Cluster data in WormBase. 
 \parttitle{Conclusions} %if any
-Our Tissue Enrichment Analysis (TEA), which can be found at www.WormBase.org/tea, 
-uses a standard hypergeometric function to test a slimmed-down   \emph{C. elegans} tissue 
-ontology and provides users with a text and graphic representation of the results. 
+Our Tissue Enrichment Analysis (TEA), which can be found at www.WormBase.org/tea, and
+can be downloaded using Python's standard pip installer. It employs a standard hypergeometric 
+function to test a slimmed-down   \emph{C. elegans} tissue ontology and provides users with a 
+text and graphic representation of the results. Our tool can discriminate between 
+embryonic and larval tissues and can even identify tissues down to the single-cell level. 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -213,7 +220,7 @@ ontology and provides users with a text and graphic representation of the result
 
 \begin{keyword}
 \kwd{Gene Ontology}
-\kwd{Tissue Ontology}
+\kwd{Anatomy Ontology}
 \kwd{WormBase}
 \kwd{RNA-seq}
 \kwd{High-throughput biology}
@@ -259,12 +266,11 @@ ontology and provides users with a text and graphic representation of the result
 %% Background %%
 %%
 \section*{Background}
-	RNA-seq and other high-throughput methods in biology have the ability to identify thousands of genes that are altered between conditions. These genes are often correlated in their biological characteristics or functions, but identifying these functions remains challenging. To interpret these long lists of genes, biologists need to abstract genes into fewer terms that are biologically relevant to form hypotheses about what is happening in the data. One such abstraction method relies on Gene Ontology (GO). GO provides a controlled set of hierarchically ordered terms in the form of an directed acyclic graph  \cite{TheGeneOntologyConsortium2000, Ontology2009, TheGeneOntologyConsortium2015} that provide detailed information about the molecular, cellular or biochemical functions of the gene among others. For a given gene list, certain software programs can query whether a particular gene is enriched  \cite{Mi2009, McLean2010, Huang2009}. One area of biological significance that GO does not include is anatomy. One way to address this shortcoming is to generate a `tissue ontology' that provides a complete anatomical description for an organism or sets of organisms, such as `tissue', `organ' or `neuronal cell', for example. Such a tissue ontology has been developed previously \cite{Lee2003}.  The  \emph{C. elegans} database, WormBase \cite{Harris2014}, maintains a carefully curated list of gene expression data from GFP-reporters. 
-	Here we provide a new framework that analyses user-input list for enrichment of specific tissues. We believe that tissues are physiologically relevant units with broad, relatively well-understood functionalities amenable to hypothesis formation. As such, we believe that identification of tissues is likely to provide researchers with enough information to be able to form hypotheses about the physiological responses of an organism to a specified condition. 
+	RNA-seq and other high-throughput methods in biology have the ability to identify thousands of genes that are altered between conditions. These genes are often correlated in their biological characteristics or functions, but identifying these functions remains challenging. To interpret these long lists of genes, biologists need to abstract genes into fewer terms that are biologically relevant to form hypotheses about what is happening in the data. One such abstraction method relies on Gene Ontology (GO). GO provides a controlled set of hierarchically ordered terms  \cite{TheGeneOntologyConsortium2000, Ontology2009, TheGeneOntologyConsortium2015} that provide detailed information about the molecular, cellular or biochemical functions of any gene. For a given gene list, certain software programs can query whether a particular term is enriched  \cite{Mi2009, McLean2010, Huang2009}. One area of biological significance that GO does not include is anatomy. One way to address this shortcoming is to use test a `tissue ontology' that provides a complete anatomical description for an organism (e.g `tissue', `organ' or `neuronal cell'), in this case for \emph{C. elegans} \cite{Lee2003}.  The  \emph{C. elegans} database, WormBase \cite{Harris2014}, maintains a carefully curated list of gene expression data from GFP-reporters. Here we provide a new framework that analyses a user-input list for enrichment of specific tissues. Tissues are physiologically relevant units with broad, relatively well-understood functionalities amenable to hypothesis formation. As such, we believe that identification of tissues is likely to provide researchers with enough information to be able to form hypotheses about the physiological responses of an organism to a specified condition. 
 	
-	Another problem frequently associated with GO enrichment analysis is that it is often difficult to interpret due to the large number of terms associated with a given gene. There exist a number of GO analytic tools for use by the community but a shared complaint for many programs is the very large number of GO terms that are significantly associated with any given gene list.  A common tool for GO analysis, DAVID, clusters terms into broad categories that are amenable to exploration by researchers  \cite{Huang2007}, whereas PANTHER, a different software package  \cite{Mi2009, Mi2013}, attempts to solve this issue by employing a manually reduced ontology, GOslim (H. Yu and P. Thomas, pers. comm. ).
+	Another problem frequently associated with GO enrichment analysis is that it is often difficult to interpret due to the large number of terms associated with a given gene. There exist a number of GO analytic tools for use by the community but a shared complaint for many programs is the very large number of GO terms that are significantly associated with any given gene list. DAVID, a common tool for GO enrichment analysis, clusters terms into broad categories  \cite{Huang2007}, whereas PANTHER \cite{Mi2009, Mi2013} attempts to solve this issue by employing a manually reduced ontology, GOslim (H. Yu and P. Thomas, pers. comm. ).
 	
-	To prevent our tool from suffering from the same drawbacks, we have cut down on result verbosity by filtering the ontology by using a small set of well-defined criteria to remove terms that do not contribute extra information. To our knowledge, such filtering has never been performed in an algorithmic fashion for an ontology before---indeed, tools such as DAVID do not employ term trimming \emph{a priori} of testing, but rather fuzzy clustering \emph{post} testing to reduce the number of ontology terms. We believe our trimming methodology strikes a good balance between detailed tissue calling and conservative testing.	
+	To prevent our tool from suffering from the same drawbacks, we have cut down on result verbosity by filtering the ontology by using a small set of well-defined criteria to remove terms that do not contribute additional information. To our knowledge, such filtering has never been performed in an algorithmic fashion for an ontology before---indeed, tools such as DAVID do not employ term trimming \emph{a priori} of testing, but rather fuzzy clustering \emph{post} testing to reduce the number of ontology terms. We believe our trimming methodology strikes a good balance between detailed tissue calling and conservative testing.	
 
 	Our tool is available within WormBase and provides users with a text-based file of the enrichment results as well as a simple and clear graph of the results that exhibit the largest fold-change enrichment.
 
@@ -279,7 +285,7 @@ Another problem arises from the fact that the tissue ontology is scarcely popula
 	Finally, we also wanted to remove as many terms as possible from the dictionary with the goals of reducing covariance between terms, decreasing multiple testing and removing as many non-informative terms as possible. Decreasing covariance between terms is important because we employ a frequentist approach that assumes all terms are independent. Large covariation coefficients between some terms means that if one of these tissues tests significant, the other terms are much more likely to pass significance testing as well. This makes adequate correction for false positive rates considerably more difficult. Moreover, from a data analysis perspective, we reasoned that, for any parent node, if all its daughters were selected for testing, there was no additional benefit to test the parent. In other words, if all the daughter nodes are tested, there is little additional information to be gained by including the parent node.  To address this issue we removed parent nodes from the analysis if all their daughter nodes passed the annotation threshold (see Figure~\ref{fig:trim_roots}).
 
 \subsubsection*{Filtering greatly reduces the number of nodes used for analysis}
-	By itself, each of these filters can reduce the number of nodes employed for analysis. Notably, these filters are not all commutative: while trimming and redundancy filtering are commutative, applying the ceiling filter is not commutative with either the trimming or the redundancy filter. If the ceiling filter is  applied before any other filter, only terminal nodes will remain, since all the parents have complete daughter sets. Since terminal nodes are the most poorly annotated, after applying the remaining filters very few nodes will be left behind if any. On the other hand, applying the ceiling operator after trimming and redundancy filtering  will result in greater numbers of nodes. We always applied the ceiling at the end. For validation (see below) we made a number of different dictionaries. The original ontology has 1675 terms with more than 5 gene annotations. After filtering, dictionary sizes ranged from 21 to a maximum of 400 terms, which shows the number of terms in a scarcely annotated ontology can be reduced by tenfold by application of a few simple filters (see Table ~\ref{tab:DictionarySpecs}). These filters were used to compile a static dictionary that we employ for all analyses.
+	By itself, each of these filters can reduce the number of nodes employed for analysis. Notably, these filters are not all commutative: while trimming and redundancy filtering are commutative, applying the ceiling filter is not commutative with either the trimming or the redundancy filter. If the ceiling filter is  applied before any other filter, only terminal nodes will remain, since all the parents have complete daughter sets. Since terminal nodes are the most poorly annotated, after applying the remaining filters very few nodes will be left behind if any. On the other hand, applying the ceiling operator after trimming and redundancy filtering  will result in greater numbers of nodes. We always applied the ceiling at the end. For validation (see below) we made a number of different dictionaries. The original ontology has almost 6,000 terms of which 1675 have at least 5 gene annotations. After filtering, dictionary sizes ranged from 21 to a maximum of 400 terms, which shows the number of terms in a scarcely annotated ontology can be reduced by an order of magnitude through application of a few simple filters (see Table ~\ref{tab:DictionarySpecs}). These filters were used to compile a static dictionary that we employ for all analyses.
 
 \subsection*{Tissue enrichment testing via a hypergeometric model}
 	Having built a static dictionary, we generated a Python script that implements a significance testing algorithm based on the hypergeometric model. Briefly, the hypergeometric model assumes the existence of an urn with a pre-determined number of balls inside it. The balls can be painted one of several colors. The hypergeometric model provides an answer to the question: If an individual removes $N$ balls, what is the probability of observing $n_i$ balls of color $i$, if the balls are selected without replacement? Mathematically, this is expressed as:
@@ -463,19 +469,6 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
   }
   \label{fig:GUIresults}
 \end{figure}
-
-% \begin{figure}[h!]
-%   \caption{\csentence{Screenshot of the web GUI.}
-%       }
-% 	  \label{fig:GUI}
-%
-%       \end{figure}
-% \begin{figure}[h!]
-%   \caption{\csentence{Screenshot of results from web GUI.}
-%       }
-% 	  \label{fig:GUIresults}
-      % \end{figure}
-
 
 % statistical testing and validation Figures
 %q plot

@@ -32,3 +32,5 @@ tests/hgf_benchmarking/doc/.Rhistory
 
 *.gz
 >>>>>>> development
+
+tests/hgf_benchmarking/doc/.Rhistory
