@@ -1,4 +1,4 @@
-No. Of Annotations,Threshold,Method,No. Of Tissues in Dictionary
+Annotation Cutoff,Similarity Threshold,Method,No. Of Tissues in Dictionary
 25,0.9,any,460
 25,0.9,avg,461
 25,0.95,any,466

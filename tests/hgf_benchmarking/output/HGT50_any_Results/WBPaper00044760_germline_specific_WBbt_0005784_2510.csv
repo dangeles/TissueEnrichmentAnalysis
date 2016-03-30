@@ -1,3 +1,3 @@
 #WBPaper00044760_germline_specific_WBbt_0005784_2510
-,Tissue,Expected,Observed,Enrichment Fold Change,Q value
-0,oocyte WBbt:0006797,15.989645559538031,40.0,2.5016189290161894,4.143273367154732e-07
+Tissue,Expected,Observed,Enrichment Fold Change,Q value
+oocyte WBbt:0006797,15.989645559538031,40.0,2.5016189290161894,4.143273367154732e-07

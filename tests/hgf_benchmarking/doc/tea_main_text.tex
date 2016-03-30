@@ -81,6 +81,7 @@
 % \def\includegraphics{}
 
 \graphicspath {{figures/}}
+\newcommand{\ignore}[2]{\hspace{0in}#2}
 
 %%% Put your definitions there:
 \startlocaldefs
@@ -318,7 +319,7 @@ We also assessed the internal agreement of our tool by using independent gene-se
 
 
 \subsection*{A brief example}
-We applied our tool to the RNA-seq datasets developed by Engelmann et al.  \cite{Engelmann2011} to gain further understanding of the biology underlying these datasets. Engelmann et al.  exposed young adult worms to 5 different pathogenic bacteria or fungi for 24 hours, after which mRNA was extracted from the worms for sequencing. We ran TEA on the genes Engelmann \emph{et al} identified as up- or down-regulated. Initially we noticed that genes that are down-regulated tend to be twice better annotated on average than genes that were up-regulated, suggesting that our understanding of the worm immune system is scarce, in spite of important advances made over the last decade. Strikingly, three out of the five samples showed enrichment of neuronal tissues or neuronal precursor tissues amongst the down-regulated genes (see \ref{fig:Dcon}, \ref{fig:Hsp},\ref{fig:Smar}). A possible explanation for this might be that the infected worms are sick and the neurons are beginning to shut down; an alternative hypothesis would be that the worm is down-regulating specific neuronal pathways as a behavioral response against the pathogen. Indeed, several studies \cite{Meisel2014, Zhang2005} have provided evidence that   \emph{C. elegans} uses chemosensory neurons to identify pathogens. Interestingly, one bacterium did not exhibit the same pattern of down-regulation of neuronal-associated genes. \emph{E. faecalis} showed increased expression of genes associated with neuronal tissues, hinting that \emph{E. faecalis} may have a different pathogenic profile. Up-regulated tissues, when detected, almost always included the hypodermis and excretory duct.
+We applied our tool to the RNA-seq datasets developed by Engelmann et al.  \cite{Engelmann2011} to gain further understanding of the biology underlying these datasets. Engelmann et al.  exposed young adult worms to 5 different pathogenic bacteria or fungi for 24 hours, after which mRNA was extracted from the worms for sequencing. We ran TEA on the genes Engelmann \emph{et al} identified as up- or down-regulated. Initially we noticed that genes that are down-regulated tend to be twice better annotated on average than genes that were up-regulated, suggesting that our understanding of the worm immune system is scarce, in spite of important advances made over the last decade. Strikingly, three out of the five samples showed enrichment of neuronal tissues or neuronal precursor tissues amongst the down-regulated genes (see \ref{fig:Dcon},\ignore{ \ref{fig:Hsp},\ref{fig:Smar}}). A possible explanation for this might be that the infected worms are sick and the neurons are beginning to shut down; an alternative hypothesis would be that the worm is down-regulating specific neuronal pathways as a behavioral response against the pathogen. Indeed, several studies \cite{Meisel2014, Zhang2005} have provided evidence that   \emph{C. elegans} uses chemosensory neurons to identify pathogens. Interestingly, one bacterium did not exhibit the same pattern of down-regulation of neuronal-associated genes. \emph{E. faecalis} showed increased expression of genes associated with neuronal tissues, hinting that \emph{E. faecalis} may have a different pathogenic profile. Up-regulated tissues, when detected, almost always included the hypodermis and excretory duct.
 	Our results highlight the involvement of various   \emph{C. elegans} neuronal tissues in pathogen defense and/or illness.
 
 \section*{Discussion}
@@ -516,9 +517,9 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
   \end{subfigure}
   \captionsetup{width= 0.95\textwidth}
   \caption{\csentence{Independently derived genesets show similar results within a given dictionary}
-  Bar labels are anatomy terms in human-readable format, followed by their unique WBbt ID.
-  \textbf{a)} Gene set from Watson, 2008~\cite{Watson2008a}. Dictionary with cutoff: 33; threshold: 0.95; method: `any'
-  \textbf{b)} Gene set from Spencer, 2011~\cite{Spencer2011}. Dictionary with cutoff: 50; threshold: 0.95; method: `any'
+  Bar labels are anatomy terms in human-readable format, followed by their unique WBbt ID. Dictionary with cutoff: 33; threshold: 0.95; method: `any'.
+  \textbf{a)} GABAergic gene set from Watson, 2008~\cite{Watson2008a}.
+  \textbf{b)} GABAergic gene set from Spencer, 2011~\cite{Spencer2011}.
    }
    \label{fig:intragree}
 \end{figure}
@@ -535,16 +536,16 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 	\label{fig:Dcon}
 \end{figure}
 
-\begin{figure}[h!]
-    \includegraphics[width=0.95\textwidth]{figures/HarposporiumspEnrichment.png}
-	\captionsetup{width= 0.95\textwidth}
-	\caption{\csentence{\emph{Harposporium sp.} enrichment results}
-      Genes altered in   \emph{C. elegans} after 24hr exposure to \emph{Harposporium sp.} a fungus, shows enrichment
-	  in the posterior lateral ganglion, similarly to \emph{D. coniospora}. This particular fungus seems to affect
-	  genes normally associated with neuronal precursor tissues as well. 
-	  }
-	\label{fig:Hsp}
-\end{figure}
+% \begin{figure}[h!]
+%     \includegraphics[width=0.95\textwidth]{figures/HarposporiumspEnrichment.png}
+% 	\captionsetup{width= 0.95\textwidth}
+% 	\caption{\csentence{\emph{Harposporium sp.} enrichment results}
+%       Genes altered in   \emph{C. elegans} after 24hr exposure to \emph{Harposporium sp.} a fungus, shows enrichment
+% 	  in the posterior lateral ganglion, similarly to \emph{D. coniospora}. This particular fungus seems to affect
+% 	  genes normally associated with neuronal precursor tissues as well.
+% 	  }
+% 	\label{fig:Hsp}
+% \end{figure}
 
 \begin{figure}[h!]
     \includegraphics[width=0.95\textwidth]{figures/SerratiamarcescensEnrichment.png}
@@ -556,29 +557,29 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 	}  
 	\label{fig:Smar}
 \end{figure}
-
-\begin{figure}[h!]
-    \includegraphics[width=0.95\textwidth]{figures/EnterococcusfaecalisEnrichment.png}
-	\captionsetup{width= 0.95\textwidth}
-  	\caption{\csentence{\emph{E. faecalis} enrichment results}
-      Genes altered in   \emph{C. elegans} after 24hr exposure to \emph{E. faecalis}, a bacterium, shows an unusual pattern:
-	  No terms were identified as enriched in the down-regulated category. Surprisingly, up-regulated genes show enrichment
-	  of various head neurons that were down-regulated with exposure to other pathogens. Interestingly, some pharyngeal
-	  muscle terms are also enriched. 
-	  }
-	\label{fig:Efaec}
-\end{figure}
-
-\begin{figure}[h!]
-    \includegraphics[width=0.95\textwidth]{figures/OtorhabdusluminescensEnrichment.png}
-	\captionsetup{width= 0.95\textwidth}
-  	\caption{\csentence{\emph{O. luminescens} enrichment results}
-      Genes altered in   \emph{C. elegans} after 24hr exposure to \emph{O. luminescens}, a bacterium, shows no
-	  significantly enriched terms in down-regulated genes. However, up-regulated genes suggest that the hypodermis
-	  and excretory duct cell may be affected by infection. 
-	  }
-	\label{fig:Olum}
-\end{figure}
+%
+% \begin{figure}[h!]
+%     \includegraphics[width=0.95\textwidth]{figures/EnterococcusfaecalisEnrichment.png}
+% 	\captionsetup{width= 0.95\textwidth}
+%   	\caption{\csentence{\emph{E. faecalis} enrichment results}
+%       Genes altered in   \emph{C. elegans} after 24hr exposure to \emph{E. faecalis}, a bacterium, shows an unusual pattern:
+% 	  No terms were identified as enriched in the down-regulated category. Surprisingly, up-regulated genes show enrichment
+% 	  of various head neurons that were down-regulated with exposure to other pathogens. Interestingly, some pharyngeal
+% 	  muscle terms are also enriched.
+% 	  }
+% 	\label{fig:Efaec}
+% \end{figure}
+%
+% \begin{figure}[h!]
+%     \includegraphics[width=0.95\textwidth]{figures/OtorhabdusluminescensEnrichment.png}
+% 	\captionsetup{width= 0.95\textwidth}
+%   	\caption{\csentence{\emph{O. luminescens} enrichment results}
+%       Genes altered in   \emph{C. elegans} after 24hr exposure to \emph{O. luminescens}, a bacterium, shows no
+% 	  significantly enriched terms in down-regulated genes. However, up-regulated genes suggest that the hypodermis
+% 	  and excretory duct cell may be affected by infection.
+% 	  }
+% 	\label{fig:Olum}
+% \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                               %%
