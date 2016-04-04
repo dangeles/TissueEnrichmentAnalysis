@@ -1,0 +1,71 @@
+Tissue,Q value-33,Q value-50,Enrichment Fold Change-33,Enrichment Fold Change-50
+lumbar ganglion WBbt:0005830,2.9e-19,-,2.2,-
+lateral ganglion WBbt:0005105,8.8e-19,8.5e-29,1.9,2.3
+nerve ring WBbt:0006749,3.2e-17,8.1e-28,1.7,2.1
+retrovesicular ganglion WBbt:0005656,9e-15,1e-19,2.8,3.5
+dorsal nerve cord WBbt:0006750,4.2e-12,2.3e-18,2,2.5
+pharyngeal nervous system WBbt:0005440,6.7e-10,-,1.9,-
+osmosensory neuron WBbt:0008433,2.6e-08,6.2e-12,2.4,3
+nociceptor neuron WBbt:0008434,2.6e-08,6.2e-12,2.4,3
+ALM WBbt:0005406,2.6e-08,1.1e-11,2.6,3.1
+lateral nerve cord WBbt:0006769,2.6e-08,1.2e-11,2.6,3.2
+PHB WBbt:0007808,2.9e-08,1.3e-11,2.5,3.1
+ASK WBbt:0005668,3.1e-08,1.1e-11,2.4,2.9
+FLP WBbt:0006828,6.4e-08,-,3.5,-
+PHA WBbt:0007807,9.3e-08,5.6e-11,2.5,3
+ASI WBbt:0005666,9.5e-08,1.6e-11,2.1,2.6
+PDE WBbt:0006747,9.5e-08,-,3.1,-
+SMDDL WBbt:0004972,1.1e-07,-,3.4,-
+ASG WBbt:0005664,1.1e-07,2e-10,2.7,3.4
+postdeirid sensillum WBbt:0005471,1.4e-07,-,2.9,-
+ASER WBbt:0003903,2.1e-07,5.8e-11,2.1,2.6
+dorso-rectal ganglion WBbt:0005212,2.4e-07,-,2.5,-
+preanal ganglion WBbt:0005448,3.3e-07,4.6e-11,1.9,2.4
+AVA WBbt:0005842,3.4e-07,1.2e-09,2.8,3.5
+AVM WBbt:0003832,4.4e-07,1e-09,2.5,3.1
+ASEL WBbt:0003904,5e-07,2e-10,2.1,2.6
+ventral nerve cord WBbt:0005829,6.2e-07,1.6e-12,1.5,1.9
+PLM WBbt:0005490,6.2e-07,1e-09,2.4,2.9
+OLQ WBbt:0006848,9.6e-07,-,3.1,-
+ADE WBbt:0005415,1.7e-06,-,3.2,-
+PVM WBbt:0004086,1.9e-06,8.8e-09,2.6,3.2
+AIY WBbt:0005413,2.9e-06,7.8e-09,2.3,2.9
+HSN WBbt:0006830,4e-06,4.9e-09,2.1,2.6
+BAG WBbt:0006825,8.7e-06,-,2.8,-
+SDQL WBbt:0004993,8.9e-06,-,2.9,-
+ADL WBbt:0005661,1.4e-05,2.4e-08,2,2.5
+ASJ WBbt:0005667,1.4e-05,4.4e-08,2.2,2.7
+BDU WBbt:0006826,1.4e-05,-,2.8,-
+PVD WBbt:0006831,4.5e-05,3.6e-07,2.3,2.8
+CEPVL WBbt:0004933,4.5e-05,-,2.8,-
+PVC WBbt:0005840,5e-05,-,2.6,-
+PVQ WBbt:0006976,5.2e-05,6.4e-07,2.4,3
+CEPVR WBbt:0004931,7e-05,-,2.7,-
+thermosensory neuron WBbt:0005838,8.7e-05,1e-06,2.3,2.8
+PQR WBbt:0004096,0.00012,1.4e-06,2.3,2.8
+outer labial quadrant sensillum WBbt:0005502,0.00015,-,2.4,-
+CEPDL WBbt:0004938,0.00017,-,2.6,-
+AUA WBbt:0006817,0.00019,-,2.6,-
+CEPDR WBbt:0004937,0.00025,-,2.5,-
+outer labial lateral sensillum WBbt:0005503,0.00025,-,2.5,-
+NSM WBbt:0003666,0.00042,-,2.2,-
+AWB WBbt:0005671,0.00074,9e-06,2,2.4
+SDQR WBbt:0004991,0.00093,-,2.3,-
+RIC WBbt:0006834,0.0011,-,2.4,-
+AWC WBbt:0005672,0.0027,2e-05,1.7,2.1
+URX WBbt:0006846,0.0028,-,2.1,-
+AWA WBbt:0005670,0.005,-,2,-
+cephalic sensillum WBbt:0006920,0.0065,-,2,-
+ray 6 WBbt:0006951,0.0075,-,2.1,-
+ray 5 WBbt:0006950,0.01,-,2,-
+PVT WBbt:0004070,0.012,0.00026,1.6,2
+ADF WBbt:0005660,0.017,0.00044,1.6,2
+CAN WBbt:0006827,0.023,0.00075,1.6,2
+ray 1 WBbt:0006942,0.028,-,1.9,-
+ray 7 WBbt:0006952,0.034,-,1.8,-
+ray 2 WBbt:0006945,0.044,-,1.8,-
+DVA WBbt:0004823,0.045,-,1.8,-
+nervous system WBbt:0005735,-,2e-59,-,1.5
+tail WBbt:0005741,-,3.2e-32,-,1.6
+posterior lateral ganglion WBbt:0005465,-,7.3e-21,-,3.2
+muscle cell WBbt:0003675,-,0.012,-,1.1

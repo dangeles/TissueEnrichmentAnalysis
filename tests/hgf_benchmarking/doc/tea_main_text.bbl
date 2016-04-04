@@ -1,1075 +1,188 @@
-%% BioMed_Central_Bib_Style_v1.01
+\begin{thebibliography}{10}
 
-\begin{thebibliography}{29}
-% BibTex style file: bmc-mathphys.bst (version 2.1), 2014-07-24
-\ifx \bisbn   \undefined \def \bisbn  #1{ISBN #1}\fi
-\ifx \binits  \undefined \def \binits#1{#1}\fi
-\ifx \bauthor  \undefined \def \bauthor#1{#1}\fi
-\ifx \batitle  \undefined \def \batitle#1{#1}\fi
-\ifx \bjtitle  \undefined \def \bjtitle#1{#1}\fi
-\ifx \bvolume  \undefined \def \bvolume#1{\textbf{#1}}\fi
-\ifx \byear  \undefined \def \byear#1{#1}\fi
-\ifx \bissue  \undefined \def \bissue#1{#1}\fi
-\ifx \bfpage  \undefined \def \bfpage#1{#1}\fi
-\ifx \blpage  \undefined \def \blpage #1{#1}\fi
-\ifx \burl  \undefined \def \burl#1{\textsf{#1}}\fi
-\ifx \doiurl  \undefined \def \doiurl#1{\textsf{#1}}\fi
-\ifx \betal  \undefined \def \betal{\textit{et al.}}\fi
-\ifx \binstitute  \undefined \def \binstitute#1{#1}\fi
-\ifx \binstitutionaled  \undefined \def \binstitutionaled#1{#1}\fi
-\ifx \bctitle  \undefined \def \bctitle#1{#1}\fi
-\ifx \beditor  \undefined \def \beditor#1{#1}\fi
-\ifx \bpublisher  \undefined \def \bpublisher#1{#1}\fi
-\ifx \bbtitle  \undefined \def \bbtitle#1{#1}\fi
-\ifx \bedition  \undefined \def \bedition#1{#1}\fi
-\ifx \bseriesno  \undefined \def \bseriesno#1{#1}\fi
-\ifx \blocation  \undefined \def \blocation#1{#1}\fi
-\ifx \bsertitle  \undefined \def \bsertitle#1{#1}\fi
-\ifx \bsnm \undefined \def \bsnm#1{#1}\fi
-\ifx \bsuffix \undefined \def \bsuffix#1{#1}\fi
-\ifx \bparticle \undefined \def \bparticle#1{#1}\fi
-\ifx \barticle \undefined \def \barticle#1{#1}\fi
-\ifx \bconfdate \undefined \def \bconfdate #1{#1}\fi
-\ifx \botherref \undefined \def \botherref #1{#1}\fi
-\ifx \url \undefined \def \url#1{\textsf{#1}}\fi
-\ifx \bchapter \undefined \def \bchapter#1{#1}\fi
-\ifx \bbook \undefined \def \bbook#1{#1}\fi
-\ifx \bcomment \undefined \def \bcomment#1{#1}\fi
-\ifx \oauthor \undefined \def \oauthor#1{#1}\fi
-\ifx \citeauthoryear \undefined \def \citeauthoryear#1{#1}\fi
-\ifx \endbibitem  \undefined \def \endbibitem {}\fi
-\ifx \bconflocation  \undefined \def \bconflocation#1{#1}\fi
-\ifx \arxivurl  \undefined \def \arxivurl#1{\textsf{#1}}\fi
-\csname PreBibitemsHook\endcsname
+\bibitem{TheGeneOntologyConsortium2000a}
+{The Gene Ontology Consortium}.
+\newblock {Gene Ontology: tool for the unification of biology}.
+\newblock {\em Nature Genetics}, 25(may):25--29, 2000.
 
-%%% 1
-\bibitem[\protect\citeauthoryear{Benjamini and Hochberg}{1995}]{Benjamini1995}
-\begin{botherref}
-\oauthor{\bsnm{Benjamini}, \binits{Y.}},
-\oauthor{\bsnm{Hochberg}, \binits{Y.}}:
-{Controlling the False Discovery Rate: A Practical and Powerful Approach to
-  Multiple Testing}
-(1995).
-\arxivurl{95/57289}.
-doi:\doiurl{10.2307/2346101}.
-\url{http://www.jstor.org/stable/2346101}
-\end{botherref}
-\endbibitem
+\bibitem{TheGeneOntologyConsortium2015}
+{The Gene Ontology Consortium}.
+\newblock {Gene Ontology Consortium: going forward}.
+\newblock {\em Nucleic Acids Research}, 43(D1):D1049--D1056, 2015.
 
-%%% 2
-\bibitem[\protect\citeauthoryear{Chikina et~al.}{2009}]{Chikina2009}
-\begin{botherref}
-\oauthor{\bsnm{Chikina}, \binits{M.D.}},
-\oauthor{\bsnm{Huttenhower}, \binits{C.}},
-\oauthor{\bsnm{Murphy}, \binits{C.T.}},
-\oauthor{\bsnm{Troyanskaya}, \binits{O.G.}}:
-{Global prediction of tissue-specific gene expression and context-dependent
-  gene networks in Caenorhabditis elegans}.
-PLoS Computational Biology
-\textbf{5}(6)
-(2009).
-doi:\doiurl{10.1371/journal.pcbi.1000417}
-\end{botherref}
-\endbibitem
+\bibitem{Mi2009}
+Huaiyu Mi, Qing Dong, Anushya Muruganujan, Pascale Gaudet, Suzanna Lewis, and
+  Paul~D. Thomas.
+\newblock {PANTHER version 7: Improved phylogenetic trees, orthologs and
+  collaboration with the Gene Ontology Consortium}.
+\newblock {\em Nucleic Acids Research}, 38(SUPPL.1), 2009.
 
-%%% 3
-\bibitem[\protect\citeauthoryear{Cinar et~al.}{2005}]{Cinar2005}
-\begin{barticle}
-\bauthor{\bsnm{Cinar}, \binits{H.}},
-\bauthor{\bsnm{Keles}, \binits{S.}},
-\bauthor{\bsnm{Jin}, \binits{Y.}}:
-\batitle{{Expression profiling of GABAergic motor neurons in Caenorhabditis
-  elegans}}.
-\bjtitle{Current Biology}
-\bvolume{15}(\bissue{4}),
-\bfpage{340}--\blpage{346}
-(\byear{2005}).
-doi:\doiurl{10.1016/j.cub.2005.02.025}
-\end{barticle}
-\endbibitem
+\bibitem{McLean2010}
+Cory~Y McLean, Dave Bristor, Michael Hiller, Shoa~L Clarke, Bruce~T Schaar,
+  Craig~B Lowe, Aaron~M Wenger, and Gill Bejerano.
+\newblock {GREAT improves functional interpretation of cis-regulatory regions.}
+\newblock {\em Nature biotechnology}, 28(5):495--501, 2010.
 
-%%% 4
-\bibitem[\protect\citeauthoryear{Engelmann et~al.}{2011}]{Engelmann2011}
-\begin{botherref}
-\oauthor{\bsnm{Engelmann}, \binits{I.}},
-\oauthor{\bsnm{Griffon}, \binits{A.}},
-\oauthor{\bsnm{Tichit}, \binits{L.}},
-\oauthor{\bsnm{Monta{\~{n}}a-Sanchis}, \binits{F.}},
-\oauthor{\bsnm{Wang}, \binits{G.}},
-\oauthor{\bsnm{Reinke}, \binits{V.}},
-\oauthor{\bsnm{Waterston}, \binits{R.H.}},
-\oauthor{\bsnm{Hillier}, \binits{L.W.}},
-\oauthor{\bsnm{Ewbank}, \binits{J.J.}}:
-{A comprehensive analysis of gene expression changes provoked by bacterial and
-  fungal infection in C. elegans}.
-PLoS ONE
-\textbf{6}(5)
-(2011).
-doi:\doiurl{10.1371/journal.pone.0019055}
-\end{botherref}
-\endbibitem
+\bibitem{Huang2009}
+Da~Wei Huang, Richard~a Lempicki, and Brad~T Sherman.
+\newblock {Systematic and integrative analysis of large gene lists using DAVID
+  bioinformatics resources.}
+\newblock {\em Nature Protocols}, 4(1):44--57, 2009.
 
-%%% 5
-\bibitem[\protect\citeauthoryear{Fox et~al.}{2007}]{Fox2007}
-\begin{barticle}
-\bauthor{\bsnm{Fox}, \binits{R.M.}},
-\bauthor{\bsnm{Watson}, \binits{J.D.}},
-\bauthor{\bsnm{{Von Stetina}}, \binits{S.E.}},
-\bauthor{\bsnm{McDermott}, \binits{J.}},
-\bauthor{\bsnm{Brodigan}, \binits{T.M.}},
-\bauthor{\bsnm{Fukushige}, \binits{T.}},
-\bauthor{\bsnm{Krause}, \binits{M.}},
-\bauthor{\bsnm{{Miller 3rd}}, \binits{D.M.}},
-\bauthor{\bsnm{Miller}, \binits{D.M.}}:
-\batitle{{The embryonic muscle transcriptome of Caenorhabditis elegans}}.
-\bjtitle{Genome Biol}
-\bvolume{8}(\bissue{9}),
-\bfpage{188}
-(\byear{2007}).
-doi:\doiurl{10.1186/gb-2007-8-9-r188}
-\end{barticle}
-\endbibitem
+\bibitem{Lee2003}
+R.~Y~N Lee and Paul~W. Sternberg.
+\newblock {Building a cell and anatomy ontology of Caenorhabditis elegans},
+  2003.
 
-%%% 6
-\bibitem[\protect\citeauthoryear{Gaudet et~al.}{2004}]{Gaudet2004a}
-\begin{botherref}
-\oauthor{\bsnm{Gaudet}, \binits{J.}},
-\oauthor{\bsnm{Muttumu}, \binits{S.}},
-\oauthor{\bsnm{Horner}, \binits{M.}},
-\oauthor{\bsnm{Mango}, \binits{S.E.}}:
-{Whole-genome analysis of temporal gene expression during foregut development}.
-PLoS Biology
-\textbf{2}(11)
-(2004).
-doi:\doiurl{10.1371/journal.pbio.0020352}
-\end{botherref}
-\endbibitem
+\bibitem{Harris2014}
+Todd~W. Harris, Joachim Baran, Tamberlyn Bieri, Abigail Cabunoc, Juancarlos
+  Chan, Wen~J. Chen, Paul Davis, James Done, Christian Grove, Kevin Howe,
+  Ranjana Kishore, Raymond Lee, Yuling Li, Hans~Michael Muller, Cecilia
+  Nakamura, Philip Ozersky, Michael Paulini, Daniela Raciti, Gary Schindelman,
+  Mary~Ann Tuli, Kimberly~Van Auken, Daniel Wang, Xiaodong Wang, Gary Williams,
+  J.~D. Wong, Karen Yook, Tim Schedl, Jonathan Hodgkin, Matthew Berriman, Paul
+  Kersey, John Spieth, Lincoln Stein, and Paul~W. Sternberg.
+\newblock {WormBase 2014: New views of curated biology}.
+\newblock {\em Nucleic Acids Research}, 42(D1), 2014.
 
-%%% 7
-\bibitem[\protect\citeauthoryear{Harris et~al.}{2014}]{Harris2014}
-\begin{botherref}
-\oauthor{\bsnm{Harris}, \binits{T.W.}},
-\oauthor{\bsnm{Baran}, \binits{J.}},
-\oauthor{\bsnm{Bieri}, \binits{T.}},
-\oauthor{\bsnm{Cabunoc}, \binits{A.}},
-\oauthor{\bsnm{Chan}, \binits{J.}},
-\oauthor{\bsnm{Chen}, \binits{W.J.}},
-\oauthor{\bsnm{Davis}, \binits{P.}},
-\oauthor{\bsnm{Done}, \binits{J.}},
-\oauthor{\bsnm{Grove}, \binits{C.}},
-\oauthor{\bsnm{Howe}, \binits{K.}},
-\oauthor{\bsnm{Kishore}, \binits{R.}},
-\oauthor{\bsnm{Lee}, \binits{R.}},
-\oauthor{\bsnm{Li}, \binits{Y.}},
-\oauthor{\bsnm{Muller}, \binits{H.M.}},
-\oauthor{\bsnm{Nakamura}, \binits{C.}},
-\oauthor{\bsnm{Ozersky}, \binits{P.}},
-\oauthor{\bsnm{Paulini}, \binits{M.}},
-\oauthor{\bsnm{Raciti}, \binits{D.}},
-\oauthor{\bsnm{Schindelman}, \binits{G.}},
-\oauthor{\bsnm{Tuli}, \binits{M.A.}},
-\oauthor{\bsnm{Auken}, \binits{K.V.}},
-\oauthor{\bsnm{Wang}, \binits{D.}},
-\oauthor{\bsnm{Wang}, \binits{X.}},
-\oauthor{\bsnm{Williams}, \binits{G.}},
-\oauthor{\bsnm{Wong}, \binits{J.D.}},
-\oauthor{\bsnm{Yook}, \binits{K.}},
-\oauthor{\bsnm{Schedl}, \binits{T.}},
-\oauthor{\bsnm{Hodgkin}, \binits{J.}},
-\oauthor{\bsnm{Berriman}, \binits{M.}},
-\oauthor{\bsnm{Kersey}, \binits{P.}},
-\oauthor{\bsnm{Spieth}, \binits{J.}},
-\oauthor{\bsnm{Stein}, \binits{L.}},
-\oauthor{\bsnm{Sternberg}, \binits{P.W.}}:
-{WormBase 2014: New views of curated biology}.
-Nucleic Acids Research
-\textbf{42}(D1)
-(2014).
-doi:\doiurl{10.1093/nar/gkt1063}
-\end{botherref}
-\endbibitem
+\bibitem{Huang2007}
+Da~Wei Huang, Brad~T. Sherman, Qina Tan, Joseph Kir, David Liu, David Bryant,
+  Yongjian Guo, Robert Stephens, Michael~W. Baseler, H.~Clifford Lane, and
+  Richard~A. Lempicki.
+\newblock {DAVID Bioinformatics Resources: Expanded annotation database and
+  novel algorithms to better extract biology from large gene lists}.
+\newblock {\em Nucleic Acids Research}, 35(SUPPL.2), 2007.
 
-%%% 8
-\bibitem[\protect\citeauthoryear{Huang et~al.}{2009}]{Huang2009}
-\begin{barticle}
-\bauthor{\bsnm{Huang}, \binits{D.W.}},
-\bauthor{\bsnm{Lempicki}, \binits{R.a.}},
-\bauthor{\bsnm{Sherman}, \binits{B.T.}}:
-\batitle{{Systematic and integrative analysis of large gene lists using DAVID
-  bioinformatics resources.}}
-\bjtitle{Nature Protocols}
-\bvolume{4}(\bissue{1}),
-\bfpage{44}--\blpage{57}
-(\byear{2009}).
-doi:\doiurl{10.1038/nprot.2008.211}
-\end{barticle}
-\endbibitem
+\bibitem{Mi2013}
+Huaiyu Mi, Anushya Muruganujan, and Paul~D. Thomas.
+\newblock {PANTHER in 2013: Modeling the evolution of gene function, and other
+  gene attributes, in the context of phylogenetic trees}.
+\newblock {\em Nucleic Acids Research}, 41(D1), 2013.
 
-%%% 9
-\bibitem[\protect\citeauthoryear{Huang et~al.}{2007}]{Huang2007}
-\begin{botherref}
-\oauthor{\bsnm{Huang}, \binits{D.W.}},
-\oauthor{\bsnm{Sherman}, \binits{B.T.}},
-\oauthor{\bsnm{Tan}, \binits{Q.}},
-\oauthor{\bsnm{Kir}, \binits{J.}},
-\oauthor{\bsnm{Liu}, \binits{D.}},
-\oauthor{\bsnm{Bryant}, \binits{D.}},
-\oauthor{\bsnm{Guo}, \binits{Y.}},
-\oauthor{\bsnm{Stephens}, \binits{R.}},
-\oauthor{\bsnm{Baseler}, \binits{M.W.}},
-\oauthor{\bsnm{Lane}, \binits{H.C.}},
-\oauthor{\bsnm{Lempicki}, \binits{R.A.}}:
-{DAVID Bioinformatics Resources: Expanded annotation database and novel
-  algorithms to better extract biology from large gene lists}.
-Nucleic Acids Research
-\textbf{35}(SUPPL.2)
-(2007).
-doi:\doiurl{10.1093/nar/gkm415}
-\end{botherref}
-\endbibitem
+\bibitem{Kim2007}
+Jong~Woo Kim, Jordi~Conesa Caralt, and Julia~K. Hilliard.
+\newblock {Pruning bio-ontologies}.
+\newblock {\em Proceedings of the Annual Hawaii International Conference on
+  System Sciences}, pages 1--10, 2007.
 
-%%% 10
-\bibitem[\protect\citeauthoryear{Lee and Sternberg}{2003}]{Lee2003}
-\begin{botherref}
-\oauthor{\bsnm{Lee}, \binits{R.Y.N.}},
-\oauthor{\bsnm{Sternberg}, \binits{P.W.}}:
-{Building a cell and anatomy ontology of Caenorhabditis elegans}
-(2003).
-doi:\doiurl{10.1002/cfg.248}
-\end{botherref}
-\endbibitem
+\bibitem{Benjamini1995}
+Yoav Benjamini and Yosef Hochberg.
+\newblock {Controlling the False Discovery Rate: A Practical and Powerful
+  Approach to Multiple Testing}, 1995.
 
-%%% 11
-\bibitem[\protect\citeauthoryear{Lee et~al.}{2013}]{Lee2013}
-\begin{barticle}
-\bauthor{\bsnm{Lee}, \binits{Y.S.}},
-\bauthor{\bsnm{Krishnan}, \binits{A.}},
-\bauthor{\bsnm{Zhu}, \binits{Q.}},
-\bauthor{\bsnm{Troyanskaya}, \binits{O.G.}}:
-\batitle{{Ontology-aware classification of tissue and cell-type signals in gene
-  expression profiles across platforms and technologies}}.
-\bjtitle{Bioinformatics}
-\bvolume{29}(\bissue{23}),
-\bfpage{3036}--\blpage{3044}
-(\byear{2013}).
-doi:\doiurl{10.1093/bioinformatics/btt529}
-\end{barticle}
-\endbibitem
+\bibitem{Gaudet2004a}
+Jeb Gaudet, Srikanth Muttumu, Michael Horner, and Susan~E. Mango.
+\newblock {Whole-genome analysis of temporal gene expression during foregut
+  development}.
+\newblock {\em PLoS Biology}, 2(11), 2004.
 
-%%% 12
-\bibitem[\protect\citeauthoryear{McKinney}{2011}]{McKinney2011}
-\begin{botherref}
-\oauthor{\bsnm{McKinney}, \binits{W.}}:
-{pandas: a Foundational Python Library for Data Analysis and Statistics}.
-Python for High Performance and Scientific Computing,
-1--9
-(2011)
-\end{botherref}
-\endbibitem
+\bibitem{Spencer2011}
+W.~Clay Spencer, Georg Zeller, Joseph~D. Watson, Stefan~R. Henz, Kathie~L.
+  Watkins, Rebecca~D. McWhirter, Sarah Petersen, Vipin~T. Sreedharan, Christian
+  Widmer, Jeanyoung Jo, Valerie Reinke, Lisa Petrella, Susan Strome, Stephen~E.
+  {Von Stetina}, Menachem Katz, Shai Shaham, Gunnar R{\"{a}}tsch, and David~M.
+  Miller.
+\newblock {A spatial and temporal map of C. elegans gene expression}.
+\newblock {\em Genome Research}, 21(2):325--341, 2011.
 
-%%% 13
-\bibitem[\protect\citeauthoryear{McLean et~al.}{2010}]{McLean2010}
-\begin{barticle}
-\bauthor{\bsnm{McLean}, \binits{C.Y.}},
-\bauthor{\bsnm{Bristor}, \binits{D.}},
-\bauthor{\bsnm{Hiller}, \binits{M.}},
-\bauthor{\bsnm{Clarke}, \binits{S.L.}},
-\bauthor{\bsnm{Schaar}, \binits{B.T.}},
-\bauthor{\bsnm{Lowe}, \binits{C.B.}},
-\bauthor{\bsnm{Wenger}, \binits{A.M.}},
-\bauthor{\bsnm{Bejerano}, \binits{G.}}:
-\batitle{{GREAT improves functional interpretation of cis-regulatory regions.}}
-\bjtitle{Nature biotechnology}
-\bvolume{28}(\bissue{5}),
-\bfpage{495}--\blpage{501}
-(\byear{2010}).
-doi:\doiurl{10.1038/nbt.1630}
-\end{barticle}
-\endbibitem
+\bibitem{Cinar2005}
+Hulusi Cinar, Sunduz Keles, and Yishi Jin.
+\newblock {Expression profiling of GABAergic motor neurons in Caenorhabditis
+  elegans}.
+\newblock {\em Current Biology}, 15(4):340--346, 2005.
 
-%%% 14
-\bibitem[\protect\citeauthoryear{Meisel and Kim}{2014}]{Meisel2014}
-\begin{barticle}
-\bauthor{\bsnm{Meisel}, \binits{J.D.}},
-\bauthor{\bsnm{Kim}, \binits{D.H.}}:
-\batitle{{Behavioral avoidance of pathogenic bacteria by Caenorhabditis
-  elegans}}.
-\bjtitle{Trends in Immunology}
-\bvolume{35}(\bissue{10}),
-\bfpage{465}--\blpage{470}
-(\byear{2014}).
-doi:\doiurl{10.1016/j.it.2014.08.008}
-\end{barticle}
-\endbibitem
+\bibitem{Watson2008a}
+Joseph~D Watson, Shenglong Wang, Stephen~E {Von Stetina}, W~Clay Spencer, Shawn
+  Levy, Phillip~J Dexheimer, Nurith Kurn, Joe~Don Heath, D~M {Miller 3rd}, and
+  David~M Miller.
+\newblock {Complementary RNA amplification methods enhance microarray
+  identification of transcripts expressed in the C. elegans nervous system}.
+\newblock {\em BMC Genomics}, 9:84, 2008.
 
-%%% 15
-\bibitem[\protect\citeauthoryear{Mi et~al.}{2013}]{Mi2013}
-\begin{botherref}
-\oauthor{\bsnm{Mi}, \binits{H.}},
-\oauthor{\bsnm{Muruganujan}, \binits{A.}},
-\oauthor{\bsnm{Thomas}, \binits{P.D.}}:
-{PANTHER in 2013: Modeling the evolution of gene function, and other gene
-  attributes, in the context of phylogenetic trees}.
-Nucleic Acids Research
-\textbf{41}(D1)
-(2013).
-doi:\doiurl{10.1093/nar/gks1118}
-\end{botherref}
-\endbibitem
+\bibitem{Pauli2006}
+Florencia Pauli, Yueyi Liu, Yoona~a Kim, Pei-Jiun Chen, and Stuart~K Kim.
+\newblock {Chromosomal clustering and GATA transcriptional regulation of
+  intestine-expressed genes in C. elegans.}
+\newblock {\em Development (Cambridge, England)}, 133(2):287--295, 2006.
 
-%%% 16
-\bibitem[\protect\citeauthoryear{Mi et~al.}{2009}]{Mi2009}
-\begin{botherref}
-\oauthor{\bsnm{Mi}, \binits{H.}},
-\oauthor{\bsnm{Dong}, \binits{Q.}},
-\oauthor{\bsnm{Muruganujan}, \binits{A.}},
-\oauthor{\bsnm{Gaudet}, \binits{P.}},
-\oauthor{\bsnm{Lewis}, \binits{S.}},
-\oauthor{\bsnm{Thomas}, \binits{P.D.}}:
-{PANTHER version 7: Improved phylogenetic trees, orthologs and collaboration
-  with the Gene Ontology Consortium}.
-Nucleic Acids Research
-\textbf{38}(SUPPL.1)
-(2009).
-doi:\doiurl{10.1093/nar/gkp1019}
-\end{botherref}
-\endbibitem
+\bibitem{Portman2004}
+Douglas~S. Portman and Scott~W. Emmons.
+\newblock {Identification of C. elegans sensory ray genes using whole-genome
+  expression profiling}.
+\newblock {\em Developmental Biology}, 270(2):499--512, 2004.
 
-%%% 17
-\bibitem[\protect\citeauthoryear{Oliphant}{2007}]{Oliphant2007}
-\begin{barticle}
-\bauthor{\bsnm{Oliphant}, \binits{T.E.}}:
-\batitle{{SciPy: Open source scientific tools for Python}}.
-\bjtitle{Computing in Science and Engineering}
-\bvolume{9},
-\bfpage{10}--\blpage{20}
-(\byear{2007})
-\end{barticle}
-\endbibitem
+\bibitem{Fox2007}
+Rebecca~M Fox, Joseph~D Watson, Stephen~E {Von Stetina}, Joan McDermott,
+  Thomas~M Brodigan, Tetsunari Fukushige, Michael Krause, D~M {Miller 3rd}, and
+  David~M Miller.
+\newblock {The embryonic muscle transcriptome of Caenorhabditis elegans}.
+\newblock {\em Genome Biol}, 8(9):R188, 2007.
 
-%%% 18
-\bibitem[\protect\citeauthoryear{Ontology}{2009}]{Ontology2009}
-\begin{barticle}
-\bauthor{\bsnm{Ontology}, \binits{G.}}:
-\batitle{{Gene Ontology}}.
-\bjtitle{Nature Reviews Genetics}
-\bvolume{2009},
-\bfpage{1}--\blpage{13}
-(\byear{2009})
-\end{barticle}
-\endbibitem
-
-%%% 19
-\bibitem[\protect\citeauthoryear{Pauli et~al.}{2006}]{Pauli2006}
-\begin{barticle}
-\bauthor{\bsnm{Pauli}, \binits{F.}},
-\bauthor{\bsnm{Liu}, \binits{Y.}},
-\bauthor{\bsnm{Kim}, \binits{Y.a.}},
-\bauthor{\bsnm{Chen}, \binits{P.-J.}},
-\bauthor{\bsnm{Kim}, \binits{S.K.}}:
-\batitle{{Chromosomal clustering and GATA transcriptional regulation of
-  intestine-expressed genes in C. elegans.}}
-\bjtitle{Development (Cambridge, England)}
-\bvolume{133}(\bissue{2}),
-\bfpage{287}--\blpage{295}
-(\byear{2006}).
-doi:\doiurl{10.1242/dev.02185}
-\end{barticle}
-\endbibitem
-
-%%% 20
-\bibitem[\protect\citeauthoryear{Portman and Emmons}{2004}]{Portman2004}
-\begin{barticle}
-\bauthor{\bsnm{Portman}, \binits{D.S.}},
-\bauthor{\bsnm{Emmons}, \binits{S.W.}}:
-\batitle{{Identification of C. elegans sensory ray genes using whole-genome
-  expression profiling}}.
-\bjtitle{Developmental Biology}
-\bvolume{270}(\bissue{2}),
-\bfpage{499}--\blpage{512}
-(\byear{2004}).
-doi:\doiurl{10.1016/j.ydbio.2004.02.020}
-\end{barticle}
-\endbibitem
-
-%%% 21
-\bibitem[\protect\citeauthoryear{Prykhozhij et~al.}{2013}]{Prykhozhij2013}
-\begin{barticle}
-\bauthor{\bsnm{Prykhozhij}, \binits{S.V.}},
-\bauthor{\bsnm{Marsico}, \binits{A.}},
-\bauthor{\bsnm{Meijsing}, \binits{S.H.}}:
-\batitle{{Zebrafish Expression Ontology of Gene Sets (ZEOGS): a tool to analyze
-  enrichment of zebrafish anatomical terms in large gene sets.}}
-\bjtitle{Zebrafish}
-\bvolume{10}(\bissue{3}),
-\bfpage{303}--\blpage{15}
-(\byear{2013}).
-doi:\doiurl{10.1089/zeb.2012.0865}
-\end{barticle}
-\endbibitem
-
-%%% 22
-\bibitem[\protect\citeauthoryear{Smith et~al.}{2010}]{Smith2010}
-\begin{barticle}
-\bauthor{\bsnm{Smith}, \binits{C.J.}},
-\bauthor{\bsnm{Watson}, \binits{J.D.}},
-\bauthor{\bsnm{Spencer}, \binits{W.C.}},
-\bauthor{\bsnm{O{\&}apos;Brien}, \binits{T.}},
-\bauthor{\bsnm{Cha}, \binits{B.}},
-\bauthor{\bsnm{Albeg}, \binits{A.}},
-\bauthor{\bsnm{Treinin}, \binits{M.}},
-\bauthor{\bsnm{Miller}, \binits{D.M.}}:
-\batitle{{Time-lapse imaging and cell-specific expression profiling reveal
+\bibitem{Smith2010}
+Cody~J. Smith, Joseph~D. Watson, W.~Clay Spencer, Tim O{\&}apos;Brien, Byeong
+  Cha, Adi Albeg, Millet Treinin, and David~M. Miller.
+\newblock {Time-lapse imaging and cell-specific expression profiling reveal
   dynamic branching and molecular determinants of a multi-dendritic nociceptor
-  in C. elegans}}.
-\bjtitle{Developmental Biology}
-\bvolume{345}(\bissue{1}),
-\bfpage{18}--\blpage{33}
-(\byear{2010}).
-doi:\doiurl{10.1016/j.ydbio.2010.05.502}
-\end{barticle}
-\endbibitem
+  in C. elegans}.
+\newblock {\em Developmental Biology}, 345(1):18--33, 2010.
 
-%%% 23
-\bibitem[\protect\citeauthoryear{Spencer et~al.}{2011}]{Spencer2011}
-\begin{barticle}
-\bauthor{\bsnm{Spencer}, \binits{W.C.}},
-\bauthor{\bsnm{Zeller}, \binits{G.}},
-\bauthor{\bsnm{Watson}, \binits{J.D.}},
-\bauthor{\bsnm{Henz}, \binits{S.R.}},
-\bauthor{\bsnm{Watkins}, \binits{K.L.}},
-\bauthor{\bsnm{McWhirter}, \binits{R.D.}},
-\bauthor{\bsnm{Petersen}, \binits{S.}},
-\bauthor{\bsnm{Sreedharan}, \binits{V.T.}},
-\bauthor{\bsnm{Widmer}, \binits{C.}},
-\bauthor{\bsnm{Jo}, \binits{J.}},
-\bauthor{\bsnm{Reinke}, \binits{V.}},
-\bauthor{\bsnm{Petrella}, \binits{L.}},
-\bauthor{\bsnm{Strome}, \binits{S.}},
-\bauthor{\bsnm{{Von Stetina}}, \binits{S.E.}},
-\bauthor{\bsnm{Katz}, \binits{M.}},
-\bauthor{\bsnm{Shaham}, \binits{S.}},
-\bauthor{\bsnm{R{\"{a}}tsch}, \binits{G.}},
-\bauthor{\bsnm{Miller}, \binits{D.M.}}:
-\batitle{{A spatial and temporal map of C. elegans gene expression}}.
-\bjtitle{Genome Research}
-\bvolume{21}(\bissue{2}),
-\bfpage{325}--\blpage{341}
-(\byear{2011}).
-doi:\doiurl{10.1101/gr.114595.110}
-\end{barticle}
-\endbibitem
+\bibitem{Engelmann2011}
+Ilka Engelmann, Aur{\'{e}}lien Griffon, Laurent Tichit, Fr{\'{e}}d{\'{e}}ric
+  Monta{\~{n}}a-Sanchis, Guilin Wang, Valerie Reinke, Robert~H. Waterston,
+  LaDeana~W. Hillier, and Jonathan~J. Ewbank.
+\newblock {A comprehensive analysis of gene expression changes provoked by
+  bacterial and fungal infection in C. elegans}.
+\newblock {\em PLoS ONE}, 6(5), 2011.
 
-%%% 24
-\bibitem[\protect\citeauthoryear{{The Gene Ontology
-  Consortium}}{2000}]{TheGeneOntologyConsortium2000}
-\begin{barticle}
-\bauthor{\bsnm{{The Gene Ontology Consortium}}}:
-\batitle{{Gene Ontology: tool for the unification of biology}}.
-\bjtitle{Nature Genetics}
-\bvolume{25}(\bissue{may}),
-\bfpage{25}--\blpage{29}
-(\byear{2000}).
-doi:\doiurl{10.1038/75556}.
-\arxivurl{10614036}
-\end{barticle}
-\endbibitem
+\bibitem{Meisel2014}
+Joshua~D. Meisel and Dennis~H. Kim.
+\newblock {Behavioral avoidance of pathogenic bacteria by Caenorhabditis
+  elegans}.
+\newblock {\em Trends in Immunology}, 35(10):465--470, 2014.
 
-%%% 25
-\bibitem[\protect\citeauthoryear{{The Gene Ontology
-  Consortium}}{2015}]{TheGeneOntologyConsortium2015}
-\begin{barticle}
-\bauthor{\bsnm{{The Gene Ontology Consortium}}}:
-\batitle{{Gene Ontology Consortium: going forward}}.
-\bjtitle{Nucleic Acids Research}
-\bvolume{43}(\bissue{D1}),
-\bfpage{1049}--\blpage{1056}
-(\byear{2015}).
-doi:\doiurl{10.1093/nar/gku1179}
-\end{barticle}
-\endbibitem
+\bibitem{Zhang2005}
+Y~Zhang, H~Lu, and C~I Bargmann.
+\newblock {Pathogenic bacteria induce aversive olfactory learning in
+  Caenorhabditis elegans}.
+\newblock {\em Nature}, 438(7065):179--184, 2005.
 
-%%% 26
-\bibitem[\protect\citeauthoryear{{Van Der Walt} et~al.}{2011}]{VanDerWalt2011}
-\begin{barticle}
-\bauthor{\bsnm{{Van Der Walt}}, \binits{S.}},
-\bauthor{\bsnm{Colbert}, \binits{S.C.}},
-\bauthor{\bsnm{Varoquaux}, \binits{G.}}:
-\batitle{{The NumPy array: A structure for efficient numerical computation}}.
-\bjtitle{Computing in Science and Engineering}
-\bvolume{13}(\bissue{2}),
-\bfpage{22}--\blpage{30}
-(\byear{2011}).
-doi:\doiurl{10.1109/MCSE.2011.37}.
-\arxivurl{1102.1523}
-\end{barticle}
-\endbibitem
+\bibitem{Chikina2009}
+Maria~D. Chikina, Curtis Huttenhower, Coleen~T. Murphy, and Olga~G.
+  Troyanskaya.
+\newblock {Global prediction of tissue-specific gene expression and
+  context-dependent gene networks in Caenorhabditis elegans}.
+\newblock {\em PLoS Computational Biology}, 5(6), 2009.
 
-%%% 27
-\bibitem[\protect\citeauthoryear{Watson et~al.}{2008}]{Watson2008a}
-\begin{barticle}
-\bauthor{\bsnm{Watson}, \binits{J.D.}},
-\bauthor{\bsnm{Wang}, \binits{S.}},
-\bauthor{\bsnm{{Von Stetina}}, \binits{S.E.}},
-\bauthor{\bsnm{Spencer}, \binits{W.C.}},
-\bauthor{\bsnm{Levy}, \binits{S.}},
-\bauthor{\bsnm{Dexheimer}, \binits{P.J.}},
-\bauthor{\bsnm{Kurn}, \binits{N.}},
-\bauthor{\bsnm{Heath}, \binits{J.D.}},
-\bauthor{\bsnm{{Miller 3rd}}, \binits{D.M.}},
-\bauthor{\bsnm{Miller}, \binits{D.M.}}:
-\batitle{{Complementary RNA amplification methods enhance microarray
-  identification of transcripts expressed in the C. elegans nervous system}}.
-\bjtitle{BMC Genomics}
-\bvolume{9},
-\bfpage{84}
-(\byear{2008}).
-doi:\doiurl{10.1186/1471-2164-9-84}
-\end{barticle}
-\endbibitem
+\bibitem{Lee2013}
+Young~Suk Lee, Arjun Krishnan, Qian Zhu, and Olga~G. Troyanskaya.
+\newblock {Ontology-aware classification of tissue and cell-type signals in
+  gene expression profiles across platforms and technologies}.
+\newblock {\em Bioinformatics}, 29(23):3036--3044, 2013.
 
-%%% 28
-\bibitem[\protect\citeauthoryear{Zhang et~al.}{2005}]{Zhang2005}
-\begin{barticle}
-\bauthor{\bsnm{Zhang}, \binits{Y.}},
-\bauthor{\bsnm{Lu}, \binits{H.}},
-\bauthor{\bsnm{Bargmann}, \binits{C.I.}}:
-\batitle{{Pathogenic bacteria induce aversive olfactory learning in
-  Caenorhabditis elegans}}.
-\bjtitle{Nature}
-\bvolume{438}(\bissue{7065}),
-\bfpage{179}--\blpage{184}
-(\byear{2005}).
-doi:\doiurl{10.1038/nature04216}
-\end{barticle}
-\endbibitem
+\bibitem{Prykhozhij2013}
+Sergey~V Prykhozhij, Annalisa Marsico, and Sebastiaan~H Meijsing.
+\newblock {Zebrafish Expression Ontology of Gene Sets (ZEOGS): a tool to
+  analyze enrichment of zebrafish anatomical terms in large gene sets.}
+\newblock {\em Zebrafish}, 10(3):303--15, 2013.
+
+\bibitem{McKinney2011}
+Wes McKinney.
+\newblock {pandas: a Foundational Python Library for Data Analysis and
+  Statistics}.
+\newblock {\em Python for High Performance and Scientific Computing}, pages
+  1--9, 2011.
+
+\bibitem{VanDerWalt2011}
+St??fan {Van Der Walt}, S.~Chris Colbert, and Ga??l Varoquaux.
+\newblock {The NumPy array: A structure for efficient numerical computation}.
+\newblock {\em Computing in Science and Engineering}, 13(2):22--30, 2011.
+
+\bibitem{Oliphant2007}
+Travis~E Oliphant.
+\newblock {SciPy: Open source scientific tools for Python}.
+\newblock {\em Computing in Science and Engineering}, 9:10--20, 2007.
+
+\bibitem{label}
+
 
 \end{thebibliography}
-
-\newcommand{\BMCxmlcomment}[1]{}
-
-\BMCxmlcomment{
-
-<refgrp>
-
-<bibl id="B1">
-</bibl>
-
-<bibl id="B2">
-  <title><p>{Controlling the False Discovery Rate: A Practical and Powerful
-  Approach to Multiple Testing}</p></title>
-  <aug>
-    <au><snm>Benjamini</snm><fnm>Y</fnm></au>
-    <au><snm>Hochberg</snm><fnm>Y</fnm></au>
-  </aug>
-  <source>Journal of the Royal Statistical Society. Series B
-  (Methodological)</source>
-  <pubdate>1995</pubdate>
-  <volume>57</volume>
-  <issue>1</issue>
-  <fpage>289</fpage>
-  <lpage>-300</lpage>
-  <url>http://www.jstor.org/stable/2346101</url>
-</bibl>
-
-<bibl id="B3">
-  <title><p>{Global prediction of tissue-specific gene expression and
-  context-dependent gene networks in Caenorhabditis elegans}</p></title>
-  <aug>
-    <au><snm>Chikina</snm><fnm>MD</fnm></au>
-    <au><snm>Huttenhower</snm><fnm>C</fnm></au>
-    <au><snm>Murphy</snm><fnm>CT</fnm></au>
-    <au><snm>Troyanskaya</snm><fnm>OG</fnm></au>
-  </aug>
-  <source>PLoS Computational Biology</source>
-  <pubdate>2009</pubdate>
-  <volume>5</volume>
-  <issue>6</issue>
-</bibl>
-
-<bibl id="B4">
-  <title><p>{Expression profiling of GABAergic motor neurons in Caenorhabditis
-  elegans}</p></title>
-  <aug>
-    <au><snm>Cinar</snm><fnm>H</fnm></au>
-    <au><snm>Keles</snm><fnm>S</fnm></au>
-    <au><snm>Jin</snm><fnm>Y</fnm></au>
-  </aug>
-  <source>Current Biology</source>
-  <pubdate>2005</pubdate>
-  <volume>15</volume>
-  <issue>4</issue>
-  <fpage>340</fpage>
-  <lpage>-346</lpage>
-</bibl>
-
-<bibl id="B5">
-  <title><p>{A comprehensive analysis of gene expression changes provoked by
-  bacterial and fungal infection in C. elegans}</p></title>
-  <aug>
-    <au><snm>Engelmann</snm><fnm>I</fnm></au>
-    <au><snm>Griffon</snm><fnm>A</fnm></au>
-    <au><snm>Tichit</snm><fnm>L</fnm></au>
-    <au><snm>Monta{\~{n}}a Sanchis</snm><fnm>F</fnm></au>
-    <au><snm>Wang</snm><fnm>G</fnm></au>
-    <au><snm>Reinke</snm><fnm>V</fnm></au>
-    <au><snm>Waterston</snm><fnm>RH</fnm></au>
-    <au><snm>Hillier</snm><fnm>LW</fnm></au>
-    <au><snm>Ewbank</snm><fnm>JJ</fnm></au>
-  </aug>
-  <source>PLoS ONE</source>
-  <pubdate>2011</pubdate>
-  <volume>6</volume>
-  <issue>5</issue>
-</bibl>
-
-<bibl id="B6">
-  <title><p>{The embryonic muscle transcriptome of Caenorhabditis
-  elegans}</p></title>
-  <aug>
-    <au><snm>Fox</snm><fnm>RM</fnm></au>
-    <au><snm>Watson</snm><fnm>JD</fnm></au>
-    <au><snm>{Von Stetina}</snm><fnm>SE</fnm></au>
-    <au><snm>McDermott</snm><fnm>J</fnm></au>
-    <au><snm>Brodigan</snm><fnm>TM</fnm></au>
-    <au><snm>Fukushige</snm><fnm>T</fnm></au>
-    <au><snm>Krause</snm><fnm>M</fnm></au>
-    <au><snm>{Miller 3rd}</snm><fnm>D M</fnm></au>
-    <au><snm>Miller</snm><fnm>DM</fnm></au>
-  </aug>
-  <source>Genome Biol</source>
-  <pubdate>2007</pubdate>
-  <volume>8</volume>
-  <issue>9</issue>
-  <fpage>R188</fpage>
-  <url>http://www.ncbi.nlm.nih.gov/pubmed/17848203</url>
-</bibl>
-
-<bibl id="B7">
-  <title><p>{Whole-genome analysis of temporal gene expression during foregut
-  development}</p></title>
-  <aug>
-    <au><snm>Gaudet</snm><fnm>J</fnm></au>
-    <au><snm>Muttumu</snm><fnm>S</fnm></au>
-    <au><snm>Horner</snm><fnm>M</fnm></au>
-    <au><snm>Mango</snm><fnm>SE</fnm></au>
-  </aug>
-  <source>PLoS Biology</source>
-  <pubdate>2004</pubdate>
-  <volume>2</volume>
-  <issue>11</issue>
-</bibl>
-
-<bibl id="B8">
-  <title><p>{WormBase 2014: New views of curated biology}</p></title>
-  <aug>
-    <au><snm>Harris</snm><fnm>TW</fnm></au>
-    <au><snm>Baran</snm><fnm>J</fnm></au>
-    <au><snm>Bieri</snm><fnm>T</fnm></au>
-    <au><snm>Cabunoc</snm><fnm>A</fnm></au>
-    <au><snm>Chan</snm><fnm>J</fnm></au>
-    <au><snm>Chen</snm><fnm>WJ</fnm></au>
-    <au><snm>Davis</snm><fnm>P</fnm></au>
-    <au><snm>Done</snm><fnm>J</fnm></au>
-    <au><snm>Grove</snm><fnm>C</fnm></au>
-    <au><snm>Howe</snm><fnm>K</fnm></au>
-    <au><snm>Kishore</snm><fnm>R</fnm></au>
-    <au><snm>Lee</snm><fnm>R</fnm></au>
-    <au><snm>Li</snm><fnm>Y</fnm></au>
-    <au><snm>Muller</snm><fnm>HM</fnm></au>
-    <au><snm>Nakamura</snm><fnm>C</fnm></au>
-    <au><snm>Ozersky</snm><fnm>P</fnm></au>
-    <au><snm>Paulini</snm><fnm>M</fnm></au>
-    <au><snm>Raciti</snm><fnm>D</fnm></au>
-    <au><snm>Schindelman</snm><fnm>G</fnm></au>
-    <au><snm>Tuli</snm><fnm>MA</fnm></au>
-    <au><snm>Auken</snm><fnm>KV</fnm></au>
-    <au><snm>Wang</snm><fnm>D</fnm></au>
-    <au><snm>Wang</snm><fnm>X</fnm></au>
-    <au><snm>Williams</snm><fnm>G</fnm></au>
-    <au><snm>Wong</snm><fnm>J. D.</fnm></au>
-    <au><snm>Yook</snm><fnm>K</fnm></au>
-    <au><snm>Schedl</snm><fnm>T</fnm></au>
-    <au><snm>Hodgkin</snm><fnm>J</fnm></au>
-    <au><snm>Berriman</snm><fnm>M</fnm></au>
-    <au><snm>Kersey</snm><fnm>P</fnm></au>
-    <au><snm>Spieth</snm><fnm>J</fnm></au>
-    <au><snm>Stein</snm><fnm>L</fnm></au>
-    <au><snm>Sternberg</snm><fnm>PW</fnm></au>
-  </aug>
-  <source>Nucleic Acids Research</source>
-  <pubdate>2014</pubdate>
-  <volume>42</volume>
-  <issue>D1</issue>
-</bibl>
-
-<bibl id="B9">
-  <title><p>{Systematic and integrative analysis of large gene lists using
-  DAVID bioinformatics resources.}</p></title>
-  <aug>
-    <au><snm>Huang</snm><fnm>DW</fnm></au>
-    <au><snm>Lempicki</snm><fnm>Ra</fnm></au>
-    <au><snm>Sherman</snm><fnm>BT</fnm></au>
-  </aug>
-  <source>Nature Protocols</source>
-  <pubdate>2009</pubdate>
-  <volume>4</volume>
-  <issue>1</issue>
-  <fpage>44</fpage>
-  <lpage>-57</lpage>
-</bibl>
-
-<bibl id="B10">
-  <title><p>{DAVID Bioinformatics Resources: Expanded annotation database and
-  novel algorithms to better extract biology from large gene lists}</p></title>
-  <aug>
-    <au><snm>Huang</snm><fnm>DW</fnm></au>
-    <au><snm>Sherman</snm><fnm>BT</fnm></au>
-    <au><snm>Tan</snm><fnm>Q</fnm></au>
-    <au><snm>Kir</snm><fnm>J</fnm></au>
-    <au><snm>Liu</snm><fnm>D</fnm></au>
-    <au><snm>Bryant</snm><fnm>D</fnm></au>
-    <au><snm>Guo</snm><fnm>Y</fnm></au>
-    <au><snm>Stephens</snm><fnm>R</fnm></au>
-    <au><snm>Baseler</snm><fnm>MW</fnm></au>
-    <au><snm>Lane</snm><fnm>HC</fnm></au>
-    <au><snm>Lempicki</snm><fnm>RA</fnm></au>
-  </aug>
-  <source>Nucleic Acids Research</source>
-  <pubdate>2007</pubdate>
-  <volume>35</volume>
-  <issue>SUPPL.2</issue>
-</bibl>
-
-<bibl id="B11">
-  <title><p>{Building a cell and anatomy ontology of Caenorhabditis
-  elegans}</p></title>
-  <aug>
-    <au><snm>Lee</snm><fnm>R. Y N</fnm></au>
-    <au><snm>Sternberg</snm><fnm>PW</fnm></au>
-  </aug>
-  <source>Comparative and Functional Genomics</source>
-  <pubdate>2003</pubdate>
-  <volume>4</volume>
-  <issue>1</issue>
-  <fpage>121</fpage>
-  <lpage>-126</lpage>
-</bibl>
-
-<bibl id="B12">
-  <title><p>{Ontology-aware classification of tissue and cell-type signals in
-  gene expression profiles across platforms and technologies}</p></title>
-  <aug>
-    <au><snm>Lee</snm><fnm>YS</fnm></au>
-    <au><snm>Krishnan</snm><fnm>A</fnm></au>
-    <au><snm>Zhu</snm><fnm>Q</fnm></au>
-    <au><snm>Troyanskaya</snm><fnm>OG</fnm></au>
-  </aug>
-  <source>Bioinformatics</source>
-  <pubdate>2013</pubdate>
-  <volume>29</volume>
-  <issue>23</issue>
-  <fpage>3036</fpage>
-  <lpage>-3044</lpage>
-</bibl>
-
-<bibl id="B13">
-  <title><p>{pandas: a Foundational Python Library for Data Analysis and
-  Statistics}</p></title>
-  <aug>
-    <au><snm>McKinney</snm><fnm>W</fnm></au>
-  </aug>
-  <source>Python for High Performance and Scientific Computing</source>
-  <pubdate>2011</pubdate>
-  <fpage>1</fpage>
-  <lpage>-9</lpage>
-</bibl>
-
-<bibl id="B14">
-  <title><p>{GREAT improves functional interpretation of cis-regulatory
-  regions.}</p></title>
-  <aug>
-    <au><snm>McLean</snm><fnm>CY</fnm></au>
-    <au><snm>Bristor</snm><fnm>D</fnm></au>
-    <au><snm>Hiller</snm><fnm>M</fnm></au>
-    <au><snm>Clarke</snm><fnm>SL</fnm></au>
-    <au><snm>Schaar</snm><fnm>BT</fnm></au>
-    <au><snm>Lowe</snm><fnm>CB</fnm></au>
-    <au><snm>Wenger</snm><fnm>AM</fnm></au>
-    <au><snm>Bejerano</snm><fnm>G</fnm></au>
-  </aug>
-  <source>Nature biotechnology</source>
-  <publisher>Nature Publishing Group</publisher>
-  <pubdate>2010</pubdate>
-  <volume>28</volume>
-  <issue>5</issue>
-  <fpage>495</fpage>
-  <lpage>-501</lpage>
-  <url>http://dx.doi.org/10.1038/nbt.1630</url>
-</bibl>
-
-<bibl id="B15">
-  <title><p>{Behavioral avoidance of pathogenic bacteria by Caenorhabditis
-  elegans}</p></title>
-  <aug>
-    <au><snm>Meisel</snm><fnm>JD</fnm></au>
-    <au><snm>Kim</snm><fnm>DH</fnm></au>
-  </aug>
-  <source>Trends in Immunology</source>
-  <publisher>Elsevier Ltd</publisher>
-  <pubdate>2014</pubdate>
-  <volume>35</volume>
-  <issue>10</issue>
-  <fpage>465</fpage>
-  <lpage>-470</lpage>
-  <url>http://dx.doi.org/10.1016/j.it.2014.08.008</url>
-</bibl>
-
-<bibl id="B16">
-  <title><p>{PANTHER in 2013: Modeling the evolution of gene function, and
-  other gene attributes, in the context of phylogenetic trees}</p></title>
-  <aug>
-    <au><snm>Mi</snm><fnm>H</fnm></au>
-    <au><snm>Muruganujan</snm><fnm>A</fnm></au>
-    <au><snm>Thomas</snm><fnm>PD</fnm></au>
-  </aug>
-  <source>Nucleic Acids Research</source>
-  <pubdate>2013</pubdate>
-  <volume>41</volume>
-  <issue>D1</issue>
-</bibl>
-
-<bibl id="B17">
-  <title><p>{PANTHER version 7: Improved phylogenetic trees, orthologs and
-  collaboration with the Gene Ontology Consortium}</p></title>
-  <aug>
-    <au><snm>Mi</snm><fnm>H</fnm></au>
-    <au><snm>Dong</snm><fnm>Q</fnm></au>
-    <au><snm>Muruganujan</snm><fnm>A</fnm></au>
-    <au><snm>Gaudet</snm><fnm>P</fnm></au>
-    <au><snm>Lewis</snm><fnm>S</fnm></au>
-    <au><snm>Thomas</snm><fnm>PD</fnm></au>
-  </aug>
-  <source>Nucleic Acids Research</source>
-  <pubdate>2009</pubdate>
-  <volume>38</volume>
-  <issue>SUPPL.1</issue>
-</bibl>
-
-<bibl id="B18">
-  <title><p>{SciPy: Open source scientific tools for Python}</p></title>
-  <aug>
-    <au><snm>Oliphant</snm><fnm>TE</fnm></au>
-  </aug>
-  <source>Computing in Science and Engineering</source>
-  <pubdate>2007</pubdate>
-  <volume>9</volume>
-  <fpage>10</fpage>
-  <lpage>-20</lpage>
-  <url>http://www.scipy.org/</url>
-</bibl>
-
-<bibl id="B19">
-  <title><p>{Gene Ontology}</p></title>
-  <aug>
-    <au><snm>Ontology</snm><fnm>G</fnm></au>
-  </aug>
-  <source>Nature Reviews Genetics</source>
-  <pubdate>2009</pubdate>
-  <volume>2009</volume>
-  <fpage>1</fpage>
-  <lpage>-13</lpage>
-  <url>http://www.geneontology.org/</url>
-</bibl>
-
-<bibl id="B20">
-  <title><p>{Chromosomal clustering and GATA transcriptional regulation of
-  intestine-expressed genes in C. elegans.}</p></title>
-  <aug>
-    <au><snm>Pauli</snm><fnm>F</fnm></au>
-    <au><snm>Liu</snm><fnm>Y</fnm></au>
-    <au><snm>Kim</snm><fnm>Ya</fnm></au>
-    <au><snm>Chen</snm><fnm>PJ</fnm></au>
-    <au><snm>Kim</snm><fnm>SK</fnm></au>
-  </aug>
-  <source>Development (Cambridge, England)</source>
-  <pubdate>2006</pubdate>
-  <volume>133</volume>
-  <issue>2</issue>
-  <fpage>287</fpage>
-  <lpage>-295</lpage>
-</bibl>
-
-<bibl id="B21">
-  <title><p>{Identification of C. elegans sensory ray genes using whole-genome
-  expression profiling}</p></title>
-  <aug>
-    <au><snm>Portman</snm><fnm>DS</fnm></au>
-    <au><snm>Emmons</snm><fnm>SW</fnm></au>
-  </aug>
-  <source>Developmental Biology</source>
-  <pubdate>2004</pubdate>
-  <volume>270</volume>
-  <issue>2</issue>
-  <fpage>499</fpage>
-  <lpage>-512</lpage>
-</bibl>
-
-<bibl id="B22">
-  <title><p>{Zebrafish Expression Ontology of Gene Sets (ZEOGS): a tool to
-  analyze enrichment of zebrafish anatomical terms in large gene
-  sets.}</p></title>
-  <aug>
-    <au><snm>Prykhozhij</snm><fnm>SV</fnm></au>
-    <au><snm>Marsico</snm><fnm>A</fnm></au>
-    <au><snm>Meijsing</snm><fnm>SH</fnm></au>
-  </aug>
-  <source>Zebrafish</source>
-  <pubdate>2013</pubdate>
-  <volume>10</volume>
-  <issue>3</issue>
-  <fpage>303</fpage>
-  <lpage>-15</lpage>
-  <url>http://www.pubmedcentral.nih.gov/articlerender.fcgi?artid=3760060{\&}tool=pmcentrez{\&}rendertype=abstract</url>
-</bibl>
-
-<bibl id="B23">
-  <title><p>{Time-lapse imaging and cell-specific expression profiling reveal
-  dynamic branching and molecular determinants of a multi-dendritic nociceptor
-  in C. elegans}</p></title>
-  <aug>
-    <au><snm>Smith</snm><fnm>CJ</fnm></au>
-    <au><snm>Watson</snm><fnm>JD</fnm></au>
-    <au><snm>Spencer</snm><fnm>WC</fnm></au>
-    <au><snm>O{\&}apos;Brien</snm><fnm>T</fnm></au>
-    <au><snm>Cha</snm><fnm>B</fnm></au>
-    <au><snm>Albeg</snm><fnm>A</fnm></au>
-    <au><snm>Treinin</snm><fnm>M</fnm></au>
-    <au><snm>Miller</snm><fnm>DM</fnm></au>
-  </aug>
-  <source>Developmental Biology</source>
-  <pubdate>2010</pubdate>
-  <volume>345</volume>
-  <issue>1</issue>
-  <fpage>18</fpage>
-  <lpage>-33</lpage>
-</bibl>
-
-<bibl id="B24">
-  <title><p>{A spatial and temporal map of C. elegans gene
-  expression}</p></title>
-  <aug>
-    <au><snm>Spencer</snm><fnm>WC</fnm></au>
-    <au><snm>Zeller</snm><fnm>G</fnm></au>
-    <au><snm>Watson</snm><fnm>JD</fnm></au>
-    <au><snm>Henz</snm><fnm>SR</fnm></au>
-    <au><snm>Watkins</snm><fnm>KL</fnm></au>
-    <au><snm>McWhirter</snm><fnm>RD</fnm></au>
-    <au><snm>Petersen</snm><fnm>S</fnm></au>
-    <au><snm>Sreedharan</snm><fnm>VT</fnm></au>
-    <au><snm>Widmer</snm><fnm>C</fnm></au>
-    <au><snm>Jo</snm><fnm>J</fnm></au>
-    <au><snm>Reinke</snm><fnm>V</fnm></au>
-    <au><snm>Petrella</snm><fnm>L</fnm></au>
-    <au><snm>Strome</snm><fnm>S</fnm></au>
-    <au><snm>{Von Stetina}</snm><fnm>SE</fnm></au>
-    <au><snm>Katz</snm><fnm>M</fnm></au>
-    <au><snm>Shaham</snm><fnm>S</fnm></au>
-    <au><snm>R{\"{a}}tsch</snm><fnm>G</fnm></au>
-    <au><snm>Miller</snm><fnm>DM</fnm></au>
-  </aug>
-  <source>Genome Research</source>
-  <pubdate>2011</pubdate>
-  <volume>21</volume>
-  <issue>2</issue>
-  <fpage>325</fpage>
-  <lpage>-341</lpage>
-</bibl>
-
-<bibl id="B25">
-  <title><p>{Gene Ontology: tool for the unification of biology}</p></title>
-  <aug>
-    <au><cnm>{The Gene Ontology Consortium}</cnm></au>
-  </aug>
-  <source>Nature Genetics</source>
-  <pubdate>2000</pubdate>
-  <volume>25</volume>
-  <issue>may</issue>
-  <fpage>25</fpage>
-  <lpage>-29</lpage>
-  <url>http://scholar.google.com/scholar?hl=en{\&}btnG=Search{\&}q=intitle:Gene+Ontology:+tool+for+the+unification+of+biology{\#}0</url>
-</bibl>
-
-<bibl id="B26">
-  <title><p>{Gene Ontology Consortium: going forward}</p></title>
-  <aug>
-    <au><cnm>{The Gene Ontology Consortium}</cnm></au>
-  </aug>
-  <source>Nucleic Acids Research</source>
-  <pubdate>2015</pubdate>
-  <volume>43</volume>
-  <issue>D1</issue>
-  <fpage>D1049</fpage>
-  <lpage>-D1056</lpage>
-  <url>http://nar.oxfordjournals.org/lookup/doi/10.1093/nar/gku1179</url>
-</bibl>
-
-<bibl id="B27">
-  <title><p>{The NumPy array: A structure for efficient numerical
-  computation}</p></title>
-  <aug>
-    <au><snm>{Van Der Walt}</snm><fnm>S</fnm></au>
-    <au><snm>Colbert</snm><fnm>SC</fnm></au>
-    <au><snm>Varoquaux</snm><fnm>G</fnm></au>
-  </aug>
-  <source>Computing in Science and Engineering</source>
-  <pubdate>2011</pubdate>
-  <volume>13</volume>
-  <issue>2</issue>
-  <fpage>22</fpage>
-  <lpage>-30</lpage>
-</bibl>
-
-<bibl id="B28">
-  <title><p>{Complementary RNA amplification methods enhance microarray
-  identification of transcripts expressed in the C. elegans nervous
-  system}</p></title>
-  <aug>
-    <au><snm>Watson</snm><fnm>JD</fnm></au>
-    <au><snm>Wang</snm><fnm>S</fnm></au>
-    <au><snm>{Von Stetina}</snm><fnm>SE</fnm></au>
-    <au><snm>Spencer</snm><fnm>WC</fnm></au>
-    <au><snm>Levy</snm><fnm>S</fnm></au>
-    <au><snm>Dexheimer</snm><fnm>PJ</fnm></au>
-    <au><snm>Kurn</snm><fnm>N</fnm></au>
-    <au><snm>Heath</snm><fnm>JD</fnm></au>
-    <au><snm>{Miller 3rd}</snm><fnm>D M</fnm></au>
-    <au><snm>Miller</snm><fnm>DM</fnm></au>
-  </aug>
-  <source>BMC Genomics</source>
-  <pubdate>2008</pubdate>
-  <volume>9</volume>
-  <fpage>84</fpage>
-  <url>http://www.ncbi.nlm.nih.gov/pubmed/18284693</url>
-</bibl>
-
-<bibl id="B29">
-  <title><p>{Pathogenic bacteria induce aversive olfactory learning in
-  Caenorhabditis elegans}</p></title>
-  <aug>
-    <au><snm>Zhang</snm><fnm>Y</fnm></au>
-    <au><snm>Lu</snm><fnm>H</fnm></au>
-    <au><snm>Bargmann</snm><fnm>C I</fnm></au>
-  </aug>
-  <source>Nature</source>
-  <pubdate>2005</pubdate>
-  <volume>438</volume>
-  <issue>7065</issue>
-  <fpage>179</fpage>
-  <lpage>-184</lpage>
-  <url><Go to
-  ISI>://WOS:000233133500039$\backslash$nhttp://www.nature.com/nature/journal/v438/n7065/pdf/nature04216.pdf</url>
-</bibl>
-
-</refgrp>
-} % end of \BMCxmlcomment

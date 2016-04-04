@@ -1,74 +1,54 @@
 This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ./tea_main_text.aux
-The style file: bmc-mathphys.bst
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+The style file: unsrt.bst
+Illegal, another \bibstyle command---line 59 of file ./tea_main_text.aux
+ : \bibstyle
+ :          {bmc-mathphys}
+I'm skipping whatever remains of this command
 Database file #1: bmc_article.bib
-Repeated entry---line 28 of file bmc_article.bib
- : @misc{Benjamini1995
- :                    ,
-I'm skipping whatever remains of this entry
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Warning--to sort, need author or key in label
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
+Warning--entry type for "label" isn't style-file defined
+--line 7 of file bmc_article.bib
+Warning--all relevant fields are empty in label
 You've used 29 entries,
-            7128 wiz_defined-function locations,
-            1373 strings with 18052 characters,
-and the built_in function-call counts, 204729 in all, are:
-= -- 25013
-> -- 1221
-< -- 594
-+ -- 5359
-- -- 426
-* -- 16732
-:= -- 41165
-add.period$ -- 55
+            1791 wiz_defined-function locations,
+            643 strings with 10605 characters,
+and the built_in function-call counts, 7270 in all, are:
+= -- 546
+> -- 539
+< -- 2
++ -- 191
+- -- 162
+* -- 631
+:= -- 1257
+add.period$ -- 83
 call.type$ -- 29
-change.case$ -- 317
-chr.to.int$ -- 1088
+change.case$ -- 28
+chr.to.int$ -- 0
 cite$ -- 30
-duplicate$ -- 3296
-empty$ -- 12550
-format.name$ -- 1584
-if$ -- 44737
-int.to.chr$ -- 1
-int.to.str$ -- 74
-missing$ -- 1132
-newline$ -- 1028
-num.names$ -- 168
-pop$ -- 1450
+duplicate$ -- 252
+empty$ -- 600
+format.name$ -- 162
+if$ -- 1503
+int.to.chr$ -- 0
+int.to.str$ -- 29
+missing$ -- 26
+newline$ -- 144
+num.names$ -- 28
+pop$ -- 49
 preamble$ -- 1
-purify$ -- 131
-quote$ -- 58
-skip$ -- 11336
+purify$ -- 0
+quote$ -- 0
+skip$ -- 118
 stack$ -- 0
-substring$ -- 29689
-swap$ -- 1015
-text.length$ -- 483
+substring$ -- 413
+swap$ -- 39
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 1097
+type$ -- 0
 warning$ -- 1
-while$ -- 1228
-width$ -- 0
-write$ -- 1641
+while$ -- 66
+width$ -- 31
+write$ -- 308
 (There was 1 error message)
