@@ -2,53 +2,50 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ./tea_main_text.aux
 The style file: unsrt.bst
-Illegal, another \bibstyle command---line 59 of file ./tea_main_text.aux
+Illegal, another \bibstyle command---line 58 of file ./tea_main_text.aux
  : \bibstyle
  :          {bmc-mathphys}
 I'm skipping whatever remains of this command
 Database file #1: bmc_article.bib
-Warning--entry type for "label" isn't style-file defined
---line 7 of file bmc_article.bib
-Warning--all relevant fields are empty in label
 You've used 29 entries,
             1791 wiz_defined-function locations,
-            643 strings with 10605 characters,
-and the built_in function-call counts, 7270 in all, are:
-= -- 546
-> -- 539
+            655 strings with 10898 characters,
+and the built_in function-call counts, 7571 in all, are:
+= -- 582
+> -- 555
 < -- 2
-+ -- 191
-- -- 162
-* -- 631
-:= -- 1257
-add.period$ -- 83
++ -- 196
+- -- 167
+* -- 668
+:= -- 1311
+add.period$ -- 85
 call.type$ -- 29
-change.case$ -- 28
+change.case$ -- 29
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 252
-empty$ -- 600
-format.name$ -- 162
-if$ -- 1503
+cite$ -- 29
+duplicate$ -- 257
+empty$ -- 617
+format.name$ -- 167
+if$ -- 1563
 int.to.chr$ -- 0
 int.to.str$ -- 29
-missing$ -- 26
-newline$ -- 144
-num.names$ -- 28
-pop$ -- 49
+missing$ -- 27
+newline$ -- 146
+num.names$ -- 29
+pop$ -- 45
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 118
+skip$ -- 110
 stack$ -- 0
-substring$ -- 413
+substring$ -- 469
 swap$ -- 39
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 1
-while$ -- 66
+warning$ -- 0
+while$ -- 71
 width$ -- 31
-write$ -- 308
+write$ -- 315
 (There was 1 error message)

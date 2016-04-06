@@ -34,16 +34,16 @@ R.~Y~N Lee and Paul~W. Sternberg.
 \newblock {Building a cell and anatomy ontology of Caenorhabditis elegans},
   2003.
 
-\bibitem{Harris2014}
-Todd~W. Harris, Joachim Baran, Tamberlyn Bieri, Abigail Cabunoc, Juancarlos
-  Chan, Wen~J. Chen, Paul Davis, James Done, Christian Grove, Kevin Howe,
-  Ranjana Kishore, Raymond Lee, Yuling Li, Hans~Michael Muller, Cecilia
-  Nakamura, Philip Ozersky, Michael Paulini, Daniela Raciti, Gary Schindelman,
-  Mary~Ann Tuli, Kimberly~Van Auken, Daniel Wang, Xiaodong Wang, Gary Williams,
-  J.~D. Wong, Karen Yook, Tim Schedl, Jonathan Hodgkin, Matthew Berriman, Paul
-  Kersey, John Spieth, Lincoln Stein, and Paul~W. Sternberg.
-\newblock {WormBase 2014: New views of curated biology}.
-\newblock {\em Nucleic Acids Research}, 42(D1), 2014.
+\bibitem{Howe2016}
+Kevin~L Howe, Bruce~J Bolt, Scott Cain, Juancarlos Chan, Wen~J Chen, Paul
+  Davis, James Done, Thomas Down, Sibyl Gao, Christian Grove, Todd~W Harris,
+  Ranjana Kishore, Raymond Lee, Jane Lomax, Yuling Li, Hans-Michael Muller,
+  Cecilia Nakamura, Paulo Nuin, Michael Paulini, Daniela Raciti, Gary
+  Schindelman, Eleanor Stanley, Mary~Ann Tuli, Kimberly {Van Auken}, Daniel
+  Wang, Xiaodong Wang, Gary Williams, Adam Wright, Karen Yook, Matthew
+  Berriman, Paul Kersey, Tim Schedl, Lincoln Stein, and Paul~W Sternberg.
+\newblock {WormBase 2016: expanding to enable helminth genomic research.}
+\newblock {\em Nucleic acids research}, 44(November 2015):D774--D780, 2016.
 
 \bibitem{Huang2007}
 Da~Wei Huang, Brad~T. Sherman, Qina Tan, Joseph Kir, David Liu, David Bryant,
@@ -165,6 +165,12 @@ Sergey~V Prykhozhij, Annalisa Marsico, and Sebastiaan~H Meijsing.
   analyze enrichment of zebrafish anatomical terms in large gene sets.}
 \newblock {\em Zebrafish}, 10(3):303--15, 2013.
 
+\bibitem{Kelly1997}
+William~G. Kelly, SiQun Xu, Mary~K. Montgomery, and Andrew Fire.
+\newblock {Distinct requirements for somatic and germline expression of a
+  generally expressed Caenorhabditis elegans gene}.
+\newblock {\em Genetics}, 146(1):227--238, 1997.
+
 \bibitem{McKinney2011}
 Wes McKinney.
 \newblock {pandas: a Foundational Python Library for Data Analysis and
@@ -173,7 +179,7 @@ Wes McKinney.
   1--9, 2011.
 
 \bibitem{VanDerWalt2011}
-St??fan {Van Der Walt}, S.~Chris Colbert, and Ga??l Varoquaux.
+St{\'{e}}fan {Van Der Walt}, S.~Chris Colbert, and Gael Varoquaux.
 \newblock {The NumPy array: A structure for efficient numerical computation}.
 \newblock {\em Computing in Science and Engineering}, 13(2):22--30, 2011.
 
@@ -181,8 +187,5 @@ St??fan {Van Der Walt}, S.~Chris Colbert, and Ga??l Varoquaux.
 Travis~E Oliphant.
 \newblock {SciPy: Open source scientific tools for Python}.
 \newblock {\em Computing in Science and Engineering}, 9:10--20, 2007.
-
-\bibitem{label}
-
 
 \end{thebibliography}
