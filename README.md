@@ -67,7 +67,7 @@ David Angeles-Albores
 Contributors:
 =============
 
-Raymond Y. Lee, Paul W. Sternberg
+Raymond Y. Lee, Juancarlos Chan, Paul W. Sternberg
 
 Acknowledgements
 ================
