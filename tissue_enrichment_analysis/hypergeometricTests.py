@@ -389,7 +389,7 @@ if __name__ == '__main__':
 
     #optional args
     if args.dictionary:
-        tdf_name= args.tissue_dictionary
+        tdf_name= args.dictionary
         tissue_df= pd.read_csv(tdf_name)
     else:
         tissue_df= fetch_dictionary()
