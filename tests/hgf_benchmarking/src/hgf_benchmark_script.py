@@ -21,16 +21,16 @@ sns.set_context('paper')
 pd.set_option('precision', 3)
 # this script generates a few directories.
 
+
 dirOutput = '../output/'
 dirSummaries = '../output/SummaryInformation/'
 dirHGT25_any = '../output/HGT25_any_Results/'
-dirHGT33_avg = '../output/HGT33_any_Results/'
 dirHGT33_any = '../output/HGT33_any_Results/'
 dirHGT50_any = '../output/HGT50_any_Results/'
 dirHGT100_any = '../output/HGT100_any_Results/'
 dirComp = '../output/comparisons/'
 
-DIRS = [dirOutput, dirSummaries, dirHGT25_any, dirHGT33_avg,
+DIRS = [dirOutput, dirSummaries, dirHGT25_any,
         dirHGT50_any, dirHGT100_any, dirComp]
 # open the relevant file
 path_sets = '../input/genesets_golden/'
@@ -153,7 +153,7 @@ plt.xlabel('Fraction of all tissues that tested significant')
 plt.xlim(0, 1)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'fractissuesKDE_method=any.png')
+plt.savefig(dirSummaries+'fractissuesKDE_method=any.pdf')
 plt.close()
 
 resplot('AvgQ', method='avg')
@@ -161,7 +161,7 @@ plt.xlabel('Fraction of all tissues that tested significant')
 plt.xlim(0, 0.05)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'avgQKDE_method=avg.png')
+plt.savefig(dirSummaries+'avgQKDE_method=avg.pdf')
 plt.close()
 
 
@@ -170,7 +170,7 @@ plt.xlabel('AvgQ value')
 plt.xlim(0, .05)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'avgQKDE_method=any.png')
+plt.savefig(dirSummaries+'avgQKDE_method=any.pdf')
 plt.close()
 
 # KDE of the fraction of avgFold
@@ -179,15 +179,12 @@ plt.xlabel('Avg Fold Change value')
 plt.xlim(0, 15)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'avgFoldChangeKDE.png')
+plt.savefig(dirSummaries+'avgFoldChangeKDE.pdf')
 plt.close()
 
 
 def line_prepender(filename, line):
-    """Given a filename, opens it and prepends the line 'line'
-    at the beginning of the file
-
-    """
+    """Given filename, open it and prepend 'line' at beginning of the file."""
     with open(filename, 'r+') as f:
         content = f.read()
         f.seek(0, 0)
@@ -352,19 +349,24 @@ def resplot(column, cutoff=25, method='any'):
 
 resplot('No. Of Tissues in Dictionary')
 
+a = '../output/HGT33_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
+b = '../output/HGT33_any_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
+df = compare(a, b, 'Spencer', 'Watson')
+df.to_csv('../output/comparisons/neuronal_comparison_33_WBPaper00024970_with_WBPaper0037950_complete.csv',
+          index=False, na_rep='-', float_format='%.2g')
 
-a = '../output/HGT33_avg_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
-b = '../output/HGT33_avg_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
-df = compare(a, b, 'l', 'r')
+a = '../output/HGT33_any_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
+b = '../output/HGT50_any_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
+df = compare(a, b, '33', '50')
+df.to_csv('../output/comparisons/neuronal_comparison_GABAergic_33-50_WBPaper0037950_complete.csv',
+          index=False, na_rep='-', float_format='%.2g')
 
-df.dropna().head()
-
-a = '../output/HGT33_avg_Results/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603.csv'
+a = '../output/HGT33_any_Results/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603.csv'
 b = '../output/HGT50_any_Results/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603.csv'
 df = compare(a, b, '-33', '-50')
 df.head(10).to_csv('../doc/figures/dict-comparison-50-33.csv', index=False,
                    na_rep='-', float_format='%.2g')
-df.to_csv('../output/comparisons/neuronal_comparison_33-50_WBPaper0031532_complete.csv',
+df.to_csv('../output/comparisons/neuronal_comparison_Pan_Neuronal_33-50_WBPaper0031532_complete.csv',
           index=False, na_rep='-', float_format='%.2g')
 
 print(df)

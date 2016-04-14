@@ -1,11 +1,11 @@
 Tissue,Q value-33,Q value-50,Enrichment Fold Change-33,Enrichment Fold Change-50
-lumbar ganglion WBbt:0005830,2.9e-19,-,2.2,-
-lateral ganglion WBbt:0005105,8.8e-19,8.5e-29,1.9,2.3
-nerve ring WBbt:0006749,3.2e-17,8.1e-28,1.7,2.1
-retrovesicular ganglion WBbt:0005656,9e-15,1e-19,2.8,3.5
-dorsal nerve cord WBbt:0006750,4.2e-12,2.3e-18,2,2.5
-pharyngeal nervous system WBbt:0005440,6.7e-10,-,1.9,-
-osmosensory neuron WBbt:0008433,2.6e-08,6.2e-12,2.4,3
-nociceptor neuron WBbt:0008434,2.6e-08,6.2e-12,2.4,3
-ALM WBbt:0005406,2.6e-08,1.1e-11,2.6,3.1
-lateral nerve cord WBbt:0006769,2.6e-08,1.2e-11,2.6,3.2
+nervous system WBbt:0005735,6.5e-59,2e-59,1.5,1.5
+tail WBbt:0005741,1e-31,3.2e-32,1.6,1.6
+lateral ganglion WBbt:0005105,2.8e-28,8.5e-29,2.3,2.3
+nerve ring WBbt:0006749,2.6e-27,8.1e-28,2.1,2.1
+posterior lateral ganglion WBbt:0005465,2.4e-20,7.3e-21,3.2,3.2
+retrovesicular ganglion WBbt:0005656,3.3e-19,1e-19,3.5,3.5
+dorsal nerve cord WBbt:0006750,7.4e-18,2.3e-18,2.5,2.5
+ventral nerve cord WBbt:0005829,5.2e-12,1.6e-12,1.9,1.9
+osmosensory neuron WBbt:0008433,2e-11,6.2e-12,3,3
+nociceptor neuron WBbt:0008434,2e-11,6.2e-12,3,3

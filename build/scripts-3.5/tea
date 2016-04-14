@@ -1,4 +1,4 @@
-#!/Users/dangeles/anaconda3/envs/testenv/bin/python
+#!python
 # -*- coding: utf-8 -*-
 """
 Created on Sun Mar 13 16:33:49 2016
@@ -21,25 +21,25 @@ sns.set_context('paper')
 sns.set_style('whitegrid')
 
 
-if __name__ == '__main__':    
+if __name__ == '__main__':
     path= './'
     os.chdir(path)
 
-    defQ= 0.1    
-    
+    defQ= 0.1
+
     parser = argparse.ArgumentParser(description='Run TEA.')
     parser = argparse.ArgumentParser()
     parser.add_argument("gene_list", help= 'The full path to the gene list (WBIDs) you would like to analyse in .csv format')
     parser.add_argument('title', help= 'Title for your analysis (shouldn\'t include file extension)', type= str)
     parser.add_argument("-d", '--dictionary', nargs= '?', help= 'Provide a dictionary to test. If none given, WormBase URL will be used to download the corresponding file')
     parser.add_argument("-q", help= 'Qvalue threshold for significance. Default is {0} if not provided'.format(defQ), type= float)
-    parser.add_argument('-p','--print', help= 'Indicate whether you would like to print results', action= 'store_true')    
+    parser.add_argument('-p','--print', help= 'Indicate whether you would like to print results', action= 'store_true')
     parser.add_argument('-s', "--save", help= 'Indicate whether to save your plot.', action= 'store_true')
     args = parser.parse_args()
 
     gl_name= args.gene_list
     title= args.title
-    
+
     #optional args
     if args.dictionary:
         tdf_name= args.tissue_dictionary
@@ -47,37 +47,37 @@ if __name__ == '__main__':
     else:
         tissue_df= hgt.fetch_dictionary()
 
-    if args.q:   
+    if args.q:
         q= args.q
     else:
         q= defQ
-    
+
     if args.print:
         prnt= True
     else:
         prnt= False
-            
+
     if args.save:
         save= True
-                    
+
     else:
         save= False
-            
-    
-    
+
+
+
     gene_list= []
     with open(gl_name, 'r') as f:
         gene_list= [x.strip() for x in f.readlines()]
-    
+
     df_results, unused= hgt.enrichment_analysis(gene_list, tissue_df, alpha= q, show= False)
-    
+
     dfname= title+'.csv'
     df_results.to_csv(dfname, index= False)
-    
-    if prnt:        
+
+    if prnt:
         with open(dfname, 'r') as f:
             printer= f.readlines()
-            
+
         for value in printer:
             value= value.split(',')
             for val in value:
@@ -91,7 +91,7 @@ if __name__ == '__main__':
 
             value= '\t'.join(value)
             print(value)
-    
+
     if save:
         hgt.plot_enrichment_results(df_results, title= title, save= save)
 

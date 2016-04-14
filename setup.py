@@ -10,28 +10,28 @@ from setuptools import setup, find_packages
 import os
 import sys
 
-version= '0.13.9'
+version = '0.13.10'
 
-#just type in python setup.py publish and this takes care of publishing to to pypi!
+# just type in python setup.py publish and this takes care of publishing to pypi!
 
 
-#tag with git
+# tag with git
 if sys.argv[1] == 'tag':
-    
-    if len(sys.argv) > 2:   
+
+    if len(sys.argv) > 2:
         if sys.argv[2] == '-m':
             print(sys.argv[2])
             print('please input your commit message')
-            message= sys.stdin.readline().strip()
+            message = sys.stdin.readline().strip()
             print("git tag -a %s -m '%s'" % (version, message))
             os.system("git tag -a %s -m '%s'" % (version, message))
-    else:    
+    else:
         os.system("git tag -a %s -m 'version %s'" % (version, version))
-        
+
     os.system("git push --tags")
     sys.exit()
 
-#publish to pypi
+# publish to pypi
 if sys.argv[-1] == 'publish':
     os.system("python setup.py sdist upload")
     os.system("python setup.py bdist_wheel upload")
@@ -41,7 +41,7 @@ if sys.argv[-1] == 'publish':
     sys.exit()
 
 
-#for pytest.py purposes -- just type in python setup.py test!
+# for pytest.py purposes -- just type in python setup.py test!
 if sys.argv[-1] == 'test':
     test_requirements = [
         'pytest',
@@ -59,30 +59,30 @@ if sys.argv[-1] == 'test':
 
 # Below this point is the rest of the setup() function
 
+
 def readme():
+    """A function to open a readme.rst file."""
     with open('README.rst') as f:
         return f.read()
 
 setup(
-  name = 'tissue_enrichment_analysis',
-#  packages = ['tissue_enrichment_analysis'], # this must be the same as the name above
+  name='tissue_enrichment_analysis',
   packages=find_packages(exclude=("tests",)),
-  version = version,
-  description = 'This package contains all the software used to implement\
+  version=version,
+  description='This package contains all the software used to implement\
   TEA in WormBase and remotely',
-  author = 'David Angeles-Albores',
-  author_email = 'dangeles@caltech.edu',
-  url = 'https://github.com/dangeles/TissueEnrichmentAnalysis', # use the URL to the github repo
-  download_url = 'https://github.com/dangeles/TissueEnrichmentAnalysis/tarball/{0}'.format(version),
-  keywords = ['tissue enrichment analysis', 'TEA', 'RNAseq', 'celegans', 'biology'], # arbitrary keywords
+  author='David Angeles-Albores',
+  author_email='dangeles@caltech.edu',
+  url='https://github.com/dangeles/TissueEnrichmentAnalysis',  # github repo
+  download_url='https://github.com/dangeles/TissueEnrichmentAnalysis/tarball/{0}'.format(version),
+  keywords=['tissue enrichment analysis', 'TEA',
+            'RNAseq', 'celegans', 'biology'],  # arbitrary keywords
   install_requires=[
           'matplotlib', 'scipy', 'numpy'
       ],
-  classifiers = [
-  'License :: OSI Approved :: MIT License',
-  'Programming Language :: Python :: 3.5'
-  ],
-  licenses= 'MIT',
-  scripts= ['bin/tea']
+  classifiers=['License :: OSI Approved :: MIT License',
+               'Programming Language :: Python :: 3.5'
+               ],
+  licenses='MIT',
+  scripts=['bin/tea']
 )
-
