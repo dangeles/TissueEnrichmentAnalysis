@@ -1,9 +1,10 @@
 # -*- coding: utf-8 -*-
 """
+A script to implement a hypergeometric test procedure.
+
 Author: David Angeles
 Date: May 26, 2015
 Requires Python > 3.5
-A script to implement a hypergeometric test
 Needs:
 A tissue dictionary
 A control list of gene names
@@ -280,18 +281,20 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     import seaborn as sns
     sns.set_context('paper')
     sns.set_style('whitegrid')
-
+    sns.choose_colorbrewer_palette('sequential', as_cmap=False)
     if df.empty:
         print('dataframe is empty!')
         return
 
     ax = kwargs.pop('ax', None)
+    ftype = kwargs.pop('ftype', 'svg')
 #
     if ax is None:
         ax = plt.gca()
 
     # sort by q value change
-    df.sort_values('Q value', ascending=True, inplace=True)
+    df.sort_values(['Q value', 'Enrichment Fold Change'],
+                   ascending=[True, False], inplace=True)
     # plot first n_bars
     ax = sns.barplot(x=df[y][:n_bars], y=df['Tissue'][:n_bars], ax=ax)
 
@@ -308,11 +311,12 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
             if not os.path.exists(dirGraphs):
                 os.makedirs(dirGraphs)
             if dirGraphs[len(dirGraphs)-1] != '/':
-                plt.savefig(dirGraphs+'/{0}.pdf'.format(title))
+                plt.savefig(dirGraphs+'/{0}.{1}'.format(title, ftype),
+                            dpi=1200)
             else:
-                plt.savefig(dirGraphs+'{0}.pdf'.format(title))
+                plt.savefig(dirGraphs+'{0}.{1}'.format(title, ftype), dpi=1200)
         else:
-            plt.savefig('{0}.pdf'.format(title))
+            plt.savefig('{0}.{1}'.format(title, ftype), dpi=1200)
 
     return ax
 #    plt.show()

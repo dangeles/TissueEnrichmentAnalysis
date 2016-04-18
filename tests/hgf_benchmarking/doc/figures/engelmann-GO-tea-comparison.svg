@@ -11,9 +11,9 @@
    xmlns:xlink="http://www.w3.org/1999/xlink"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="191.86603mm"
-   height="290.09244mm"
-   viewBox="0 0 679.84025 1027.8866"
+   width="192.80692mm"
+   height="290.85748mm"
+   viewBox="0 0 683.1741 1030.5974"
    id="svg8080"
    version="1.1"
    inkscape:version="0.91 r13725"
@@ -23,6 +23,14 @@
    inkscape:export-ydpi="345.27823">
   <defs
      id="defs8082">
+    <linearGradient
+       id="linearGradient5006"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop5008" />
+    </linearGradient>
     <linearGradient
        id="linearGradient6273"
        osb:paint="solid">
@@ -368,20 +376,20 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.7"
-     inkscape:cx="246.41365"
-     inkscape:cy="577.05128"
+     inkscape:cx="196.63297"
+     inkscape:cy="294.0474"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:window-width="1440"
-     inkscape:window-height="783"
+     inkscape:window-height="788"
      inkscape:window-x="0"
      inkscape:window-y="1"
      inkscape:window-maximized="1"
      fit-margin-top="0.6"
      fit-margin-left="0.6"
      fit-margin-right="0"
-     fit-margin-bottom="0" />
+     fit-margin-bottom="20" />
   <metadata
      id="metadata8085">
     <rdf:RDF>
@@ -390,7 +398,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -398,7 +406,16 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-30.729206,-19.922115)">
+     transform="translate(-28.367038,-19.922115)">
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.08099985;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.39999998;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5031"
+       width="685.71429"
+       height="981.42859"
+       x="28.367039"
+       y="20.519522"
+       rx="5.1405501"
+       ry="39.710983" />
     <image
        y="55.219349"
        x="32.85519"
@@ -457,7 +474,7 @@
          y="586.94519"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:30px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';text-align:start;writing-mode:lr-tb;text-anchor:start">b)</tspan></text>
     <rect
-       style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:4.481;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       style="opacity:1;fill:none;fill-opacity:1;stroke:#ff0000;stroke-width:4.48099995;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:0;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
        id="rect4795"
        width="674.28571"
        height="101.42857"
@@ -466,7 +483,7 @@
        rx="0"
        ry="0" />
     <g
-       transform="matrix(1.2020502,0,0,-1.297773,30.493022,1001.6533)"
+       transform="matrix(1.2020502,0,0,-1.297773,30.493022,979.6533)"
        inkscape:label="Drechmeria coniosporaEnrichment"
        id="g13082">
       <path
@@ -1328,5 +1345,14 @@
         </text>
       </g>
     </g>
+    <rect
+       style="opacity:1;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.08099985;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.39999998;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+       id="rect5004"
+       width="212.85715"
+       height="30"
+       x="254.44348"
+       y="588.95154"
+       rx="5.1405501"
+       ry="30" />
   </g>
 </svg>

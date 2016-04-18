@@ -10,7 +10,7 @@ from setuptools import setup, find_packages
 import os
 import sys
 
-version = '0.13.10'
+version = '0.13.12'
 
 # just type in python setup.py publish and this takes care of publishing to pypi!
 

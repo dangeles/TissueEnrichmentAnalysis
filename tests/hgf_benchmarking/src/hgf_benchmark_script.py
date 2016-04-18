@@ -132,6 +132,7 @@ NoAnnotations = df_summary.NoAnnotations.unique()
 def resplot(column, method='any'):
     """
     A method to quickly plot all combinations of cutoffs, thresholds.
+
     All cutoffs are same color
     All Thresholds are same line style
 
@@ -232,7 +233,7 @@ def walker(tissue_df, directory, save=True):
                 line_prepender(directory+short_name+'.csv', line)
                 # plot
                 tea.plot_enrichment_results(df_analysis, title=short_name,
-                                            dirGraphs=directory)
+                                            dirGraphs=directory, ftype='pdf')
                 plt.close()
 
             # if it's empty and you want to save, place it in file called empty
@@ -303,7 +304,7 @@ walker(tissue_df, dirHGT100_any)
 tissue_df = pd.read_csv('../input/WS252AnatomyDictionary/cutoff33_threshold0.95_methodany.csv')
 walker(tissue_df, dirHGT33_any)
 
-grouped = df_summary.groupby(['NoAnnotations','Threshold', 'Method'])
+grouped = df_summary.groupby(['NoAnnotations', 'Threshold', 'Method'])
 with open('../doc/figures/TissueNumbers.csv', 'w') as f:
     f.write('Annotation Cutoff,Similarity Threshold,Method')
     f.write(',No. Of Terms in Dictionary\n')
@@ -322,32 +323,34 @@ thresh = df_summary.Threshold.unique()
 NoAnnotations = df_summary.NoAnnotations.unique()
 
 
-def resplot(column, cutoff=25, method='any'):
-    """
-    A method to quickly plot all combinations of cutoffs, thresholds.
-    All cutoffs are same color
-    All Thresholds are same line style
-    """
-    for i, threshold in enumerate(thresh):
-        ax = plt.gca()
-        ax.grid(False)
-        if threshold == 1:
-            continue
-        tissue_data[sel(threshold, method)].plot(x='No. Of Annotations',
-                    y= 'No. Of Tissues in Dictionary', kind='scatter',
-                    color=cols[i], ax=ax, s=50, alpha=.7)
-    ax.set_xlim(20, 110)
-    ax.set_xscale('log')
-    ax.set_xticks([25, 33, 50, 100])
-    ax.get_xaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
-
-    ax.set_ylim(25, 1000)
-    ax.set_yscale('log')
-    ax.set_yticks([50, 100, 250, 500])
-    ax.get_yaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
-
-
-resplot('No. Of Tissues in Dictionary')
+# def resplot(column, cutoff=25, method='any'):
+#     """
+#     A method to quickly plot all combinations of cutoffs, thresholds.
+#     All cutoffs are same color
+#     All Thresholds are same line style
+#     """
+#     for i, threshold in enumerate(thresh):
+#         ax = plt.gca()
+#         ax.grid(False)
+#         if threshold == 1:
+#             continue
+#         tissue_data[sel(threshold, method)].plot(x='No. Of Annotations',
+#                                                  y='No. Of Tissues in Dictionary',
+#                                                  kind='scatter',
+#                                                  color=cols[i],
+#                                                  ax=ax, s=50, alpha=.7)
+#     ax.set_xlim(20, 110)
+#     ax.set_xscale('log')
+#     ax.set_xticks([25, 33, 50, 100])
+#     ax.get_xaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
+#
+#     ax.set_ylim(25, 1000)
+#     ax.set_yscale('log')
+#     ax.set_yticks([50, 100, 250, 500])
+#     ax.get_yaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
+#
+#
+# resplot('No. Of Tissues in Dictionary')
 
 a = '../output/HGT33_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
 b = '../output/HGT33_any_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
@@ -361,8 +364,8 @@ df = compare(a, b, '33', '50')
 df.to_csv('../output/comparisons/neuronal_comparison_GABAergic_33-50_WBPaper0037950_complete.csv',
           index=False, na_rep='-', float_format='%.2g')
 
-a = '../output/HGT33_any_Results/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603.csv'
-b = '../output/HGT50_any_Results/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603.csv'
+a = '../output/HGT33_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
+b = '../output/HGT50_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
 df = compare(a, b, '-33', '-50')
 df.head(10).to_csv('../doc/figures/dict-comparison-50-33.csv', index=False,
                    na_rep='-', float_format='%.2g')
