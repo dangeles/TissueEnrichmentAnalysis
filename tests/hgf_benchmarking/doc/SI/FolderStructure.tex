@@ -1,0 +1,97 @@
+\documentclass{article}
+% \bibliographystyle{unsrtnat}
+
+%%% Load packages
+\usepackage{amsthm,amsmath}
+\RequirePackage{natbib}
+% \RequirePackage[authoryear]{natbib}% uncomment this for author-year bibliography
+\RequirePackage{hyperref}
+% \usepackage[utf8]{inputenc} %unicode support
+% \usepackage[applemac]{inputenc} %applemac support if unicode package fails
+% \usepackage[latin1]{inputenc} %UNIX support if unicode package fails
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+\usepackage{subcaption} %for subfigures
+\usepackage{graphicx} %graphics support to specify path
+\usepackage{csvsimple} %insert tables using .csv files
+\usepackage{caption}
+\usepackage{adjustbox}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                             %%
+%%  If you wish to display your graphics for   %%
+%%  your own use using includegraphic or       %%
+%%  includegraphics, then comment out the      %%
+%%  following two lines of code.               %%
+%%  NB: These line *must* be included when     %%
+%%  submitting to BMC.                         %%
+%%  All Figure files must be submitted as      %%
+%%  separate graphics through the BMC          %%
+%%  submission process, not included in the    %%
+%%  submitted article.                         %%
+%%                                             %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% \def\includegraphic{}
+% \def\includegraphics{}
+\bibliographystyle{unsrt}
+
+\graphicspath {{figures/}}
+
+%%% Put your definitions there:
+
+
+%%% Begin ...
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Enter the title of your article here     %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Tissue Enrichment Analysis (TEA)}
+
+
+%%%%%%%%%%%%%%%%
+%% Background %%
+%%
+\section*{Folder Structure}
+
+In the SI, we provide the entire output of our tests for the interested reader. The folder is organized as follows:
+
+\subsection*{HGTXX\_any\_Results}
+The folders titled HGTXX\_any\_Results contain the enrichment results of all the 30 golden sets tested with a dictionary with cutoff XX, similarity threshold $=0.95$ and thresholding method `any'. The folders contain two kinds of files, `.pdf' and `.csv' files. The pdf files contain the bar charts for each analysis, whereas the csv files contain the complete output for a particular geneset. There is also a file called `empty.txt' that contains the names of any gene sets where no terms were enriched.
+
+Files are titled according to a common schema. For example, the file \\
+\texttt{WBPaper00013489\_Ray\_Enriched\_WBbt\_0006941\_25.csv}\\
+refers to the \textbf{WormBase Paper 0013489}, which should be `\textbf{Ray Enriched}', and specifically should be enriched in term `\textbf{WBbt:0006941}'. The gene set that was used for this analysis is contained in the SI folder named `\textbf{golden gene sets}' and is contained in a homologously named csv file. 
+
+\subsection*{Engelmann}
+	Contains all graphs pertaining to the data from Engelmann 2011. 
+
+\subsection*{Comparisons}
+	Contains csv files of the comparisons between gene sets or within dictionaries. The file nomenclature is:\
+neuronal\_comparison\_33\_WBPaper00024970\_with\_WBPaper0037950\_complete.csv
+Refers to a `neuronal comparison' using dictionary 33, comparing papers 24970 with 37950. The word complete at the end of the analysis refers to the fact that this table contains the complete table of results. 
+
+Alternatively, when comparing two dictionaries, the nomenclature is:
+neuronal\_comparison\_GABAergic\_33-50_WBPaper0037950_complete.csv
+Which refers to a `GABAergic neuronal' lists, comparing dictionaries with cutoffs of 33-50 (all other parameters are the same) using paper 37950. 
+
+\subsection*{Summary Info}
+
+\subsection*{test_list_efaecalis.txt}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                          %%
+%% Backmatter begins here                   %%
+%%                                          %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\end{document}
