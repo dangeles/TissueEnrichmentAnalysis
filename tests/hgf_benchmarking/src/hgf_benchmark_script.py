@@ -15,23 +15,23 @@ import matplotlib.pyplot as plt
 import re
 import matplotlib as mpl
 
-
 sns.set_context('paper')
 
 # pd.set_option('display.float_format', lambda x:'%f'%x)
 pd.set_option('precision', 3)
 # this script generates a few directories.
 
+
 dirOutput = '../output/'
 dirSummaries = '../output/SummaryInformation/'
 dirHGT25_any = '../output/HGT25_any_Results/'
-dirHGT33_avg = '../output/HGT33_any_Results/'
 dirHGT33_any = '../output/HGT33_any_Results/'
 dirHGT50_any = '../output/HGT50_any_Results/'
 dirHGT100_any = '../output/HGT100_any_Results/'
+dirComp = '../output/comparisons/'
 
-DIRS = [dirOutput, dirSummaries, dirHGT25_any, dirHGT33_avg,
-        dirHGT50_any, dirHGT100_any]
+DIRS = [dirOutput, dirSummaries, dirHGT25_any,
+        dirHGT50_any, dirHGT100_any, dirComp]
 # open the relevant file
 path_sets = '../input/genesets_golden/'
 path_dicts = '../input/WS252AnatomyDictionary/'
@@ -41,6 +41,7 @@ path_dicts = '../input/WS252AnatomyDictionary/'
 for d in DIRS:
     if not os.path.exists(d):
         os.makedirs(d)
+
 
 # Make the file that will hold the summaries and make the columns.
 with open(dirSummaries+'ExecutiveSummary.csv', 'w') as fSum:
@@ -111,7 +112,7 @@ df_summary['fracTissues'] = df_summary['TissuesReturned']/df_summary[
     'TissuesTested']
 
 df_summary.sort_values(['NoAnnotations', 'Threshold', 'Method'], inplace=True)
-#==============================================================================
+# ==============================================================================
 # ==============================================================================
 # # Plot summary graphs
 # ==============================================================================
@@ -131,6 +132,7 @@ NoAnnotations = df_summary.NoAnnotations.unique()
 def resplot(column, method='any'):
     """
     A method to quickly plot all combinations of cutoffs, thresholds.
+
     All cutoffs are same color
     All Thresholds are same line style
 
@@ -152,7 +154,7 @@ plt.xlabel('Fraction of all tissues that tested significant')
 plt.xlim(0, 1)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'fractissuesKDE_method=any.png')
+plt.savefig(dirSummaries+'fractissuesKDE_method=any.pdf')
 plt.close()
 
 resplot('AvgQ', method='avg')
@@ -160,7 +162,7 @@ plt.xlabel('Fraction of all tissues that tested significant')
 plt.xlim(0, 0.05)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'avgQKDE_method=avg.png')
+plt.savefig(dirSummaries+'avgQKDE_method=avg.pdf')
 plt.close()
 
 
@@ -169,7 +171,7 @@ plt.xlabel('AvgQ value')
 plt.xlim(0, .05)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'avgQKDE_method=any.png')
+plt.savefig(dirSummaries+'avgQKDE_method=any.pdf')
 plt.close()
 
 # KDE of the fraction of avgFold
@@ -178,16 +180,12 @@ plt.xlabel('Avg Fold Change value')
 plt.xlim(0, 15)
 plt.title('KDE Curves for all dictionaries, benchmarked on all gold standards')
 plt.legend()
-plt.savefig(dirSummaries+'avgFoldChangeKDE.png')
+plt.savefig(dirSummaries+'avgFoldChangeKDE.pdf')
 plt.close()
 
 
 def line_prepender(filename, line):
-    """
-    Given a filename, opens it and prepends the line 'line'
-    at the beginning of the file
-    """
-
+    """Given filename, open it and prepend 'line' at beginning of the file."""
     with open(filename, 'r+') as f:
         content = f.read()
         f.seek(0, 0)
@@ -235,7 +233,7 @@ def walker(tissue_df, directory, save=True):
                 line_prepender(directory+short_name+'.csv', line)
                 # plot
                 tea.plot_enrichment_results(df_analysis, title=short_name,
-                                            dirGraphs=directory)
+                                            dirGraphs=directory, ftype='pdf')
                 plt.close()
 
             # if it's empty and you want to save, place it in file called empty
@@ -261,6 +259,9 @@ def compare(resA, resB, l, r):
     df1 = pd.read_csv(resA, comment='#')
     df2 = pd.read_csv(resB, comment='#')
 
+    # drop observed column from df1
+    df1.drop('Observed', axis=1, inplace=True)
+    df2.drop('Observed', axis=1, inplace=True)
     # make a dummy column, key for merging
     df1['key'] = df1['Tissue']
     df2['key'] = df2['Tissue']
@@ -269,14 +270,25 @@ def compare(resA, resB, l, r):
     result = pd.merge(df1, df2, on='key', suffixes=[l, r], how='outer')
 
     # sort by q val and drop non useful columns
-    result.sort_values('Q value{0}'.format(l))
+    # result.sort_values('Q value{0}'.format(l))
     result.drop('Tissue{0}'.format(l), axis=1, inplace=True)
     result.drop('Tissue{0}'.format(r), axis=1, inplace=True)
 
-    # rename key column to Tissue
-    result['Tissue'] = df1['key']
+    result['Tissue'] = result['key']
     # drop key
     result.drop('key', axis=1, inplace=True)
+
+    result.sort_values(['Q value%s' % (l), 'Q value%s' % (r)], inplace=True)
+    # drop Expected values
+    result.drop(['Expected%s' % (l), 'Expected%s' % (r)], axis=1, inplace=True)
+
+    # rearrange columns
+    cols = ['Tissue', 'Q value%s' % (l), 'Q value%s' % (r),
+            'Enrichment Fold Change%s' % (l), 'Enrichment Fold Change%s' % (r)]
+
+    result = result[cols]
+
+    # drop observed
     return result  # return result
 
 tissue_df = pd.read_csv('../input/WS252AnatomyDictionary/cutoff25_threshold0.95_methodany.csv')
@@ -292,58 +304,72 @@ walker(tissue_df, dirHGT100_any)
 tissue_df = pd.read_csv('../input/WS252AnatomyDictionary/cutoff33_threshold0.95_methodany.csv')
 walker(tissue_df, dirHGT33_any)
 
-grouped = df_summary.groupby(['NoAnnotations','Threshold', 'Method'])
-with open('../output/SummaryInformation/TissueNumbers.csv', 'w') as f:
-    f.write('Annotation Cutoff,Similarity Threshold,Method,')
-    f.write(',No. Of Tissues in Dictionary\n')
+grouped = df_summary.groupby(['NoAnnotations', 'Threshold', 'Method'])
+with open('../doc/figures/TissueNumbers.csv', 'w') as f:
+    f.write('Annotation Cutoff,Similarity Threshold,Method')
+    f.write(',No. Of Terms in Dictionary\n')
     for key, group in grouped:
         f.write('{0},{1},{2},{3}\n'.format(key[0], key[1], key[2],
                                            group.TissuesTested.unique()[0]))
+
 
 tissue_data = pd.read_csv('../output/SummaryInformation/TissueNumbers.csv')
 sel = lambda y, z: ((tissue_data.iloc[:, 1] == y) &
                     (tissue_data.iloc[:, 2] == z))
 
-#KDE of the fraction of all tissues that tested significant
+# KDE of the fraction of all tissues that tested significant
 cols = ['#1b9e77', '#d95f02', '#7570b3']  # used with varying colors
 thresh = df_summary.Threshold.unique()
 NoAnnotations = df_summary.NoAnnotations.unique()
 
 
-def resplot(column, cutoff=25, method='any'):
-    """
-    A method to quickly plot all combinations of cutoffs, thresholds.
-    All cutoffs are same color
-    All Thresholds are same line style
-    """
-    for i, threshold in enumerate(thresh):
-        ax = plt.gca()
-        ax.grid(False)
-        if threshold == 1:
-            continue
-        tissue_data[sel(threshold, method)].plot(x='No. Of Annotations',
-                    y= 'No. Of Tissues in Dictionary', kind='scatter',
-                    color=cols[i], ax=ax, s=50, alpha=.7)
-    ax.set_xlim(20, 110)
-    ax.set_xscale('log')
-    ax.set_xticks([25, 33, 50, 100])
-    ax.get_xaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
+# def resplot(column, cutoff=25, method='any'):
+#     """
+#     A method to quickly plot all combinations of cutoffs, thresholds.
+#     All cutoffs are same color
+#     All Thresholds are same line style
+#     """
+#     for i, threshold in enumerate(thresh):
+#         ax = plt.gca()
+#         ax.grid(False)
+#         if threshold == 1:
+#             continue
+#         tissue_data[sel(threshold, method)].plot(x='No. Of Annotations',
+#                                                  y='No. Of Tissues in Dictionary',
+#                                                  kind='scatter',
+#                                                  color=cols[i],
+#                                                  ax=ax, s=50, alpha=.7)
+#     ax.set_xlim(20, 110)
+#     ax.set_xscale('log')
+#     ax.set_xticks([25, 33, 50, 100])
+#     ax.get_xaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
+#
+#     ax.set_ylim(25, 1000)
+#     ax.set_yscale('log')
+#     ax.set_yticks([50, 100, 250, 500])
+#     ax.get_yaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
+#
+#
+# resplot('No. Of Tissues in Dictionary')
 
-    ax.set_ylim(25, 1000)
-    ax.set_yscale('log')
-    ax.set_yticks([50, 100, 250, 500])
-    ax.get_yaxis().set_major_formatter(mpl.ticker.ScalarFormatter())
+a = '../output/HGT33_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
+b = '../output/HGT33_any_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
+df = compare(a, b, 'Spencer', 'Watson')
+df.to_csv('../output/comparisons/neuronal_comparison_33_WBPaper00024970_with_WBPaper0037950_complete.csv',
+          index=False, na_rep='-', float_format='%.2g')
 
+a = '../output/HGT33_any_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
+b = '../output/HGT50_any_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
+df = compare(a, b, '33', '50')
+df.to_csv('../output/comparisons/neuronal_comparison_GABAergic_33-50_WBPaper0037950_complete.csv',
+          index=False, na_rep='-', float_format='%.2g')
 
-resplot('No. Of Tissues in Dictionary')
+a = '../output/HGT33_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
+b = '../output/HGT50_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
+df = compare(a, b, '-33', '-50')
+df.head(10).to_csv('../doc/figures/dict-comparison-50-33.csv', index=False,
+                   na_rep='-', float_format='%.2g')
+df.to_csv('../output/comparisons/neuronal_comparison_Pan_Neuronal_33-50_WBPaper0031532_complete.csv',
+          index=False, na_rep='-', float_format='%.2g')
 
-
-a = '../output/HGT33_avg_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
-b = '../output/HGT33_avg_Results/WBPaper00037950_GABAergic-motor-neurons_larva_enriched_WBbt_0005190_132.csv'
-df = compare(a, b, 'l', 'r')
-
-df.dropna().head()
-
-a = '../output/HGT33_avg_Results/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603.csv'
-b = '../output/HGT50_any_Results/WBPaper00031532_Larva_Pan_Neuronal_Enriched_WBbt_0003679_1603.csv'
-df = compare(a, b, 'l', 'r')
+print(df)

@@ -11,7 +11,7 @@ Requirements
 
 This library has been developed in Python >= 3.5, using the Anaconda
 distribution. Requirements include ``pandas``, ``matplotlib``, ``numpy``,
-``scipy`` and ``seaborn``. 
+``scipy`` and ``seaborn``.
 
 Installation
 ================================
@@ -23,15 +23,15 @@ Basic Usage
 Web usage
 ----------------------
 
-Go to `www.wormbase.org/tea <http://www.wormbase.org/tea>`_, input your gene list 
+Go to `www.wormbase.org/tea <http://www.wormbase.org/tea>`_, input your gene list
 and enjoy the results!
- 
+
 
 Within a Python Script
 ----------------------
 
 There are really just two main functions that are provided in TEA:
-``enrichment_analysis`` and ``plot_enrichment_results``. 
+``enrichment_analysis`` and ``plot_enrichment_results``.
 
 A standard call to this library would be as follows:
 
@@ -81,12 +81,9 @@ David Angeles-Albores
 Contributors:
 ================================
 
-Raymond Y. Lee, Paul W. Sternberg
+Raymond Y. Lee, Juancarlos Chan, Paul W. Sternberg
 
 Acknowledgements
 ================
 
 With special thanks to the entire worm community!
-
-
-

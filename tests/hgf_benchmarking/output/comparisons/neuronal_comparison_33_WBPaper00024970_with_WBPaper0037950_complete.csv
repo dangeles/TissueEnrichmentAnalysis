@@ -1,0 +1,31 @@
+Tissue,Q valueSpencer,Q valueWatson,Enrichment Fold ChangeSpencer,Enrichment Fold ChangeWatson
+nerve ring WBbt:0006749,8.7e-11,0.005,2.9,2.7
+nervous system WBbt:0005735,1.1e-09,0.005,1.4,1.4
+retrovesicular ganglion WBbt:0005656,1.4e-08,0.011,5.7,5
+lateral ganglion WBbt:0005105,2e-08,-,2.8,-
+dorsal nerve cord WBbt:0006750,1.3e-05,0.005,3.2,3.8
+tail WBbt:0005741,3e-05,-,1.6,-
+SMDDL WBbt:0004972,7.4e-05,-,7.8,-
+BAG WBbt:0006825,0.0002,-,6.8,-
+ventral nerve cord WBbt:0005829,0.00032,-,2.3,-
+PVC WBbt:0005840,0.00034,-,6.1,-
+posterior lateral ganglion WBbt:0005465,0.0004,-,3.3,-
+AIY WBbt:0005413,0.00063,-,4.4,-
+NSM WBbt:0003666,0.00068,-,5.4,-
+SDQL WBbt:0004993,0.00068,-,6.3,-
+HSN WBbt:0006830,0.002,-,3.5,-
+ASG WBbt:0005664,0.0025,-,4.3,-
+ASEL WBbt:0003904,0.0025,-,3.2,-
+AUA WBbt:0006817,0.0025,-,5.7,-
+preanal ganglion WBbt:0005448,0.0025,-,2.8,-
+ASER WBbt:0003903,0.0025,-,3.2,-
+PLM WBbt:0005490,0.0038,-,3.6,-
+AVA WBbt:0005842,0.004,-,4.4,-
+AVM WBbt:0003832,0.0041,-,3.9,-
+SDQR WBbt:0004991,0.0041,-,5.1,-
+URX WBbt:0006846,0.0099,-,4.3,-
+ASK WBbt:0005668,0.017,-,2.9,-
+ALM WBbt:0005406,0.018,-,3.1,-
+DVA WBbt:0004823,0.019,-,4.3,-
+outer labial lateral sensillum WBbt:0005503,0.024,-,4.1,-
+PQR WBbt:0004096,0.029,-,3.4,-
