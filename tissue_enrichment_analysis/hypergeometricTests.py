@@ -281,7 +281,7 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     import seaborn as sns
     sns.set_context('paper')
     sns.set_style('whitegrid')
-    sns.choose_colorbrewer_palette('sequential', as_cmap=False)
+    # sns.choose_colorbrewer_palette('sequential', as_cmap=False)
     if df.empty:
         print('dataframe is empty!')
         return
