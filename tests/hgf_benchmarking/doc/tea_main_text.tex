@@ -109,7 +109,7 @@
 %%                                          %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\title{Tissue Enrichment Analysis (TEA)}
+\title{Tissue Enrichment Analysis for C. elegans Genomics}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                                          %%
@@ -190,14 +190,14 @@
 
 \begin{abstract} % abstract
 \parttitle{Background} %if any
-Over the last ten years, there has been explosive development in tools
-for measuring gene expression. These tools can identify thousands of altered 
+Over the last ten years, there has been explosive development in methods
+for measuring gene expression. These methods can identify thousands of altered 
 genes between conditions, but understanding these datasets and forming hypotheses based on them remains challenging. One way to analyze these datasets is to associate ontologies (hierarchical, descriptive vocabularies
 with controlled relations between terms) with genes and to look for enrichment of specific terms. Although gene ontology (GO) is available for   \emph{Caenorhabditis~elegans}, it does not include anatomical information.
 \parttitle{Results} %if any 
 We have developed a tool for identifying  enrichment of \emph{C.~elegans} tissues among gene sets and generated a website GUI where users can access this tool. Since a common drawback to ontology enrichment analyses is result verbosity, we developed a very simple trimming algorithm to reduce the ontology size by an order of magnitude. We adjusted these filters and validated our tool using a set of 30  gold standards from Expression Cluster data in WormBase and we show our tool can even discriminate between embryonic and larval tissues and can even identify tissues down to the single-cell level. We used our tool to identify multiple neuronal tissues that are down-regulated due to pathogen infection in \emph{C.~elegans}.
 \parttitle{Conclusions} %if any
-Our Tissue Enrichment Analysis (TEA) can be found at \url{www.wormbase.org/tea}, and can be downloaded using Python's standard pip installer. It tests a slimmed-down \emph{C.~elegans} tissue ontology for enrichment of specific terms and provides users with a  text and graphic representation of the results. 
+Our Tissue Enrichment Analysis (TEA) can be found within WormBase, and can be downloaded using Python's standard pip installer. It tests a slimmed-down \emph{C.~elegans} tissue ontology for enrichment of specific terms and provides users with a  text and graphic representation of the results. 
 \end{abstract}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -259,7 +259,7 @@ Our Tissue Enrichment Analysis (TEA) can be found at \url{www.wormbase.org/tea},
 	RNA-seq and other high-throughput methods in biology have the ability to identify thousands of genes that are altered between conditions. These genes are often correlated in their biological characteristics or functions, but identifying these functions remains challenging. To interpret these long lists of genes, biologists need to abstract genes into concepts that are biologically relevant to form hypotheses about what is happening in the system. One such abstraction method relies on Gene Ontology (GO). GO provides a controlled set of hierarchically ordered terms~\cite{TheGeneOntologyConsortium2000a, TheGeneOntologyConsortium2015} that provide detailed descriptions about the molecular, cellular or biochemical functions of any gene. For a given gene list, existing software programs can query whether a particular term is enriched~\cite{Mi2009, McLean2010, Huang2009}. One area of biological significance that GO does not include is anatomy. One way to address this shortcoming is to use a `tissue ontology' that provides a complete anatomical description for an organism (e.g `tissue', `organ' or `specific cell'), in this case for \emph{C.~elegans}~\cite{Lee2003}. Cells and tissues are physiologically relevant units with broad, relatively well-understood functionalities amenable to hypothesis formation. The \emph{C.~elegans} database, WormBase~\cite{Howe2016}, maintains a curated list of gene expression data from the literature. Here we provide a new framework that analyzes a user-input list for enrichment of specific cells and tissues. %As such, we believe that identification of tissues is likely to provide researchers with enough information to be able to form hypotheses about the physiological responses of an organism to a specified condition.
 
 Another problem frequently associated with GO enrichment analysis is that it is often difficult to interpret due to the large number of terms associated with a given gene. %There exist a number of GO analytic tools for use by the community but a shared complaint for many programs is the very large number of GO terms that are significantly associated with any given gene list.
-DAVID, a common tool for GO enrichment analysis, clusters enriched terms into broad categories~\cite{Huang2007}, whereas PANTHER~\cite{Mi2009, Mi2013} attempts to solve this issue by employing a manually reduced ontology, GOslim (pers. comm., H. Yu and P. Thomas). To reduce verbosity, we have filtered our ontology using a small set of well-defined criteria to remove terms that do not contribute additional information. To our knowledge, such filtering has not been performed in an algorithmic fashion for a biological ontology before---indeed, DAVID does not employ term trimming \emph{a priori} of testing, but rather fuzzy clustering \emph{post} testing to reduce the number of ontology terms. Other pruning tools do exist (see for example~\cite{Kim2007}), but the pruning is query-dependent. We believe our trimming methodology strikes a good balance between detailed tissue calling and conservative testing.
+DAVID, a common tool for GO enrichment analysis, clusters enriched terms into broad categories~\cite{Huang2007}, whereas PANTHER~\cite{Mi2009, Mi2013} attempts to solve this issue by employing a manually reduced ontology, GOslim (pers. comm., H. Yu and P. Thomas). To reduce verbosity, we have filtered our ontology using a small set of well-defined criteria to remove terms that do not contribute additional information. To our knowledge, such filtering has not been performed in an algorithmic fashion for a biological ontology before---indeed, DAVID does not employ term trimming \emph{a priori} of testing, but rather fuzzy clustering \emph{post} testing to reduce the number of ontology terms. Other pruning methods do exist (see for example~\cite{Kim2007}), but the pruning is query-dependent. We believe our trimming methodology strikes a good balance between detailed tissue calling and conservative testing.
 
 %Our tool is available within WormBase and provides users with a text-based file of the enrichment results as well as a simple and clear graph of the results that exhibit the largest fold-change enrichment.
 
@@ -273,7 +273,7 @@ To identify redundancy, we defined a similarity metric (see \emph{Methods} secti
 
 \subsubsection*{Terminal branch terms and parent terms can be
 safely removed in an algorithmic fashion }
-Another problem arises from the ontology being scarcely populated. Many nodes have 0-10 annotations, which we consider too few to accurately test. To solve this issue, we implemented a straightforward trimming strategy. For a given terminal node, we test whether the node has more than a threshold number of annotations. If it does not, the node is removed. The next higher node in the branch is tested and removed recursively until a node which satisfies the condition is found. At that point, no more nodes can be removed from that branch. This is guaranteed by the structure of the ontology: parent nodes inherit all of the annotations of all of their descendants, so the number of annotated terms monotonically increases with increasing term hierarchy (see Figure~\ref{fig:trim_ends}). In this way, we ensure that our term dictionary includes only those tissues that are considered sufficiently well annotated for statistical purposes.
+Another problem arises from the ontology being scarcely populated. Many nodes have 0-10 annotations, which we consider too few to accurately test. To solve this issue, we implemented a straightforward trimming strategy. For a given terminal node, we test whether the node has more than a threshold number of annotations. If it does not, the node is removed. The next higher node in the branch is tested and removed recursively until a node that satisfies the condition is found. At that point, no more nodes can be removed from that branch. This completion is guaranteed by the structure of the ontology: parent nodes inherit all of the annotations of all of their descendants, so the number of annotated terms monotonically increases with increasing term hierarchy (see Figure~\ref{fig:trim_ends}). In this way, we ensure that our term dictionary includes only those tissues that are considered sufficiently well annotated for statistical purposes.
 
 Additionally, we reasoned that, for any parent node, if all its daughters were selected for testing, there was no additional benefit to test the parent. %In other words, if all the daughter nodes are tested, there is little additional information to be gained by including the parent node. To address this issue 
 We removed parent nodes from the analysis if all their daughter nodes passed the annotation threshold (see Figure~\ref{fig:trim_roots}). We called this a ceiling filter. Applying these three filters reduced the number of ontology terms by an order of magnitude. 
@@ -336,7 +336,7 @@ Our results highlight the involvement of various \emph{C.~elegans} neuronal tiss
 We have presented a tissue enrichment analysis tool that employs a standard hypergeometric model to test the \emph{C.~elegans} tissue ontology. We use a hypergeometric function to test a user-provided gene list for enrichment of anatomical terms in \emph{C.~elegans}. Our hope is that the physiological relevance of anatomical terms will enable researchers to make hypotheses about high-dimensionality data. Specifically, we believe an enriched term may broadly suggest one of two hypotheses: if a list is enriched in a particular anatomical region, that anatomical region is affected by the experimental treatment; alternatively, the anatomical regions that are enriched reflect biologically relevant interactions between tissues. We believe the first hypothesis is a reasonable hypothesis to make in the case of whole-worm RNA-seq data for example, whereas the second hypothesis may be more plausible in cases where a researcher already knows what tissues a particular gene list came from, as may be the case in single-cell RNA-seq. 
 
 %Other tools
-Our tool relies on an annotation dictionary that is continuously updated primarily with data from single gene qualitative analyses, does not require retraining and does not require ranked genes. To our knowledge, this is the first tool that tests tissue enrichment  in \emph{C.~elegans} via the hypergeometric method, but similar projects exist for humans and zebrafish~\cite{Lee2013, Prykhozhij2013}, highlighting the relevance of our tool for high-dimensionality biology. Chikina \emph{et al}~\cite{Chikina2009} have previously reported a tissue enrichment model for \emph{C.~elegans }based on a Support Vector Machine classifier that has been trained on microarray studies. SVMs are powerful tools, but they require continuous retraining as more tissue expression data becomes available. Moreover, classifiers require that data be rank-ordered by some metric, something which is not possible for certain studies. Finally, this tissue enrichment tool provides users with enrichment results for only 6 large tissues. In contrast, our tool routinely tests a much larger number of terms, and we have shown it can even accurately identify enrichment of embryonic precursor lineages for select data sets. 
+Our tool relies on an annotation dictionary that is continuously updated primarily with data from single gene qualitative analyses, does not require retraining and does not require ranked genes. To our knowledge, this is the first tool that tests tissue enrichment  in \emph{C.~elegans} via the hypergeometric method, but similar projects exist for humans and zebrafish~\cite{Lee2013, Prykhozhij2013}, highlighting the relevance of our tool for high-dimensionality biology. Chikina \emph{et al}~\cite{Chikina2009} have previously reported a tissue enrichment model for \emph{C.~elegans }based on a Support Vector Machine classifier that has been trained on microarray studies. SVMs are powerful tools, but they require continuous retraining as more tissue expression data becomes available. Moreover, classifiers require that data be rank-ordered by some metric, something which is not possible for certain studies. Furthermore, this tissue enrichment tool provides users with enrichment results for only 6 large tissues. In contrast, our tool routinely tests a much larger number of terms, and we have shown it can even accurately identify enrichment of embryonic precursor lineages for select data sets. 
 
 %Trimming discussion
 We have also presented the first, to our knowledge, ontology trimming algorithm for biomedical ontologies. This algorithm, which is very easy to execute, places strong limits on the number of terms selected for testing. Due to the nature of all ontologies as hierarchical, acyclical graphs with term inheritance, term annotations are correlated along any given branch. This correlation reduces the benefits of including all terms for statistical analysis: for any given term along a branch, if that term passes significance, there is a high probability that many other terms along that branch will also pass significance. If the branch is enriched by random chance, error propagation along a branch means that many more false positives will follow. Thus, a researcher might be misled by the number of terms of correlated function and assign importance to this finding; the fact that the branching structure of GO amplifies false positive signals is a powerful argument for either reducing branch length or branch intracorrelation, or both. On the other hand, if a term is actually enriched, we argue that there is little benefit to presenting the user with additional terms along that branch. Instead, a user will benefit most from testing sparsely along the tree at a suitable specificity for hypothesis formation. Related terms of the same level should only be tested when there is sufficient annotation to differentiate, with statistical confidence, whether one term is enriched above the other. Our algorithm reduces branch length by identifying and removing nodes that are insufficiently annotated and parents that are likely to include sparse information.
@@ -371,7 +371,7 @@ All scripts were written in Python 3.5. Our software relies on the pandas, NumPy
 
 
 \section*{Availability of data and materials}
-Our web implementation is available at \url{https://www.wormbase.org/tea}. Our software can also be downloaded using Python's pip installer via the command
+Our web implementation is available at \url{https://www.wormbase.org/enrichment/tea}. Our software can also be downloaded using Python's pip installer via the command
 
 \texttt{pip install tissue\_enrichment\_analysis}
 
@@ -413,7 +413,7 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 
 % if your bibliography is in bibtex format, use those commands:
 \bibliographystyle{bmc-mathphys} % Style BST file (bmc-mathphys, vancouver, spbasic).
-\bibliography{bmc_article}      % Bibliography file (usually '*.bib' )
+\bibliography{tea_citations}      % Bibliography file (usually '*.bib' )
 % for author-year bibliography (bmc-mathphys or spbasic)
 % a) write to bib file (bmc-mathphys only)
 % @settings{label, options="nameyear"}
@@ -504,7 +504,7 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 	\includegraphics[width=\textwidth]{avgQKDE_method=any.pdf}
   \captionsetup{width= 0.95\textwidth}
   \caption{
-  \csentence{Kernel density estimates for 30 gold standard datasets.}
+  \csentence{Kernel density estimates (KDE) for 30 gold standard datasets.}
       We ran TEA on 30 datasets we believed to be enriched in particular tissues and pooled all the results to observe the distribution of q-values. The mode of the distribution for dictionaries with annotation cut-offs of 100 and 50 genes are very similar; however, when the cut-off is lowered to 25 genes, the mode of the distribution shifts to the left, potentially signalling a decrease in measurement power.
 	  }
 	  \label{fig:qvals}
@@ -570,7 +570,7 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 
 \begin{table}[h!]
 	\caption{
-	Comparison of results for a neuronal-enriched gene set from Watson~\cite{Watson2008a}. We ran the same genelist on a dictionary with a minimum annotation cutoff of 50, similarity threshold of 0.95 and similarity method `any' versus another with a minimum annotation cutoff of 33, similarity threshold of 0.95 and similarity method `any'. In the table, columns are labeled with their significance value (Q-value) or enrichment fold change followed by a hyphen and a number which indicates which the cutoff for the dictionary that was used for testing. Not all tissues are present in either dictionary. Hyphens denote not-applicable values, which occurs when a particular tissue is not present in both dictionaries. Full table is available on github.
+	Comparison of results for a neuronal-enriched gene set from Watson~\cite{Watson2008a}. We ran the same genelist on a dictionary with a minimum annotation cutoff of 50, similarity threshold of 0.95 and similarity method `any' versus another with a minimum annotation cutoff of 33, similarity threshold of 0.95 and similarity method `any'. In the table, columns are labeled with their significance value (Q-value) or enrichment fold change followed by a hyphen and a number which indicates which the cutoff for the dictionary that was used for testing. Not all tissues are present in either dictionary. Hyphens denote not-applicable values, which occurs when a particular tissue is not present in both dictionaries. Full table is available in Additional File 2.
 	}
 	
 	\begin{adjustbox}{width=1\textwidth}
@@ -596,6 +596,12 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 \section*{Additional Files}
   \subsection*{Additional file 1 --- IPython Notebook}
     Tutorial for users interested in using our software within a python script
+  \subsection*{Additional file 2 --- Folder Structure for SI files 3 and 4}
+    A file detailing the folder structure of the zipped folders 3 and 4. 
+  \subsection*{Additional file 3 --- Golden Gene Sets}
+    A list of all the genes used for our benchmarking process. 
+  \subsection*{Additional file 4 --- Results}
+    A folder containing a complete version of the results we generated for this paper. 
 
 
 \end{backmatter}

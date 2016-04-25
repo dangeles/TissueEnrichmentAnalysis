@@ -2,7 +2,7 @@ This is BibTeX, Version 0.99d (TeX Live 2015)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: ./tea_main_text.aux
 The style file: unsrt.bst
-Illegal, another \bibstyle command---line 58 of file ./tea_main_text.aux
+Illegal, another \bibstyle command---line 60 of file ./tea_main_text.aux
  : \bibstyle
  :          {bmc-mathphys}
 I'm skipping whatever remains of this command
