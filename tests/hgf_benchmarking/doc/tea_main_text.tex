@@ -385,6 +385,23 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{backmatter}
+\section*{Abbreviations}
+
+\begin{itemize}
+	\item TEA --- Tissue Enrichment Analysis
+	\item GO --- Gene Ontology
+	\item WBbt ID --- A unique ID assigned to reference ontology terms
+	\item WBgene ID -- A unique ID assigned to reference nematode genes
+\end{itemize}
+
+
+\section*{Ethics Approval and Consent to Participate}
+
+Not applicable
+
+\section*{Consent for Publication}
+
+Not applicable
 
 \section*{Competing interests}
  	The authors declare that they have no competing interests.
@@ -396,6 +413,23 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 	We thank Justin Bois for his help and support. 
 	We would like to acknowledge all members of the Sternberg
 	lab for helpful discussion.
+	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                               %%
+%% Additional Files              %%
+%%                               %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Additional Files}
+  \subsection*{Additional file 1 --- TEA Tutorial}
+    Tutorial for users interested in using our software within a python script
+  \subsection*{Additional file 2 --- Folder Structure for SI files 3 and 4}
+    A file detailing the folder structure of the zipped folders 3 and 4. 
+  \subsection*{Additional file 3 --- Golden Gene Sets}
+    A list of all the genes used for our benchmarking process. 
+  \subsection*{Additional file 4 --- Results}
+    A folder containing a complete version of the results we generated for this paper. 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%                  The Bibliography                       %%
 %%                                                         %%
@@ -442,20 +476,20 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 \section*{Figures}
 
 % Figures describing algorithm
-\begin{figure}[h!]
+\begin{figure}[htbp]
   \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{figures/RedundancyTrimmingOntogeny.png}
+    % \includegraphics[width=\textwidth]{figures/RedundancyTrimmingOntogeny.png}
    	 	\caption{}
     \label{fig:simdiagram}
   \end{subfigure}
   %
   \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{figures/FloorTrimmingOntogeny.png}
+    % \includegraphics[width=\textwidth]{figures/FloorTrimmingOntogeny.png}
 	      \caption{}
     \label{fig:trim_ends}
   \end{subfigure}
   \begin{subfigure}[b]{0.3\textwidth}
-    \includegraphics[width=\textwidth]{figures/CeilingTrimmingOntogeny.png}
+    % \includegraphics[width=\textwidth]{figures/CeilingTrimmingOntogeny.png}
     	\caption{}
     \label{fig:trim_roots}
   \end{subfigure}
@@ -472,9 +506,9 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 
 
 %gui
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
-    \includegraphics[width=0.95\textwidth]{figures/guiresults.png}
+    % \includegraphics[width=0.95\textwidth]{figures/guiresults.png}
   	\captionsetup{width= 0.95\textwidth}
  	\caption{
 	\csentence{Screenshot of results from the web GUI.} 
@@ -485,9 +519,9 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 
 
 % workflow 
-\begin{figure}
+\begin{figure}[htbp]
 	\centering
-	\includegraphics[width=0.95\textwidth]{figures/workflow.pdf}
+	% \includegraphics[width=0.95\textwidth]{figures/workflow.pdf}
 	\captionsetup{width= 0.95\textwidth}
 	\caption{
 	\csentence{TEA Workflow.}
@@ -500,8 +534,8 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 
 % statistical testing and validation Figures
 %q plot
-\begin{figure}[h!]
-	\includegraphics[width=\textwidth]{avgQKDE_method=any.pdf}
+\begin{figure}[htbp]
+	% \includegraphics[width=\textwidth]{avgQKDE_method=any.pdf}
   \captionsetup{width= 0.95\textwidth}
   \caption{
   \csentence{Kernel density estimates (KDE) for 30 gold standard datasets.}
@@ -514,7 +548,7 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 
 %gaba
 \begin{figure}
-  \includegraphics[width=0.95\textwidth]{GABAcomparison3.pdf}
+  % \includegraphics[width=0.95\textwidth]{GABAcomparison3.pdf}
   \captionsetup{width= 0.95\textwidth}
   \caption{
   \csentence{Independently derived gene sets show similar results 	when tested with the same dictionary.}
@@ -528,8 +562,8 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 
 %results Figures - engelmann et al reanalysis
 %labels are missing.
-\begin{figure}[h!]
-    \includegraphics[width=0.95\textwidth]{figures/engelmann-GO-tea-comparison.png}
+\begin{figure}[htbp]
+    % \includegraphics[width=0.95\textwidth]{figures/engelmann-GO-tea-comparison.png}
 	\captionsetup{width= 0.95\textwidth}
   	\caption{
 	\csentence{\emph{D.~coniospora} Gene Enrichment Analysis and Tissue Enrichment Analysis results.}
@@ -549,60 +583,49 @@ All benchmark gene sets, benchmarking code and Figures can also be found at the 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Use of \listoftables is discouraged.
-%%
+%
+
+
+
 \section*{Tables}
 
-\begin{table}[h!]
+\begin{table}[p]
 	\caption{
 	Parameter specifications and number of tissues for all dictionaries. The `Method' column refers to the trimming criterion for the similarity metric. We used two such criteria, `any' and `avg'.`any': For a given sister set, if any sister had a similarity exceeding the corresponding threshold, all sisters were removed from the final dictionary. `avg': For a given sister set, if the average similarity across all the sisters in the set was greater than the corresponding threshold, all sisters were removed from the final dictionary.
 	}
-	\csvreader[tabular= c | c | c | c,
-	table head= {\textbf{Annotation Cutoff}} & {\textbf{Similarity Threshold}} & {\textbf{Method}} & {\textbf{No. Of Terms in Dictionary}}\\\hline,
-	late after line= \\,
-	late after last line= \\\hline
-	]
-	{figures/TissueNumbers.csv}{}
-	{\csvcoli & \csvcolii & \csvcoliii & \csvcoliv}	
+	% \csvreader[tabular= c | c | c | c,
+	% table head= {\textbf{Annotation Cutoff}} & {\textbf{Similarity Threshold}} & {\textbf{Method}} & {\textbf{No. Of Terms in Dictionary}}\\\hline,
+	% late after line= \\,
+	% late after last line= \\\hline
+	% ]
+	% {figures/TissueNumbers.csv}{}
+	% {\csvcoli & \csvcolii & \csvcoliii & \csvcoliv}
 	
-	% \csvautotabular{figures/TissueNumbers.csv}
 	\label{tab:DictionarySpecs}
 \end{table}
 
-\begin{table}[h!]
+\begin{table}[p]
 	\caption{
 	Comparison of results for a neuronal-enriched gene set from Watson~\cite{Watson2008a}. We ran the same genelist on a dictionary with a minimum annotation cutoff of 50, similarity threshold of 0.95 and similarity method `any' versus another with a minimum annotation cutoff of 33, similarity threshold of 0.95 and similarity method `any'. In the table, columns are labeled with their significance value (Q-value) or enrichment fold change followed by a hyphen and a number which indicates which the cutoff for the dictionary that was used for testing. Not all tissues are present in either dictionary. Hyphens denote not-applicable values, which occurs when a particular tissue is not present in both dictionaries. Full table is available in Additional File 2.
 	}
 	
-	\begin{adjustbox}{width=1\textwidth}
-		\centering
-		% \csvreader{figures/dict-comparison-50-33.csv}
-		\csvreader[tabular={ r | c | c | c | c},
-	    table head ={\textbf{Tissue}} & {\textbf{Q-value-33}} & {\textbf{Q-value-50}} & {\textbf{Enrichment-33}} & {\textbf{Enrichment-50}}\\\hline,
-	    late after line= \\,
-		late after last line=\\\hline
-		]%
-		{figures/dict-comparison-50-33.csv}{}	
-		{\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv}	
-		\label{tab:interagree}
-	\end{adjustbox}
+	% \begin{adjustbox}{width=1\textwidth}
+	% 	\centering
+	% 	% \csvreader{figures/dict-comparison-50-33.csv}
+	%
+	% 	\csvreader[tabular={ r | c | c | c | c},
+	% 		    table head ={\textbf{Tissue}} & {\textbf{Q-value-33}} & {\textbf{Q-value-50}} & {\textbf{Enrichment-33}} & {\textbf{Enrichment-50}}\\\hline,
+	% 		    late after line= \\,
+	% 	late after last line=\\\hline
+	% 	]%
+	% 	{figures/dict-comparison-50-33.csv}{}
+	% 	{\csvcoli & \csvcolii & \csvcoliii & \csvcoliv & \csvcolv}
+	%
+	% \end{adjustbox}
+	\label{tab:interagree}
+	
 \end{table}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%                               %%
-%% Additional Files              %%
-%%                               %%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Additional Files}
-  \subsection*{Additional file 1 --- IPython Notebook}
-    Tutorial for users interested in using our software within a python script
-  \subsection*{Additional file 2 --- Folder Structure for SI files 3 and 4}
-    A file detailing the folder structure of the zipped folders 3 and 4. 
-  \subsection*{Additional file 3 --- Golden Gene Sets}
-    A list of all the genes used for our benchmarking process. 
-  \subsection*{Additional file 4 --- Results}
-    A folder containing a complete version of the results we generated for this paper. 
-
-
 \end{backmatter}
+
 \end{document}
