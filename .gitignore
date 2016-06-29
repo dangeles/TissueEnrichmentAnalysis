@@ -38,3 +38,7 @@ tests/hgf_benchmarking/doc/.Rhistory
 *.aux
 
 *.gz
+
+*.lb
+
+*.out
