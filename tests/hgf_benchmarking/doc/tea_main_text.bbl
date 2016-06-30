@@ -146,13 +146,6 @@ Y~Zhang, H~Lu, and C~I Bargmann.
   Caenorhabditis elegans}.
 \newblock {\em Nature}, 438(7065):179--184, 2005.
 
-\bibitem{Chikina2009}
-Maria~D. Chikina, Curtis Huttenhower, Coleen~T. Murphy, and Olga~G.
-  Troyanskaya.
-\newblock {Global prediction of tissue-specific gene expression and
-  context-dependent gene networks in Caenorhabditis elegans}.
-\newblock {\em PLoS Computational Biology}, 5(6), 2009.
-
 \bibitem{Lee2013}
 Young~Suk Lee, Arjun Krishnan, Qian Zhu, and Olga~G. Troyanskaya.
 \newblock {Ontology-aware classification of tissue and cell-type signals in
@@ -164,6 +157,13 @@ Sergey~V Prykhozhij, Annalisa Marsico, and Sebastiaan~H Meijsing.
 \newblock {Zebrafish Expression Ontology of Gene Sets (ZEOGS): a tool to
   analyze enrichment of zebrafish anatomical terms in large gene sets.}
 \newblock {\em Zebrafish}, 10(3):303--15, 2013.
+
+\bibitem{Chikina2009}
+Maria~D. Chikina, Curtis Huttenhower, Coleen~T. Murphy, and Olga~G.
+  Troyanskaya.
+\newblock {Global prediction of tissue-specific gene expression and
+  context-dependent gene networks in Caenorhabditis elegans}.
+\newblock {\em PLoS Computational Biology}, 5(6), 2009.
 
 \bibitem{Kelly1997}
 William~G. Kelly, SiQun Xu, Mary~K. Montgomery, and Andrew Fire.

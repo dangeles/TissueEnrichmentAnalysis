@@ -224,7 +224,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
 
     # write results to a dataframe.
     columns = ['Tissue', 'Expected', 'Observed', 'Enrichment Fold Change',
-               'Q value']
+               'P value', 'Q value']
     df_final = pd.DataFrame(index=np.arange(len(q_hash)), columns=columns)
 
     i = 0
@@ -241,13 +241,15 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
                 df_final['Enrichment Fold Change'].ix[i] = observed/expected
             else:
                 df_final['Enrichment Fold Change'].ix[i] = np.inf
+            df_final['P value'].ix[i] = p_hash[tissue]
             df_final['Q value'].ix[i] = qval
             i += 1
 
     df_final.dropna(inplace=True)
     df_final['Expected'] = df_final['Expected'].astype(float)
-    df_final['Observed'] = df_final['Observed'].astype(float)
+    df_final['Observed'] = df_final['Observed'].astype(int)
     df_final['Enrichment Fold Change'] = df_final['Enrichment Fold Change'].astype(float)
+    df_final['P value'] = df_final['P value'].astype(float)
     df_final['Q value'] = df_final['Q value'].astype(float)
 
     df_final.sort_values('Q value', inplace=True)
@@ -363,16 +365,22 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(description='Run TEA.')
     parser = argparse.ArgumentParser()
-    parser.add_argument("gene_list", help='The full path to the gene list (WBIDs) you would like to analyse in .csv format')
-    parser.add_argument('title', help='Title for your analysis (shouldn\'t include file extension)',
+    parser.add_argument("gene_list",
+                        help='The full path to the gene list (WBIDs) you would\
+                         like to analyse in .csv format')
+    parser.add_argument('title', help='Title for your analysis (shouldn\'t\
+                        include file extension)',
                         type=str)
-    parser.add_argument("-d", '--dictionary', nargs='?', help='Provide a dictionary to test. If none given, WormBase URL will be used to download the corresponding file')
-    parser.add_argument("-q", help='Qvalue threshold for significance. Default is {0} if not provided'.format(defQ),
+    parser.add_argument("-d", '--dictionary', nargs='?', help='Provide a\
+                        dictionary to test. If none given, WormBase URL \
+                        will be used to download the corresponding file')
+    parser.add_argument("-q", help='Qvalue threshold for significance. \
+                        Default is {0} if not provided'.format(defQ),
                         type=float)
-    parser.add_argument('-p', '--print', help='Indicate whether you would like to print results',
-                        action='store_true')
-    parser.add_argument('-s', "--save", help='Indicate whether to save your plot.',
-                        action='store_true')
+    parser.add_argument('-p', '--print', help='Indicate whether you would like \
+                        to print results', action='store_true')
+    parser.add_argument('-s', "--save", help='Indicate whether to save your \
+                        plot.', action='store_true')
     args = parser.parse_args()
 
     gl_name = args.gene_list
