@@ -4,7 +4,7 @@
 % and http://www.ctan.org/tex-archive/macros/latex/contrib/newlfm
 % for more information.
 %
-\documentclass[12pt,stdletter,orderfromtodate,sigleft]{newlfm}
+\documentclass[12pt]{article}
 \usepackage{blindtext, xfrac}
  
  \newcommand{\pointRaised}[2]{\medskip \hrule \noindent 
@@ -12,25 +12,7 @@
  \newcommand{\reply}{\noindent \textbf{Reply}:\ }       
  
  
-\newlfmP{dateskipbefore=50pt}
-\newlfmP{sigsize=50pt}
-\newlfmP{sigskipbefore=50pt}
- \newlfmP{Headlinewd=0pt,Footlinewd=0pt}
- 
-\namefrom{Paul W. Sternberg and David Angeles-Albores}
-\addrfrom{
-    HHMI and Division of Biology and Biological Engineering,
-	Caltech
-}
-\addrto{%
-    Dr. Joao Carlos Setubal,
-	BMC Bioinformatics
-}
-\dateset{June 29, 2016}
-\greetto{Dear Dr. Setubal}
-\closeline{Sincerely,}
 \begin{document}
-\begin{newlfm}
 
  % Enclosed is our manuscript, titled `Tissue Enrichment Analysis for \emph{C.~elegans} genomics' to be considered for publication in BMC Bioinformatics. We have previously received two reviews and an editorial comment, which we address below.
 
@@ -110,7 +92,6 @@ While we do intend to expand TEA to major model systems in the future, we cannot
 
 \pointRaised{4}{Hypergeometric tests. What was the benefit of setting alpha to 0.1 vs 0.05 or another value? Did you find this using some of the established datasets?}
 
-\reply{An alpha of 0.1 is standard for many applications that employ FDR. We didn’t fine-tune this parameter cutoff. We have added a sentence to explicitly point this out in the text, and we have also made it clear that this parameter can be tuned by users in the command-line, but not the web, version. }
+\reply{An alpha of 0.1 is standard for many applications that employ FDR. We didn’t fine-tune this parameter cutoff. We have added a sentence to explicitly point this out in the text, and we have also made it clear that this parameter can be tuned by users in the command-line, but not the web, version.}
 
-\end{newlfm}
 \end{document}
