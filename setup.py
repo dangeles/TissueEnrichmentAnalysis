@@ -10,7 +10,7 @@ from setuptools import setup, find_packages
 import os
 import sys
 
-version = '0.13.16'
+version = '0.13.17'
 
 # just type in python setup.py publish and this takes care of publishing to pypi!
 
@@ -52,7 +52,7 @@ if sys.argv[-1] == 'test':
         modules = map(__import__, test_requirements)
     except ImportError as e:
         err_msg = e.message.replace("No module named ", "")
-        msg = "%s is not installed. Install your test requirments." % err_msg
+        msg = "%s is not installed. Install your test requirements." % err_msg
         raise ImportError(msg)
     os.system('py.test')
     sys.exit()
