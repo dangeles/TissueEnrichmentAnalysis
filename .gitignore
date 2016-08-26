@@ -42,3 +42,5 @@ tests/hgf_benchmarking/doc/.Rhistory
 *.lb
 
 *.out
+
+*.pyc
