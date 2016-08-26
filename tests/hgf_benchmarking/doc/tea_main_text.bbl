@@ -29,6 +29,16 @@ Da~Wei Huang, Richard~a Lempicki, and Brad~T Sherman.
   bioinformatics resources.}
 \newblock {\em Nature Protocols}, 4(1):44--57, 2009.
 
+\bibitem{Pathan2015}
+Mohashin Pathan, Shivakumar Keerthikumar, Ching~Seng Ang, Lahiru Gangoda,
+  Camelia Y~J Quek, Nicholas~A. Williamson, Dmitri Mouradov, Oliver~M. Sieber,
+  Richard~J. Simpson, Agus Salim, Antony Bacic, Andrew~F. Hill, David~A.
+  Stroud, Michael~T. Ryan, Johnson~I. Agbinya, John~M. Mariadason, Antony~W.
+  Burgess, and Suresh Mathivanan.
+\newblock {FunRich: An open access standalone functional enrichment and
+  interaction network analysis tool}.
+\newblock {\em Proteomics}, 15(15):2597--2601, 2015.
+
 \bibitem{Lee2003}
 R.~Y~N Lee and Paul~W. Sternberg.
 \newblock {Building a cell and anatomy ontology of Caenorhabditis elegans},
@@ -65,10 +75,34 @@ Jong~Woo Kim, Jordi~Conesa Caralt, and Julia~K. Hilliard.
 \newblock {\em Proceedings of the Annual Hawaii International Conference on
   System Sciences}, pages 1--10, 2007.
 
+\bibitem{Garrido2012}
+Juli{\'{a}}n Garrido and Ignacio Requena.
+\newblock {Towards summarizing knowledge: Brief ontologies}.
+\newblock {\em Expert Systems with Applications}, 39(3):3213--3222, 2012.
+
 \bibitem{Benjamini1995}
 Yoav Benjamini and Yosef Hochberg.
 \newblock {Controlling the False Discovery Rate: A Practical and Powerful
   Approach to Multiple Testing}, 1995.
+
+\bibitem{Love2014}
+Michael~I Love, Wolfgang Huber, and Simon Anders.
+\newblock {Moderated estimation of fold change and dispersion for RNA-seq data
+  with DESeq2.}
+\newblock {\em Genome biology}, 15(12):550, 2014.
+
+\bibitem{Pawitan2005}
+Yudi Pawitan, Stefan Michiels, Serge Koscielny, Arief Gusnanto, and Alexander
+  Ploner.
+\newblock {False discovery rate, sensitivity and sample size for microarray
+  studies}.
+\newblock {\em Bioinformatics}, 21(13):3017--3024, 2005.
+
+\bibitem{Storey2003}
+John~D. Storey and Robert Tibshirani.
+\newblock {Statistical significance for genomewide studies}.
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America}, 100(16):9440--9445, 2003.
 
 \bibitem{Gaudet2004a}
 Jeb Gaudet, Srikanth Muttumu, Michael Horner, and Susan~E. Mango.

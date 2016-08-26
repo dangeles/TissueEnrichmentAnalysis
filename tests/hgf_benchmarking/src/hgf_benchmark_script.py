@@ -83,9 +83,17 @@ for folder in os.walk(path_dicts):
                                                               alpha=0.05,
                                                               show=False)
 
+                # save the analysis to the relevant folder
+                savepath = '../output/HGT'+annot + '_' + method + '_Results/'
+                df_analysis.to_csv(savepath + f_set+'.csv', index=False)
+
+                tea.plot_enrichment_results(df_analysis,
+                                            save='savepath'+f_set+'Graph',
+                                            ftype='pdf')
+
                 nana = len(df_analysis)  # len of results
                 nun = len(unused)  # number of genes dropped
-                avf = df_analysis['Fold Change'].mean()
+                avf = df_analysis['Enrichment Fold Change'].mean()
                 avq = df_analysis['Q value'].mean()
                 s = '{0},{1},{2},{3},{4},{5},{6},{7},{8},{9},{10}'.format(
                         annot, thresh, method, f_set, ntiss, ntest, nana,
@@ -146,7 +154,9 @@ def resplot(column, method='any'):
                 continue
             s = sel(annots, threshold, method)
             df_summary[s][column].plot('kde', color=cols[j], ls=ls[i], lw=4,
-                                       label='Annotation Cut-off: {0}, Threshold: {1}'.format(annots, threshold))
+                                       label='Annotation Cut-off: {0}, \
+                                       Threshold: {1}'.format(annots,
+                                                              threshold))
 
 
 resplot('fracTissues')
@@ -364,12 +374,14 @@ df = compare(a, b, '33', '50')
 df.to_csv('../output/comparisons/neuronal_comparison_GABAergic_33-50_WBPaper0037950_complete.csv',
           index=False, na_rep='-', float_format='%.2g')
 
+
 a = '../output/HGT33_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
 b = '../output/HGT50_any_Results/WBPaper00024970_GABAergic_neuron_specific_WBbt_0005190_247.csv'
 df = compare(a, b, '-33', '-50')
+
+# print to figures
 df.head(10).to_csv('../doc/figures/dict-comparison-50-33.csv', index=False,
                    na_rep='-', float_format='%.2g')
+
 df.to_csv('../output/comparisons/neuronal_comparison_Pan_Neuronal_33-50_WBPaper0031532_complete.csv',
           index=False, na_rep='-', float_format='%.2g')
-
-print(df)
