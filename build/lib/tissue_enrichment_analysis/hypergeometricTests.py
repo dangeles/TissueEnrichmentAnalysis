@@ -297,8 +297,12 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     # sort by q value change
     df.sort_values(['Q value', 'Enrichment Fold Change'],
                    ascending=[True, False], inplace=True)
+
+    # added August 26 2016:
+    lenID = 11
+    hr_labels = df['Tissue'][:n_bars].str[:-lenID-1]
     # plot first n_bars
-    ax = sns.barplot(x=df[y][:n_bars], y=df['Tissue'][:n_bars], ax=ax)
+    ax = sns.barplot(x=df[y][:n_bars], y=hr_labels, ax=ax)
 
     # fix the plot to prettify it
     ax.set_ylabel('Tissue', fontsize=15)
