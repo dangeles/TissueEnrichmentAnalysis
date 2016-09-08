@@ -44,3 +44,7 @@ tests/hgf_benchmarking/doc/.Rhistory
 *.out
 
 *.pyc
+
+build/.DS_Store
+
+.DS_Store
