@@ -1,19 +1,21 @@
-# -*- coding: utf-8 -*-
 """
+A script to setup the package.
+
 Created on Fri Mar 11 11:27:39 2016
 
 @author: dangeles
 """
+# -*- coding: utf-8 -*-
 
 from distutils.core import setup
 from setuptools import setup, find_packages
 import os
 import sys
 
-version = '0.13.19'
+version = '0.13.21'
 
-# just type in python setup.py publish and this takes care of publishing to pypi!
-
+# just type in python setup.py publish and
+# this takes care of publishing to pypi!
 
 # tag with git
 if sys.argv[1] == 'tag':
