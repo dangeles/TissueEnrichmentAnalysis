@@ -76,11 +76,11 @@ def hgf(gene_list, tissue_df):
     tissue_df = tissue_df.set_index('wbid')
 
     # number of tissues in the dictionary
-    sums_of_tissues = tissue_df.sum()[1:]  # this object can be identified by
+    sums_of_tissues = tissue_df.sum()  # this object can be identified by
     # the column names of tissues and excludes gene IDs
 
     # total size of the urn
-    total_genes = tissue_df.shape[0]  # total genes in the dictionary
+    total_genes = tissue_df.sum().sum()  # total labels in the dictionary
 
     # slice out the rows from tissue_dictionary that came from the list
     wanted_dictionary = tissue_df.loc[wanted]

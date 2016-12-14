@@ -1,0 +1,25 @@
+Annotation Cutoff,Similarity Threshold,Method,No. Of Terms in Dictionary
+25,0.9,any,460
+25,0.9,avg,461
+25,0.95,any,466
+25,0.95,avg,468
+25,1.0,any,476
+25,1.0,avg,476
+33,0.9,any,261
+33,0.9,avg,255
+33,0.95,any,261
+33,0.95,avg,262
+33,1.0,any,247
+33,1.0,avg,247
+50,0.9,any,83
+50,0.9,avg,77
+50,0.95,any,82
+50,0.95,avg,81
+50,1.0,any,70
+50,1.0,avg,70
+100,0.9,any,45
+100,0.9,avg,35
+100,0.95,any,42
+100,0.95,avg,36
+100,1.0,any,21
+100,1.0,avg,21
