@@ -1,0 +1,70 @@
+Human GeneID	Human Gene ID	HGNCID	Human Symbol	 Species	Worm GeneID	WormBaseID	Worm Symbol	DIOPT Score	Weighted Score	Rank	Best Score	Best Score Reverse	Prediction Derived From	
+TTC39B	158219	23704	TTC39B	Worm	174046	WBGene00016314	C32D5.6	9	8.818	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+PIGY	84992	28213	PIGY					0	0.0	None
+CMKLR1	1240	2121	CMKLR1	Worm	177285	WBGene00006428	tkr-3	1	1.1	low	Yes	Yes	Panther
+CMKLR1	1240	2121	CMKLR1	Worm	187897	WBGene00020086	npr-24	1	0.91	low	Yes	No	Phylome
+CMKLR1	1240	2121	CMKLR1	Worm	187427	WBGene00006475	tyra-3	1	0.91	low	Yes	Yes	Phylome
+IRF2BP2	359948	21729	IRF2BP2	Worm	179817	WBGene00010867	tag-260	5	4.905	moderate	Yes	No	Compara, Inparanoid, Panther, Phylome, TreeFam
+MARK1	4139	6896	MARK1	Worm	179912	WBGene00003916	par-1	7	6.806	moderate	Yes	No	Compara, Inparanoid, OrthoDB, orthoMCL, Panther, Phylome, TreeFam
+PTGFR	5737	9600	PTGFR					0	0.0	None
+TRANK1	9881	29011	TRANK1					0	0.0	None
+TXNDC9	10190	24110	TXNDC9	Worm	182257	WBGene00006515	txdc-9	11	10.769	high	Yes	Yes	Compara, Homologene, Inparanoid, Isobase, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+LOC731779	731779	50460	LINC01300					0	0.0	None
+LMAN2L	81562	19263	LMAN2L	Worm	180423	WBGene00002071	ile-2	10	9.819	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+C15orf53	400359	33796	C15orf53					0	0.0	None
+LBA1	9881	29011	TRANK1					0	0.0	None
+PARD6B	84612	16245	PARD6B	Worm	173137	WBGene00003921	par-6	7	6.858	moderate	Yes	No	Compara, Inparanoid, OMA, orthoMCL, Panther, Phylome, RoundUp
+NFIA	4774	7784	NFIA	Worm	174225	WBGene00003592	nfi-1	5	4.994	moderate	Yes	No	Compara, OrthoDB, Panther, RoundUp, TreeFam
+SGCG	6445	10809	SGCG	Worm	184162	WBGene00004790	sgn-1	7	6.918	moderate	Yes	No	Compara, Inparanoid, OMA, Panther, Phylome, RoundUp, TreeFam
+CD276	80381	19137	CD276	Worm	181093	WBGene00006942	wrk-1	1	0.91	low	Yes	Yes	Phylome
+RPGRIP1L	23322	29168	RPGRIP1L	Worm	174654	WBGene00007490	mks-5	7	6.858	high	Yes	Yes	Compara, Inparanoid, OMA, orthoMCL, Panther, Phylome, RoundUp
+SP8	221833	19196	SP8	Worm	189783	WBGene00012735	sptf-3	2	2.101	moderate	Yes	No	OrthoDB, Panther
+SP8	221833	19196	SP8	Worm	172909	WBGene00009743	sptf-1	2	2.05	high	Yes	Yes	Isobase, Panther
+NF1A	4784	7788	NFIX	Worm	174225	WBGene00003592	nfi-1	4	3.991	moderate	Yes	No	Compara, OrthoDB, Panther, TreeFam
+CTNNA2	1496	2510	CTNNA2	Worm	179624	WBGene00001978	hmp-1	10	9.819	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+KIT	3815	6342	KIT	Worm	191738	WBGene00003863	old-2	2	1.951	high	Yes	Yes	Isobase, OrthoDB
+KIT	3815	6342	KIT	Worm	186632	WBGene00006897	ver-4	2	1.911	moderate	Yes	No	OrthoDB, Phylome
+KIT	3815	6342	KIT	Worm	181289	WBGene00006896	ver-3	2	1.911	moderate	Yes	No	OrthoDB, Phylome
+KIT	3815	6342	KIT	Worm	175182	WBGene00006894	ver-1	2	1.911	moderate	Yes	No	OrthoDB, Phylome
+TSGA10	80705	14927	TSGA10	Worm	180771	WBGene00022500	lfi-1	1	1.1	low	Yes	No	Panther
+TSGA10	80705	14927	TSGA10	Worm	173801	WBGene00018051	che-10	1	1.1	low	Yes	No	Panther
+GPR20	2843	4475	GPR20	Worm	180841	WBGene00016570	gnrr-4	1	1.1	low	Yes	Yes	Panther
+FER1L5	90342	19044	FER1L5	Worm	172659	WBGene00001414	fer-1	4	3.945	moderate	Yes	No	Compara, Inparanoid, Panther, Phylome
+FER1L5	90342	19044	FER1L5	Worm	188128	WBGene00020262	ferl-1	3	2.94	low	No	No	Compara, Panther, Phylome
+RASGRP1	10125	9878	RASGRP1	Worm	179344	WBGene00009100	rgef-1	6	5.885	moderate	Yes	No	Inparanoid, OMA, orthoMCL, Panther, Phylome, TreeFam
+REV1	51455	14060	REV1	Worm	174275	WBGene00014066	rev-1	7	6.808	high	Yes	Yes	Compara, Inparanoid, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+CNNM4	26504	105	CNNM4	Worm	178499	WBGene00016879	cnnm-1	5	4.918	moderate	Yes	No	Inparanoid, orthoMCL, Panther, Phylome, RoundUp
+CNNM4	26504	105	CNNM4	Worm	180591	WBGene00016343	cnnm-3	5	4.774	high	Yes	Yes	OrthoDB, orthoMCL, Phylome, RoundUp, TreeFam
+CNNM4	26504	105	CNNM4	Worm	181129	WBGene00019869	cnnm-2	4	3.87	moderate	No	Yes	orthoMCL, Panther, Phylome, TreeFam
+MRPL30	51263	14036	MRPL30	Worm	175359	WBGene00021021	mrpl-30	5	4.873	high	Yes	Yes	orthoMCL, Panther, Phylome, RoundUp, TreeFam
+MITD1	129531	25207	MITD1	Worm	176587	WBGene00013436	Y66D12A.10	10	9.819	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+MGAT4A	11320	7047	MGAT4A	Worm	184996	WBGene00006241	str-208	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	181948	WBGene00007161	B0391.3	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	182054	WBGene00006284	str-258	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	181949	WBGene00006289	str-263	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192046	WBGene00006286	str-260	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192041	WBGene00006266	str-238	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	184732	WBGene00006236	str-200	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192045	WBGene00006282	str-256	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	6418726	WBGene00077582	F14H8.8	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192002	WBGene00006172	str-121	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	190851	WBGene00006249	str-217	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192047	WBGene00006288	str-262	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	181846	WBGene00006274	str-247	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192026	WBGene00006231	str-190	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192044	WBGene00006271	str-244	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	183495	WBGene00006281	str-255	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	190524	WBGene00006235	str-199	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192035	WBGene00006256	str-225	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	182052	WBGene00006283	str-257	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192038	WBGene00006259	str-228	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192036	WBGene00006257	str-226	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	189480	WBGene00021216	Y19D10A.1	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	188372	WBGene00006263	str-232	1	1.001	low	Yes	Yes	OrthoDB
+MGAT4A	11320	7047	MGAT4A	Worm	192042	WBGene00006268	str-240	1	1.001	low	Yes	Yes	OrthoDB
+LYG1	129530	27014	LYG1					0	0.0	None
+LYG2	254773	29615	LYG2					0	0.0	None
+LIPT1	51601	29569	LIPT1	Worm	183473	WBGene00001590	C45G3.3	9	8.818	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+EIF5B	9669	30793	EIF5B	Worm	175353	WBGene00021857	iffb-1	8	7.818	high	Yes	Yes	Compara, Inparanoid, OMA, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+C2orf55	343990	33454	KIAA1211L					0	0.0	None
+C2orf15	150590	28436	C2orf15					0	0.0	None

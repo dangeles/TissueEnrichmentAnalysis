@@ -31,18 +31,29 @@ class solr_query():
         """Add a query url to the solr_query object."""
         self.query = url
 
-    def open_query(self):
+    def open_query(self, p=0, timeout=10):
         """
         Given a query, append it to the main url.
 
         Open URL and use simplejson to load the results
         """
-        try:
-            with contextlib.closing(urlopen(self.solr_url +
-                                    self.query)) as conn:
-                return simplejson.load(conn)
-        except:
-            raise Warning('URL is invalid or may have timed out')
+        timer = 10  # don't try more than 10x per website
+        if p:
+            print(self.solr_url + self.query)
+
+        while timer > 0:
+            try:
+                with contextlib.closing(urlopen(self.solr_url +
+                                        self.query, timeout=timeout)) as conn:
+                    return simplejson.load(conn)
+            except:
+                # raise Warning('URL is invalid or may have timed out')
+                timer -= 1
+                pass
+        # raise an error if the timer reached 0
+        if timer == 0:
+            print(self.solr_url + self.query)
+            raise Warning('Url could not be contacted or is invalid')
 
 
 class node():
@@ -104,7 +115,7 @@ class node():
         """Calculate similarity."""
         self.similarity = sim
 
-    def find_family(self, solr_url, query_relation):
+    def find_family(self, solr_url, query_relation, p=0):
         """
         Find the family for this node by using solr_url and query_relation.
 
@@ -114,7 +125,7 @@ class node():
         rsp_rlshp = solr_query(solr_url, query_relation(self.name))
 
         # extract the array with all the right information
-        array_of_rlshps = rsp_rlshp.open_query()['response']['docs'][0]
+        array_of_rlshps = rsp_rlshp.open_query(p=p)['response']['docs'][0]
 
         # go through the array, turning each line into a dictionary
         # these mini-dictionaries contain the edges between nodes
@@ -291,8 +302,10 @@ class ontology():
 
     def find_node_family(self, lambda_query_rlshp):
         """Find the nodes that are related to this one."""
+        p = 1
         for n in iter(self.nodes):
-            self.nodes[n].find_family(self.solr_url, lambda_query_rlshp)
+            self.nodes[n].find_family(self.solr_url, lambda_query_rlshp, p=p)
+            p = 0
 
     def find_node_annotations(self, lambda_query_genes):
         """Fetch the annotations for this node."""
@@ -460,14 +473,13 @@ if __name__ == '__main__':
                 '&facet=true&facet.field=regulates_closure&' +\
                 'facet.limit=-1&facet.mincount={0}&facet.sort' +\
                 '=count&fq=source:%22WB%22&fq=-qualifier:%22not%22'
-            return s.format(x)
         else:
             s = 'select?qt=standard&indent=on&wt=json&version=2.2&fl=' +\
                 'id&start=0&rows=1&q=document_category:bioentity&facet=' +\
                 'true&facet.field=regulates_closure&facet.limit=-1&' +\
                 'facet.mincount={0}&facet.sort=count&fq=source:%22WB' +\
                 '%22&fq=taxon:%22NCBITaxon:6239%22&fq=-qualifier:%22not%22'
-            return s.format(x)
+        return s.format(x)
 
     def query_relation(x, ontology=args.ontology):
         """
@@ -482,14 +494,11 @@ if __name__ == '__main__':
             s = "select?qt=standard&fl=topology_graph_json&" +\
                 "version=2.2&wt=json&indent=on&rows=1&q=id:" +\
                 "%22{0}%22&fq=document_category:%22ontology_class%22"
-            return s.format(x)
         else:
-            s = 'select?qt=standard&indent=on&wt=json&version=2.2&fl' +\
-                '=id&start=0&rows=0&q=document_category:bioentity' +\
-                '&facet=true&facet.field=regulates_closure&facet' +\
-                '.limit=-1&facet.mincount={0}&facet.sort=count&' +\
-                'fq=source:%22WB%22&fq=-qualifier:%22not%22'
-            return s.format(x)
+            s = "select?qt=standard&fl=topology_graph_json&" +\
+                "version=2.2&wt=json&indent=on&rows=1&q=id:" +\
+                "%22{0}%22&fq=document_category:%22ontology_class%22"
+        return s.format(x)
 
     def query_genes(x):
         """
