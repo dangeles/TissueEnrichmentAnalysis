@@ -52,6 +52,8 @@ def pass_list(user_provided, tissue_dictionary):
 
 def hgf(gene_list, tissue_df):
     """
+    Given a list, returns the p-value for each tissue tested.
+
     Given a list of tissues and a gene-tissue dictionary,
     returns a p-dictionary for the enrichment of every tissue
     (a p-dictionary is a vector of length equal to the number
@@ -74,11 +76,11 @@ def hgf(gene_list, tissue_df):
     tissue_df = tissue_df.set_index('wbid')
 
     # number of tissues in the dictionary
-    sums_of_tissues = tissue_df.sum()[1:]  # this object can be identified by
+    sums_of_tissues = tissue_df.sum()  # this object can be identified by
     # the column names of tissues and excludes gene IDs
 
     # total size of the urn
-    total_genes = tissue_df.shape[0]  # total genes in the dictionary
+    total_genes = tissue_df.sum().sum()  # total labels in the dictionary
 
     # slice out the rows from tissue_dictionary that came from the list
     wanted_dictionary = tissue_df.loc[wanted]
@@ -281,8 +283,6 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     """
     import matplotlib.pyplot as plt
     import seaborn as sns
-    sns.set_context('paper')
-    sns.set_style('whitegrid')
     # sns.choose_colorbrewer_palette('sequential', as_cmap=False)
     if df.empty:
         print('dataframe is empty!')
@@ -297,8 +297,15 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     # sort by q value change
     df.sort_values(['Q value', 'Enrichment Fold Change'],
                    ascending=[True, False], inplace=True)
+
+    # added August 26 2016:
+    lenID = 11
+    hr_labels = df['Tissue'][:n_bars].str[:-lenID-1]
     # plot first n_bars
-    ax = sns.barplot(x=df[y][:n_bars], y=df['Tissue'][:n_bars], ax=ax)
+
+    with sns.axes_style('whitegrid'):
+        # with sns.set_context('paper'):
+        ax = sns.barplot(x=df[y][:n_bars], y=hr_labels, ax=ax)
 
     # fix the plot to prettify it
     ax.set_ylabel('Tissue', fontsize=15)

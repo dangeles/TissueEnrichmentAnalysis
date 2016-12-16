@@ -1,0 +1,39 @@
+Human GeneID	Human Gene ID	HGNCID	Human Symbol	 Species	Worm GeneID	WormBaseID	Worm Symbol	DIOPT Score	Weighted Score	Rank	Best Score	Best Score Reverse	Prediction Derived From	
+TMX3	54495	24718	TMX3	Worm	172039	WBGene00022836	ZK973.11	9	8.668	high	Yes	Yes	Compara, Homologene, Inparanoid, Isobase, OMA, orthoMCL, Phylome, RoundUp, TreeFam
+GRIK4	2900	4582	GRIK4	Worm	174258	WBGene00001615	glr-4	4	3.931	moderate	Yes	No	Compara, OrthoDB, orthoMCL, Panther
+GRIK4	2900	4582	GRIK4	Worm	179251	WBGene00001616	glr-5	4	3.911	moderate	Yes	No	OrthoDB, orthoMCL, Panther, Phylome
+GRIK4	2900	4582	GRIK4	Worm	172449	WBGene00001614	glr-3	4	3.741	moderate	Yes	No	Compara, OrthoDB, orthoMCL, Phylome
+SHFM1	7979	10845	SHFM1	Worm	175284	WBGene00022492	dss-1	2	2.013	high	Yes	Yes	OMA, RoundUp
+TCEB1	6921	11617	TCEB1	Worm	190775	WBGene00001236	elc-1	11	10.769	high	Yes	Yes	Compara, Homologene, Inparanoid, Isobase, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+TCEB1	6921	11617	TCEB1	Worm	6418855	WBGene00077680	F54F7.10	5	4.901	moderate	No	Yes	Compara, OrthoDB, Panther, Phylome, TreeFam
+TCEB1	6921	11617	TCEB1	Worm	24104987	WBGene00001237	elc-2	5	4.85	moderate	No	Yes	Compara, Isobase, Panther, Phylome, TreeFam
+ATPBD4	89978	30543	DPH6	Worm	183978	WBGene00017087	E01A2.5	10	9.819	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+SLC9A9	285195	20653	SLC9A9	Worm	181258	WBGene00003733	nhx-5	9	8.819	high	Yes	Yes	Compara, Inparanoid, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+LOC643308	643308	49215	RPL7P59					0	0.0	None
+EREG	2069	3443	EREG					0	0.0	None
+HAS3	3038	4820	HAS3	Worm	173405	WBGene00000497	chs-2	2	1.963	high	Yes	Yes	RoundUp, TreeFam
+CLYBL	171425	18355	CLYBL	Worm	180018	WBGene00007234	C01G10.7	10	9.669	high	Yes	Yes	Compara, Homologene, Inparanoid, Isobase, OMA, OrthoDB, orthoMCL, Phylome, RoundUp, TreeFam
+OXER1	165140	24884	OXER1	Worm	190386	WBGene00021983	npr-5	1	0.95	low	Yes	No	Isobase
+OXER1	165140	24884	OXER1	Worm	187427	WBGene00006475	tyra-3	1	0.91	low	Yes	Yes	Phylome
+OXER1	165140	24884	OXER1	Worm	187897	WBGene00020086	npr-24	1	0.91	low	Yes	No	Phylome
+AK094352	105370982	-	LOC105370982					0	0.0	None
+TFEB	7942	11753	TFEB	Worm	177157	WBGene00020930	hlh-30	5	4.948	high	Yes	Yes	Compara, Inparanoid, Panther, Phylome, RoundUp
+ETV3L	440695	33834	ETV3L	Worm	180778	WBGene00016600	ets-5	1	1.1	low	Yes	No	Panther
+C5orf15	56951	20656	C5orf15	Worm	178137	WBGene00011742	tgn-38	1	1.1	low	Yes	Yes	Panther
+FLJ31818	154743	26475	BMT2					0	0.0	None
+YWHAZ	7534	12855	YWHAZ	Worm	181348	WBGene00001502	ftt-2	8	7.878	high	Yes	Yes	Homologene, Inparanoid, Isobase, OMA, orthoMCL, Panther, Phylome, RoundUp
+YWHAZ	7534	12855	YWHAZ	Worm	178113	WBGene00003920	par-5	7	6.978	moderate	No	Yes	Homologene, Inparanoid, Isobase, OMA, Panther, Phylome, RoundUp
+PTPRD	5789	9668	PTPRD	Worm	174685	WBGene00004215	ptp-3	9	8.909	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, OrthoDB, orthoMCL, Panther, RoundUp, TreeFam
+PITRM1	10531	17663	PITRM1	Worm	175914	WBGene00015481	C05D11.1	2	1.953	high	Yes	Yes	Isobase, RoundUp
+AMOTL1	154810	17811	AMOTL1	Worm	181718	WBGene00019102	F59C12.3	3	2.93	high	Yes	Yes	Compara, orthoMCL, Panther
+GSX1	219409	20374	GSX1	Worm	185853	WBGene00000449	ceh-27	1	1.005	low	Yes	Yes	Inparanoid
+LIG4	3981	6601	LIG4	Worm	176067	WBGene00002986	lig-4	8	7.758	high	Yes	Yes	Compara, Inparanoid, Isobase, orthoMCL, Panther, Phylome, RoundUp, TreeFam
+SPATA8	145946	28676	SPATA8					0	0.0	None
+ETV3	2117	3492	ETV3	Worm	180778	WBGene00016600	ets-5	1	1.1	low	Yes	No	Panther
+GPR85	54329	4536	GPR85	Worm	181716	WBGene00004776	ser-1	1	0.93	low	Yes	No	Compara
+CWC15	51503	26939	CWC15	Worm	180069	WBGene00011687	T10C6.5	9	8.859	high	Yes	Yes	Compara, Homologene, Inparanoid, OMA, OrthoDB, orthoMCL, Panther, Phylome, RoundUp
+PDX1	3651	6107	PDX1	Worm	176521	WBGene00006873	vab-7	1	1.005	low	Yes	No	Inparanoid
+ABHD13	84945	20293	ABHD13	Worm	183636	WBGene00008222	C50B6.9	1	1.1	low	Yes	No	Panther
+ABHD13	84945	20293	ABHD13	Worm	172585	WBGene00045192	aho-3	1	1.003	low	Yes	No	RoundUp
+ABHD13	84945	20293	ABHD13	Worm	175051	WBGene00008497	F01D5.7	1	1.003	low	Yes	No	RoundUp
+JMJD2D	55693	25498	KDM4D	Worm	175080	WBGene00012982	jmjd-2	4	3.9	moderate	Yes	No	Compara, Panther, Phylome, TreeFam

@@ -1,0 +1,39 @@
+%\title{Example letter using the newlfm LaTeX package}
+%
+% See http://texblog.org/2013/11/11/latexs-alternative-letter-class-newlfm/
+% and http://www.ctan.org/tex-archive/macros/latex/contrib/newlfm
+% for more information.
+%
+\documentclass[12pt,stdletter,orderfromtodate,sigleft]{newlfm}
+\usepackage{blindtext, xfrac}
+ 
+ \newcommand{\pointRaised}[2]{\medskip \hrule \noindent 
+                \textsl{{\fontseries{b} #1}: #2}} 
+ \newcommand{\reply}{\noindent \textbf{Reply}:\ }       
+ 
+ 
+\newlfmP{dateskipbefore=50pt}
+\newlfmP{sigsize=50pt}
+\newlfmP{sigskipbefore=50pt}
+ \newlfmP{Headlinewd=0pt,Footlinewd=0pt}
+ 
+\namefrom{Paul W. Sternberg and David Angeles-Albores}
+\addrfrom{
+    HHMI and Division of Biology and Biological Engineering,
+	Caltech
+}
+\addrto{%
+    Dr. Joao Carlos Setubal,
+	BMC Bioinformatics
+}
+\dateset{June 29, 2016}
+\greetto{Dear Dr. Setubal}
+\closeline{Sincerely,}
+\begin{document}
+\begin{newlfm}
+
+ Enclosed is our revised manuscript, titled `Tissue Enrichment Analysis for \emph{C.~elegans} genomics' to be considered for publication in BMC Bioinformatics. We have addressed all the reviewer comments. 
+
+
+\end{newlfm}
+\end{document}

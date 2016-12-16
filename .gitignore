@@ -42,3 +42,11 @@ tests/hgf_benchmarking/doc/.Rhistory
 *.lb
 
 *.out
+
+*.pyc
+
+build/.DS_Store
+
+.DS_Store
+
+gene_ontology.csv

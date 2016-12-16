@@ -1,0 +1,3 @@
+Tissue,Expected,Observed,Enrichment Fold Change,P value,Q value
+organism osmotic stress response variant WBPhenotype:0000876,1.8502562983967719,8,4.323725316828765,9.06900423229527e-05,0.022581820538415225
+stress induced lethality variant WBPhenotype:0000139,1.2760388264805322,6,4.702051282051282,0.0002629040045617035,0.03273154856793209

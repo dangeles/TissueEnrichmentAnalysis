@@ -1,19 +1,21 @@
-# -*- coding: utf-8 -*-
 """
+A script to setup the package.
+
 Created on Fri Mar 11 11:27:39 2016
 
 @author: dangeles
 """
+# -*- coding: utf-8 -*-
 
 from distutils.core import setup
 from setuptools import setup, find_packages
 import os
 import sys
 
-version = '0.13.16'
+version = '0.14.00'
 
-# just type in python setup.py publish and this takes care of publishing to pypi!
-
+# just type in python setup.py publish and
+# this takes care of publishing to pypi!
 
 # tag with git
 if sys.argv[1] == 'tag':
@@ -52,7 +54,7 @@ if sys.argv[-1] == 'test':
         modules = map(__import__, test_requirements)
     except ImportError as e:
         err_msg = e.message.replace("No module named ", "")
-        msg = "%s is not installed. Install your test requirments." % err_msg
+        msg = "%s is not installed. Install your test requirements." % err_msg
         raise ImportError(msg)
     os.system('py.test')
     sys.exit()

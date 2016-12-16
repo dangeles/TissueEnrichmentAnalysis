@@ -1,0 +1,1235 @@
+gene_name,wbid,phenotype
+let-363,WBGene00002583,foraging behavior variant WBPhenotype:0000662
+dhcr-7,WBGene00007126,foraging behavior variant WBPhenotype:0000662
+trp-1,WBGene00006614,foraging behavior variant WBPhenotype:0000662
+tph-1,WBGene00006600,foraging behavior variant WBPhenotype:0000662
+snf-11,WBGene00004910,foraging behavior variant WBPhenotype:0000662
+unc-10,WBGene00006750,foraging behavior variant WBPhenotype:0000662
+rpl-10,WBGene00004421,foraging behavior variant WBPhenotype:0000662
+aps-1,WBGene00000159,foraging behavior variant WBPhenotype:0000662
+mod-5,WBGene00003387,foraging behavior variant WBPhenotype:0000662
+dlg-1,WBGene00001006,endomitotic oocytes WBPhenotype:0000668
+vab-3,WBGene00006870,endomitotic oocytes WBPhenotype:0000668
+mpk-1,WBGene00003401,endomitotic oocytes WBPhenotype:0000668
+let-413,WBGene00002632,endomitotic oocytes WBPhenotype:0000668
+unc-22,WBGene00006759,mitochondria morphology variant WBPhenotype:0001401
+utx-1,WBGene00017046,transgene expression reduced WBPhenotype:0001278
+let-363,WBGene00002583,transgene expression reduced WBPhenotype:0001278
+cbp-1,WBGene00000366,transgene expression reduced WBPhenotype:0001278
+set-16,WBGene00011729,transgene expression reduced WBPhenotype:0001278
+unc-73,WBGene00006805,transgene expression reduced WBPhenotype:0001278
+vab-3,WBGene00006870,transgene expression reduced WBPhenotype:0001278
+ceh-43,WBGene00000463,transgene expression reduced WBPhenotype:0001278
+daf-18,WBGene00000913,transgene expression reduced WBPhenotype:0001278
+C10C5.5,WBGene00007509,transgene expression reduced WBPhenotype:0001278
+rpl-10,WBGene00004421,transgene expression reduced WBPhenotype:0001278
+bcl-11,WBGene00017430,transgene expression reduced WBPhenotype:0001278
+aps-1,WBGene00000159,transgene expression reduced WBPhenotype:0001278
+kqt-1,WBGene00002233,transgene expression reduced WBPhenotype:0001278
+gap-2,WBGene00001516,transgene expression reduced WBPhenotype:0001278
+ccb-1,WBGene00000368,dauer constitutive WBPhenotype:0000012
+ptp-2,WBGene00004214,dauer constitutive WBPhenotype:0000012
+daf-18,WBGene00000913,dauer constitutive WBPhenotype:0000012
+C10C5.4,WBGene00007508,dauer constitutive WBPhenotype:0000012
+top-1,WBGene00006595,exploded through vulva WBPhenotype:0000038
+let-363,WBGene00002583,exploded through vulva WBPhenotype:0000038
+adsl-1,WBGene00011064,exploded through vulva WBPhenotype:0000038
+eif-3.G,WBGene00001230,exploded through vulva WBPhenotype:0000038
+daf-18,WBGene00000913,exploded through vulva WBPhenotype:0000038
+cyk-1,WBGene00000872,exploded through vulva WBPhenotype:0000038
+paa-1,WBGene00003901,exploded through vulva WBPhenotype:0000038
+bcl-11,WBGene00017430,exploded through vulva WBPhenotype:0000038
+cul-4,WBGene00000839,exploded through vulva WBPhenotype:0000038
+gsa-1,WBGene00001745,exploded through vulva WBPhenotype:0000038
+trp-1,WBGene00006614,velocity of movement variant WBPhenotype:0004025
+tph-1,WBGene00006600,velocity of movement variant WBPhenotype:0004025
+snf-11,WBGene00004910,velocity of movement variant WBPhenotype:0004025
+unc-10,WBGene00006750,velocity of movement variant WBPhenotype:0004025
+mod-5,WBGene00003387,velocity of movement variant WBPhenotype:0004025
+rig-4,WBGene00004371,cytokinesis variant WBPhenotype:0002408
+jac-1,WBGene00002175,cytokinesis variant WBPhenotype:0002408
+unc-73,WBGene00006805,cytokinesis variant WBPhenotype:0002408
+cyk-1,WBGene00000872,cytokinesis variant WBPhenotype:0002408
+ptr-2,WBGene00004217,cytokinesis variant WBPhenotype:0002408
+alh-7,WBGene00000113,behavior variant WBPhenotype:0000517
+rig-4,WBGene00004371,behavior variant WBPhenotype:0000517
+avr-14,WBGene00000232,behavior variant WBPhenotype:0000517
+ptr-1,WBGene00004216,behavior variant WBPhenotype:0000517
+utx-1,WBGene00017046,behavior variant WBPhenotype:0000517
+dlg-1,WBGene00001006,behavior variant WBPhenotype:0000517
+ptr-13,WBGene00004227,behavior variant WBPhenotype:0000517
+mua-3,WBGene00003482,behavior variant WBPhenotype:0000517
+top-1,WBGene00006595,behavior variant WBPhenotype:0000517
+exc-5,WBGene00001366,behavior variant WBPhenotype:0000517
+ccb-1,WBGene00000368,behavior variant WBPhenotype:0000517
+let-363,WBGene00002583,behavior variant WBPhenotype:0000517
+adsl-1,WBGene00011064,behavior variant WBPhenotype:0000517
+syd-2,WBGene00006364,behavior variant WBPhenotype:0000517
+dhcr-7,WBGene00007126,behavior variant WBPhenotype:0000517
+shl-1,WBGene00022240,behavior variant WBPhenotype:0000517
+glc-1,WBGene00001591,behavior variant WBPhenotype:0000517
+ptp-2,WBGene00004214,behavior variant WBPhenotype:0000517
+mcm-4,WBGene00003156,behavior variant WBPhenotype:0000517
+lin-45,WBGene00003030,behavior variant WBPhenotype:0000517
+mec-6,WBGene00003170,behavior variant WBPhenotype:0000517
+metr-1,WBGene00010988,behavior variant WBPhenotype:0000517
+trp-1,WBGene00006614,behavior variant WBPhenotype:0000517
+slo-1,WBGene00004830,behavior variant WBPhenotype:0000517
+swsn-4,WBGene00004204,behavior variant WBPhenotype:0000517
+gab-1,WBGene00001512,behavior variant WBPhenotype:0000517
+cbp-1,WBGene00000366,behavior variant WBPhenotype:0000517
+tph-1,WBGene00006600,behavior variant WBPhenotype:0000517
+set-16,WBGene00011729,behavior variant WBPhenotype:0000517
+avr-15,WBGene00000233,behavior variant WBPhenotype:0000517
+unc-73,WBGene00006805,behavior variant WBPhenotype:0000517
+glc-3,WBGene00001593,behavior variant WBPhenotype:0000517
+vab-3,WBGene00006870,behavior variant WBPhenotype:0000517
+dpy-18,WBGene00001077,behavior variant WBPhenotype:0000517
+mca-3,WBGene00003153,behavior variant WBPhenotype:0000517
+snf-11,WBGene00004910,behavior variant WBPhenotype:0000517
+eif-3.G,WBGene00001230,behavior variant WBPhenotype:0000517
+ceh-43,WBGene00000463,behavior variant WBPhenotype:0000517
+ztf-11,WBGene00009939,behavior variant WBPhenotype:0000517
+daf-18,WBGene00000913,behavior variant WBPhenotype:0000517
+nlg-1,WBGene00006412,behavior variant WBPhenotype:0000517
+ptr-6,WBGene00004221,behavior variant WBPhenotype:0000517
+mca-2,WBGene00019875,behavior variant WBPhenotype:0000517
+mbk-1,WBGene00003149,behavior variant WBPhenotype:0000517
+ampd-1,WBGene00016415,behavior variant WBPhenotype:0000517
+unc-10,WBGene00006750,behavior variant WBPhenotype:0000517
+mpk-1,WBGene00003401,behavior variant WBPhenotype:0000517
+rpl-10,WBGene00004421,behavior variant WBPhenotype:0000517
+cyk-1,WBGene00000872,behavior variant WBPhenotype:0000517
+ptr-2,WBGene00004217,behavior variant WBPhenotype:0000517
+ace-1,WBGene00000035,behavior variant WBPhenotype:0000517
+paa-1,WBGene00003901,behavior variant WBPhenotype:0000517
+bcl-11,WBGene00017430,behavior variant WBPhenotype:0000517
+ntr-1,WBGene00011582,behavior variant WBPhenotype:0000517
+gsk-3,WBGene00001746,behavior variant WBPhenotype:0000517
+aps-1,WBGene00000159,behavior variant WBPhenotype:0000517
+daf-6,WBGene00000902,behavior variant WBPhenotype:0000517
+mod-5,WBGene00003387,behavior variant WBPhenotype:0000517
+gex-3,WBGene00001580,behavior variant WBPhenotype:0000517
+rib-1,WBGene00004360,behavior variant WBPhenotype:0000517
+cul-4,WBGene00000839,behavior variant WBPhenotype:0000517
+let-413,WBGene00002632,behavior variant WBPhenotype:0000517
+unc-22,WBGene00006759,behavior variant WBPhenotype:0000517
+mca-1,WBGene00003151,behavior variant WBPhenotype:0000517
+gsa-1,WBGene00001745,behavior variant WBPhenotype:0000517
+shn-1,WBGene00006444,behavior variant WBPhenotype:0000517
+ost-1,WBGene00003893,behavior variant WBPhenotype:0000517
+adsl-1,WBGene00011064,growth rate variant WBPhenotype:0000676
+metr-1,WBGene00010988,growth rate variant WBPhenotype:0000676
+unc-73,WBGene00006805,short WBPhenotype:0000324
+unc-10,WBGene00006750,short WBPhenotype:0000324
+tph-1,WBGene00006600,amplitude of sinusoidal movement increased WBPhenotype:0002328
+snf-11,WBGene00004910,amplitude of sinusoidal movement increased WBPhenotype:0002328
+cbp-1,WBGene00000366,variable cell division timing WBPhenotype:0002390
+gsk-3,WBGene00001746,variable cell division timing WBPhenotype:0002390
+cbp-1,WBGene00000366,cell fate transformation WBPhenotype:0000414
+cnt-2,WBGene00000566,cell fate transformation WBPhenotype:0000414
+gsk-3,WBGene00001746,cell fate transformation WBPhenotype:0000414
+avr-14,WBGene00000232,sluggish WBPhenotype:0000646
+syd-2,WBGene00006364,sluggish WBPhenotype:0000646
+mec-6,WBGene00003170,sluggish WBPhenotype:0000646
+set-16,WBGene00011729,sluggish WBPhenotype:0000646
+unc-73,WBGene00006805,sluggish WBPhenotype:0000646
+gsa-1,WBGene00001745,sluggish WBPhenotype:0000646
+mua-3,WBGene00003482,pigmentation variant WBPhenotype:0000521
+top-1,WBGene00006595,pigmentation variant WBPhenotype:0000521
+exc-7,WBGene00001368,pigmentation variant WBPhenotype:0000521
+cbp-1,WBGene00000366,pigmentation variant WBPhenotype:0000521
+ceh-43,WBGene00000463,pigmentation variant WBPhenotype:0000521
+rpl-10,WBGene00004421,pigmentation variant WBPhenotype:0000521
+cyk-1,WBGene00000872,pigmentation variant WBPhenotype:0000521
+aps-1,WBGene00000159,pigmentation variant WBPhenotype:0000521
+agmo-1,WBGene00007210,pigmentation variant WBPhenotype:0000521
+ost-1,WBGene00003893,pigmentation variant WBPhenotype:0000521
+trp-1,WBGene00006614,path curvature decreased WBPhenotype:0002337
+snf-11,WBGene00004910,path curvature decreased WBPhenotype:0002337
+mod-5,WBGene00003387,path curvature decreased WBPhenotype:0002337
+lin-45,WBGene00003030,embryo osmotic integrity defective early emb WBPhenotype:0000365
+ptr-2,WBGene00004217,embryo osmotic integrity defective early emb WBPhenotype:0000365
+daf-18,WBGene00000913,enzyme activity variant WBPhenotype:0000727
+ace-1,WBGene00000035,enzyme activity variant WBPhenotype:0000727
+paa-1,WBGene00003901,multiple nuclei oocyte WBPhenotype:0001955
+adsl-1,WBGene00011064,paraquat resistant WBPhenotype:0000461
+mpk-1,WBGene00003401,diakinesis progression during oogenesis variant WBPhenotype:0001948
+tph-1,WBGene00006600,body posture wavelength increased WBPhenotype:0002296
+snf-11,WBGene00004910,body posture wavelength increased WBPhenotype:0002296
+shl-1,WBGene00022240,sexually dimorphic behavior variant WBPhenotype:0000821
+vab-3,WBGene00006870,sexually dimorphic behavior variant WBPhenotype:0000821
+daf-6,WBGene00000902,sexually dimorphic behavior variant WBPhenotype:0000821
+unc-10,WBGene00006750,forward locomotion decreased WBPhenotype:0002347
+mod-5,WBGene00003387,forward locomotion decreased WBPhenotype:0002347
+tph-1,WBGene00006600,forward locomotion increased WBPhenotype:0002346
+unc-10,WBGene00006750,forward locomotion increased WBPhenotype:0002346
+unc-73,WBGene00006805,sexually dimorphic morphology variant WBPhenotype:0001023
+vab-3,WBGene00006870,sexually dimorphic morphology variant WBPhenotype:0001023
+dpy-18,WBGene00001077,sexually dimorphic morphology variant WBPhenotype:0001023
+exc-7,WBGene00001368,pale WBPhenotype:0001261
+gsk-3,WBGene00001746,organism osmotic stress response variant WBPhenotype:0000876
+top-1,WBGene00006595,progeny variant WBPhenotype:0000069
+adsl-1,WBGene00011064,progeny variant WBPhenotype:0000069
+C32D5.3,WBGene00016311,progeny variant WBPhenotype:0000069
+swsn-4,WBGene00004204,progeny variant WBPhenotype:0000069
+unc-73,WBGene00006805,progeny variant WBPhenotype:0000069
+eif-3.G,WBGene00001230,progeny variant WBPhenotype:0000069
+mpk-1,WBGene00003401,progeny variant WBPhenotype:0000069
+cyk-1,WBGene00000872,progeny variant WBPhenotype:0000069
+gsk-3,WBGene00001746,progeny variant WBPhenotype:0000069
+gex-3,WBGene00001580,progeny variant WBPhenotype:0000069
+cul-4,WBGene00000839,progeny variant WBPhenotype:0000069
+gsa-1,WBGene00001745,progeny variant WBPhenotype:0000069
+ptr-2,WBGene00004217,pronuclear migration defective early emb WBPhenotype:0001152
+cul-3,WBGene00000838,pronuclear migration defective early emb WBPhenotype:0001152
+gex-3,WBGene00001580,pronuclear migration defective early emb WBPhenotype:0001152
+adsl-1,WBGene00011064,RNA processing variant WBPhenotype:0000028
+dhcr-7,WBGene00007126,RNA processing variant WBPhenotype:0000028
+lin-45,WBGene00003030,germ cell compartment expansion variant WBPhenotype:0001980
+C32D5.3,WBGene00016311,germ cell compartment expansion variant WBPhenotype:0001980
+cbp-1,WBGene00000366,germ cell compartment expansion variant WBPhenotype:0001980
+D2085.4,WBGene00008429,germ cell compartment expansion variant WBPhenotype:0001980
+rpl-10,WBGene00004421,germ cell compartment expansion variant WBPhenotype:0001980
+paa-1,WBGene00003901,germ cell compartment expansion variant WBPhenotype:0001980
+mpk-1,WBGene00003401,no oocytes WBPhenotype:0000291
+cbp-1,WBGene00000366,distal tip cell migration variant WBPhenotype:0000195
+unc-73,WBGene00006805,distal tip cell migration variant WBPhenotype:0000195
+vab-3,WBGene00006870,distal tip cell migration variant WBPhenotype:0000195
+gex-3,WBGene00001580,distal tip cell migration variant WBPhenotype:0000195
+utx-1,WBGene00017046,maternal effect lethal emb WBPhenotype:0000052
+C32D5.3,WBGene00016311,germ cell compartment small WBPhenotype:0001974
+paa-1,WBGene00003901,germ cell compartment small WBPhenotype:0001974
+trp-1,WBGene00006614,tail bend angle increased WBPhenotype:0002289
+nlr-1,WBGene00003772,fertility reduced WBPhenotype:0001384
+fezf-1,WBGene00012639,fertility reduced WBPhenotype:0001384
+utx-1,WBGene00017046,fertility reduced WBPhenotype:0001384
+dlg-1,WBGene00001006,fertility reduced WBPhenotype:0001384
+mua-3,WBGene00003482,fertility reduced WBPhenotype:0001384
+top-1,WBGene00006595,fertility reduced WBPhenotype:0001384
+exc-5,WBGene00001366,fertility reduced WBPhenotype:0001384
+let-363,WBGene00002583,fertility reduced WBPhenotype:0001384
+adsl-1,WBGene00011064,fertility reduced WBPhenotype:0001384
+dhcr-7,WBGene00007126,fertility reduced WBPhenotype:0001384
+alh-1,WBGene00000107,fertility reduced WBPhenotype:0001384
+mcm-4,WBGene00003156,fertility reduced WBPhenotype:0001384
+lin-45,WBGene00003030,fertility reduced WBPhenotype:0001384
+C32D5.3,WBGene00016311,fertility reduced WBPhenotype:0001384
+swsn-4,WBGene00004204,fertility reduced WBPhenotype:0001384
+cbp-1,WBGene00000366,fertility reduced WBPhenotype:0001384
+tph-1,WBGene00006600,fertility reduced WBPhenotype:0001384
+set-16,WBGene00011729,fertility reduced WBPhenotype:0001384
+cnt-2,WBGene00000566,fertility reduced WBPhenotype:0001384
+unc-73,WBGene00006805,fertility reduced WBPhenotype:0001384
+chd-7,WBGene00007053,fertility reduced WBPhenotype:0001384
+hmp-1,WBGene00001978,fertility reduced WBPhenotype:0001384
+mca-3,WBGene00003153,fertility reduced WBPhenotype:0001384
+eif-3.G,WBGene00001230,fertility reduced WBPhenotype:0001384
+ceh-43,WBGene00000463,fertility reduced WBPhenotype:0001384
+ztf-11,WBGene00009939,fertility reduced WBPhenotype:0001384
+mca-2,WBGene00019875,fertility reduced WBPhenotype:0001384
+aap-1,WBGene00000001,fertility reduced WBPhenotype:0001384
+D2085.4,WBGene00008429,fertility reduced WBPhenotype:0001384
+mpk-1,WBGene00003401,fertility reduced WBPhenotype:0001384
+sec-15,WBGene00016188,fertility reduced WBPhenotype:0001384
+tat-4,WBGene00020784,fertility reduced WBPhenotype:0001384
+rpl-10,WBGene00004421,fertility reduced WBPhenotype:0001384
+cyk-1,WBGene00000872,fertility reduced WBPhenotype:0001384
+ptr-2,WBGene00004217,fertility reduced WBPhenotype:0001384
+paa-1,WBGene00003901,fertility reduced WBPhenotype:0001384
+gsk-3,WBGene00001746,fertility reduced WBPhenotype:0001384
+aps-1,WBGene00000159,fertility reduced WBPhenotype:0001384
+klc-2,WBGene00002215,fertility reduced WBPhenotype:0001384
+xnp-1,WBGene00006961,fertility reduced WBPhenotype:0001384
+gex-3,WBGene00001580,fertility reduced WBPhenotype:0001384
+rib-1,WBGene00004360,fertility reduced WBPhenotype:0001384
+cul-4,WBGene00000839,fertility reduced WBPhenotype:0001384
+let-413,WBGene00002632,fertility reduced WBPhenotype:0001384
+unc-22,WBGene00006759,fertility reduced WBPhenotype:0001384
+hpo-29,WBGene00021754,fertility reduced WBPhenotype:0001384
+gsa-1,WBGene00001745,fertility reduced WBPhenotype:0001384
+ost-1,WBGene00003893,fertility reduced WBPhenotype:0001384
+gap-2,WBGene00001516,fertility reduced WBPhenotype:0001384
+mua-3,WBGene00003482,hermaphrodite fertility reduced WBPhenotype:0001259
+top-1,WBGene00006595,hermaphrodite fertility reduced WBPhenotype:0001259
+let-363,WBGene00002583,hermaphrodite fertility reduced WBPhenotype:0001259
+dhcr-7,WBGene00007126,hermaphrodite fertility reduced WBPhenotype:0001259
+lin-45,WBGene00003030,hermaphrodite fertility reduced WBPhenotype:0001259
+C32D5.3,WBGene00016311,hermaphrodite fertility reduced WBPhenotype:0001259
+cbp-1,WBGene00000366,hermaphrodite fertility reduced WBPhenotype:0001259
+ceh-43,WBGene00000463,hermaphrodite fertility reduced WBPhenotype:0001259
+aap-1,WBGene00000001,hermaphrodite fertility reduced WBPhenotype:0001259
+D2085.4,WBGene00008429,hermaphrodite fertility reduced WBPhenotype:0001259
+mpk-1,WBGene00003401,hermaphrodite fertility reduced WBPhenotype:0001259
+rpl-10,WBGene00004421,hermaphrodite fertility reduced WBPhenotype:0001259
+ptr-2,WBGene00004217,hermaphrodite fertility reduced WBPhenotype:0001259
+paa-1,WBGene00003901,hermaphrodite fertility reduced WBPhenotype:0001259
+aps-1,WBGene00000159,hermaphrodite fertility reduced WBPhenotype:0001259
+xnp-1,WBGene00006961,hermaphrodite fertility reduced WBPhenotype:0001259
+let-413,WBGene00002632,hermaphrodite fertility reduced WBPhenotype:0001259
+hpo-29,WBGene00021754,hermaphrodite fertility reduced WBPhenotype:0001259
+gsa-1,WBGene00001745,hermaphrodite fertility reduced WBPhenotype:0001259
+gap-2,WBGene00001516,hermaphrodite fertility reduced WBPhenotype:0001259
+top-1,WBGene00006595,endocytic transport variant WBPhenotype:0001421
+adsl-1,WBGene00011064,endocytic transport variant WBPhenotype:0001421
+C32D5.3,WBGene00016311,endocytic transport variant WBPhenotype:0001421
+set-16,WBGene00011729,endocytic transport variant WBPhenotype:0001421
+cnt-2,WBGene00000566,endocytic transport variant WBPhenotype:0001421
+mca-3,WBGene00003153,endocytic transport variant WBPhenotype:0001421
+cyk-1,WBGene00000872,endocytic transport variant WBPhenotype:0001421
+paa-1,WBGene00003901,endocytic transport variant WBPhenotype:0001421
+gsk-3,WBGene00001746,endocytic transport variant WBPhenotype:0001421
+gex-3,WBGene00001580,endocytic transport variant WBPhenotype:0001421
+gsa-1,WBGene00001745,endocytic transport variant WBPhenotype:0001421
+tph-1,WBGene00006600,coiling frequency increased WBPhenotype:0002300
+unc-10,WBGene00006750,coiling frequency increased WBPhenotype:0002300
+F23C8.5,WBGene00017734,cytoplasmic appearance variant WBPhenotype:0001427
+ptr-2,WBGene00004217,cytoplasmic appearance variant WBPhenotype:0001427
+set-16,WBGene00011729,RNAi resistant WBPhenotype:0001208
+paa-1,WBGene00003901,RNAi resistant WBPhenotype:0001208
+lin-45,WBGene00003030,germ cell partition morphology variant WBPhenotype:0001977
+mpk-1,WBGene00003401,germ cell partition morphology variant WBPhenotype:0001977
+lin-45,WBGene00003030,oocytes lack nucleus WBPhenotype:0001956
+C32D5.3,WBGene00016311,oocytes lack nucleus WBPhenotype:0001956
+paa-1,WBGene00003901,oocytes lack nucleus WBPhenotype:0001956
+eif-3.G,WBGene00001230,pleiotropic defects severe early emb WBPhenotype:0000270
+rpl-10,WBGene00004421,pleiotropic defects severe early emb WBPhenotype:0000270
+ptr-1,WBGene00004216,intestinal vacuole WBPhenotype:0001428
+ptr-13,WBGene00004227,intestinal vacuole WBPhenotype:0001428
+ptr-6,WBGene00004221,intestinal vacuole WBPhenotype:0001428
+ptr-2,WBGene00004217,intestinal vacuole WBPhenotype:0001428
+ptr-10,WBGene00004224,intestinal vacuole WBPhenotype:0001428
+mod-5,WBGene00003387,coiling frequency decreased WBPhenotype:0002299
+gsk-3,WBGene00001746,spindle orientation variant WBPhenotype:0001681
+rib-1,WBGene00004360,spindle orientation variant WBPhenotype:0001681
+tph-1,WBGene00006600,nose movement increased WBPhenotype:0002303
+top-1,WBGene00006595,protein interaction variant WBPhenotype:0001369
+dhcr-7,WBGene00007126,protein interaction variant WBPhenotype:0001369
+cbp-1,WBGene00000366,protein interaction variant WBPhenotype:0001369
+D2085.4,WBGene00008429,protein interaction variant WBPhenotype:0001369
+aap-1,WBGene00000001,dauer induction variant WBPhenotype:0001539
+glc-4,WBGene00001594,dauer induction variant WBPhenotype:0001539
+daf-6,WBGene00000902,dauer induction variant WBPhenotype:0001539
+sec-15,WBGene00016188,L1 larval development variant WBPhenotype:0000751
+dlg-1,WBGene00001006,transgene subcellular localization variant WBPhenotype:0000679
+top-1,WBGene00006595,transgene subcellular localization variant WBPhenotype:0000679
+let-363,WBGene00002583,transgene subcellular localization variant WBPhenotype:0000679
+adsl-1,WBGene00011064,transgene subcellular localization variant WBPhenotype:0000679
+syd-2,WBGene00006364,transgene subcellular localization variant WBPhenotype:0000679
+dhcr-7,WBGene00007126,transgene subcellular localization variant WBPhenotype:0000679
+phy-2,WBGene00004025,transgene subcellular localization variant WBPhenotype:0000679
+C32D5.3,WBGene00016311,transgene subcellular localization variant WBPhenotype:0000679
+slo-1,WBGene00004830,transgene subcellular localization variant WBPhenotype:0000679
+cbp-1,WBGene00000366,transgene subcellular localization variant WBPhenotype:0000679
+cnt-2,WBGene00000566,transgene subcellular localization variant WBPhenotype:0000679
+mca-3,WBGene00003153,transgene subcellular localization variant WBPhenotype:0000679
+eif-3.G,WBGene00001230,transgene subcellular localization variant WBPhenotype:0000679
+daf-18,WBGene00000913,transgene subcellular localization variant WBPhenotype:0000679
+sec-15,WBGene00016188,transgene subcellular localization variant WBPhenotype:0000679
+rpl-10,WBGene00004421,transgene subcellular localization variant WBPhenotype:0000679
+cyk-1,WBGene00000872,transgene subcellular localization variant WBPhenotype:0000679
+paa-1,WBGene00003901,transgene subcellular localization variant WBPhenotype:0000679
+aps-1,WBGene00000159,transgene subcellular localization variant WBPhenotype:0000679
+gex-3,WBGene00001580,transgene subcellular localization variant WBPhenotype:0000679
+cul-4,WBGene00000839,transgene subcellular localization variant WBPhenotype:0000679
+let-413,WBGene00002632,transgene subcellular localization variant WBPhenotype:0000679
+gsa-1,WBGene00001745,transgene subcellular localization variant WBPhenotype:0000679
+utx-1,WBGene00017046,ectopic expression transgene WBPhenotype:0001276
+tbx-9,WBGene00006546,ectopic expression transgene WBPhenotype:0001276
+set-16,WBGene00011729,ectopic expression transgene WBPhenotype:0001276
+gsk-3,WBGene00001746,ectopic expression transgene WBPhenotype:0001276
+tbx-8,WBGene00006545,ectopic expression transgene WBPhenotype:0001276
+syd-2,WBGene00006364,synapse morphology variant WBPhenotype:0000616
+unc-10,WBGene00006750,synapse morphology variant WBPhenotype:0000616
+snn-1,WBGene00004913,synapse morphology variant WBPhenotype:0000616
+mca-3,WBGene00003153,nicotine response variant WBPhenotype:0001573
+mca-2,WBGene00019875,nicotine response variant WBPhenotype:0001573
+tph-1,WBGene00006600,body posture amplitude increased WBPhenotype:0002293
+unc-10,WBGene00006750,body posture amplitude increased WBPhenotype:0002293
+lin-45,WBGene00003030,touch resistant WBPhenotype:0000456
+mec-6,WBGene00003170,touch resistant WBPhenotype:0000456
+mpk-1,WBGene00003401,touch resistant WBPhenotype:0000456
+trp-1,WBGene00006614,turning variant WBPhenotype:0002311
+tph-1,WBGene00006600,turning variant WBPhenotype:0002311
+unc-10,WBGene00006750,turning variant WBPhenotype:0002311
+mod-5,WBGene00003387,turning variant WBPhenotype:0002311
+mpk-1,WBGene00003401,diplotene absent during oogenesis WBPhenotype:0001954
+paa-1,WBGene00003901,diplotene absent during oogenesis WBPhenotype:0001954
+cbp-1,WBGene00000366,sister cell division timing asynchrony reduced WBPhenotype:0002369
+ceh-43,WBGene00000463,sister cell division timing asynchrony reduced WBPhenotype:0002369
+gsk-3,WBGene00001746,sister cell division timing asynchrony reduced WBPhenotype:0002369
+adsl-1,WBGene00011064,cytoplasmic processing body variant WBPhenotype:0001794
+dhcr-7,WBGene00007126,cytoplasmic processing body variant WBPhenotype:0001794
+mcm-4,WBGene00003156,sinusoidal movement variant WBPhenotype:0004018
+trp-1,WBGene00006614,sinusoidal movement variant WBPhenotype:0004018
+tph-1,WBGene00006600,sinusoidal movement variant WBPhenotype:0004018
+snf-11,WBGene00004910,sinusoidal movement variant WBPhenotype:0004018
+unc-10,WBGene00006750,sinusoidal movement variant WBPhenotype:0004018
+mod-5,WBGene00003387,sinusoidal movement variant WBPhenotype:0004018
+trp-1,WBGene00006614,body posture amplitude decreased WBPhenotype:0002292
+mod-5,WBGene00003387,body posture amplitude decreased WBPhenotype:0002292
+swsn-4,WBGene00004204,amphid phasmid sensillum morphology variant WBPhenotype:0001527
+cbp-1,WBGene00000366,amphid phasmid sensillum morphology variant WBPhenotype:0001527
+vab-3,WBGene00006870,amphid phasmid sensillum morphology variant WBPhenotype:0001527
+daf-6,WBGene00000902,amphid phasmid sensillum morphology variant WBPhenotype:0001527
+utx-1,WBGene00017046,mRNA levels reduced WBPhenotype:0000137
+let-363,WBGene00002583,mRNA levels reduced WBPhenotype:0000137
+metr-1,WBGene00010988,mRNA levels reduced WBPhenotype:0000137
+cbp-1,WBGene00000366,mRNA levels reduced WBPhenotype:0000137
+set-16,WBGene00011729,mRNA levels reduced WBPhenotype:0000137
+daf-18,WBGene00000913,mRNA levels reduced WBPhenotype:0000137
+utx-1,WBGene00017046,gonad migration variant WBPhenotype:0000690
+top-1,WBGene00006595,gonad migration variant WBPhenotype:0000690
+jmjd-3.1,WBGene00017571,gonad migration variant WBPhenotype:0000690
+set-16,WBGene00011729,gonad migration variant WBPhenotype:0000690
+paa-1,WBGene00003901,gonad migration variant WBPhenotype:0000690
+gsk-3,WBGene00001746,gonad migration variant WBPhenotype:0000690
+cnt-2,WBGene00000566,cell division polarity variant WBPhenotype:0001235
+gsk-3,WBGene00001746,cell division polarity variant WBPhenotype:0001235
+ptr-2,WBGene00004217,polar body defective early emb WBPhenotype:0001147
+klc-2,WBGene00002215,polar body defective early emb WBPhenotype:0001147
+gcst-1,WBGene00017765,mRNA levels increased WBPhenotype:0000136
+let-363,WBGene00002583,mRNA levels increased WBPhenotype:0000136
+metr-1,WBGene00010988,mRNA levels increased WBPhenotype:0000136
+cbp-1,WBGene00000366,mRNA levels increased WBPhenotype:0000136
+mthf-1,WBGene00015512,mRNA levels increased WBPhenotype:0000136
+gsk-3,WBGene00001746,mRNA levels increased WBPhenotype:0000136
+cul-4,WBGene00000839,mRNA levels increased WBPhenotype:0000136
+paa-1,WBGene00003901,oocytes small WBPhenotype:0001945
+daf-18,WBGene00000913,dauer defective WBPhenotype:0000013
+glc-4,WBGene00001594,dauer defective WBPhenotype:0000013
+daf-6,WBGene00000902,dauer defective WBPhenotype:0000013
+utx-1,WBGene00017046,protruding vulva WBPhenotype:0000697
+top-1,WBGene00006595,protruding vulva WBPhenotype:0000697
+adsl-1,WBGene00011064,protruding vulva WBPhenotype:0000697
+vab-19,WBGene00006882,protruding vulva WBPhenotype:0000697
+swsn-4,WBGene00004204,protruding vulva WBPhenotype:0000697
+cbp-1,WBGene00000366,protruding vulva WBPhenotype:0000697
+unc-73,WBGene00006805,protruding vulva WBPhenotype:0000697
+eif-3.G,WBGene00001230,protruding vulva WBPhenotype:0000697
+mpk-1,WBGene00003401,protruding vulva WBPhenotype:0000697
+tat-4,WBGene00020784,protruding vulva WBPhenotype:0000697
+cyk-1,WBGene00000872,protruding vulva WBPhenotype:0000697
+gex-3,WBGene00001580,protruding vulva WBPhenotype:0000697
+rib-1,WBGene00004360,protruding vulva WBPhenotype:0000697
+cul-4,WBGene00000839,protruding vulva WBPhenotype:0000697
+let-413,WBGene00002632,protruding vulva WBPhenotype:0000697
+gsa-1,WBGene00001745,protruding vulva WBPhenotype:0000697
+top-1,WBGene00006595,aneuploidy WBPhenotype:0001882
+top-1,WBGene00006595,developmental pigmentation variant WBPhenotype:0001009
+cbp-1,WBGene00000366,developmental pigmentation variant WBPhenotype:0001009
+ceh-43,WBGene00000463,developmental pigmentation variant WBPhenotype:0001009
+agmo-1,WBGene00007210,developmental pigmentation variant WBPhenotype:0001009
+swsn-4,WBGene00004204,intestinal cell development variant WBPhenotype:0000705
+ost-1,WBGene00003893,intestinal cell development variant WBPhenotype:0000705
+mpk-1,WBGene00003401,cell cycle defective early emb WBPhenotype:0001114
+lin-45,WBGene00003030,odorant positive chemotaxis defective WBPhenotype:0001438
+cyk-1,WBGene00000872,nuclear division variant WBPhenotype:0000504
+ptr-2,WBGene00004217,nuclear division variant WBPhenotype:0000504
+paa-1,WBGene00003901,nuclear division variant WBPhenotype:0000504
+trp-1,WBGene00006614,backing decreased WBPhenotype:0002344
+mod-5,WBGene00003387,backing decreased WBPhenotype:0002344
+adsl-1,WBGene00011064,embryonic cell physiology variant WBPhenotype:0000763
+mcm-4,WBGene00003156,embryonic cell physiology variant WBPhenotype:0000763
+unc-73,WBGene00006805,embryonic cell physiology variant WBPhenotype:0000763
+cyk-1,WBGene00000872,embryonic cell physiology variant WBPhenotype:0000763
+ptr-2,WBGene00004217,embryonic cell physiology variant WBPhenotype:0000763
+paa-1,WBGene00003901,embryonic cell physiology variant WBPhenotype:0000763
+cul-3,WBGene00000838,embryonic cell physiology variant WBPhenotype:0000763
+gsk-3,WBGene00001746,embryonic cell physiology variant WBPhenotype:0000763
+klc-2,WBGene00002215,embryonic cell physiology variant WBPhenotype:0000763
+gex-3,WBGene00001580,embryonic cell physiology variant WBPhenotype:0000763
+shl-1,WBGene00022240,male mating efficiency reduced WBPhenotype:0000843
+daf-6,WBGene00000902,male mating efficiency reduced WBPhenotype:0000843
+alh-1,WBGene00000107,organism oxidative stress resistant WBPhenotype:0001663
+rpl-10,WBGene00004421,diplotene region organization variant WBPhenotype:0001950
+paa-1,WBGene00003901,diplotene region organization variant WBPhenotype:0001950
+unc-22,WBGene00006759,cholinergic agonist resistant WBPhenotype:0001578
+aap-1,WBGene00000001,slow development WBPhenotype:0000674
+slo-1,WBGene00004830,eating variant WBPhenotype:0002056
+tph-1,WBGene00006600,eating variant WBPhenotype:0002056
+unc-10,WBGene00006750,eating variant WBPhenotype:0002056
+shn-1,WBGene00006444,eating variant WBPhenotype:0002056
+mua-3,WBGene00003482,cell death variant WBPhenotype:0000729
+let-363,WBGene00002583,cell death variant WBPhenotype:0000729
+tat-3,WBGene00012360,cell death variant WBPhenotype:0000729
+mcm-4,WBGene00003156,cell death variant WBPhenotype:0000729
+lin-45,WBGene00003030,cell death variant WBPhenotype:0000729
+C32D5.3,WBGene00016311,cell death variant WBPhenotype:0000729
+cbp-1,WBGene00000366,cell death variant WBPhenotype:0000729
+D2085.4,WBGene00008429,cell death variant WBPhenotype:0000729
+mpk-1,WBGene00003401,cell death variant WBPhenotype:0000729
+tat-4,WBGene00020784,cell death variant WBPhenotype:0000729
+paa-1,WBGene00003901,cell death variant WBPhenotype:0000729
+gsk-3,WBGene00001746,cell death variant WBPhenotype:0000729
+xnp-1,WBGene00006961,cell death variant WBPhenotype:0000729
+ptr-2,WBGene00004217,ectopic cleavage furrows early emb WBPhenotype:0001132
+dlg-1,WBGene00001006,late embryonic arrest WBPhenotype:0000779
+vab-19,WBGene00006882,late embryonic arrest WBPhenotype:0000779
+ceh-43,WBGene00000463,late embryonic arrest WBPhenotype:0000779
+ptr-2,WBGene00004217,late embryonic arrest WBPhenotype:0000779
+let-363,WBGene00002583,mid larval lethal WBPhenotype:0000116
+adsl-1,WBGene00011064,pronuclear nuclear appearance variant emb WBPhenotype:0001374
+mcm-4,WBGene00003156,pronuclear nuclear appearance variant emb WBPhenotype:0001374
+cyk-1,WBGene00000872,pronuclear nuclear appearance variant emb WBPhenotype:0001374
+ptr-2,WBGene00004217,pronuclear nuclear appearance variant emb WBPhenotype:0001374
+paa-1,WBGene00003901,pronuclear nuclear appearance variant emb WBPhenotype:0001374
+cul-3,WBGene00000838,pronuclear nuclear appearance variant emb WBPhenotype:0001374
+gex-3,WBGene00001580,pronuclear nuclear appearance variant emb WBPhenotype:0001374
+alh-7,WBGene00000113,developmental growth variant WBPhenotype:0001015
+dlg-1,WBGene00001006,developmental growth variant WBPhenotype:0001015
+mua-3,WBGene00003482,developmental growth variant WBPhenotype:0001015
+top-1,WBGene00006595,developmental growth variant WBPhenotype:0001015
+let-363,WBGene00002583,developmental growth variant WBPhenotype:0001015
+adsl-1,WBGene00011064,developmental growth variant WBPhenotype:0001015
+dhcr-7,WBGene00007126,developmental growth variant WBPhenotype:0001015
+mcm-4,WBGene00003156,developmental growth variant WBPhenotype:0001015
+tbx-9,WBGene00006546,developmental growth variant WBPhenotype:0001015
+unc-73,WBGene00006805,developmental growth variant WBPhenotype:0001015
+eif-3.G,WBGene00001230,developmental growth variant WBPhenotype:0001015
+ceh-43,WBGene00000463,developmental growth variant WBPhenotype:0001015
+ampd-1,WBGene00016415,developmental growth variant WBPhenotype:0001015
+mpk-1,WBGene00003401,developmental growth variant WBPhenotype:0001015
+sec-15,WBGene00016188,developmental growth variant WBPhenotype:0001015
+tat-4,WBGene00020784,developmental growth variant WBPhenotype:0001015
+rpl-10,WBGene00004421,developmental growth variant WBPhenotype:0001015
+cyk-1,WBGene00000872,developmental growth variant WBPhenotype:0001015
+ptr-2,WBGene00004217,developmental growth variant WBPhenotype:0001015
+Y82E9BR.16,WBGene00022348,developmental growth variant WBPhenotype:0001015
+aps-1,WBGene00000159,developmental growth variant WBPhenotype:0001015
+ptr-10,WBGene00004224,developmental growth variant WBPhenotype:0001015
+tbx-8,WBGene00006545,developmental growth variant WBPhenotype:0001015
+gex-3,WBGene00001580,developmental growth variant WBPhenotype:0001015
+cul-4,WBGene00000839,developmental growth variant WBPhenotype:0001015
+gsa-1,WBGene00001745,developmental growth variant WBPhenotype:0001015
+lin-45,WBGene00003030,sexually dimorphic development variant WBPhenotype:0000930
+mpk-1,WBGene00003401,sexually dimorphic development variant WBPhenotype:0000930
+dlg-1,WBGene00001006,pattern protein expression variant WBPhenotype:0001408
+syd-2,WBGene00006364,pattern protein expression variant WBPhenotype:0001408
+vab-19,WBGene00006882,pattern protein expression variant WBPhenotype:0001408
+hmp-1,WBGene00001978,pattern protein expression variant WBPhenotype:0001408
+daf-18,WBGene00000913,pattern protein expression variant WBPhenotype:0001408
+mpk-1,WBGene00003401,pattern protein expression variant WBPhenotype:0001408
+cul-3,WBGene00000838,pattern protein expression variant WBPhenotype:0001408
+gsk-3,WBGene00001746,pattern protein expression variant WBPhenotype:0001408
+let-413,WBGene00002632,pattern protein expression variant WBPhenotype:0001408
+vab-19,WBGene00006882,pericellular component development variant WBPhenotype:0000200
+daf-6,WBGene00000902,pericellular component development variant WBPhenotype:0000200
+dhcr-7,WBGene00007126,avoids bacterial lawn WBPhenotype:0000402
+rpl-10,WBGene00004421,avoids bacterial lawn WBPhenotype:0000402
+adsl-1,WBGene00011064,oxidative stress response variant WBPhenotype:0000068
+cbp-1,WBGene00000366,oxidative stress response variant WBPhenotype:0000068
+daf-18,WBGene00000913,oxidative stress response variant WBPhenotype:0000068
+nlg-1,WBGene00006412,oxidative stress response variant WBPhenotype:0000068
+trp-1,WBGene00006614,Pausing decreased WBPhenotype:0002309
+tph-1,WBGene00006600,Pausing decreased WBPhenotype:0002309
+vab-19,WBGene00006882,epithelial development variant WBPhenotype:0000701
+adsl-1,WBGene00011064,pesticide response variant WBPhenotype:0000459
+glc-1,WBGene00001591,pesticide response variant WBPhenotype:0000459
+cbp-1,WBGene00000366,pesticide response variant WBPhenotype:0000459
+daf-18,WBGene00000913,pesticide response variant WBPhenotype:0000459
+nlg-1,WBGene00006412,pesticide response variant WBPhenotype:0000459
+unc-10,WBGene00006750,pesticide response variant WBPhenotype:0000459
+unc-22,WBGene00006759,pesticide response variant WBPhenotype:0000459
+cul-3,WBGene00000838,protein expression increased WBPhenotype:0000119
+top-1,WBGene00006595,dumpy WBPhenotype:0000583
+unc-73,WBGene00006805,dumpy WBPhenotype:0000583
+dpy-18,WBGene00001077,dumpy WBPhenotype:0000583
+eif-3.G,WBGene00001230,dumpy WBPhenotype:0000583
+mua-3,WBGene00003482,paralyzed WBPhenotype:0000644
+unc-73,WBGene00006805,paralyzed WBPhenotype:0000644
+mca-3,WBGene00003153,paralyzed WBPhenotype:0000644
+unc-22,WBGene00006759,paralyzed WBPhenotype:0000644
+top-1,WBGene00006595,cell proliferation variant WBPhenotype:0000171
+let-363,WBGene00002583,cell proliferation variant WBPhenotype:0000171
+exc-7,WBGene00001368,cell proliferation variant WBPhenotype:0000171
+cbp-1,WBGene00000366,cell proliferation variant WBPhenotype:0000171
+exc-5,WBGene00001366,cell component localization variant WBPhenotype:0002098
+phy-2,WBGene00004025,cell component localization variant WBPhenotype:0002098
+eif-3.G,WBGene00001230,cell component localization variant WBPhenotype:0002098
+rpl-10,WBGene00004421,cell component localization variant WBPhenotype:0002098
+paa-1,WBGene00003901,cell component localization variant WBPhenotype:0002098
+aps-1,WBGene00000159,cell component localization variant WBPhenotype:0002098
+utx-1,WBGene00017046,oocytes disorganized WBPhenotype:0001925
+set-16,WBGene00011729,oocytes disorganized WBPhenotype:0001925
+mpk-1,WBGene00003401,oocytes disorganized WBPhenotype:0001925
+unc-73,WBGene00006805,spindle defective early emb WBPhenotype:0000759
+ptr-2,WBGene00004217,spindle defective early emb WBPhenotype:0000759
+paa-1,WBGene00003901,spindle defective early emb WBPhenotype:0000759
+gsk-3,WBGene00001746,spindle defective early emb WBPhenotype:0000759
+klc-2,WBGene00002215,spindle defective early emb WBPhenotype:0000759
+let-363,WBGene00002583,late larval lethal WBPhenotype:0000058
+unc-73,WBGene00006805,late larval lethal WBPhenotype:0000058
+rpl-10,WBGene00004421,patchy coloration WBPhenotype:0001029
+ptr-2,WBGene00004217,embryonic lethal late emb WBPhenotype:0001020
+bcl-11,WBGene00017430,embryonic lethal late emb WBPhenotype:0001020
+tph-1,WBGene00006600,long WBPhenotype:0000022
+snf-11,WBGene00004910,long WBPhenotype:0000022
+mpk-1,WBGene00003401,long WBPhenotype:0000022
+cyk-1,WBGene00000872,long WBPhenotype:0000022
+let-413,WBGene00002632,long WBPhenotype:0000022
+unc-22,WBGene00006759,long WBPhenotype:0000022
+ptr-2,WBGene00004217,large cytoplasmic granules early emb WBPhenotype:0001082
+utx-1,WBGene00017046,developmental timing variant WBPhenotype:0000033
+top-1,WBGene00006595,developmental timing variant WBPhenotype:0000033
+adsl-1,WBGene00011064,developmental timing variant WBPhenotype:0000033
+dhcr-7,WBGene00007126,developmental timing variant WBPhenotype:0000033
+C32D5.3,WBGene00016311,developmental timing variant WBPhenotype:0000033
+metr-1,WBGene00010988,developmental timing variant WBPhenotype:0000033
+vab-19,WBGene00006882,developmental timing variant WBPhenotype:0000033
+swsn-4,WBGene00004204,developmental timing variant WBPhenotype:0000033
+cbp-1,WBGene00000366,developmental timing variant WBPhenotype:0000033
+set-16,WBGene00011729,developmental timing variant WBPhenotype:0000033
+unc-73,WBGene00006805,developmental timing variant WBPhenotype:0000033
+eif-3.G,WBGene00001230,developmental timing variant WBPhenotype:0000033
+daf-18,WBGene00000913,developmental timing variant WBPhenotype:0000033
+mca-2,WBGene00019875,developmental timing variant WBPhenotype:0000033
+mbk-1,WBGene00003149,developmental timing variant WBPhenotype:0000033
+aap-1,WBGene00000001,developmental timing variant WBPhenotype:0000033
+ampd-1,WBGene00016415,developmental timing variant WBPhenotype:0000033
+mthf-1,WBGene00015512,developmental timing variant WBPhenotype:0000033
+rpl-10,WBGene00004421,developmental timing variant WBPhenotype:0000033
+ptr-2,WBGene00004217,developmental timing variant WBPhenotype:0000033
+paa-1,WBGene00003901,developmental timing variant WBPhenotype:0000033
+bcl-11,WBGene00017430,developmental timing variant WBPhenotype:0000033
+gsk-3,WBGene00001746,developmental timing variant WBPhenotype:0000033
+gex-3,WBGene00001580,developmental timing variant WBPhenotype:0000033
+cul-4,WBGene00000839,developmental timing variant WBPhenotype:0000033
+mca-1,WBGene00003151,developmental timing variant WBPhenotype:0000033
+gsa-1,WBGene00001745,developmental timing variant WBPhenotype:0000033
+shn-1,WBGene00006444,developmental timing variant WBPhenotype:0000033
+ost-1,WBGene00003893,developmental timing variant WBPhenotype:0000033
+nlr-1,WBGene00003772,organ system physiology variant WBPhenotype:0000575
+fezf-1,WBGene00012639,organ system physiology variant WBPhenotype:0000575
+jac-1,WBGene00002175,organ system physiology variant WBPhenotype:0000575
+utx-1,WBGene00017046,organ system physiology variant WBPhenotype:0000575
+dlg-1,WBGene00001006,organ system physiology variant WBPhenotype:0000575
+mua-3,WBGene00003482,organ system physiology variant WBPhenotype:0000575
+top-1,WBGene00006595,organ system physiology variant WBPhenotype:0000575
+exc-5,WBGene00001366,organ system physiology variant WBPhenotype:0000575
+let-363,WBGene00002583,organ system physiology variant WBPhenotype:0000575
+adsl-1,WBGene00011064,organ system physiology variant WBPhenotype:0000575
+dhcr-7,WBGene00007126,organ system physiology variant WBPhenotype:0000575
+alh-1,WBGene00000107,organ system physiology variant WBPhenotype:0000575
+mcm-4,WBGene00003156,organ system physiology variant WBPhenotype:0000575
+lin-45,WBGene00003030,organ system physiology variant WBPhenotype:0000575
+tbx-9,WBGene00006546,organ system physiology variant WBPhenotype:0000575
+C32D5.3,WBGene00016311,organ system physiology variant WBPhenotype:0000575
+vab-19,WBGene00006882,organ system physiology variant WBPhenotype:0000575
+swsn-4,WBGene00004204,organ system physiology variant WBPhenotype:0000575
+cbp-1,WBGene00000366,organ system physiology variant WBPhenotype:0000575
+tph-1,WBGene00006600,organ system physiology variant WBPhenotype:0000575
+set-16,WBGene00011729,organ system physiology variant WBPhenotype:0000575
+cnt-2,WBGene00000566,organ system physiology variant WBPhenotype:0000575
+unc-73,WBGene00006805,organ system physiology variant WBPhenotype:0000575
+chd-7,WBGene00007053,organ system physiology variant WBPhenotype:0000575
+vab-3,WBGene00006870,organ system physiology variant WBPhenotype:0000575
+hmp-1,WBGene00001978,organ system physiology variant WBPhenotype:0000575
+mca-3,WBGene00003153,organ system physiology variant WBPhenotype:0000575
+eif-3.G,WBGene00001230,organ system physiology variant WBPhenotype:0000575
+ceh-43,WBGene00000463,organ system physiology variant WBPhenotype:0000575
+ztf-11,WBGene00009939,organ system physiology variant WBPhenotype:0000575
+mca-2,WBGene00019875,organ system physiology variant WBPhenotype:0000575
+aap-1,WBGene00000001,organ system physiology variant WBPhenotype:0000575
+D2085.4,WBGene00008429,organ system physiology variant WBPhenotype:0000575
+mpk-1,WBGene00003401,organ system physiology variant WBPhenotype:0000575
+sec-15,WBGene00016188,organ system physiology variant WBPhenotype:0000575
+tat-4,WBGene00020784,organ system physiology variant WBPhenotype:0000575
+rpl-10,WBGene00004421,organ system physiology variant WBPhenotype:0000575
+cyk-1,WBGene00000872,organ system physiology variant WBPhenotype:0000575
+ptr-2,WBGene00004217,organ system physiology variant WBPhenotype:0000575
+paa-1,WBGene00003901,organ system physiology variant WBPhenotype:0000575
+gsk-3,WBGene00001746,organ system physiology variant WBPhenotype:0000575
+aps-1,WBGene00000159,organ system physiology variant WBPhenotype:0000575
+klc-2,WBGene00002215,organ system physiology variant WBPhenotype:0000575
+tbx-8,WBGene00006545,organ system physiology variant WBPhenotype:0000575
+xnp-1,WBGene00006961,organ system physiology variant WBPhenotype:0000575
+gex-3,WBGene00001580,organ system physiology variant WBPhenotype:0000575
+rib-1,WBGene00004360,organ system physiology variant WBPhenotype:0000575
+cul-4,WBGene00000839,organ system physiology variant WBPhenotype:0000575
+let-413,WBGene00002632,organ system physiology variant WBPhenotype:0000575
+unc-22,WBGene00006759,organ system physiology variant WBPhenotype:0000575
+hpo-29,WBGene00021754,organ system physiology variant WBPhenotype:0000575
+lrp-2,WBGene00003072,organ system physiology variant WBPhenotype:0000575
+gsa-1,WBGene00001745,organ system physiology variant WBPhenotype:0000575
+shn-1,WBGene00006444,organ system physiology variant WBPhenotype:0000575
+ost-1,WBGene00003893,organ system physiology variant WBPhenotype:0000575
+gap-2,WBGene00001516,organ system physiology variant WBPhenotype:0000575
+lin-45,WBGene00003030,protein degradation variant WBPhenotype:0001645
+unc-73,WBGene00006805,protein degradation variant WBPhenotype:0001645
+daf-18,WBGene00000913,protein degradation variant WBPhenotype:0001645
+mpk-1,WBGene00003401,protein degradation variant WBPhenotype:0001645
+unc-22,WBGene00006759,protein degradation variant WBPhenotype:0001645
+prkl-1,WBGene00022727,neuronal outgrowth variant WBPhenotype:0000572
+unc-73,WBGene00006805,neuronal outgrowth variant WBPhenotype:0000572
+vab-3,WBGene00006870,neuronal outgrowth variant WBPhenotype:0000572
+dpy-18,WBGene00001077,neuronal outgrowth variant WBPhenotype:0000572
+gex-3,WBGene00001580,neuronal outgrowth variant WBPhenotype:0000572
+alh-7,WBGene00000113,embryonic development variant WBPhenotype:0000749
+rig-4,WBGene00004371,embryonic development variant WBPhenotype:0000749
+nlr-1,WBGene00003772,embryonic development variant WBPhenotype:0000749
+F23C8.5,WBGene00017734,embryonic development variant WBPhenotype:0000749
+jac-1,WBGene00002175,embryonic development variant WBPhenotype:0000749
+utx-1,WBGene00017046,embryonic development variant WBPhenotype:0000749
+dlg-1,WBGene00001006,embryonic development variant WBPhenotype:0000749
+top-1,WBGene00006595,embryonic development variant WBPhenotype:0000749
+ccb-1,WBGene00000368,embryonic development variant WBPhenotype:0000749
+let-363,WBGene00002583,embryonic development variant WBPhenotype:0000749
+rbr-2,WBGene00004319,embryonic development variant WBPhenotype:0000749
+adsl-1,WBGene00011064,embryonic development variant WBPhenotype:0000749
+prkl-1,WBGene00022727,embryonic development variant WBPhenotype:0000749
+dhcr-7,WBGene00007126,embryonic development variant WBPhenotype:0000749
+ptp-2,WBGene00004214,embryonic development variant WBPhenotype:0000749
+mcm-4,WBGene00003156,embryonic development variant WBPhenotype:0000749
+lin-45,WBGene00003030,embryonic development variant WBPhenotype:0000749
+tbx-9,WBGene00006546,embryonic development variant WBPhenotype:0000749
+C32D5.3,WBGene00016311,embryonic development variant WBPhenotype:0000749
+mgl-2,WBGene00003233,embryonic development variant WBPhenotype:0000749
+F19H6.4,WBGene00008959,embryonic development variant WBPhenotype:0000749
+vab-19,WBGene00006882,embryonic development variant WBPhenotype:0000749
+swsn-4,WBGene00004204,embryonic development variant WBPhenotype:0000749
+F52B5.3,WBGene00009922,embryonic development variant WBPhenotype:0000749
+cbp-1,WBGene00000366,embryonic development variant WBPhenotype:0000749
+tph-1,WBGene00006600,embryonic development variant WBPhenotype:0000749
+set-16,WBGene00011729,embryonic development variant WBPhenotype:0000749
+cnt-2,WBGene00000566,embryonic development variant WBPhenotype:0000749
+unc-73,WBGene00006805,embryonic development variant WBPhenotype:0000749
+hmp-1,WBGene00001978,embryonic development variant WBPhenotype:0000749
+F47E1.4,WBGene00018568,embryonic development variant WBPhenotype:0000749
+dpy-18,WBGene00001077,embryonic development variant WBPhenotype:0000749
+mca-3,WBGene00003153,embryonic development variant WBPhenotype:0000749
+eif-3.G,WBGene00001230,embryonic development variant WBPhenotype:0000749
+ceh-43,WBGene00000463,embryonic development variant WBPhenotype:0000749
+ztf-11,WBGene00009939,embryonic development variant WBPhenotype:0000749
+ptr-6,WBGene00004221,embryonic development variant WBPhenotype:0000749
+mbk-1,WBGene00003149,embryonic development variant WBPhenotype:0000749
+mpk-1,WBGene00003401,embryonic development variant WBPhenotype:0000749
+sec-15,WBGene00016188,embryonic development variant WBPhenotype:0000749
+rpl-10,WBGene00004421,embryonic development variant WBPhenotype:0000749
+cyk-1,WBGene00000872,embryonic development variant WBPhenotype:0000749
+ptr-2,WBGene00004217,embryonic development variant WBPhenotype:0000749
+paa-1,WBGene00003901,embryonic development variant WBPhenotype:0000749
+cul-3,WBGene00000838,embryonic development variant WBPhenotype:0000749
+bcl-11,WBGene00017430,embryonic development variant WBPhenotype:0000749
+Y82E9BR.16,WBGene00022348,embryonic development variant WBPhenotype:0000749
+gsk-3,WBGene00001746,embryonic development variant WBPhenotype:0000749
+aps-1,WBGene00000159,embryonic development variant WBPhenotype:0000749
+klc-2,WBGene00002215,embryonic development variant WBPhenotype:0000749
+tbx-8,WBGene00006545,embryonic development variant WBPhenotype:0000749
+gex-3,WBGene00001580,embryonic development variant WBPhenotype:0000749
+rib-1,WBGene00004360,embryonic development variant WBPhenotype:0000749
+glc-2,WBGene00001592,embryonic development variant WBPhenotype:0000749
+let-413,WBGene00002632,embryonic development variant WBPhenotype:0000749
+unc-22,WBGene00006759,embryonic development variant WBPhenotype:0000749
+hpo-29,WBGene00021754,embryonic development variant WBPhenotype:0000749
+ost-1,WBGene00003893,embryonic development variant WBPhenotype:0000749
+tbx-11,WBGene00006547,embryonic development variant WBPhenotype:0000749
+trp-1,WBGene00006614,fat WBPhenotype:0000542
+snf-11,WBGene00004910,fat WBPhenotype:0000542
+mod-5,WBGene00003387,fat WBPhenotype:0000542
+alh-1,WBGene00000107,fat content increased WBPhenotype:0001184
+cbp-1,WBGene00000366,fat content increased WBPhenotype:0001184
+vab-3,WBGene00006870,male nervous system morphology variant WBPhenotype:0001358
+dpy-18,WBGene00001077,male nervous system morphology variant WBPhenotype:0001358
+tbx-9,WBGene00006546,axon fasciculation variant WBPhenotype:0000632
+unc-73,WBGene00006805,axon fasciculation variant WBPhenotype:0000632
+trp-1,WBGene00006614,backward point velocity increased WBPhenotype:0002325
+tph-1,WBGene00006600,backward point velocity increased WBPhenotype:0002325
+snf-11,WBGene00004910,backward point velocity increased WBPhenotype:0002325
+rig-4,WBGene00004371,mitosis variant WBPhenotype:0001743
+mpk-1,WBGene00003401,mitosis variant WBPhenotype:0001743
+paa-1,WBGene00003901,mitosis variant WBPhenotype:0001743
+utx-1,WBGene00017046,bag of worms WBPhenotype:0000007
+syd-2,WBGene00006364,bag of worms WBPhenotype:0000007
+cbp-1,WBGene00000366,bag of worms WBPhenotype:0000007
+ost-1,WBGene00003893,bag of worms WBPhenotype:0000007
+mod-5,WBGene00003387,Pausing increased WBPhenotype:0002310
+mpk-1,WBGene00003401,gonad small WBPhenotype:0001957
+mec-6,WBGene00003170,dendrite development variant WBPhenotype:0000882
+unc-73,WBGene00006805,dendrite development variant WBPhenotype:0000882
+set-16,WBGene00011729,somatic transgene silencing variant WBPhenotype:0001595
+paa-1,WBGene00003901,somatic transgene silencing variant WBPhenotype:0001595
+trp-1,WBGene00006614,forward point velocity increased WBPhenotype:0002322
+tph-1,WBGene00006600,forward point velocity increased WBPhenotype:0002322
+snf-11,WBGene00004910,forward point velocity increased WBPhenotype:0002322
+mod-5,WBGene00003387,backward point velocity decreased WBPhenotype:0002324
+jac-1,WBGene00002175,brood size variant WBPhenotype:0000673
+utx-1,WBGene00017046,brood size variant WBPhenotype:0000673
+dlg-1,WBGene00001006,brood size variant WBPhenotype:0000673
+top-1,WBGene00006595,brood size variant WBPhenotype:0000673
+let-363,WBGene00002583,brood size variant WBPhenotype:0000673
+adsl-1,WBGene00011064,brood size variant WBPhenotype:0000673
+tbx-9,WBGene00006546,brood size variant WBPhenotype:0000673
+vab-19,WBGene00006882,brood size variant WBPhenotype:0000673
+set-16,WBGene00011729,brood size variant WBPhenotype:0000673
+cnt-2,WBGene00000566,brood size variant WBPhenotype:0000673
+unc-73,WBGene00006805,brood size variant WBPhenotype:0000673
+mpk-1,WBGene00003401,brood size variant WBPhenotype:0000673
+cyk-1,WBGene00000872,brood size variant WBPhenotype:0000673
+klc-2,WBGene00002215,brood size variant WBPhenotype:0000673
+tbx-8,WBGene00006545,brood size variant WBPhenotype:0000673
+let-413,WBGene00002632,brood size variant WBPhenotype:0000673
+shn-1,WBGene00006444,brood size variant WBPhenotype:0000673
+ost-1,WBGene00003893,brood size variant WBPhenotype:0000673
+lin-45,WBGene00003030,pathogen susceptibility increased WBPhenotype:0001013
+tph-1,WBGene00006600,pathogen susceptibility increased WBPhenotype:0001013
+mpk-1,WBGene00003401,pathogen susceptibility increased WBPhenotype:0001013
+let-363,WBGene00002583,mid larval arrest WBPhenotype:0001019
+cul-4,WBGene00000839,mid larval arrest WBPhenotype:0001019
+ptr-1,WBGene00004216,small WBPhenotype:0000229
+utx-1,WBGene00017046,small WBPhenotype:0000229
+ptr-13,WBGene00004227,small WBPhenotype:0000229
+unc-73,WBGene00006805,small WBPhenotype:0000229
+dpy-18,WBGene00001077,small WBPhenotype:0000229
+ptr-6,WBGene00004221,small WBPhenotype:0000229
+mca-2,WBGene00019875,small WBPhenotype:0000229
+unc-10,WBGene00006750,small WBPhenotype:0000229
+tat-4,WBGene00020784,small WBPhenotype:0000229
+ptr-2,WBGene00004217,small WBPhenotype:0000229
+unc-22,WBGene00006759,small WBPhenotype:0000229
+ost-1,WBGene00003893,small WBPhenotype:0000229
+ace-1,WBGene00000035,chemical hypersensitive WBPhenotype:0001918
+let-363,WBGene00002583,protein expression reduced WBPhenotype:0000120
+tbx-9,WBGene00006546,protein expression reduced WBPhenotype:0000120
+set-16,WBGene00011729,protein expression reduced WBPhenotype:0000120
+daf-18,WBGene00000913,protein expression reduced WBPhenotype:0000120
+paa-1,WBGene00003901,protein expression reduced WBPhenotype:0000120
+gsk-3,WBGene00001746,protein expression reduced WBPhenotype:0000120
+klc-2,WBGene00002215,protein expression reduced WBPhenotype:0000120
+gex-3,WBGene00001580,protein expression reduced WBPhenotype:0000120
+let-363,WBGene00002583,late larval arrest WBPhenotype:0000056
+dlg-1,WBGene00001006,actin organization biogenesis variant WBPhenotype:0001587
+vab-19,WBGene00006882,actin organization biogenesis variant WBPhenotype:0001587
+gex-3,WBGene00001580,actin organization biogenesis variant WBPhenotype:0001587
+rib-1,WBGene00004360,actin organization biogenesis variant WBPhenotype:0001587
+let-413,WBGene00002632,actin organization biogenesis variant WBPhenotype:0001587
+lin-45,WBGene00003030,germ cell compartment anucleate WBPhenotype:0001971
+C32D5.3,WBGene00016311,germ cell compartment anucleate WBPhenotype:0001971
+mpk-1,WBGene00003401,germ cell compartment anucleate WBPhenotype:0001971
+paa-1,WBGene00003901,germ cell compartment anucleate WBPhenotype:0001971
+prkl-1,WBGene00022727,cell differentiation variant WBPhenotype:0000354
+dhcr-7,WBGene00007126,cell differentiation variant WBPhenotype:0000354
+cbp-1,WBGene00000366,cell differentiation variant WBPhenotype:0000354
+cnt-2,WBGene00000566,cell differentiation variant WBPhenotype:0000354
+gsk-3,WBGene00001746,cell differentiation variant WBPhenotype:0000354
+adsl-1,WBGene00011064,embryonic cell morphology variant WBPhenotype:0000770
+mcm-4,WBGene00003156,embryonic cell morphology variant WBPhenotype:0000770
+cyk-1,WBGene00000872,embryonic cell morphology variant WBPhenotype:0000770
+ptr-2,WBGene00004217,embryonic cell morphology variant WBPhenotype:0000770
+mcm-4,WBGene00003156,thin WBPhenotype:0000164
+unc-10,WBGene00006750,thin WBPhenotype:0000164
+mpk-1,WBGene00003401,thin WBPhenotype:0000164
+unc-22,WBGene00006759,thin WBPhenotype:0000164
+let-363,WBGene00002583,organism heat response variant WBPhenotype:0001273
+jmjd-3.1,WBGene00017571,organism heat response variant WBPhenotype:0001273
+rbr-2,WBGene00004319,vulval cell induction reduced WBPhenotype:0000219
+lin-45,WBGene00003030,vulval cell induction reduced WBPhenotype:0000219
+cbp-1,WBGene00000366,vulval cell induction reduced WBPhenotype:0000219
+dep-1,WBGene00009717,vulval cell induction reduced WBPhenotype:0000219
+mpk-1,WBGene00003401,vulval cell induction reduced WBPhenotype:0000219
+ptr-1,WBGene00004216,alae morphology variant WBPhenotype:0001412
+ptr-17,WBGene00004231,alae morphology variant WBPhenotype:0001412
+shl-1,WBGene00022240,copulation variant WBPhenotype:0000647
+vab-3,WBGene00006870,copulation variant WBPhenotype:0000647
+daf-6,WBGene00000902,copulation variant WBPhenotype:0000647
+cul-4,WBGene00000839,nuclei enlarged WBPhenotype:0001567
+top-1,WBGene00006595,shortened life span WBPhenotype:0001171
+let-363,WBGene00002583,shortened life span WBPhenotype:0001171
+rbr-2,WBGene00004319,shortened life span WBPhenotype:0001171
+ptp-2,WBGene00004214,shortened life span WBPhenotype:0001171
+lin-45,WBGene00003030,shortened life span WBPhenotype:0001171
+cbp-1,WBGene00000366,shortened life span WBPhenotype:0001171
+daf-18,WBGene00000913,shortened life span WBPhenotype:0001171
+nlg-1,WBGene00006412,shortened life span WBPhenotype:0001171
+mpk-1,WBGene00003401,shortened life span WBPhenotype:0001171
+cul-3,WBGene00000838,shortened life span WBPhenotype:0001171
+agmo-1,WBGene00007210,shortened life span WBPhenotype:0001171
+cul-4,WBGene00000839,shortened life span WBPhenotype:0001171
+gsa-1,WBGene00001745,shortened life span WBPhenotype:0001171
+utx-1,WBGene00017046,VPC competence variant WBPhenotype:0002017
+rbr-2,WBGene00004319,VPC competence variant WBPhenotype:0002017
+lin-45,WBGene00003030,VPC competence variant WBPhenotype:0002017
+cbp-1,WBGene00000366,VPC competence variant WBPhenotype:0002017
+set-16,WBGene00011729,VPC competence variant WBPhenotype:0002017
+dep-1,WBGene00009717,VPC competence variant WBPhenotype:0002017
+mpk-1,WBGene00003401,VPC competence variant WBPhenotype:0002017
+unc-22,WBGene00006759,VPC competence variant WBPhenotype:0002017
+top-1,WBGene00006595,oocyte physiology variant WBPhenotype:0001424
+adsl-1,WBGene00011064,oocyte physiology variant WBPhenotype:0001424
+C32D5.3,WBGene00016311,oocyte physiology variant WBPhenotype:0001424
+set-16,WBGene00011729,oocyte physiology variant WBPhenotype:0001424
+cnt-2,WBGene00000566,oocyte physiology variant WBPhenotype:0001424
+mca-3,WBGene00003153,oocyte physiology variant WBPhenotype:0001424
+mpk-1,WBGene00003401,oocyte physiology variant WBPhenotype:0001424
+cyk-1,WBGene00000872,oocyte physiology variant WBPhenotype:0001424
+paa-1,WBGene00003901,oocyte physiology variant WBPhenotype:0001424
+gsk-3,WBGene00001746,oocyte physiology variant WBPhenotype:0001424
+gex-3,WBGene00001580,oocyte physiology variant WBPhenotype:0001424
+gsa-1,WBGene00001745,oocyte physiology variant WBPhenotype:0001424
+phy-2,WBGene00004025,endosome morphology variant WBPhenotype:0002090
+cbp-1,WBGene00000366,endosome morphology variant WBPhenotype:0002090
+eif-3.G,WBGene00001230,endosome morphology variant WBPhenotype:0002090
+sec-15,WBGene00016188,endosome morphology variant WBPhenotype:0002090
+rpl-10,WBGene00004421,endosome morphology variant WBPhenotype:0002090
+paa-1,WBGene00003901,endosome morphology variant WBPhenotype:0002090
+aps-1,WBGene00000159,endosome morphology variant WBPhenotype:0002090
+utx-1,WBGene00017046,vulval cell induction increased WBPhenotype:0000218
+rbr-2,WBGene00004319,vulval cell induction increased WBPhenotype:0000218
+set-16,WBGene00011729,vulval cell induction increased WBPhenotype:0000218
+dep-1,WBGene00009717,vulval cell induction increased WBPhenotype:0000218
+mpk-1,WBGene00003401,vulval cell induction increased WBPhenotype:0000218
+unc-22,WBGene00006759,vulval cell induction increased WBPhenotype:0000218
+utx-1,WBGene00017046,extended life span WBPhenotype:0000061
+let-363,WBGene00002583,extended life span WBPhenotype:0000061
+rbr-2,WBGene00004319,extended life span WBPhenotype:0000061
+nrx-1,WBGene00007799,extended life span WBPhenotype:0000061
+tph-1,WBGene00006600,extended life span WBPhenotype:0000061
+daf-18,WBGene00000913,extended life span WBPhenotype:0000061
+glc-4,WBGene00001594,extended life span WBPhenotype:0000061
+top-1,WBGene00006595,gonad development variant WBPhenotype:0000691
+let-363,WBGene00002583,gonad development variant WBPhenotype:0000691
+prkl-1,WBGene00022727,gonad development variant WBPhenotype:0000691
+mcm-4,WBGene00003156,gonad development variant WBPhenotype:0000691
+lin-45,WBGene00003030,gonad development variant WBPhenotype:0000691
+C32D5.3,WBGene00016311,gonad development variant WBPhenotype:0000691
+unc-73,WBGene00006805,gonad development variant WBPhenotype:0000691
+mpk-1,WBGene00003401,gonad development variant WBPhenotype:0000691
+cyk-1,WBGene00000872,gonad development variant WBPhenotype:0000691
+xnp-1,WBGene00006961,gonad development variant WBPhenotype:0000691
+gsa-1,WBGene00001745,gonad development variant WBPhenotype:0000691
+tbx-9,WBGene00006546,neurite morphology variant WBPhenotype:0001398
+unc-73,WBGene00006805,neurite morphology variant WBPhenotype:0001398
+gsk-3,WBGene00001746,neurite morphology variant WBPhenotype:0001398
+mod-5,WBGene00003387,neurite morphology variant WBPhenotype:0001398
+gex-3,WBGene00001580,neurite morphology variant WBPhenotype:0001398
+avr-14,WBGene00000232,chemosensory behavior variant WBPhenotype:0001049
+lin-45,WBGene00003030,chemosensory behavior variant WBPhenotype:0001049
+slo-1,WBGene00004830,chemosensory behavior variant WBPhenotype:0001049
+tph-1,WBGene00006600,chemosensory behavior variant WBPhenotype:0001049
+avr-15,WBGene00000233,chemosensory behavior variant WBPhenotype:0001049
+vab-3,WBGene00006870,chemosensory behavior variant WBPhenotype:0001049
+daf-18,WBGene00000913,chemosensory behavior variant WBPhenotype:0001049
+nlg-1,WBGene00006412,chemosensory behavior variant WBPhenotype:0001049
+mpk-1,WBGene00003401,chemosensory behavior variant WBPhenotype:0001049
+ntr-1,WBGene00011582,chemosensory behavior variant WBPhenotype:0001049
+daf-6,WBGene00000902,chemosensory behavior variant WBPhenotype:0001049
+mod-5,WBGene00003387,chemosensory behavior variant WBPhenotype:0001049
+F23C8.5,WBGene00017734,early larval lethal WBPhenotype:0000057
+utx-1,WBGene00017046,early larval lethal WBPhenotype:0000057
+mua-3,WBGene00003482,early larval lethal WBPhenotype:0000057
+ccb-1,WBGene00000368,early larval lethal WBPhenotype:0000057
+mcm-4,WBGene00003156,early larval lethal WBPhenotype:0000057
+set-16,WBGene00011729,early larval lethal WBPhenotype:0000057
+ptr-2,WBGene00004217,early larval lethal WBPhenotype:0000057
+bcl-11,WBGene00017430,early larval lethal WBPhenotype:0000057
+aps-1,WBGene00000159,early larval lethal WBPhenotype:0000057
+let-413,WBGene00002632,early larval lethal WBPhenotype:0000057
+ptr-1,WBGene00004216,organism segment development variant WBPhenotype:0000579
+vab-3,WBGene00006870,organism segment development variant WBPhenotype:0000579
+ptr-2,WBGene00004217,organism segment development variant WBPhenotype:0000579
+unc-73,WBGene00006805,neuropil development variant WBPhenotype:0000945
+set-16,WBGene00011729,antibody staining reduced WBPhenotype:0000425
+daf-18,WBGene00000913,antibody staining reduced WBPhenotype:0000425
+gsk-3,WBGene00001746,stress induced lethality variant WBPhenotype:0000139
+lin-45,WBGene00003030,cell membrane organization biogenesis variant WBPhenotype:0001982
+C32D5.3,WBGene00016311,cell membrane organization biogenesis variant WBPhenotype:0001982
+cbp-1,WBGene00000366,cell membrane organization biogenesis variant WBPhenotype:0001982
+ceh-43,WBGene00000463,cell membrane organization biogenesis variant WBPhenotype:0001982
+mpk-1,WBGene00003401,cell membrane organization biogenesis variant WBPhenotype:0001982
+paa-1,WBGene00003901,cell membrane organization biogenesis variant WBPhenotype:0001982
+aps-1,WBGene00000159,cell membrane organization biogenesis variant WBPhenotype:0001982
+gap-2,WBGene00001516,cell membrane organization biogenesis variant WBPhenotype:0001982
+cbp-1,WBGene00000366,oocyte number decreased WBPhenotype:0001944
+mpk-1,WBGene00003401,oocyte number decreased WBPhenotype:0001944
+rpl-10,WBGene00004421,oocyte number decreased WBPhenotype:0001944
+glc-1,WBGene00001591,reversal variant WBPhenotype:0002320
+mcm-4,WBGene00003156,reversal variant WBPhenotype:0002320
+trp-1,WBGene00006614,reversal variant WBPhenotype:0002320
+tph-1,WBGene00006600,reversal variant WBPhenotype:0002320
+nlg-1,WBGene00006412,reversal variant WBPhenotype:0002320
+unc-10,WBGene00006750,reversal variant WBPhenotype:0002320
+mod-5,WBGene00003387,reversal variant WBPhenotype:0002320
+ptr-1,WBGene00004216,pericellular component morphology variant WBPhenotype:0000912
+ptr-17,WBGene00004231,pericellular component morphology variant WBPhenotype:0000912
+lin-45,WBGene00003030,oocyte septum formation variant WBPhenotype:0001810
+C32D5.3,WBGene00016311,oocyte septum formation variant WBPhenotype:0001810
+mpk-1,WBGene00003401,oocyte septum formation variant WBPhenotype:0001810
+tat-4,WBGene00020784,Bacillus thuringiensis toxin hypersensitive WBPhenotype:0002057
+hpo-29,WBGene00021754,Bacillus thuringiensis toxin hypersensitive WBPhenotype:0002057
+mca-1,WBGene00003151,Bacillus thuringiensis toxin hypersensitive WBPhenotype:0002057
+cyk-1,WBGene00000872,everted vulva WBPhenotype:0000696
+xnp-1,WBGene00006961,everted vulva WBPhenotype:0000696
+utx-1,WBGene00017046,egg laying defective WBPhenotype:0000006
+syd-2,WBGene00006364,egg laying defective WBPhenotype:0000006
+swsn-4,WBGene00004204,egg laying defective WBPhenotype:0000006
+cbp-1,WBGene00000366,egg laying defective WBPhenotype:0000006
+tph-1,WBGene00006600,egg laying defective WBPhenotype:0000006
+unc-73,WBGene00006805,egg laying defective WBPhenotype:0000006
+gex-3,WBGene00001580,egg laying defective WBPhenotype:0000006
+gsa-1,WBGene00001745,egg laying defective WBPhenotype:0000006
+ost-1,WBGene00003893,egg laying defective WBPhenotype:0000006
+lin-45,WBGene00003030,germ cell compartment multinucleate WBPhenotype:0001972
+D2085.4,WBGene00008429,germ cell compartment multinucleate WBPhenotype:0001972
+mpk-1,WBGene00003401,germ cell compartment multinucleate WBPhenotype:0001972
+ptr-2,WBGene00004217,germ cell compartment multinucleate WBPhenotype:0001972
+paa-1,WBGene00003901,germ cell compartment multinucleate WBPhenotype:0001972
+mua-3,WBGene00003482,sick WBPhenotype:0000032
+dhcr-7,WBGene00007126,sick WBPhenotype:0000032
+swsn-4,WBGene00004204,sick WBPhenotype:0000032
+cbp-1,WBGene00000366,sick WBPhenotype:0000032
+set-16,WBGene00011729,sick WBPhenotype:0000032
+mpk-1,WBGene00003401,sick WBPhenotype:0000032
+tat-4,WBGene00020784,sick WBPhenotype:0000032
+cyk-1,WBGene00000872,sick WBPhenotype:0000032
+ptr-2,WBGene00004217,sick WBPhenotype:0000032
+paa-1,WBGene00003901,sick WBPhenotype:0000032
+aps-1,WBGene00000159,sick WBPhenotype:0000032
+gsa-1,WBGene00001745,sick WBPhenotype:0000032
+tph-1,WBGene00006600,fat content reduced WBPhenotype:0001183
+tbc-18,WBGene00018281,fat content reduced WBPhenotype:0001183
+daf-18,WBGene00000913,fat content reduced WBPhenotype:0001183
+mod-5,WBGene00003387,fat content reduced WBPhenotype:0001183
+gsa-1,WBGene00001745,protein phosphorylation reduced WBPhenotype:0001351
+mca-3,WBGene00003153,adult lethal WBPhenotype:0000060
+daf-18,WBGene00000913,adult lethal WBPhenotype:0000060
+cyk-1,WBGene00000872,adult lethal WBPhenotype:0000060
+mua-3,WBGene00003482,accumulated germline cell corpses WBPhenotype:0001180
+C32D5.3,WBGene00016311,accumulated germline cell corpses WBPhenotype:0001180
+cbp-1,WBGene00000366,accumulated germline cell corpses WBPhenotype:0001180
+D2085.4,WBGene00008429,accumulated germline cell corpses WBPhenotype:0001180
+paa-1,WBGene00003901,accumulated germline cell corpses WBPhenotype:0001180
+xnp-1,WBGene00006961,accumulated germline cell corpses WBPhenotype:0001180
+exc-7,WBGene00001368,excess intestinal cells WBPhenotype:0001636
+gsk-3,WBGene00001746,excess intestinal cells WBPhenotype:0001636
+unc-10,WBGene00006750,body posture wavelength decreased WBPhenotype:0002295
+lin-45,WBGene00003030,germ cell mitosis variant WBPhenotype:0001215
+mpk-1,WBGene00003401,germ cell mitosis variant WBPhenotype:0001215
+avr-14,WBGene00000232,organism starvation response variant WBPhenotype:0000147
+tph-1,WBGene00006600,organism starvation response variant WBPhenotype:0000147
+avr-15,WBGene00000233,organism starvation response variant WBPhenotype:0000147
+daf-18,WBGene00000913,organism starvation response variant WBPhenotype:0000147
+daf-6,WBGene00000902,organism starvation response variant WBPhenotype:0000147
+lin-45,WBGene00003030,eggshell formation variant WBPhenotype:0002075
+ptr-2,WBGene00004217,eggshell formation variant WBPhenotype:0002075
+top-1,WBGene00006595,muscle system morphology variant WBPhenotype:0000603
+cyk-1,WBGene00000872,muscle system morphology variant WBPhenotype:0000603
+tbx-8,WBGene00006545,muscle system morphology variant WBPhenotype:0000603
+unc-22,WBGene00006759,muscle system morphology variant WBPhenotype:0000603
+mpk-1,WBGene00003401,nuclei small WBPhenotype:0001792
+paa-1,WBGene00003901,nuclei small WBPhenotype:0001792
+top-1,WBGene00006595,meiotic chromosome segregation variant WBPhenotype:0001499
+glc-1,WBGene00001591,dauer metabolism variant WBPhenotype:0001547
+vab-19,WBGene00006882,dauer metabolism variant WBPhenotype:0001547
+gsnl-1,WBGene00010593,dauer metabolism variant WBPhenotype:0001547
+mpk-1,WBGene00003401,dauer metabolism variant WBPhenotype:0001547
+cul-4,WBGene00000839,dauer metabolism variant WBPhenotype:0001547
+ptr-1,WBGene00004216,body morphology variant WBPhenotype:0000072
+utx-1,WBGene00017046,body morphology variant WBPhenotype:0000072
+dlg-1,WBGene00001006,body morphology variant WBPhenotype:0000072
+ptr-13,WBGene00004227,body morphology variant WBPhenotype:0000072
+top-1,WBGene00006595,body morphology variant WBPhenotype:0000072
+mcm-4,WBGene00003156,body morphology variant WBPhenotype:0000072
+lin-45,WBGene00003030,body morphology variant WBPhenotype:0000072
+tbx-9,WBGene00006546,body morphology variant WBPhenotype:0000072
+trp-1,WBGene00006614,body morphology variant WBPhenotype:0000072
+tph-1,WBGene00006600,body morphology variant WBPhenotype:0000072
+unc-73,WBGene00006805,body morphology variant WBPhenotype:0000072
+vab-3,WBGene00006870,body morphology variant WBPhenotype:0000072
+hmp-1,WBGene00001978,body morphology variant WBPhenotype:0000072
+dpy-18,WBGene00001077,body morphology variant WBPhenotype:0000072
+snf-11,WBGene00004910,body morphology variant WBPhenotype:0000072
+eif-3.G,WBGene00001230,body morphology variant WBPhenotype:0000072
+ptr-6,WBGene00004221,body morphology variant WBPhenotype:0000072
+mca-2,WBGene00019875,body morphology variant WBPhenotype:0000072
+unc-10,WBGene00006750,body morphology variant WBPhenotype:0000072
+mpk-1,WBGene00003401,body morphology variant WBPhenotype:0000072
+tat-4,WBGene00020784,body morphology variant WBPhenotype:0000072
+cyk-1,WBGene00000872,body morphology variant WBPhenotype:0000072
+ptr-2,WBGene00004217,body morphology variant WBPhenotype:0000072
+ptr-10,WBGene00004224,body morphology variant WBPhenotype:0000072
+tbx-8,WBGene00006545,body morphology variant WBPhenotype:0000072
+mod-5,WBGene00003387,body morphology variant WBPhenotype:0000072
+let-413,WBGene00002632,body morphology variant WBPhenotype:0000072
+unc-22,WBGene00006759,body morphology variant WBPhenotype:0000072
+ost-1,WBGene00003893,body morphology variant WBPhenotype:0000072
+adsl-1,WBGene00011064,nonsense mRNA accumulation WBPhenotype:0000508
+dhcr-7,WBGene00007126,nonsense mRNA accumulation WBPhenotype:0000508
+cbp-1,WBGene00000366,paraquat hypersensitive WBPhenotype:0000462
+daf-18,WBGene00000913,paraquat hypersensitive WBPhenotype:0000462
+nlg-1,WBGene00006412,paraquat hypersensitive WBPhenotype:0000462
+ccb-1,WBGene00000368,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+syd-2,WBGene00006364,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+exc-7,WBGene00001368,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+dkf-2,WBGene00012019,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+slo-1,WBGene00004830,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+unc-73,WBGene00006805,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+unc-10,WBGene00006750,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+mpk-1,WBGene00003401,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+ace-1,WBGene00000035,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+gsk-3,WBGene00001746,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+aps-1,WBGene00000159,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+tag-232,WBGene00044077,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+snn-1,WBGene00004913,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+gsa-1,WBGene00001745,acetylcholinesterase inhibitor response variant WBPhenotype:0001290
+rig-4,WBGene00004371,cleavage furrow initiation defective early emb WBPhenotype:0001885
+jac-1,WBGene00002175,cleavage furrow initiation defective early emb WBPhenotype:0001885
+lin-45,WBGene00003030,pachytene progression during oogenesis variant WBPhenotype:0001946
+cbp-1,WBGene00000366,pachytene progression during oogenesis variant WBPhenotype:0001946
+mpk-1,WBGene00003401,pachytene progression during oogenesis variant WBPhenotype:0001946
+rpl-10,WBGene00004421,pachytene progression during oogenesis variant WBPhenotype:0001946
+paa-1,WBGene00003901,pachytene progression during oogenesis variant WBPhenotype:0001946
+cbp-1,WBGene00000366,apoptosis reduced WBPhenotype:0000182
+mpk-1,WBGene00003401,apoptosis reduced WBPhenotype:0000182
+F23C8.5,WBGene00017734,transgene expression increased WBPhenotype:0001236
+gcst-1,WBGene00017765,transgene expression increased WBPhenotype:0001236
+let-363,WBGene00002583,transgene expression increased WBPhenotype:0001236
+adsl-1,WBGene00011064,transgene expression increased WBPhenotype:0001236
+dhcr-7,WBGene00007126,transgene expression increased WBPhenotype:0001236
+alh-1,WBGene00000107,transgene expression increased WBPhenotype:0001236
+tbx-9,WBGene00006546,transgene expression increased WBPhenotype:0001236
+metr-1,WBGene00010988,transgene expression increased WBPhenotype:0001236
+set-16,WBGene00011729,transgene expression increased WBPhenotype:0001236
+vab-3,WBGene00006870,transgene expression increased WBPhenotype:0001236
+eif-3.G,WBGene00001230,transgene expression increased WBPhenotype:0001236
+daf-18,WBGene00000913,transgene expression increased WBPhenotype:0001236
+ptr-6,WBGene00004221,transgene expression increased WBPhenotype:0001236
+mthf-1,WBGene00015512,transgene expression increased WBPhenotype:0001236
+paa-1,WBGene00003901,transgene expression increased WBPhenotype:0001236
+cul-3,WBGene00000838,transgene expression increased WBPhenotype:0001236
+tbx-8,WBGene00006545,transgene expression increased WBPhenotype:0001236
+cul-4,WBGene00000839,transgene expression increased WBPhenotype:0001236
+gsa-1,WBGene00001745,transgene expression increased WBPhenotype:0001236
+alh-7,WBGene00000113,movement variant WBPhenotype:0001206
+rig-4,WBGene00004371,movement variant WBPhenotype:0001206
+avr-14,WBGene00000232,movement variant WBPhenotype:0001206
+ptr-1,WBGene00004216,movement variant WBPhenotype:0001206
+utx-1,WBGene00017046,movement variant WBPhenotype:0001206
+ptr-13,WBGene00004227,movement variant WBPhenotype:0001206
+mua-3,WBGene00003482,movement variant WBPhenotype:0001206
+top-1,WBGene00006595,movement variant WBPhenotype:0001206
+exc-5,WBGene00001366,movement variant WBPhenotype:0001206
+ccb-1,WBGene00000368,movement variant WBPhenotype:0001206
+adsl-1,WBGene00011064,movement variant WBPhenotype:0001206
+syd-2,WBGene00006364,movement variant WBPhenotype:0001206
+dhcr-7,WBGene00007126,movement variant WBPhenotype:0001206
+glc-1,WBGene00001591,movement variant WBPhenotype:0001206
+ptp-2,WBGene00004214,movement variant WBPhenotype:0001206
+mcm-4,WBGene00003156,movement variant WBPhenotype:0001206
+mec-6,WBGene00003170,movement variant WBPhenotype:0001206
+trp-1,WBGene00006614,movement variant WBPhenotype:0001206
+slo-1,WBGene00004830,movement variant WBPhenotype:0001206
+tph-1,WBGene00006600,movement variant WBPhenotype:0001206
+set-16,WBGene00011729,movement variant WBPhenotype:0001206
+avr-15,WBGene00000233,movement variant WBPhenotype:0001206
+unc-73,WBGene00006805,movement variant WBPhenotype:0001206
+dpy-18,WBGene00001077,movement variant WBPhenotype:0001206
+mca-3,WBGene00003153,movement variant WBPhenotype:0001206
+snf-11,WBGene00004910,movement variant WBPhenotype:0001206
+eif-3.G,WBGene00001230,movement variant WBPhenotype:0001206
+ceh-43,WBGene00000463,movement variant WBPhenotype:0001206
+ztf-11,WBGene00009939,movement variant WBPhenotype:0001206
+nlg-1,WBGene00006412,movement variant WBPhenotype:0001206
+ptr-6,WBGene00004221,movement variant WBPhenotype:0001206
+mca-2,WBGene00019875,movement variant WBPhenotype:0001206
+mbk-1,WBGene00003149,movement variant WBPhenotype:0001206
+ampd-1,WBGene00016415,movement variant WBPhenotype:0001206
+unc-10,WBGene00006750,movement variant WBPhenotype:0001206
+cyk-1,WBGene00000872,movement variant WBPhenotype:0001206
+ptr-2,WBGene00004217,movement variant WBPhenotype:0001206
+paa-1,WBGene00003901,movement variant WBPhenotype:0001206
+bcl-11,WBGene00017430,movement variant WBPhenotype:0001206
+gsk-3,WBGene00001746,movement variant WBPhenotype:0001206
+aps-1,WBGene00000159,movement variant WBPhenotype:0001206
+mod-5,WBGene00003387,movement variant WBPhenotype:0001206
+gex-3,WBGene00001580,movement variant WBPhenotype:0001206
+cul-4,WBGene00000839,movement variant WBPhenotype:0001206
+let-413,WBGene00002632,movement variant WBPhenotype:0001206
+unc-22,WBGene00006759,movement variant WBPhenotype:0001206
+mca-1,WBGene00003151,movement variant WBPhenotype:0001206
+gsa-1,WBGene00001745,movement variant WBPhenotype:0001206
+cbp-1,WBGene00000366,lysosome-related organelle morphology variant WBPhenotype:0002095
+eif-3.G,WBGene00001230,lysosome-related organelle morphology variant WBPhenotype:0002095
+sec-15,WBGene00016188,lysosome-related organelle morphology variant WBPhenotype:0002095
+rpl-10,WBGene00004421,lysosome-related organelle morphology variant WBPhenotype:0002095
+aps-1,WBGene00000159,lysosome-related organelle morphology variant WBPhenotype:0002095
+lin-45,WBGene00003030,gonad vesiculated WBPhenotype:0001979
+C32D5.3,WBGene00016311,gonad vesiculated WBPhenotype:0001979
+rpl-10,WBGene00004421,gonad vesiculated WBPhenotype:0001979
+paa-1,WBGene00003901,gonad vesiculated WBPhenotype:0001979
+vab-3,WBGene00006870,male mating defective WBPhenotype:0001414
+daf-6,WBGene00000902,male mating defective WBPhenotype:0001414
+ptr-1,WBGene00004216,molt variant WBPhenotype:0002041
+ptr-13,WBGene00004227,molt variant WBPhenotype:0002041
+top-1,WBGene00006595,molt variant WBPhenotype:0002041
+vab-19,WBGene00006882,molt variant WBPhenotype:0002041
+cbp-1,WBGene00000366,molt variant WBPhenotype:0002041
+ptr-6,WBGene00004221,molt variant WBPhenotype:0002041
+ptr-2,WBGene00004217,molt variant WBPhenotype:0002041
+ptr-10,WBGene00004224,molt variant WBPhenotype:0002041
+vab-3,WBGene00006870,male nervous system development variant WBPhenotype:0001008
+dpy-18,WBGene00001077,male nervous system development variant WBPhenotype:0001008
+let-363,WBGene00002583,lipid metabolism variant WBPhenotype:0000725
+alh-1,WBGene00000107,lipid metabolism variant WBPhenotype:0000725
+cbp-1,WBGene00000366,lipid metabolism variant WBPhenotype:0000725
+tph-1,WBGene00006600,lipid metabolism variant WBPhenotype:0000725
+tbc-18,WBGene00018281,lipid metabolism variant WBPhenotype:0000725
+daf-18,WBGene00000913,lipid metabolism variant WBPhenotype:0000725
+mod-5,WBGene00003387,lipid metabolism variant WBPhenotype:0000725
+utx-1,WBGene00017046,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+top-1,WBGene00006595,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+adsl-1,WBGene00011064,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+vab-19,WBGene00006882,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+swsn-4,WBGene00004204,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+cbp-1,WBGene00000366,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+unc-73,WBGene00006805,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+eif-3.G,WBGene00001230,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+mpk-1,WBGene00003401,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+tat-4,WBGene00020784,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+cyk-1,WBGene00000872,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+xnp-1,WBGene00006961,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+gex-3,WBGene00001580,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+rib-1,WBGene00004360,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+cul-4,WBGene00000839,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+let-413,WBGene00002632,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+gsa-1,WBGene00001745,hermaphrodite reproductive system morphology variant WBPhenotype:0001335
+tat-4,WBGene00020784,pore forming toxin response variant WBPhenotype:0002058
+hpo-29,WBGene00021754,pore forming toxin response variant WBPhenotype:0002058
+mca-1,WBGene00003151,pore forming toxin response variant WBPhenotype:0002058
+C32D5.3,WBGene00016311,apoptosis increased WBPhenotype:0000183
+cbp-1,WBGene00000366,apoptosis increased WBPhenotype:0000183
+paa-1,WBGene00003901,apoptosis increased WBPhenotype:0000183
+glc-1,WBGene00001591,pathogen resistance increased WBPhenotype:0001014
+lin-45,WBGene00003030,pathogen resistance increased WBPhenotype:0001014
+unc-73,WBGene00006805,pathogen resistance increased WBPhenotype:0001014
+mpk-1,WBGene00003401,pathogen resistance increased WBPhenotype:0001014
+gsk-3,WBGene00001746,pathogen resistance increased WBPhenotype:0001014
+mpk-1,WBGene00003401,germ cell physiology variant WBPhenotype:0000987
+cul-3,WBGene00000838,one cell arrest early emb WBPhenotype:0000040
+mua-3,WBGene00003482,clear WBPhenotype:0001010
+ceh-43,WBGene00000463,clear WBPhenotype:0001010
+cyk-1,WBGene00000872,clear WBPhenotype:0001010
+aps-1,WBGene00000159,clear WBPhenotype:0001010
+ost-1,WBGene00003893,clear WBPhenotype:0001010
+lin-45,WBGene00003030,germline nuclear positioning variant WBPhenotype:0001952
+D2085.4,WBGene00008429,germline nuclear positioning variant WBPhenotype:0001952
+mpk-1,WBGene00003401,germline nuclear positioning variant WBPhenotype:0001952
+ptr-2,WBGene00004217,germline nuclear positioning variant WBPhenotype:0001952
+paa-1,WBGene00003901,germline nuclear positioning variant WBPhenotype:0001952
+aps-1,WBGene00000159,germline nuclear positioning variant WBPhenotype:0001952
+gap-2,WBGene00001516,germline nuclear positioning variant WBPhenotype:0001952
+lin-45,WBGene00003030,rachis wide WBPhenotype:0001943
+mpk-1,WBGene00003401,rachis wide WBPhenotype:0001943
+cbp-1,WBGene00000366,rachis narrow WBPhenotype:0001941
+rpl-10,WBGene00004421,rachis narrow WBPhenotype:0001941
+paa-1,WBGene00003901,rachis narrow WBPhenotype:0001941
+syd-2,WBGene00006364,inhibitor of serotonin uptake variant WBPhenotype:0001598
+dlg-1,WBGene00001006,egg morphology variant WBPhenotype:0000037
+rbr-2,WBGene00004319,egg morphology variant WBPhenotype:0000037
+ccb-1,WBGene00000368,dauer development variant WBPhenotype:0000308
+let-363,WBGene00002583,dauer development variant WBPhenotype:0000308
+ptp-2,WBGene00004214,dauer development variant WBPhenotype:0000308
+vab-3,WBGene00006870,dauer development variant WBPhenotype:0000308
+daf-18,WBGene00000913,dauer development variant WBPhenotype:0000308
+glc-4,WBGene00001594,dauer development variant WBPhenotype:0000308
+daf-6,WBGene00000902,dauer development variant WBPhenotype:0000308
+C10C5.4,WBGene00007508,dauer development variant WBPhenotype:0000308
