@@ -94,7 +94,7 @@ def hgf(gene_list, tissue_df):
     # make a hash with the p-values for enrichment of each tissue.
     p_hash = {}
     exp_hash = {}  # expected number for each tissue
-    for i, name in enumerate(tissue_df.columns.values[1:]):
+    for i, name in enumerate(tissue_df.columns.values):
         # if the total number of genes is zero, return p= 1 for all tissues
         if total == 0:
             p_hash[name] = 1
@@ -107,7 +107,6 @@ def hgf(gene_list, tissue_df):
             if wanted_sum[name] == 0:
                 p_hash[name] = 1
             else:
-
                 # no. of balls of color name picked
                 # total number of balls in urn
                 # total number of balls of color name in urn
@@ -338,7 +337,8 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
 
 def fetch_dictionary():
     """Fetch the dictionary we want."""
-    url_tissue = 'ftp://caltech.wormbase.org/pub/TissueEnrichmentAnalysis/anat_dict.csv'
+    url_tissue = 'ftp://caltech.wormbase.org/pub/' +\
+                 'TissueEnrichmentAnalysis/anat_dict.csv'
 
     try:
         with contextlib.closing(urlopen(url_tissue)) as conn:

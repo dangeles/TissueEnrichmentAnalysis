@@ -1,0 +1,132 @@
+\documentclass[10pt,letterpaper,twocolumn]{article}
+% \usepackage[twocolumn]{geometry}
+\usepackage{lmodern}% http://ctan.org/pkg/lm
+
+% use Unicode characters - try changing the option if you run into troubles with special characters (e.g. umlauts)
+\usepackage[utf8x]{inputenc}
+% clean citations
+\usepackage{cite}
+% hyperref makes references clicky. use \url{www.example.com} or \href{www.example.com}{description} to add a clicky url
+\usepackage{nameref}
+% line numbers
+\usepackage[right]{lineno}
+% improves typesetting in LaTeX
+% \usepackage{microtype}
+% degree symbol
+\usepackage{gensymb}
+\usepackage{amsmath}
+\usepackage{booktabs}
+% use adjustwidth environment to exceed text width (see examples in text)
+\usepackage{changepage}
+
+% adjust caption style
+\usepackage[aboveskip=1pt,labelfont=bf,labelsep=period,singlelinecheck=off]{caption}
+
+% remove brackets from references
+\makeatletter
+\renewcommand{\@biblabel}[1]{\quad#1.}
+\makeatother
+
+% headrule, footrule and page numbers
+\usepackage{lastpage,fancyhdr,graphicx}
+\usepackage{epstopdf}
+\pagestyle{myheadings}
+\pagestyle{fancy}
+\fancyhf{}
+\rfoot{\thepage/\pageref{LastPage}}
+\renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
+% \fancyheadoffset[L]{2.25in}
+% \fancyfootoffset[L]{2.25in}
+
+% use \textcolor{color}{text} for colored text (e.g. highlight to-do areas)
+\usepackage{color}
+
+% define custom colors (this one is for figure captions)
+\definecolor{Gray}{gray}{.25}
+
+% this is required to include graphics
+\usepackage{graphicx}
+
+% use if you want to put caption to the side of the figure - see example in text
+\usepackage{sidecap}
+% \usepackage[urlcolor  = blue]{hyperref}
+
+% hyperurls packages:
+\usepackage{xcolor}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+
+
+% use for have text wrap around figures
+\usepackage{wrapfig}
+\usepackage[pscoord]{eso-pic}
+\usepackage[fulladjust]{marginnote}
+\reversemarginpar{}
+
+% new commands
+\newcommand{\cel}{\emph{C.~elegans}}
+\newcommand{\fog}{\emph{\mbox{fog-2}}}
+\newcommand{\ecol}{\emph{E.~coli}}
+
+
+\title{
+  \Large
+  \textbf{Phenotype Enrichment Discovers Phenologues for Disease Modeling in \cel{}}
+}
+
+\author{David Angeles-Albores\textsuperscript{1,$\dagger{}$}
+\and{}
+Paul W. Sternberg\textsuperscript{1,*}
+}
+
+\begin{document}
+
+
+% \vspace*{0.35in}
+
+% title goes here:
+\twocolumn[
+% title
+\maketitle
+
+
+]
+% now start line numbers
+\nolinenumbers{}
+
+
+
+\section*{Introduction}
+
+\section*{Results}
+
+\subsection*{Developing PEA and GEA}
+
+\subsection*{Applying the WormBase Enrichment Suite to Discover Disease Phenologues}
+\subsubsection*{Obesity}
+\subsubsection*{Schizophrenia}
+\subsubsection*{Type-2 Diabetes}
+\subsubsection*{Crohn's Disease}
+\subsubsection*{Prostate Cancer}
+
+\subsection*{Ontology Enrichment as an aid for Screen Design}
+\subsubsection*{Enrichment in the Linker Cell Transcriptome}
+\subsubsection*{Enrichment in a Linker Cell Screen}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
