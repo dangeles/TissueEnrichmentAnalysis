@@ -19,6 +19,8 @@ wbids = pd.read_csv('../input/wormbase_ids.txt', sep='\t', header=None,
                     names=['wbid', 'human_read', 'target_id'])
 
 ciliated_df = pd.read_excel('~/Downloads/mmc3.xlsx')
+
+
 # define a function to run e.a.s quickly
 def run(path, f, output_path, dictionary, column='gene', **kwargs):
     """Run and save e.a.."""
@@ -63,130 +65,130 @@ for f in os.listdir('../input/hypoxia'):
 #     print(disease, snp[snp.Disease_Trait == disease].shape[0])
 
 
-depression = ['Major depressive disorder', 'Major depressive disorder (broad)']
-celiac = ['Celiac disease', 'Celiac disease and Rheumatoid arthritis']
-macular_degeneration = ['Age-related macular degeneration',
-                        'Age-related macular degeneration (CNV vs. GA)',
-                        'Age-related macular degeneration (CNV)',
-                        'Age-related macular degeneration (GA)',
-                        'Age-related macular degeneration (extreme sampling)',
-                        'Age-related macular degeneration (wet)']
-alcoholism = ['Alcohol and nictotine co-dependence', 'Alcohol consumption',
-              'Alcohol dependence', 'Alcoholism' +
-              '(12-month weekly alcohol consumption)',
-              'Alcoholism (alcohol dependence factor score)',
-              'Alcoholism (alcohol use disorder factor score)',
-              'Alcoholism (heaviness of drinking)']
-alzheimers = ['Alzheimer\'s disease', 'Alzheimer\'s disease (age of onset)',
-              'Alzheimer\'s disease (cognitive decline)',
-              'Alzheimer\'s disease (late onset)',
-              'Alzheimer\'s disease (neuritic plaque pathology)',
-              'Alzheimer\'s disease biomarkers']
-adhd = ['Attention deficit hyperactivity disorder',
-        'Attention deficit hyperactivity disorder (combined symptoms)',
-        'Attention deficit hyperactivity disorder'
-        '(hyperactivity-impulsivity symptoms)',
-        'Attention deficit hyperactivity disorder (inattention symptoms)',
-        'Attention deficit hyperactivity disorder (time to onset)',
-        'Attention deficit hyperactivity disorder and conduct disorder',
-        'Attention deficit hyperactivity disorder motor coordination',
-        'Attention deficit hyperactivity disorder symptoms (interaction)']
-bipolar = ['Bipolar disorder']
-heart_disease = ['Coronary heart disease']
-crohns = ['Crohn\'s disease']
-mult_scler = ['Multiple sclerosis',
-              'Multiple sclerosis (OCB status)',
-              'Multiple sclerosis (age of onset)',
-              'Multiple sclerosis (severity)',
-              'Multiple sclerosis--Brain Glutamate Levels']
-hiv = ['AIDS', 'AIDS progression', 'HIV (mother-to-child transmission)',
-       'HIV-1 control', 'HIV-1 progression', 'HIV-1 susceptibility',
-       'HIV-1 viral setpoint', 'HIV-associated dementia']
-obesity_related = ['Obesity', 'Obesity (early onset extreme)',
-                   'Obesity (extreme)', 'Obesity and blood pressure',
-                   'Obesity and osteoporisis', 'Obesity-related traits']
-ovarian_cancer = ['Ovarian cancer',
-                  'Ovariance cancer in BRCA1 mutation carriers']
-diabetes = ['Type 2 diabetes']
-lupus = ['Systemic lupus erythematosus',
-         'Systemic lupus erythematosus and Systemic sclerosis']
-prostate_cancer = ['Prostate cancer',
-                   'Prostate cancer (gene x gene interaction)',
-                   'Prostate cancer mortality']
-hash_of_list = {'prostate_cancer': prostate_cancer,
-                'lupus': lupus,
-                'diabetes': diabetes,
-                'ovarian_cancer': ovarian_cancer,
-                'obesity_related': obesity_related,
-                'hiv': hiv, 'mult_scler': mult_scler,
-                'crohns': crohns, 'heart_disease': heart_disease,
-                'bipolar': bipolar, 'adhd': adhd,
-                'alzheimers': alzheimers, 'alcoholism': alcoholism,
-                'macular_degeneration': macular_degeneration,
-                'celiac': celiac, 'depression': depression}
+# depression = ['Major depressive disorder', 'Major depressive disorder (broad)']
+# celiac = ['Celiac disease', 'Celiac disease and Rheumatoid arthritis']
+# macular_degeneration = ['Age-related macular degeneration',
+#                         'Age-related macular degeneration (CNV vs. GA)',
+#                         'Age-related macular degeneration (CNV)',
+#                         'Age-related macular degeneration (GA)',
+#                         'Age-related macular degeneration (extreme sampling)',
+#                         'Age-related macular degeneration (wet)']
+# alcoholism = ['Alcohol and nictotine co-dependence', 'Alcohol consumption',
+#               'Alcohol dependence', 'Alcoholism' +
+#               '(12-month weekly alcohol consumption)',
+#               'Alcoholism (alcohol dependence factor score)',
+#               'Alcoholism (alcohol use disorder factor score)',
+#               'Alcoholism (heaviness of drinking)']
+# alzheimers = ['Alzheimer\'s disease', 'Alzheimer\'s disease (age of onset)',
+#               'Alzheimer\'s disease (cognitive decline)',
+#               'Alzheimer\'s disease (late onset)',
+#               'Alzheimer\'s disease (neuritic plaque pathology)',
+#               'Alzheimer\'s disease biomarkers']
+# adhd = ['Attention deficit hyperactivity disorder',
+#         'Attention deficit hyperactivity disorder (combined symptoms)',
+#         'Attention deficit hyperactivity disorder'
+#         '(hyperactivity-impulsivity symptoms)',
+#         'Attention deficit hyperactivity disorder (inattention symptoms)',
+#         'Attention deficit hyperactivity disorder (time to onset)',
+#         'Attention deficit hyperactivity disorder and conduct disorder',
+#         'Attention deficit hyperactivity disorder motor coordination',
+#         'Attention deficit hyperactivity disorder symptoms (interaction)']
+# bipolar = ['Bipolar disorder']
+# heart_disease = ['Coronary heart disease']
+# crohns = ['Crohn\'s disease']
+# mult_scler = ['Multiple sclerosis',
+#               'Multiple sclerosis (OCB status)',
+#               'Multiple sclerosis (age of onset)',
+#               'Multiple sclerosis (severity)',
+#               'Multiple sclerosis--Brain Glutamate Levels']
+# hiv = ['AIDS', 'AIDS progression', 'HIV (mother-to-child transmission)',
+#        'HIV-1 control', 'HIV-1 progression', 'HIV-1 susceptibility',
+#        'HIV-1 viral setpoint', 'HIV-associated dementia']
+# obesity_related = ['Obesity', 'Obesity (early onset extreme)',
+#                    'Obesity (extreme)', 'Obesity and blood pressure',
+#                    'Obesity and osteoporisis', 'Obesity-related traits']
+# ovarian_cancer = ['Ovarian cancer',
+#                   'Ovariance cancer in BRCA1 mutation carriers']
+# diabetes = ['Type 2 diabetes']
+# lupus = ['Systemic lupus erythematosus',
+#          'Systemic lupus erythematosus and Systemic sclerosis']
+# prostate_cancer = ['Prostate cancer',
+#                    'Prostate cancer (gene x gene interaction)',
+#                    'Prostate cancer mortality']
+# hash_of_list = {'prostate_cancer': prostate_cancer,
+#                 'lupus': lupus,
+#                 'diabetes': diabetes,
+#                 'ovarian_cancer': ovarian_cancer,
+#                 'obesity_related': obesity_related,
+#                 'hiv': hiv, 'mult_scler': mult_scler,
+#                 'crohns': crohns, 'heart_disease': heart_disease,
+#                 'bipolar': bipolar, 'adhd': adhd,
+#                 'alzheimers': alzheimers, 'alcoholism': alcoholism,
+#                 'macular_degeneration': macular_degeneration,
+#                 'celiac': celiac, 'depression': depression}
+#
+# path1 = '../input/disease_gwas/'
+# path2 = '../input/disease_gwas_links/'
+#
+# for key, value in hash_of_list.items():
+#     ind = (snp.Disease_Trait.isin(value))
+#     ind2 = (snp.Mapped_gene != 'Intergenic')
+#     genes = snp[ind & ind2].dropna().Mapped_gene.unique()
+#     links = snp[ind & ind2][['Link', 'Disease_Trait']].dropna().copy()
+#     links.drop_duplicates(inplace=True)
+#     if len(genes) < 30:
+#         continue
+#     if os.path.isfile('../input/disease_gwas/links.csv') is False:
+#         links.to_csv('../input/disease_gwas/links.csv', mode='w', index=False)
+#     else:
+#         links.to_csv('../input/disease_gwas/links.csv', mode='a', index=False,
+#                      header=False)
+#
+#     with open(path1 + key + '.csv', 'w') as f:
+#         for gene in genes:
+#             f.write(gene + '\n')
 
-path1 = '../input/disease_gwas/'
-path2 = '../input/disease_gwas_links/'
-
-for key, value in hash_of_list.items():
-    ind = (snp.Disease_Trait.isin(value))
-    ind2 = (snp.Mapped_gene != 'Intergenic')
-    genes = snp[ind & ind2].dropna().Mapped_gene.unique()
-    links = snp[ind & ind2][['Link', 'Disease_Trait']].dropna().copy()
-    links.drop_duplicates(inplace=True)
-    if len(genes) < 30:
-        continue
-    if os.path.isfile('../input/disease_gwas/links.csv') is False:
-        links.to_csv('../input/disease_gwas/links.csv', mode='w', index=False)
-    else:
-        links.to_csv('../input/disease_gwas/links.csv', mode='a', index=False,
-                     header=False)
-
-    with open(path1 + key + '.csv', 'w') as f:
-        for gene in genes:
-            f.write(gene + '\n')
-
-# analyze the SNP data from T-cell paper:
-path = '../input/worm_disease_gwas/'
-output_path = '../output/phenologues/'
-output_path2 = '../output/disease_tissues/'
-for f in os.listdir(path):
-    # run(path, f, output_path, phenotype_df, column='WormBaseID', sep='\t')
-    run(path, f, output_path2, tissue_df, column='WormBaseID', sep='\t')
+# # analyze the SNP data from T-cell paper:
+# path = '../input/worm_disease_gwas/'
+# output_path = '../output/phenologues/'
+# output_path2 = '../output/disease_tissues/'
+# for f in os.listdir(path):
+#     # run(path, f, output_path, phenotype_df, column='WormBaseID', sep='\t')
+#     run(path, f, output_path2, tissue_df, column='WormBaseID', sep='\t')
 
 # half of crohns genes have no orthologs
 # half of mult scler have no orthologs
 
 # analyze the linker cell transcriptome
-lc = linker_cell[linker_cell.ratio > 10].Gene.str[:14]
-print(len(lc))
-df, _ = tea.enrichment_analysis(lc, phenotype_df, show=False)
-df.to_csv('../output/linker_cell.csv', index=False)
-
-df, _ = tea.enrichment_analysis(lc, tissue_df, show=False)
-df.to_csv('../output/tea_linker_cell.csv', index=False)
-
-df, _ = tea.enrichment_analysis(lc, go_df, show=False)
-df.to_csv('../output/gea_linker_cell.csv', index=False)
-
-lc_deplete = linker_cell[linker_cell.ratio < 10**-1].Gene.str[:14]
-print(len(lc_deplete))
-df, _ = tea.enrichment_analysis(lc_deplete, phenotype_df, show=False)
-df.to_csv('../output/linker_cell_deplete.csv', index=False)
-
-df, _ = tea.enrichment_analysis(lc_deplete, tissue_df, show=False)
-df.to_csv('../output/tea_linker_cell_deplete.csv', index=False)
-
-df, _ = tea.enrichment_analysis(lc_deplete, go_df, show=False)
-df.to_csv('../output/gea_linker_cell_deplete.csv', index=False)
-
-# analyze the linker cell screen
-df, _ = tea.enrichment_analysis(lc_screen.gene, phenotype_df, show=False)
-df.to_csv('../output/pea_lc_screen.csv', index=False)
-
-sel = lc_screen.phenotype == 'nonwt_RNAi'
-df, _ = tea.enrichment_analysis(lc_screen[sel].gene, phenotype_df, show=False)
-df.to_csv('../output/pea_lc_screen_hits.csv', index=False)
+# lc = linker_cell[linker_cell.ratio > 10].Gene.str[:14]
+# print(len(lc))
+# df, _ = tea.enrichment_analysis(lc, phenotype_df, show=False)
+# df.to_csv('../output/linker_cell.csv', index=False)
+#
+# df, _ = tea.enrichment_analysis(lc, tissue_df, show=False)
+# df.to_csv('../output/tea_linker_cell.csv', index=False)
+#
+# df, _ = tea.enrichment_analysis(lc, go_df, show=False)
+# df.to_csv('../output/gea_linker_cell.csv', index=False)
+#
+# lc_deplete = linker_cell[linker_cell.ratio < 10**-1].Gene.str[:14]
+# print(len(lc_deplete))
+# df, _ = tea.enrichment_analysis(lc_deplete, phenotype_df, show=False)
+# df.to_csv('../output/linker_cell_deplete.csv', index=False)
+#
+# df, _ = tea.enrichment_analysis(lc_deplete, tissue_df, show=False)
+# df.to_csv('../output/tea_linker_cell_deplete.csv', index=False)
+#
+# df, _ = tea.enrichment_analysis(lc_deplete, go_df, show=False)
+# df.to_csv('../output/gea_linker_cell_deplete.csv', index=False)
+#
+# # analyze the linker cell screen
+# df, _ = tea.enrichment_analysis(lc_screen.gene, phenotype_df, show=False)
+# df.to_csv('../output/pea_lc_screen.csv', index=False)
+#
+# sel = lc_screen.phenotype == 'nonwt_RNAi'
+# df, _ = tea.enrichment_analysis(lc_screen[sel].gene, phenotype_df, show=False)
+# df.to_csv('../output/pea_lc_screen_hits.csv', index=False)
 
 
 # from the gwas catalog, identify diseases with more than 100 associated genes
@@ -246,35 +248,30 @@ for trait in candidates:
     if worm_genes.shape[0] > 100:
         # one of the traits foolishly has a '/'
         if '/' in trait:
-            trait = 'pot bronchodilator fev1 fevc ratio'
+            trait = 'post bronchodilator fev1 fevc ratio'
         df, _ = tea.enrichment_analysis(worm_genes, phenotype_df, show=False)
         df = df[df.Observed > 3]
         df.to_csv('../output/phenologues_2/pea_' + trait + '.csv', index=False)
 
         df, _ = tea.enrichment_analysis(worm_genes, tissue_df, show=False)
-        df = df[df.Expected > 3]
+        df = df[df.Observed > 3]
         df.to_csv('../output/disease_tissues_2/tea_' + trait + '.csv',
                   index=False)
 
+        df, _ = tea.enrichment_analysis(worm_genes, go_df, show=False)
+        df = df[df.Observed > 3]
+        df.to_csv('../output/disease_go_2/gea_' + trait + '.csv',
+                  index=False)
 
-ind = ciliated_df['p val'] < 0.05
+
+ind = ciliated_df['pval'] < 0.05
 sel = (wbids.human_read.isin(ciliated_df[ind].gene_name))
 sel2 = (wbids.target_id.isin(ciliated_df[ind].gene_name))
 
 wbids.shape
-wbids[sel | sel2].shape
-ciliated_df[ind].shape
+cilia_genes = wbids[sel | sel2].wbid
+df, _ = tea.enrichment_analysis(cilia_genes, tissue_df, show=False)
 
+df, _ = tea.enrichment_analysis(cilia_genes, phenotype_df, show=False)
 
-def find_wbid(x):
-    if wbids[wbids.human_read == x].shape[0] > 0:
-        return wbids[wbids.human_read == x].wbid
-    elif wbids[wbids.target_id == x].shape[0] > 0:
-        return wbids[wbids.target_id == x].wbid
-    elif wbids[wbids.wbid == x].shape[0] > 0:
-        return wbids[wbids.wbid == x].wbid
-    else:
-        return ''
-
-ciliated_df['wbid'] = ciliated_df.gene_name.apply(find_wbid)
-ciliated_df.head()
+df, _ = tea.enrichment_analysis(cilia_genes, go_df, show=False)

@@ -27,20 +27,23 @@ def pass_list(user_provided, tissue_dictionary):
     tissue_dictionary is a pandas dataframe that you should know about
     user_provided is a list of gene names
     """
-    length = tissue_dictionary.shape[0]  # how many genes in the dict
-
-    # make an empty dataframe
-    present = pd.DataFrame(index=range(length), columns=['wbid', 'provided'])
-
-    # fill wbid column with all the gene names
-    present.wbid = tissue_dictionary.wbid
-
-    # go through and pass attendance -- 1 if present, 0 otherwise
-    for item in user_provided:
-        present.provided[present.wbid == item] = 1
-
-    # remove NA's and make them 0
-    present.provided = present.provided.fillna(0)
+    # changed 4 Jan 2017
+    # length = tissue_dictionary.shape[0]  # how many genes in the dict
+    #
+    # # make an empty dataframe
+    # present = pd.DataFrame(index=range(length), columns=['wbid', 'provided'])
+    #
+    # # fill wbid column with all the gene names
+    # present.wbid = tissue_dictionary.wbid
+    #
+    # # go through and pass attendance -- 1 if present, 0 otherwise
+    # for item in user_provided:
+    #     present.provided[present.wbid == item] = 1
+    #
+    # # remove NA's and make them 0
+    # present.provided = present.provided.fillna(0)
+    ind = tissue_dictionary.wbid.isin(user_provided)
+    present = tissue_dictionary[ind].wbid
 
     # return df
     return present
@@ -65,17 +68,18 @@ def hgf(gene_list, tissue_df):
     tissue_dictionary should be a pandas df
     """
     # figure out what genes are in the user provided list
-    present = pass_list(gene_list, tissue_df)
+    # present = pass_list(gene_list, tissue_df)
 
-    unused = present[present.provided == 0].wbid
+    # unused = present[present.provided == 0].wbid # 4 Jan 2017
 
     # slice out only the genes that were present from the user-provided list
-    wanted = present.wbid[present.provided == 1]
+    # wanted = present.wbid[present.provided == 1]
+    wanted = pass_list(gene_list, tissue_df)
 
     # re-index the dictionary s.t. the wbid is the index
     tissue_df = tissue_df.set_index('wbid')
 
-    # number of tissues in the dictionary
+    # number of balls per tissue in the dictionary
     sums_of_tissues = tissue_df.sum()  # this object can be identified by
     # the column names of tissues and excludes gene IDs
 
@@ -118,12 +122,12 @@ def hgf(gene_list, tissue_df):
 #                print(n_obs,t_dict,s_tissue,t_picked)
                 p_hash[name] = stats.hypergeom.sf(n_obs, t_dict, s_tissue,
                                                   t_picked)
-
                 exp_hash[name] = stats.hypergeom.mean(t_dict, s_tissue,
                                                       t_picked)
+
     # return the p-values, the genes associated with each tissue and the user
     # provided genes associate with each tissue.
-    return p_hash, exp_hash, wanted_dictionary, unused
+    return p_hash, exp_hash, wanted_dictionary  # , unused
 
 
 # ==============================================================================
@@ -211,49 +215,77 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
     aname= filename to use to save results
     show= Whether to print results or not.
     """
-    print('Executing script\n')
+    if show:
+        print('Executing script\n')
 
     # always make iterable
     if type(gene_list) in [str]:
         gene_list = [gene_list]
 
-    # calculat the enrichment
-    p_hash, exp_hash, wanted_dic, unused = hgf(gene_list, tissue_df)
+    if len(gene_list) == 0:
+        raise ValueError('gene_list is empty!')
+
+    # calculate the enrichment
+    # p_hash, exp_hash, wanted_dic, unused = hgf(gene_list, tissue_df)
+    p_hash, exp_hash, wanted_dic = hgf(gene_list, tissue_df)
 
     # FDR correct
     q_hash = return_enriched_tissues(p_hash, alpha)
 
     # write results to a dataframe.
-    columns = ['Tissue', 'Expected', 'Observed', 'Enrichment Fold Change',
-               'P value', 'Q value']
-    df_final = pd.DataFrame(index=np.arange(len(q_hash)), columns=columns)
+    # columns = ['Tissue', 'Expected', 'Observed', 'Enrichment Fold Change',
+    #            'P value', 'Q value']
+    # df_final = pd.DataFrame(index=np.arange(len(q_hash)), columns=columns)
+    #
+    # i = 0
+    # for tissue, qval in q_hash.items():
+    #     if qval < alpha:
+    #
+    #         expected = exp_hash[tissue]
+    #         observed = wanted_dic[tissue].sum()
+    #
+    #         df_final['Tissue'].ix[i] = tissue
+    #         df_final['Expected'].ix[i] = expected
+    #         df_final['Observed'].ix[i] = observed
+    #         if expected != 0:
+    #             df_final['Enrichment Fold Change'].ix[i] = observed/expected
+    #         else:
+    #             df_final['Enrichment Fold Change'].ix[i] = np.inf
+    #         df_final['P value'].ix[i] = p_hash[tissue]
+    #         df_final['Q value'].ix[i] = qval
+    #         i += 1
+    #
+    # df_final.dropna(inplace=True)
+    # df_final['Expected'] = df_final['Expected'].astype(float)
+    # df_final['Observed'] = df_final['Observed'].astype(int)
+    # df_final['Enrichment Fold Change'] = df_final['Enrichment Fold Change'].astype(float)
+    # df_final['P value'] = df_final['P value'].astype(float)
+    # df_final['Q value'] = df_final['Q value'].astype(float)
 
-    i = 0
-    for tissue, qval in q_hash.items():
-        if qval < alpha:
+    # TODO: is there a better way to do this?
+    def get_observed(x):
+        """A function to find the number of observations of a tissue x."""
+        return wanted_dic[x].sum()
 
-            expected = exp_hash[tissue]
-            observed = wanted_dic[tissue].sum()
-
-            df_final['Tissue'].ix[i] = tissue
-            df_final['Expected'].ix[i] = expected
-            df_final['Observed'].ix[i] = observed
-            if expected != 0:
-                df_final['Enrichment Fold Change'].ix[i] = observed/expected
-            else:
-                df_final['Enrichment Fold Change'].ix[i] = np.inf
-            df_final['P value'].ix[i] = p_hash[tissue]
-            df_final['Q value'].ix[i] = qval
-            i += 1
+    # slight modification
+    # make a dataframe
+    # index will be tissues column
+    df_final = pd.DataFrame.from_dict(exp_hash, orient='index')
+    # make the tissues their own column:
+    df_final.reset_index(level=0, inplace=True)
+    df_final.columns = ['Tissue', 'Expected']
+    df_final['Observed'] = df_final.Tissue.apply(get_observed)  # v. slow
+    df_final['Enrichment Fold Change'] = df_final.Observed/df_final.Expected
+    df_final['P value'] = df_final.Tissue.map(p_hash)
+    df_final['Q value'] = df_final.Tissue.map(q_hash)
 
     df_final.dropna(inplace=True)
-    df_final['Expected'] = df_final['Expected'].astype(float)
-    df_final['Observed'] = df_final['Observed'].astype(int)
-    df_final['Enrichment Fold Change'] = df_final['Enrichment Fold Change'].astype(float)
-    df_final['P value'] = df_final['P value'].astype(float)
-    df_final['Q value'] = df_final['Q value'].astype(float)
+    df_final.Observed = df_final.Observed.astype(int)
 
     df_final.sort_values('Q value', inplace=True)
+
+    df_final = df_final[df_final['Q value'] < alpha]
+
     if show:
         if len(df_final) == 0:
             print('Analysis returned no enriched tissues.')
@@ -263,7 +295,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
     if save:
         df_final.to_csv(aname)
 
-    return df_final, unused  # , p_hash
+    return df_final  # , unused , p_hash
 # ==============================================================================
 #
 # ==============================================================================
@@ -420,8 +452,8 @@ if __name__ == '__main__':
     with open(gl_name, 'r') as f:
         gene_list = [x.strip() for x in f.readlines()]
 
-    df_results, unused = enrichment_analysis(gene_list, tissue_df, alpha=q,
-                                             show=False)
+    df_results = enrichment_analysis(gene_list, tissue_df, alpha=q,
+                                     show=False)
 
     dfname = title+'.csv'
     df_results.to_csv(dfname, index=False)
