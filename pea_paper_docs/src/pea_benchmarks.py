@@ -10,6 +10,9 @@ phenotype_df = pd.read_csv('../input/phenotype_ontology.csv')
 go_df = pd.read_csv('../input/gene_ontology.csv')
 tissue_df = tea.fetch_dictionary()
 
+tissue_df.shape
+phenotype_df.shape
+
 snp = pd.read_csv('../input/known_snps.csv', sep=',', comment='#')
 linker_cell = pd.read_csv('../input/linker_cell.txt', sep='\t')
 lc_screen = pd.read_csv('../input/lc_screen.csv')
@@ -25,8 +28,8 @@ ciliated_df = pd.read_excel('~/Downloads/mmc3.xlsx')
 def run(path, f, output_path, dictionary, column='gene', **kwargs):
     """Run and save e.a.."""
     genes = pd.read_csv(path+f, **kwargs)
-    df, _ = tea.enrichment_analysis(genes[column], dictionary,
-                                    show=False)
+    df = tea.enrichment_analysis(genes[column], dictionary,
+                                 show=False)
     df = df[df.Observed > 2]
     df.to_csv(output_path + f + '.csv', index=False)
 
@@ -216,7 +219,7 @@ with open('gene_homologs.csv', 'w+') as F:
 candidates = []
 for trait in all_snps.TRAIT.unique():
     if all_snps[all_snps.TRAIT == trait].shape[0] > 200:
-        print(trait)
+        print(trait, all_snps[all_snps.TRAIT == trait].shape[0])
         candidates += [trait]
 
 # what are the pubmedids associated with the list of traits?
@@ -249,17 +252,19 @@ for trait in candidates:
         # one of the traits foolishly has a '/'
         if '/' in trait:
             trait = 'post bronchodilator fev1 fevc ratio'
-        df, _ = tea.enrichment_analysis(worm_genes, phenotype_df, show=False)
-        df = df[df.Observed > 3]
+        df = tea.enrichment_analysis(worm_genes, phenotype_df, show=False)
+        # print(_.head(), _.shape)
+        # break
+        df = df[df.Observed > 10]
         df.to_csv('../output/phenologues_2/pea_' + trait + '.csv', index=False)
 
-        df, _ = tea.enrichment_analysis(worm_genes, tissue_df, show=False)
-        df = df[df.Observed > 3]
+        df = tea.enrichment_analysis(worm_genes, tissue_df, show=False)
+        df = df[df.Observed > 10]
         df.to_csv('../output/disease_tissues_2/tea_' + trait + '.csv',
                   index=False)
 
-        df, _ = tea.enrichment_analysis(worm_genes, go_df, show=False)
-        df = df[df.Observed > 3]
+        df = tea.enrichment_analysis(worm_genes, go_df, show=False)
+        df = df[df.Observed > 10]
         df.to_csv('../output/disease_go_2/gea_' + trait + '.csv',
                   index=False)
 
@@ -270,8 +275,8 @@ sel2 = (wbids.target_id.isin(ciliated_df[ind].gene_name))
 
 wbids.shape
 cilia_genes = wbids[sel | sel2].wbid
-df, _ = tea.enrichment_analysis(cilia_genes, tissue_df, show=False)
+df = tea.enrichment_analysis(cilia_genes, tissue_df, show=False)
 
-df, _ = tea.enrichment_analysis(cilia_genes, phenotype_df, show=False)
+df = tea.enrichment_analysis(cilia_genes, phenotype_df, show=False)
 
-df, _ = tea.enrichment_analysis(cilia_genes, go_df, show=False)
+df = tea.enrichment_analysis(cilia_genes, go_df, show=False)
