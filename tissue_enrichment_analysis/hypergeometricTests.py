@@ -208,7 +208,6 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
     gene_list: a list of non-redundant WBIDs
     tissue_df: as provided by WormBase (use fetch_dictionary)
     alpha: significance threshold, defaults to 0.05
-    f: filename for the enrichment analysis
     aname= filename to use to save results
     show= Whether to print results or not.
 

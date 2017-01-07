@@ -300,12 +300,10 @@ class ontology():
                 continue
             self.nodes[val['id']].get_name(val['annotation_class_label'])
 
-    def find_node_family(self, lambda_query_rlshp):
+    def find_node_family(self, lambda_query_rlshp, p=0):
         """Find the nodes that are related to this one."""
-        p = 1
         for n in iter(self.nodes):
             self.nodes[n].find_family(self.solr_url, lambda_query_rlshp, p=p)
-            p = 0
 
     def find_node_annotations(self, lambda_query_genes):
         """Fetch the annotations for this node."""
@@ -500,16 +498,23 @@ if __name__ == '__main__':
                 "%22{0}%22&fq=document_category:%22ontology_class%22"
         return s.format(x)
 
-    def query_genes(x):
+    def query_genes(x, ontology=args.ontology):
         """
         find the genes associated with every node.
 
         given a wbbt ID `x`, open URL that contains genes assoc. with it.
         """
-        s = "select?qt=standard&indent=on&wt=json&version=2.2&" +\
-            "fl=id&start=0&rows=10000&q=document_category:bioentity" +\
-            "&fq=source:%22WB%22&fq=-qualifier:%22not%22&" +\
-            "fq=regulates_closure:%22{0}%22"
+        if ontology != 'go':
+            s = "select?qt=standard&indent=on&wt=json&version=2.2&" +\
+                "fl=id&start=0&rows=10000&q=document_category:bioentity" +\
+                "&fq=source:%22WB%22&fq=-qualifier:%22not%22&" +\
+                "fq=regulates_closure:%22{0}%22"
+        else:
+            s = "select?qt=standard&indent=on&wt=json&version=2.2&" +\
+                "fl=id&start=0&rows=10000&q=document_category:bioentity" +\
+                "&fq=source:%22WB%22&fq=taxon:%22NCBITaxon:6239%22" +\
+                "&fq=-qualifier:%22not%22&" +\
+                "fq=regulates_closure:%22{0}%22"
         return s.format(x)
 
     # query for readable names
@@ -581,7 +586,7 @@ if __name__ == '__main__':
 
     for n in trial1.good:
         tissues.append(n)
-        print(n)
+        # print(n)
         genes = genes+trial1.good[n].genes
     genes = list(set(genes))
 

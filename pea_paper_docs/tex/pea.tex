@@ -77,21 +77,26 @@
 \newcommand{\hobesity}{957}
 \newcommand{\wobesity}{614}
 
-\newcommand{\hschizo}{899}
-\newcommand{\wschizo}{433}
+\newcommand{\hlupus}{283}
+\newcommand{\wlupus}{135}
 
-\newcommand{\hcrohn}{390}
-\newcommand{\wcrohn}{213}
+\newcommand{\harthritis}{309}
+\newcommand{\warthritis}{124}
 
-\newcommand{\hprostate}{273}
-\newcommand{\wprostate}{273}
+\newcommand{\qval}[1]{
+                      \ensuremath{
+                                  q<10^{-#1}
+                                  }
+                      }
 
-\newcommand{\hdiabetes}{396}
-\newcommand{\wdiabetes}{224}
 
 \title{
   \Large
-  \textbf{Phenotype Enrichment Discovers Phenologs for Disease Modeling in \cel{}}
+  \textbf{
+  % Phenotype Enrichment Discovers Phenologs for Disease Modeling in \cel{}
+  Phenotype and gene ontology enrichment as guides for disease modeling
+  in \cel{}
+          }
 }
 
 \author{David Angeles-Albores\textsuperscript{1,$\dagger{}$}
@@ -117,18 +122,23 @@ Paul W. Sternberg\textsuperscript{1,*}
 The last decade has seen an explosion of techniques capable of genome-wide
 measurements. Some examples of genome-wide tools include RNA-seq~\cite{} to
 measure gene expression, CHIP-seq~\cite{} to measure binding, or genome-wide
-methylation profiling to understand epigenetic changes. These tools are capable
-of generating large quantities of data. Understanding this data, and generating
-hypotheses from it remains challenging. A common approach used to understand
+methylation profiling to understand epigenetic changes~\cite{}. These tools are capable
+of generating large quantities of data. Understanding these data, and generating
+hypotheses from them remains challenging. A common approach used to understand
 these datasets is to reduce the dimensionality of the data via enrichment
-analyses of ontologies, which helps researchers understand what terms are
+analyses of ontologies~\cite{}, which helps researchers understand what terms are
 overrepresented beyond random levels. By analyzing overrepresented terms in
 aggregate, researchers can better understand what biological processes were most
 affected in a given experiment, and form hypotheses about what is
-happening~\cite{}. This approach is limited by what ontologies can be tested for
-enrichment. In \cel{}, only the gene ontology (GO) and tissue ontology are
-available for testing~\cite{} even though curated gene, tissue and phenotype
-ontologies exist. Another limitation is that tissue enrichment testing
+happening~\cite{}.
+This approach is limited by what ontologies can be tested for
+enrichment.
+The best-known ontology for biological research is the Gene Ontology (GO), which
+provides a controlled language to describe molecular and cellular functions of
+genes~\cite{}. In \cel{}, curated tissue and phenotype ontologies exist which provide
+controlled languages with which to describe \cel{} anatomy and phenotypes
+respectively~\cite{}. However, enrichment tools only exist for gene and tissue ontologies
+in the community today (see for example~\cite{}). Another limitation is that tissue enrichment testing
 is not offered on the same websites as GO enrichment testing, which requires
 users to test their data on different websites that may or may not use different
 methodologies to detect enrichment.
@@ -147,121 +157,228 @@ phenotypes that have the same underlying genetic regulatory network~\cite{}.
 Formally, two phenotypes are phenologs of each other if the homologs of the
 genes that cause a phenotype in an organism cause a second phenotype in another.
 
-In order to study a clinically relevant disease, an appropriate model has to be
-established. A straightforward method towards establishing a disease model in
+To study a clinically relevant disease in a non-human, an appropriate
+model has to be established. A straightforward method towards establishing a
+disease model in
 \cel{} is to link a disease to a causal gene, then to identify the homologous
 gene in \cel{} and then to study the function of the genetic homolog to
 extrapolate back to humans. However, this method relies on the existence of
 known disease genes and requires that the homolog have a phenotype that can be
 reliably identified and studied. A fundamentally different way to establish a
 disease model in \cel{} would be to identify the phenologs of the disease to be
-studied in \cel{}, and to use that phenolog as the basis for screens to identify
-genes that are associated with that phenolog. This approach has been
-successfully used in the past to make non-obvious links between phenotypes in
-different species~\cite{}.
+studied in \cel{} by identifying disease-associated human genes in an unbiased
+manner through genome-wide association studies (GWAS) and identified candidate
+homolog genes in \cel{}. The homologs can be used to identify \cel{} disease
+phenologs, which can in turn be used as the basis for screens to identify
+genes that are associated with that phenolog. Approaches similar to this have
+been successfully used in the past to make non-obvious links between phenotypes
+in different species~\cite{}.
 
-In order to facilitate understanding of large datasets, and to make discovery of
-phenologs easier, we have developed a complete enrichment tool suite in WormBase
-that allows users to rapidly perform all analyses on curated \cel{} ontologies
+The concept of a phenolog can also be useful when applied within a species.
+In \cel{}, not all phenotypes are equally easy to study. Although genome-wide
+measurements can help elucidate the genetic network underlying a phenotype,
+devising screens to test which genes are functionally important can be difficult.
+A common strategy to study phenotypes that are difficult to screen is to
+select an easier-to-screen phenolog, and to test positive hits for the true
+phenotype of interest
+afterwards~\cite{}. Currently, selection of screening phenotypes is
+performed based on researcher experience.
+By formalizing phenotype enrichment analysis as a tool with which to analyze
+gene sets, researchers should be able to formally establish phenologs, which has
+consequences for screen design.
+
+An additional problem with genome-wide
+queries of \cel{} states (be they developmental, neuronal, or other) is that
+they do not
+always have a straightforward interpretation in terms of phenotypes. In these
+situations, researchers must rely on intuition to select a phenotype to screen
+for. As a result, many hits may go unexplored that would prove fruitful. The
+question of how to design a screen that is maximally informative is an important
+question that has so far not been addressed within this community.
+
+To facilitate understanding of large datasets, and to make discovery of
+phenologs easier, we have completed an enrichment tool suite in WormBase
+that allows users to rapidly perform phenotype, tissue and gene ontology
+enrichment analyses (PEA, TEA and GEA respectively) on curated \cel{} ontologies
 using the same methodology for each one. They are located at
 % TODO: include links.
 We applied our tools towards the unbiased discovery of phenologues of
-multigenic, complex diseases including schizophrenia, type-2 diabetes,
-crohn's disease and prostate cancer by using genes associated with these
+multigenic, complex diseases including
+% Diseases to study:
+systemic lupus erythematosus, obesity and obesity-related traits,  and
+rheumatoid arthritis
+by using genes associated with these
 diseases via genome-wide association studies. We also illustrate the utility of
 the complete enrichment suite for finding new relationships in complex data by
 analyzing a ciliary neuron transcriptome~\cite{}.
 
 \section*{Methods}
+\subsection*{Building the dictionaries}
+
+\subsection*{Human disease phenolog identification}
+We used the GWAS EBI-NHGRI catalog~\cite{} to extract information on all genome-wide
+association studies deposited there. We only selected traits that had $>300$
+associated genes. We identified 24 traits that met our criteria. Next, we used
+DIOPT~\cite{} to identify candidate homologs for the genes associated with these
+traits. Briefly, DIOPT combines a large number of methods for identifying homologs
+and returns homolog candidates associated with a compound score. Depending on the score,
+homologs can be considered `high', `moderate' or `low' rank, reflecting confidence
+in the homology. Many-to-one and one-to-many homology relationships are allowed
+in DIOPT, reflecting a mixture of uncertainty and family expansion/reduction.
+For our study, we only accepted homolog candidates with `high' or `moderate' scores
+and we did not insist on a one-to-one relationship between genes.
+
+After we identified worm homologs for each trait, we reassessed how many traits
+still had $>100$ gene candidates, and dropped all traits that had less than this
+for our analysis. We identified 18 traits that met this criteria. The gene
+lists for each of these 18 traits were then analyzed for gene, tissue and
+phenotype enrichment. Tissue enrichment was performed using the WormBase Tissue
+Enrichment Analysis tool (TEA)~\cite{}.
 
 
 \section*{Results}
-\subsection*{Developing the WormBase Enrichment Suite}
+\subsection*{Developing the WormBase enrichment suite}
 % TODO add numbers instead of XXX
 We developed the dictionaries for PEA and GEA using the same procedure as was
 used for TEA~\cite{}. We generated a dictionary that included terms with at
 least 50 annotating genes or more and had a similarity threshold of 0.95 for PEA
-(the total number of terms in the dictionary is XXX);\@ and we generated a
-dictionary that included terms with at least 100 annotating genes or more and
+(the total number of terms in the dictionary was 251, annotated by 9,169 genes
+ for the version XXXXX);\@ and we generated a
+dictionary that included terms with at least 50 annotating genes or more and
 had a similarity threshold of 0.95 for GEA (the total number of terms in this
-dictionary is XXX).\@ Next, we benchmarked the dictionaries on the same gene
+dictionary is 271, annotated by 14,636 genes for the version XXXX).
+\@ Next, we benchmarked the dictionaries on the same gene
 sets as TEA and obtained enrichment of all the expected categories. For example,
 on a gene set enriched for embryonic muscle genes~\cite{}, the top two enriched
 phenotype terms by q-value were `muscle system morphology variant' and `body
 wall muscle thick filament variant'; the top two enriched GO terms were
-`developmental process' and `contractile fiber'. For all the benchmarking
+`myofibril' and `striated muscle dense body'. For all the benchmarking
 results, see supplementary information. Having generated and validated our
-dictionaries, we proceeded to identify phenologs for several common human diseases.
+dictionaries, we proceeded to identify phenologs for several common human
+diseases.
 
-\subsection*{Applying the WormBase Enrichment Suite}
-In order to discover phenologs, we first needed to identify genes that
+\subsection*{Applying the WormBase enrichment suite}
+To discover phenologs, we first needed to identify genes that
 contribute to a disease in an unbiased manner. One way to discover gene
-associations in an unbiased manner is to perform genome-wide association
-studies (GWAS) in human populations. Therefore, we used the GWAS NHGRI-EBI
+associations in an unbiased manner is to perform GWSA in human populations.
+Therefore, we used the GWAS NHGRI-EBI
 Catalog~\cite{} to identify genes associated with human diseases. We found the
 best nematode candidate homologs for these genes using DIOPT~\cite{} and applied
 our enrichment suite to each of these gene regulatory networks.
 
 \subsubsection*{Obesity-related traits}
-Human genes in Obesity-related traits: 957\\
-Worm genes in Obesity-related traits: 614
-
 Obesity-related traits is a category within the GWAS NHGRI-EBI catalog that
 pools studies that have measured obesity and other traits associated with
 obesity, such as heart rate, physical activity, hormone levels, body composition
 and cholesterol levels. Since this category includes many parameters,
 we expected there would be many phenologs. GWAS studies have identified
 \hobesity{} genes associated with these traits. Using DIOPT, we found
-\wobesity{} homologs for these genes, of which XXX had a phenotype. 
+\wobesity{} homologs for these genes. In total, $341/\wobesity{}$ genes had
+at least one phenotype annotation; $548/\wobesity{}$ had at least one gene ontology term
+annotation; and $427/\wobesity{}$ had at least one tissue term annotation.
 
 Top results for obesity-related traits included `acetylcholinesterase inhibitor
-response variant', `behavior variant', `neurite morphology variant' and `thin'.
+response variant' (38 genes, \qval{6}),
+`neurite morphology variant' (21 genes, \qval{2}),
+and `thin' (31 genes, \qval{2}).
 Terms involving locomotion were significantly enriched, as were terms involving
-body shape and food consumption ($q<0.1$). Concomitant with these phenologs was
-an enrichment in tissues including the \cel{} `tail', `sex organ', and an
-eclectic collection of neuronal tissues and cells.
+body shape and food consumption (\qval{1}). Concomitant with these phenologs was
+a tissue enrichment in neuron-related terms. GO enrichment suggested that these
+genes are participating in `iron ion binding' (40 genes, \qval{20}) and
+`tetrapyrrole binding' (37 genes, \qval{13}).
 
-\subsubsection*{Schizophrenia}
-Human genes in schizophrenia: 899\\
-Worm genes in schizophrenia: 433
+Tissue and phenotype enrichment therefore suggest that obesity-related traits
+may be studied in \cel{} through neuron physiology and function, specifically
+with respect to acetylcholinesterase inhibitors. Moreover, GO enrichment
+implicates iron and tetrapyrrole binding as metabolic components of
+the obesity-related phenologs in \cel{}.
 
-Schizophrenia results included `acetylcholinesterase inhibitor response variant',
-multiple terms involving vulval formation and induction, cell division defects
-(`sister chromatid segregation defective early embryo', `cytokinesis variant')
-and terms involving lethality or arrest at multiple stages. Tissue enrichment
-showed that the anal depressor and sphincter muscles were significantly
-overrepresented, as were neuronal tissues. Somatic gonad, including the
-spermatheca and the distal tip cell were also significantly overrepresented in
-this dataset.
+\subsection*{Systemic lupus erythematosus}
+Systemic lupus is an autoimmune disease that is believed to be polygenic in
+nature~\cite{}. It mainly affects women and is characterized by painful
+and swollen joints, hair loss, and fatigue~\cite{}. Since worms do not have a
+cellular immune system, we were interested in what phenologs corresponded to
+this disorder in \cel{}. To establish phenolog candidates, we obtained
+\hlupus{} genes associated with the disease via GWAS studies, and found
+\wlupus{} homolog candidates in \cel{}.
 
-\subsubsection*{Type-2 Diabetes}
-Human genes in diabetes: 396\\
-Worm genes in diabetes: 224
+Lupus-associated homologs were reasonably well annotated. Slightly more than half
+of the genes had at least one phenotype annotation ($76/\wlupus{}$) and almost
+all genes were annotated to at least one tissue or gene ontology term
+($104/\wlupus{}$ and $115/\wlupus$ genes respectively).
+We found that Lupus-associated homologs were enriched in `aneuploidy' (7 genes,
+\qval{1}) and `meiotic chromosome segregation' (8 genes, \qval{1}). `Cell fate
+transformation' (6 genes, \qval{1}), and `excess intestinal cells'
+(5 genes, \qval{1}) were also overrepresented, as was `male tail morphology'
+(6 genes, \qval{1}). Finally, the phenotype `nonsense mRNA accumulation' was also
+enriched (5 genes, \qval{1}).
+Meanwhile, TEA suggested that the
+`excretory duct cell' (5 genes, \qval{2}) and the `posterior gonad arm' are
+overrepresented in this dataset. We also found that the Pn.p cells P3.p through
+P8.p were enriched in this dataset (5 genes, \qval{1}). GO enrichment pointed
+at `modification-dependent macromolecule catabolic process' (23 genes,
+\qval{15}) as a molecular function that characterizes this dataset. However,
+this GO term was enriched only due to a single gene family, the \emph{skr} gene
+family. Almost the entire \emph{skr} family was considered a candidate homolog
+to the SKP1 human gene, making the GO enrichment suspect.
 
-The phenolog results for type-2 diabetes included `somatic gonad morphology
-variant', and `Q neuroblast lineage migration variant'.
+Enrichment of the terms for `aneuploidy', `meiotic chromosome segregation',
+and `excess intestinal cells' were largely driven by the same gene group, which
+includes \emph{cki-1}, and several \emph{skr} genes. On the other hand, `cell
+fate transformation' and `male tail morphology' reflected the involvement of
+developmental genes \emph{let-23}, and \emph{lin-12} among others. The term
+`nonsense mRNA accumulation' was the result of \emph{pept-3}, \emph{smg-7},
+\emph{tsr-1}, \emph{dhcr-7} and \emph{F08B4.7}. Therefore, we conclude that
+systemic lupus erythematosus is potentially represented by a combination of three
+phenotypes in \cel{}: A cell proliferation phenotype (either increased or
+decreased), probably marked by increased
+aneuploidy; a developmental phenotype involving cell fate transformation and
+leading to dysmorphias; and a molecular phenotype involving impairment of the
+nonsense-mediated decay pathway.
+% TODO: Is the text below true???
+The results from the tissue enrichment analysis
+highlighted three tissues that are particularly sensitive to \emph{lin} mutations
+(the gonad, the excretory duct cell and the vulval precursor cells),
+and the gonad arms undergo large quantities of nuclear proliferation.
 
-\subsubsection*{Crohn's Disease}
-Human genes in Crohn's Disease: 390\\
-Worm genes in Crohn's Disease: 213
+\subsection*{Rheumatoid arthritis}
+Rheumatoid arthritis is an auto-immune disease that is characterized by
+swollen and painful joints that progressively deteriorate~\cite{}. Unlike lupus,
+rheumatoid arthritis is not life-threatening~\cite{}, and comorbidity between rheumatoid
+arthritis and lupus is low~\cite{}, suggesting that they may have at least
+partially distinct genetic causes. We found \harthritis{} genes associated with
+rheumatoid arthritis, for which we found \warthritis{} worm homolog candidates.
 
-Crohn's disease in the worm presents traits including `brood size variants',
-`P granule defective', `cell fate transformation', `male mating defective' as
-well as various defects involving the \cel{} gonad. Reflecting this, TEA showed
-that Crohn's associated genes in the worm were enriched in the reproductive
-tract and somatic gonad, as well as the dorsal, ventral and lateral nerve cords
-and the nerve ring.
+% TODO: Is no tissue enrichment observed bc poor annotations, or because
+% all tissues randomly represented?
+The only phenotype that was enriched for these homologs was `short' (10 genes,
+\qval{4}), even though 64 homologs were associated with at least
+one phenotype term. No tissue was enriched in this dataset. Because
+82 genes are annotated to have expression in at least one tissue, the lack of
+enrichment does not reflect ignorance about the sites of expression of these
+genes. GEA showed that enriched
+molecular functions for these genes include `collagen trimer' (22 genes,
+\qval{15}). However, this term was enriched as the result of degeneracy in the
+homolog candidates for the SFTPD gene. Other terms included
+ `glycosylation' (10 genes, \qval{4}) and `Golgi apparatus' (11
+genes, \qval{3}), but this enrichment was also the result of degenerate homolog
+candidates for the human gene B3GNT7 which encodes a
+beta-1,3-N-acetylgalactosaminyltransferase.
 
-\subsubsection*{Prostate Cancer}
-Human genes in prostate cancer: 273\\
-Worm genes in prostate cancer: 273
+The `short' phenotype was the result of the \emph{cat-4}, \emph{dpy-7},
+\emph{rnt-1}, \emph{sem-4}, \emph{unc-116}, \emph{ocrl-1} and some genes in the
+\emph{fat} family. Although these genes are bound by a common phenotype, any
+genetic relationships between these genes are not immediately clear. Some genes,
+like \emph{sem-4} and \emph{rnt-1} are likely transcription factors with roles
+in development (including hypodermal development).
+Others are molecular motors (\emph{unc-116}) that are broadly expressed throughout
+the body of \cel{}. Yet others have known roles in neuron and muscle function,
+such as \emph{ocrl-1} and \emph{cat-4}. The `short' phenotype is a subset of
+the `body length variant' phenotype. Body length in \cel{} can be controlled via
+cell size, shape and number\cite{}; alternatively, cuticle development can alter body
+shape~\cite{}; finally, muscles can alter the effective body length artificially~\cite{}.
 
-Genes associated with prostate cancer in nematodes were associated with cell fate
-transformations, adult lethal phenotypes and P granule localization defects,
-and enriched tissues included the nerve cords, the sex organs and the tail of the
-animal.
-
-\subsection*{Ontology Enrichment as an aid for Screen Design}
+\subsection*{Ontology Enrichment as an aid for screen design}
 An additional use for a tool like PEA would be as a tool to help guide and
 design screens to identify genes from an RNA-seq or other genome-wide experiment
 for further study. This would be particularly useful in cases when researchers
@@ -271,26 +388,98 @@ not easy to screen for. By finding phenologs to the phenotype of interest, the
 researcher can design an easier screen for genes that affect the phenolog in
 question, then re-test genes for the original phenotype of interest.
 
-\subsubsection*{Enrichment in the Ciliary Neuronal Transcriptome}
+\subsubsection*{Enrichment in the ciliary neuronal transcriptome}
 As an example of how ontology enrichment can improve our understanding of
 transcriptomes,
 we selected a ciliary neuron dataset~\cite{} and ran the complete WormBase
 Enrichment Suite on it. Ciliary neurons are present in the \cel{} male tail, but
 they are also present in the male cephalic sensillum and hermaphrodites also have
-ciliated neurons. The results are illuminating. PEA reveals that the ciliated
+ciliated neurons. PEA reveals that the ciliated
 neuron transcriptome is enriched for genes that are typically associated with
-chromosome segregation, aneuploidy and spindle defects. This makes sense---cilia
-employ microtubules for structural integrity, and microtubules are required for
-chromosome segregation. Whereas PEA suggests that this dataset is enriched in
-microtubule defects, TEA points at the \cel{} gonad primordium, somatic gonad
-and germline precursors as the sites where genes associated with ciliary neurons
-are enriched.  \cel{} has a stereotyped cell lineage~\cite{}, and no cellular
-division happens after a certain point in post-embryonic development, with the
-exception of the germline.
+`meiotic chromosome segregation' (46 genes, \qval{5}),
+`aneuploidy' (42 genes, \qval{5}) and `spindle defective early embryos' (45
+genes, \qval{2}).
 
+In addition, TEA points at the \cel{} gonad primordium, the somatic gonad
+and early embryonic cells as the sites where genes associated with ciliary neurons
+are enriched. The `male distal tip cell' is a tissue
+that is overrepresented in this dataset, but `distal tip cell' is not enriched,
+which suggests that structures that are present only in the male tissue are
+overrepresented in this dataset.
 
+Although one interpretation of the results would be that microtubule genes
+are driving the enrichment of these terms, another possibility is that
+there are cell-cycle genes that are driving the enrichment of these phenotypes
+and tissues. Indeed, GO enrichment shows terms such as `DNA replication' (29
+genes, \qval{5}), and `purine NTP-dependent helicase activity'
+(15 genes, \qval{1}). Visual inspection of list in question reveals that
+cell-cycle and DNA replication/repair genes are abundant in this transcriptome
+and include genes such as \emph{atm-1}, \emph{dna-2}, or \emph{hpr-17}. This
+analysis reveals that the ciliary neuron transcriptome is enriched in
+genes associated with microtubules, but the cell-cycle machinery is also
+carefully regulated.
+
+\subsection*{Deconstructing the \emph{egl} phenotype}
+How does a phenotype emerge? We realized that with the tools that we have
+developed, it is possible to understand what tissues contribute to a phenotype
+in a probabilistic framework. In other words, we can extract all genes associated
+with a particular phenotype, then search for tissue terms that are enriched to
+understand how a phenotype arises from interactions between anatomical regions.
+As a test of this, we selected the \emph{egg-laying defective} (\emph{egl}) phenotype.
+\emph{A priori}, it is not clear what tissues may contribute the most towards
+an \emph{egl} phenotype. In \cel{}, egg-laying is a complex behavior that involves
+a large number of tissues. The somatic gonad acts as a repository for the eggs,
+the uterine seam cells help protect the uterus, and a variety of muscles help
+contract the uterus and open the vulva to lay an egg. The vulva must be well-formed
+to allow passage of an egg, and the hermaphrodite-specific neuron (HSN) helps the
+animal sense lay eggs, possibly by sensing pressure on the uterus. The
+complexity of the interactions that happen to allow egg-laying make understanding
+the \emph{egl} phenotype in terms of tissues a challenging task.
+
+We extracted all of the \cel{} genes that have been associated with an \emph{egl}
+phenotype and we used TEA to understand what tissues are enriched. The `HSN'
+was the most enriched tissue contributing to \emph{egl} phenotypes (\qval{13}).
+Next, the vulD and vulC vulval cells were most enriched respectively (\qval{7}).
+The somatic gonad was fourth most enriched (\qval{6}). The next biggest contribution
+comes from the Pn.p cells and the vulE, vulF cells (\qval{6}), followed by the
+vulA, vulB2 and vulB1 cells (\qval{5}). The uterine muscles are enriched at lower
+levels (\qval{2}), comparably to the uterine seam cells. Therefore, the \emph{egl}
+phenotype would seem to emerge primarily from defects in sensing (via the HSN),
+secondarily from defects in the vulva, and only sometimes from defects in the
+uterine seam cells or muscles. It is notable that the vulva was not equally
+enriched. Although all the `vul' cells are annotated to a similar degree (between
+50--70 genes for each cell type), the vulD and vulE cells were considerably more
+likely to be associated with an \emph{egl} phenotype than the others. This may
+reflect the fact that vulD and vulE are the site of attachment for four vulval
+muscles, vm1. Perhaps this attachment is particularly fragile, and perturbations
+to these cells prevents adequate function of these muscles. However, vulF is
+also attached to a set of four additional vulval muscles, vm2. Why
+is vulF less associated with an \emph{egl} phenotype?
 
 \section*{Conclusions}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 \end{document}

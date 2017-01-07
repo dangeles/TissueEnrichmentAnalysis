@@ -69,9 +69,7 @@ def hgf(gene_list, tissue_df):
     """
     # figure out what genes are in the user provided list
     # present = pass_list(gene_list, tissue_df)
-
     # unused = present[present.provided == 0].wbid # 4 Jan 2017
-
     # slice out only the genes that were present from the user-provided list
     # wanted = present.wbid[present.provided == 1]
     wanted = pass_list(gene_list, tissue_df)
@@ -84,7 +82,7 @@ def hgf(gene_list, tissue_df):
     # the column names of tissues and excludes gene IDs
 
     # total size of the urn
-    total_genes = tissue_df.sum().sum()  # total labels in the dictionary
+    total_balls = tissue_df.sum().sum()  # total labels in the dictionary
 
     # slice out the rows from tissue_dictionary that came from the list
     wanted_dictionary = tissue_df.loc[wanted]
@@ -92,22 +90,22 @@ def hgf(gene_list, tissue_df):
     # get the total number of labels from each tissue
     wanted_sum = wanted_dictionary.sum()
 
-    # get the total number of genes provided by the user that are in dictionary
-    total = wanted.shape[0]
+    # get the total number of balls provided by the user that are in dictionary
+    picked = wanted_sum.sum()
 
     # make a hash with the p-values for enrichment of each tissue.
     p_hash = {}
     exp_hash = {}  # expected number for each tissue
     for i, name in enumerate(tissue_df.columns.values):
         # if the total number of genes is zero, return p= 1 for all tissues
-        if total == 0:
+        if picked == 0:
             p_hash[name] = 1
         else:
             # if a certain tissue has never been called, don't test it
             # in certain pathological cases where the list size is small
             # ie. close to 1, probability of never drawing a given label
             # can be close to 1, so survival function can be less than 0.05
-            # although the math is right, this behaviour is clearly undesirable
+            # although the math is right, this behavior is clearly undesirable
             if wanted_sum[name] == 0:
                 p_hash[name] = 1
             else:
@@ -116,14 +114,11 @@ def hgf(gene_list, tissue_df):
                 # total number of balls of color name in urn
                 # total number of balls picked out
                 n_obs = wanted_sum[name]
-                t_dict = total_genes
                 s_tissue = sums_of_tissues[name]
-                t_picked = total
-#                print(n_obs,t_dict,s_tissue,t_picked)
-                p_hash[name] = stats.hypergeom.sf(n_obs, t_dict, s_tissue,
-                                                  t_picked)
-                exp_hash[name] = stats.hypergeom.mean(t_dict, s_tissue,
-                                                      t_picked)
+                p_hash[name] = stats.hypergeom.sf(n_obs, total_balls, s_tissue,
+                                                  picked)
+                exp_hash[name] = stats.hypergeom.mean(total_balls, s_tissue,
+                                                      picked)
 
     # return the p-values, the genes associated with each tissue and the user
     # provided genes associate with each tissue.
@@ -208,12 +203,18 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
     """
     Execute complete enrichment analysis (hypergeometric test, BH correction).
 
+    ------
+    Params:
     gene_list: a list of non-redundant WBIDs
     tissue_df: as provided by WormBase (use fetch_dictionary)
     alpha: significance threshold, defaults to 0.05
     f: filename for the enrichment analysis
     aname= filename to use to save results
     show= Whether to print results or not.
+
+    -------
+    output:
+    df_final - the final dataframe containing enriched tissues
     """
     if show:
         print('Executing script\n')
@@ -258,7 +259,8 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
     # df_final.dropna(inplace=True)
     # df_final['Expected'] = df_final['Expected'].astype(float)
     # df_final['Observed'] = df_final['Observed'].astype(int)
-    # df_final['Enrichment Fold Change'] = df_final['Enrichment Fold Change'].astype(float)
+    # df_final['Enrichment Fold Change']
+    #  = df_final['Enrichment Fold Change'].astype(float)
     # df_final['P value'] = df_final['P value'].astype(float)
     # df_final['Q value'] = df_final['Q value'].astype(float)
 
@@ -311,6 +313,10 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     n_bars: number of bars to be shown, defaults to 15
     dirGraps: directory to save figures to. if not existent,
     generates a new folder
+
+    ------
+    output:
+    ax - an axis object holding the graph that was generated
     """
     import matplotlib.pyplot as plt
     import seaborn as sns
