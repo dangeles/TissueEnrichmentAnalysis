@@ -33,6 +33,9 @@ if __name__ == '__main__':
                         (WBIDs) you would like to analyse in .csv format')
     parser.add_argument('title', help='Title for your analysis (shouldn\'t\
                         include file extension)', type=str)
+    parser.add_argument('kind', help='What kind of analysis will be ' +
+                        'performed. One of `tissue`, `phenotype` or `go`',
+                        type=str)
     parser.add_argument("-d", '--dictionary', nargs='?',
                         help='Provide a dictionary to test.\
                         If none given, WormBase URL will be used to\
@@ -54,7 +57,7 @@ if __name__ == '__main__':
         tdf_name = args.tissue_dictionary
         tissue_df = pd.read_csv(tdf_name)
     else:
-        tissue_df = hgt.fetch_dictionary()
+        tissue_df = hgt.fetch_dictionary(args.kind)
 
     if args.q:
         q = args.q
@@ -101,6 +104,7 @@ if __name__ == '__main__':
             print(value)
 
     if save:
-        hgt.plot_enrichment_results(df_results, title=title, save=save)
+        hgt.plot_enrichment_results(df_results, title=title, save=save,
+                                    analysis=kind)
 
     sys.exit()
