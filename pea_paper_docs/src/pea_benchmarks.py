@@ -203,11 +203,50 @@ for trait in candidates:
 
 
 for trait in diseases:
+    # get genes associated with trait:
+    g = all_snps[all_snps.TRAIT == trait]['REPORTED GENE(S)'].values
+    current = []
+    for i, gi in enumerate(g):
+        if type(gi) is not str:
+            continue
+        list_of_genes = [x.strip() for x in gi.split(',')]
+        for x in list_of_genes:
+            current += [x]
+
     sel1 = homologs.HID.isin(current)
     worm_genes = homologs[sel1 & sel2].WormBaseID
-
-    if 'Lupus' in trait:
-        print(pheno_traits[pheno_traits.term.str.contains(aneuploidy)].wbid)
+    print(trait)
+    # if 'lupus' in trait:
+        # ind1 = pheno_traits.term.str.contains('nonsense mRNA accumulation')
+        # ind2 = pheno_traits.wbid.isin(worm_genes)
+        # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
+        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+        # print(whatever)
+        # ind1 = tissue_traits.term.str.contains('excretory duct cell')
+        # ind2 = tissue_traits.wbid.isin(worm_genes)
+        # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
+        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+        # print(whatever)
+        # ind1 = go_traits.term.str.contains('modification-dependent macromolecule catabolic process')
+        # ind2 = go_traits.wbid.isin(worm_genes)
+        # aneuploidy_genes = go_traits[ind1 & ind2].wbid
+        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+        # print(whatever)
+    if 'Rheumatoid' in trait:
+        # ind1 = pheno_traits.term.str.contains('short WBPhenotype:0000324')
+        # ind2 = pheno_traits.wbid.isin(worm_genes)
+        # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
+        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+        # print(whatever)
+        # ind1 = tissue_traits.term.str.contains('excretory duct cell')
+        # ind2 = tissue_traits.wbid.isin(worm_genes)
+        # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
+        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+        # print(whatever)
+        ind1 = go_traits.term.str.contains('Golgi apparatus')
+        ind2 = go_traits.wbid.isin(worm_genes)
+        aneuploidy_genes = go_traits[ind1 & ind2].wbid
+        whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
 
 ###############################################################################
 ###############################################################################
@@ -230,28 +269,84 @@ df.to_csv(path + 'pea.csv', index=False)
 df = tea.enrichment_analysis(cilia_genes, go_df, show=False)
 df.to_csv(path + 'gea.csv', index=False)
 
+ind1 = tissue_traits.term.str.contains('male distal tip cell')
+ind2 = tissue_traits.wbid.isin(cilia_genes)
+aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
+whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+
+print(whatever)
 ###############################################################################
 ###############################################################################
 print('Beginning phenotype-tissue mapping analysis')
 egl_genes = pheno_traits[pheno_traits.term.str.contains('egg laying')].wbid
-
+len(egl_genes)
 df = tea.enrichment_analysis(egl_genes, tissue_df, show=False)
+df
+ax = tea.plot_enrichment_results(df, save=True, title='egl_tissue_enrichment',
+                                 dirGraphs='../output/')
 
+
+def calculate_cond_probs(phenotype_genes):
+    """
+    Calculate and returns P(pheno|tissue) and P(tissue|pheno).
+
+    Given a list of genes associated with a phenotype, calculate
+    the conditional probabilities associated with each tissue.
+
+    Params:
+    -------
+    phenotype_genes -- a list of genes (iterable)
+
+    Output:
+    -------
+    pheno_given_tissue - a dictionary containing the P(pheno|tissue)
+    where the keys are the tissues
+    tissue_given_pheno - a dictionary containing the P(tissue|pheno)
+    where the keys are the tissues
+    """
+    N = len(phenotype_genes)
+    pheno_given_tissue = {}
+    tissue_given_pheno = {}
+
+    for tissue in tissue_traits.term.unique():
+        # find the genes annotated with an expression pattern that includes
+        # the current tissue
+        ind = (tissue_traits.term.str.contains(tissue))
+        tg = tissue_traits[ind].wbid
+
+        # find the genes annotated with an expression pattern that
+        # includes the current tissue and the phenotype of interest
+        ind2 = (tissue_traits.wbid.isin(phenotype_genes))
+        tissue_and_pheno = tissue_traits[ind & ind2].wbid
+
+        # calculate and store
+        P_pheno_given_tissue = len(tissue_and_pheno)/len(tg)
+        pheno_given_tissue[tissue] = P_pheno_given_tissue
+        tissue_given_pheno[tissue] = len(tissue_and_pheno)/N
+
+    return pheno_given_tissue, tissue_given_pheno
+
+
+def print_sorted_dict(d):
+    """A function to print a dictionary sorted by its values."""
+    d_view = [(v, k) for k, v in d.items()]
+    d_view.sort(reverse=True)  # natively sort tuples by first element
+    for v, k in d_view:
+        if v > 0.1:
+            print("{0}, {1:.2f}".format(k, v))
+
+egl_given_tissue, tissue_given_egl = calculate_cond_probs(egl_genes)
+print_sorted_dict(egl_given_tissue)
+
+print_sorted_dict(tissue_given_egl)
+
+
+eat_genes = pheno_traits[pheno_traits.term.str.contains('eating')].wbid
+len(eat_genes)
+df = tea.enrichment_analysis(eat_genes, tissue_df, show=False)
 df
 
+eat_given_tissue, tissue_given_eat = calculate_cond_probs(eat_genes)
+print_sorted_dict(eat_given_tissue)
 
-
-egl_genes = pheno_traits[pheno_traits.term.str.contains('body posture')]
-egl_genes.shape
-egl_genes.head()
-
-df = tea.enrichment_analysis(egl_genes.wbid, tissue_df, show=False)
-df
-
-
-df = tea.enrichment_analysis(egl_genes.wbid, go_df, show=False)
-df
-
-
-df = tea.enrichment_analysis(egl_genes.wbid, phenotype_df, show=False)
-df
+print_sorted_dict(tissue_given_eat)

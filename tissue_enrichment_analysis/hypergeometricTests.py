@@ -309,6 +309,7 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
 
     df: dataframe as output by implement_hypergmt_enrichment_tool
     y: One of 'Fold Change', 'Q value' or a user generated column
+    title - Title for the graph, also file name
     n_bars: number of bars to be shown, defaults to 15
     dirGraps: directory to save figures to. if not existent,
     generates a new folder

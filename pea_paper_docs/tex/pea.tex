@@ -131,8 +131,7 @@ overrepresented beyond random levels. By analyzing overrepresented terms in
 aggregate, researchers can better understand what biological processes were most
 affected in a given experiment, and form hypotheses about what is
 happening~\cite{}.
-This approach is limited by what ontologies can be tested for
-enrichment.
+This approach is limited by what ontologies can be tested for enrichment.
 The best-known ontology for biological research is the Gene Ontology (GO), which
 provides a controlled language to describe molecular and cellular functions of
 genes~\cite{}. In \cel{}, curated tissue and phenotype ontologies exist which provide
@@ -419,45 +418,51 @@ analysis reveals that the ciliary neuron transcriptome is enriched in
 genes associated with microtubules, but the cell-cycle machinery is also
 carefully regulated.
 
-\subsection*{Deconstructing the \emph{egl} phenotype}
+\subsection*{Deconstructing the Egl phenotype}
 How does a phenotype emerge? We realized that with the tools that we have
 developed, it is possible to understand what tissues contribute to a phenotype
 in a probabilistic framework. In other words, we can extract all genes associated
 with a particular phenotype, then search for tissue terms that are enriched to
 understand how a phenotype arises from interactions between anatomical regions.
-As a test of this, we selected the \emph{egg-laying defective} (\emph{egl}) phenotype.
-\emph{A priori}, it is not clear what tissues may contribute the most towards
-an \emph{egl} phenotype. In \cel{}, egg-laying is a complex behavior that involves
-a large number of tissues. The somatic gonad acts as a repository for the eggs,
+As a test of this, we selected the egg-laying defective (Egl) phenotype.
+In \cel{}, egg-laying is a complex behavior that involves
+a large number of tissues~\cite{}. The somatic gonad acts as a repository for the eggs,
 the uterine seam cells help protect the uterus, and a variety of muscles help
-contract the uterus and open the vulva to lay an egg. The vulva must be well-formed
-to allow passage of an egg, and the hermaphrodite-specific neuron (HSN) helps the
-animal sense lay eggs, possibly by sensing pressure on the uterus. The
-complexity of the interactions that happen to allow egg-laying make understanding
-the \emph{egl} phenotype in terms of tissues a challenging task.
+contract the uterus and open the vulva to lay an egg~\cite{}. The vulva must be well-formed
+to allow passage of an egg, and the hermaphrodite-specific neuron (HSN) is involved
+in the egg-laying control~\cite{}. The complexity of the interactions that
+happen to allow egg-laying make understanding the Egl phenotype in terms of
+tissues a challenging task.
 
-We extracted all of the \cel{} genes that have been associated with an \emph{egl}
-phenotype and we used TEA to understand what tissues are enriched. The `HSN'
-was the most enriched tissue contributing to \emph{egl} phenotypes (\qval{13}).
-Next, the vulD and vulC vulval cells were most enriched respectively (\qval{7}).
-The somatic gonad was fourth most enriched (\qval{6}). The next biggest contribution
-comes from the Pn.p cells and the vulE, vulF cells (\qval{6}), followed by the
-vulA, vulB2 and vulB1 cells (\qval{5}). The uterine muscles are enriched at lower
-levels (\qval{2}), comparably to the uterine seam cells. Therefore, the \emph{egl}
-phenotype would seem to emerge primarily from defects in sensing (via the HSN),
-secondarily from defects in the vulva, and only sometimes from defects in the
-uterine seam cells or muscles. It is notable that the vulva was not equally
+We extracted all of the \cel{} genes that have been associated with an Egl
+phenotype and we used TEA to understand what tissues are enriched. The HSN
+was enriched more than five-fold above background (\qval{7}) as were vulD, vulC,
+vulE and vulF (\qval{6}). The vulA, vulB2 and vulB1 were
+enriched at slightly lower levels (\qval{5}), whereas the uterine muscles and
+uterine seam cells were enriched more than twice above background levels
+(\qval{2}).
+Therefore, the Egl phenotype would seem to emerge primarily from defects in the
+HSN, secondarily from defects in the vulva, and only sometimes from defects in the
+uterine seam cells or muscles. It is notable that all vulval cells were not equally
 enriched. Although all the `vul' cells are annotated to a similar degree (between
-50--70 genes for each cell type), the vulD and vulE cells were considerably more
-likely to be associated with an \emph{egl} phenotype than the others. This may
+50--70 genes for each cell type), the vulD and vulC cells had the largest
+enrichment effect size and the lowest q-values, suggesting that these cells
+are more likely to be associated with an Egl phenotype than the others. This may
 reflect the fact that vulD and vulE are the site of attachment for four vulval
 muscles, vm1. Perhaps this attachment is particularly fragile, and perturbations
-to these cells prevents adequate function of these muscles. However, vulF is
+to these cells prevent adequate function of these muscles. In support of these
+observations, P7.pa had the largest fold-enrichment of any tissue. In \cel{},
+P7.pa gives rise to vulD and vulC. However, vulF is
 also attached to a set of four additional vulval muscles, vm2. Why
-is vulF less associated with an \emph{egl} phenotype?
+is vulF less associated with an Egl phenotype?
 
 \section*{Conclusions}
-
+The addition of GO and Phenotype Ontology enrichment testing to WormBase marks
+an important step towards a unified set of analyses that can help researchers
+to understand genomic datasets. By offering tissue, phenotype and gene ontology
+enrichment on a single site, researchers will benefit both in the speed at which
+the analysis is completed, but also from the fact that the analyses are all
+carried out with the same methodology and the same underlying algorithms. 
 
 
 
