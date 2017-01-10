@@ -114,9 +114,16 @@ for g in all_snps['REPORTED GENE(S)'].values:
 
 # save the array of genes to a file for translation into DIOPT
 array_of_genes = list(set(array_of_genes))
+print('writing unique genes to gene_homologs.csv...')
+print('The following gene names could not be decoded (silly excel!)')
 with open('gene_homologs.csv', 'w+') as F:
     for g in array_of_genes:
-        F.write(g+'\n')
+        if type(g) is not str:
+            print(g, type(g))
+        try:
+            F.write(g+'\n')
+        except:
+            print(g)
 
 # find all the diseases with more than 200 associated genes and save the
 # list of traits that meet criterion
@@ -190,64 +197,83 @@ for trait in candidates:
         df = tea.enrichment_analysis(worm_genes, phenotype_df, show=False)
         df = df[df.Observed > n_min_obs]
         df.to_csv('../output/phenologues_2/pea_' + trait + '.csv', index=False)
+        if 'lupus' in trait:
+            print('Graphing PEA results for ', trait)
+            fig, ax = plt.subplot()
+            tea.plot_enrichment_results(df, title='../output/lupus_pea',
+                                        save=True)
 
         df = tea.enrichment_analysis(worm_genes, tissue_df, show=False)
         df = df[df.Observed > n_min_obs]
         df.to_csv('../output/disease_tissues_2/tea_' + trait + '.csv',
                   index=False)
+        if 'lupus' in trait:
+            print('Graphing TEA results for ', trait)
+            fig, ax = plt.subplot()
+            tea.plot_enrichment_results(df, title='../output/lupus_tea',
+                                        save=True)
+            tea.plot_enrichment_results(df, title='../output/lupus_tea',
+                                        save=True)
 
         df = tea.enrichment_analysis(worm_genes, go_df, show=False)
         df = df[df.Observed > n_min_obs]
         df.to_csv('../output/disease_go_2/gea_' + trait + '.csv',
                   index=False)
+        if 'lupus' in trait:
+            print('Graphing GEA results for ', trait)
+            fig, ax = plt.subplot()
+            tea.plot_enrichment_results(df, title='../output/lupus_gea',
+                                        save=True)
+
+            tea.plot_enrichment_results(df, title='../output/lupus_gea',
+                                        save=True)
 
 
-for trait in diseases:
-    # get genes associated with trait:
-    g = all_snps[all_snps.TRAIT == trait]['REPORTED GENE(S)'].values
-    current = []
-    for i, gi in enumerate(g):
-        if type(gi) is not str:
-            continue
-        list_of_genes = [x.strip() for x in gi.split(',')]
-        for x in list_of_genes:
-            current += [x]
-
-    sel1 = homologs.HID.isin(current)
-    worm_genes = homologs[sel1 & sel2].WormBaseID
-    print(trait)
-    # if 'lupus' in trait:
-        # ind1 = pheno_traits.term.str.contains('nonsense mRNA accumulation')
-        # ind2 = pheno_traits.wbid.isin(worm_genes)
-        # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
-        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-        # print(whatever)
-        # ind1 = tissue_traits.term.str.contains('excretory duct cell')
-        # ind2 = tissue_traits.wbid.isin(worm_genes)
-        # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
-        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-        # print(whatever)
-        # ind1 = go_traits.term.str.contains('modification-dependent macromolecule catabolic process')
-        # ind2 = go_traits.wbid.isin(worm_genes)
-        # aneuploidy_genes = go_traits[ind1 & ind2].wbid
-        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-        # print(whatever)
-    if 'Rheumatoid' in trait:
-        # ind1 = pheno_traits.term.str.contains('short WBPhenotype:0000324')
-        # ind2 = pheno_traits.wbid.isin(worm_genes)
-        # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
-        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-        # print(whatever)
-        # ind1 = tissue_traits.term.str.contains('excretory duct cell')
-        # ind2 = tissue_traits.wbid.isin(worm_genes)
-        # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
-        # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-        # print(whatever)
-        ind1 = go_traits.term.str.contains('Golgi apparatus')
-        ind2 = go_traits.wbid.isin(worm_genes)
-        aneuploidy_genes = go_traits[ind1 & ind2].wbid
-        whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-
+# for trait in diseases:
+#     # get genes associated with trait:
+#     g = all_snps[all_snps.TRAIT == trait]['REPORTED GENE(S)'].values
+#     current = []
+#     for i, gi in enumerate(g):
+#         if type(gi) is not str:
+#             continue
+#         list_of_genes = [x.strip() for x in gi.split(',')]
+#         for x in list_of_genes:
+#             current += [x]
+#
+#     sel1 = homologs.HID.isin(current)
+#     worm_genes = homologs[sel1 & sel2].WormBaseID
+#     print(trait)
+#     # if 'lupus' in trait:
+#         # ind1 = pheno_traits.term.str.contains('nonsense mRNA accumulation')
+#         # ind2 = pheno_traits.wbid.isin(worm_genes)
+#         # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
+#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+#         # print(whatever)
+#         # ind1 = tissue_traits.term.str.contains('excretory duct cell')
+#         # ind2 = tissue_traits.wbid.isin(worm_genes)
+#         # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
+#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+#         # print(whatever)
+#         # ind1 = go_traits.term.str.contains('modification-dependent macromolecule catabolic process')
+#         # ind2 = go_traits.wbid.isin(worm_genes)
+#         # aneuploidy_genes = go_traits[ind1 & ind2].wbid
+#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+#         # print(whatever)
+#     if 'Rheumatoid' in trait:
+#         # ind1 = pheno_traits.term.str.contains('short WBPhenotype:0000324')
+#         # ind2 = pheno_traits.wbid.isin(worm_genes)
+#         # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
+#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+#         # print(whatever)
+#         # ind1 = tissue_traits.term.str.contains('excretory duct cell')
+#         # ind2 = tissue_traits.wbid.isin(worm_genes)
+#         # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
+#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
+#         # print(whatever)
+#         ind1 = go_traits.term.str.contains('Golgi apparatus')
+#         ind2 = go_traits.wbid.isin(worm_genes)
+#         aneuploidy_genes = go_traits[ind1 & ind2].wbid
+#         whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
 ###############################################################################
 ###############################################################################
 # Begin analysis of ciliary neuron transcriptome
@@ -282,9 +308,8 @@ egl_genes = pheno_traits[pheno_traits.term.str.contains('egg laying')].wbid
 len(egl_genes)
 df = tea.enrichment_analysis(egl_genes, tissue_df, show=False)
 df
-ax = tea.plot_enrichment_results(df, save=True, title='egl_tissue_enrichment',
+ax = tea.plot_enrichment_results(df, save=True, title='egl_tissue',
                                  dirGraphs='../output/')
-
 
 def calculate_cond_probs(phenotype_genes):
     """
@@ -340,6 +365,9 @@ print_sorted_dict(egl_given_tissue)
 
 print_sorted_dict(tissue_given_egl)
 
+for key in tissue_given_egl.keys():
+    if 'vulB1' in key:
+        print(key, tissue_given_egl[key])
 
 eat_genes = pheno_traits[pheno_traits.term.str.contains('eating')].wbid
 len(eat_genes)

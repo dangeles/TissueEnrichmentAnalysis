@@ -89,6 +89,8 @@
                                   }
                       }
 
+% more space between rows
+\newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
 
 \title{
   \Large
@@ -137,10 +139,10 @@ provides a controlled language to describe molecular and cellular functions of
 genes~\cite{}. In \cel{}, curated tissue and phenotype ontologies exist which provide
 controlled languages with which to describe \cel{} anatomy and phenotypes
 respectively~\cite{}. However, enrichment tools only exist for gene and tissue ontologies
-in the community today (see for example~\cite{}). Another limitation is that tissue enrichment testing
-is not offered on the same websites as GO enrichment testing, which requires
-users to test their data on different websites that may or may not use different
-methodologies to detect enrichment.
+in the community today (see for example~\cite{}). Another limitation is that
+tissue enrichment testing is not offered on the same websites as GO enrichment
+testing, which requires users to test their data on different websites that may
+or may not use different methodologies to detect enrichment.
 
 Another way to use enrichment tools is for evolutionary comparison purposes.
 In molecular biology it is often useful to know when a gene is homologous
@@ -212,8 +214,6 @@ the complete enrichment suite for finding new relationships in complex data by
 analyzing a ciliary neuron transcriptome~\cite{}.
 
 \section*{Methods}
-\subsection*{Building the dictionaries}
-
 \subsection*{Human disease phenolog identification}
 We used the GWAS EBI-NHGRI catalog~\cite{} to extract information on all genome-wide
 association studies deposited there. We only selected traits that had $>300$
@@ -377,6 +377,9 @@ the `body length variant' phenotype. Body length in \cel{} can be controlled via
 cell size, shape and number\cite{}; alternatively, cuticle development can alter body
 shape~\cite{}; finally, muscles can alter the effective body length artificially~\cite{}.
 
+% TODO: SO.... ?
+
+
 \subsection*{Ontology Enrichment as an aid for screen design}
 An additional use for a tool like PEA would be as a tool to help guide and
 design screens to identify genes from an RNA-seq or other genome-wide experiment
@@ -418,7 +421,9 @@ analysis reveals that the ciliary neuron transcriptome is enriched in
 genes associated with microtubules, but the cell-cycle machinery is also
 carefully regulated.
 
-\subsection*{Deconstructing the Egl phenotype}
+\subsection*{Deconstructing phenotype-tissue relationships}
+\subsubsection*{Tissue enrichment on the Egl gene set reveals cellular
+components of the phenotype}
 How does a phenotype emerge? We realized that with the tools that we have
 developed, it is possible to understand what tissues contribute to a phenotype
 in a probabilistic framework. In other words, we can extract all genes associated
@@ -456,13 +461,136 @@ P7.pa gives rise to vulD and vulC. However, vulF is
 also attached to a set of four additional vulval muscles, vm2. Why
 is vulF less associated with an Egl phenotype?
 
+\subsubsection*{Quantifying the anatomy-phenotype
+                mapping via Bayesian probabilities}
+Another way to understand the phenotype-anatomy mapping is by considering
+how informative a given anatomy term is on a particular phenotype, or vice-versa.
+To this end, we calculated two conditional probabilities that helped us answer
+this question. The first conditional probability,
+
+\begin{equation}
+  P( \text{a gene has Egl annotation} | \text{it is expressed in } X)
+\end{equation}
+
+answers the question: For a gene with an expression pattern that includes the
+tissue term X (i.e., the gene is expressed at least in X), what is the probability
+that this gene has an Egl phenotype (i.e., the phenotype annotations for this
+gene include Egl)? For simplicity, we can re-write this equation more succintly
+by removing a few words. The calculation of this probability is straightforward
+and follows from the definition of conditional probability:
+
+\begin{equation}
+  P(\text{Egl}|X) = \frac{N_\text{genes annotated Egl and X}}
+                         {N_\text{genes annotated with X}}.
+\label{egl_x}
+\end{equation}
+
+Equation~\ref{egl_x} measures how likely a gene is to be annotated with an Egl
+phenotype given that its expression pattern includes the term $X$. A related
+quantity (which is neither the inverse nor the complement) is the conditional
+probability that a gene which is annotated with at least the Egl phenotype is
+expressed in tissue $X$. That is to say,
+
+\begin{equation}
+  P(X|\text{Egl}) = \frac{N_\text{genes annotated Egl and X}}
+                         {N_\text{genes annotated with Egl}}.
+  \label{x_egl}
+\end{equation}
+
+Equation~\ref{x_egl} tells us how probable it is that any given gene that is
+annotated with an Egl phenotype includes $X$ as a tissue term. Taken together,
+equations~\ref{egl_x} and~\ref{x_egl} help us understand how predictive
+anatomic expression is of phenotypes, and how predictive phenotypes are of
+anatomic expression.
+
+\begin{table*}
+  \renewcommand{\familydefault}{\sfdefault}\normalfont{}
+  \centering{}
+  \ra{1.3}
+  \caption{Conditional probabilities for various tissues. The
+  first column shows the conditional probability that a gene has an Egl
+  phenotype given that it has expression in tissue $X$ (given by the row).
+  The second column shows the conditional probability that a gene has expression
+  in the anatomy term X given that it has an Egl phenotype. The first 9 terms
+  are the terms for which $P(\text{Egl}|X)$ is maximized. The last three terms
+  are the terms which have the highest $P(X|\text{Egl})$. For clarity, the Pn.p
+  cells are not shown even though $P(\text{Egl}|\text{Pn.p})\sim 0.24$.}
+
+  \begin{tabular}{@{}lcc@{}}
+  \toprule{}
+  Tissue & $P(\text{Egl}| X)$ & $P(X|\text{Egl})$\\
+  \bottomrule{}\\
+  % Data goes here
+  P7.pa & $0.30$ & $0.04$\\
+  HSN & $0.27$ & $0.11$\\
+  vulC & $0.27$ & $0.06$\\
+  vulD & $0.26$ & $0.07$\\
+  vulE & $0.25$ & $0.06$\\
+  vulF & $0.24$ & $0.06$\\
+  vulA & $0.24$ & $0.05$\\
+  vulB2 & $0.23$ & $0.05$\\
+  vulB1 & $0.22$ & $0.05$\\
+  nervous system & $0.02$ & $0.72$ \\
+  pharynx  & $0.00$ & $0.46$\\
+  sex organ & $0.07$ & $0.41$\\
+  tail & $0.05$ & $0.33$\\
+  \bottomrule{}
+  \end{tabular}
+\label{tab:cond_probs}
+\end{table*}
+
+We calculated the conditional probability that a gene has an Egl phenotype given
+that it's expression pattern includes a tissue term $X$ and we searched for the
+tissue terms that maximized this probability. The list of terms that maximized this
+probability reflected the results from running TEA on the subset of genes that have
+an Egl phenotype. We also calculated the conditional probability that a gene has
+expression in a tissue term $X$ given that it is annotated with an Egl phenotype
+and we searched for terms that maximized this probability. The terms that maximized
+this probability were `nervous system', `pharynx' (a body part with a lot of neurons),
+`sex organ' and `tail' (a body part with neurons and hypodermis). In general, the
+terms that had a high $P(\text{Egl}|X)$ did not have a high $P(X|\text{Egl})$.
+Additionally, the terms that had a high $P(X|\text{Egl})$ are broad terms that
+include a lot of cells, whereas the terms that had a high $P(\text{Egl}|X)$
+were considerably more specific.
+We conclude that the Egl phenotype arises from a small set of tissues. The Egl
+phenotype can be best predicted by genes with expression patterns that include
+at least one of a small number of cells (mainly vul cells, HSN). On the other
+hand, answering whether the expression pattern of a gene includes a particular
+anatomic region or tissue given that the gene has an Egl phenotype is hard to
+do for small tissues or single cells. However, guesses about what functional system
+or broad anatomic region may be affected by an Egl gene can be answered with
+confidence ($\sim70\%$ of the time, the nervous system is the system
+affected by an Egl mutant).
+
 \section*{Conclusions}
+
+We have highlighted three possible uses for phenotype and GO enrichment analyses.
+Taken together, the WormBase Enrichment Suite can help guide researchers as they
+search for a phenologue that is representative of a human disease that has no
+immediately obvious counterpart in the worm. Such phenologues may benefit from
+the fact that they represent an unbiased approach to disease modeling as long as
+the human genes are selected from unbiased screens. GWAS data suggests that certain
+aspects of lupus biology may be best understood from a developmental perspective
+in \cel{}. On the other hand, our results suggest that rheumatoid arthritis
+might not be effectively modeled in the worm, although it is possible that our
+inability to find phenologues more concretely is the result of the GWAS screens:
+If GWAS screens identified factors that lead to worse prognosis of rheumatoid
+arthritis, but not factors that cause onset of the disease, this could explain
+the lack of phenotype enrichment in \cel{}.
+
+% Phenologues
+
+% Screen Design
+
+% Curation and annotation biases
+
+
 The addition of GO and Phenotype Ontology enrichment testing to WormBase marks
 an important step towards a unified set of analyses that can help researchers
 to understand genomic datasets. By offering tissue, phenotype and gene ontology
 enrichment on a single site, researchers will benefit both in the speed at which
-the analysis is completed, but also from the fact that the analyses are all
-carried out with the same methodology and the same underlying algorithms. 
+the analysis is completed and from the fact that the analyses are all
+carried out with the same methodology and the same underlying algorithms.
 
 
 

@@ -303,13 +303,15 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
 
 
 def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
-                            n_bars=15, dirGraphs='', save=True, **kwargs):
+                            analysis='tissue', n_bars=15, dirGraphs='',
+                            save=True, **kwargs):
     """
     A plot function for TEA.
 
     df: dataframe as output by implement_hypergmt_enrichment_tool
     y: One of 'Fold Change', 'Q value' or a user generated column
     title - Title for the graph, also file name
+    analysis - one of `tissue`, `phenotype` or `go`
     n_bars: number of bars to be shown, defaults to 15
     dirGraps: directory to save figures to. if not existent,
     generates a new folder
@@ -325,6 +327,12 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
         print('dataframe is empty!')
         return
 
+    if analysis.lower() not in ['tissue', 'phenotype', 'go']:
+        raise ValueError('analysis variable must be one of' +
+                         '`tissue`, `phenotype` or `go`')
+
+    analysis = analysis.lower()
+
     ax = kwargs.pop('ax', None)
     ftype = kwargs.pop('ftype', 'svg')
 #
@@ -336,8 +344,17 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
                    ascending=[True, False], inplace=True)
 
     # added August 26 2016:
-    lenID = 11
-    hr_labels = df['Tissue'][:n_bars].str[:-lenID-1]
+    tissue_ID = 11
+    pheno_ID = 19
+    go_ID = 11
+
+    if analysis == 'phenotype':
+        hr_labels = df['Tissue'][:n_bars].str[:-pheno_ID-1]
+    elif analysis == 'tissue':
+        hr_labels = df['Tissue'][:n_bars].str[:-tissue_ID-1]
+    elif analysis == 'go':
+        hr_labels = df['Tissue'][:n_bars].str[:-go_ID-1]
+
     # plot first n_bars
 
     with sns.axes_style('whitegrid'):
@@ -345,7 +362,7 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
         ax = sns.barplot(x=df[y][:n_bars], y=hr_labels, ax=ax)
 
     # fix the plot to prettify it
-    ax.set_ylabel('Tissue', fontsize=15)
+    ax.set_ylabel('Ontology Terms', fontsize=15)
     ax.set_xlabel(y, fontsize=15)
     ax.tick_params(axis='x', labelsize=13)
     ax.tick_params(axis='y', labelsize=13)
@@ -373,10 +390,32 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
 # ==============================================================================
 
 
-def fetch_dictionary():
-    """Fetch the dictionary we want."""
-    url_tissue = 'ftp://caltech.wormbase.org/pub/' +\
-                 'TissueEnrichmentAnalysis/anat_dict.csv'
+def fetch_dictionary(analysis='tissue'):
+    """
+    Fetch the dictionary we want.
+
+    If analysis isn't specified, fetches the tissue dictionary.
+
+    Params:
+    ------
+    analysis - one of `tissue`, `phenotype` or `go`
+
+    Output:
+    data - a dataframe containing the dictionary of interest
+    """
+    analysis = analysis.lower()
+    if analysis not in ['tissue', 'phenotype', 'go']:
+        raise ValueError('analysis must be one of `tissue`, `phenotype`' +
+                         ' or `go`')
+
+    url_tissue = 'ftp://caltech.wormbase.org/pub/'
+
+    if analysis == 'tissue':
+        url_tissue += 'TissueEnrichmentAnalysis/anat_dict.csv'
+    elif analysis == 'phenotype':
+        raise ValueError('come back soon for this function')
+    elif analysis == 'go':
+        raise ValueError('come back soon for this function')
 
     try:
         with contextlib.closing(urlopen(url_tissue)) as conn:
@@ -408,13 +447,16 @@ if __name__ == '__main__':
 
     defQ = 0.1
 
-    parser = argparse.ArgumentParser(description='Run TEA.')
+    parser = argparse.ArgumentParser(description='Run EA.')
     parser = argparse.ArgumentParser()
     parser.add_argument("gene_list",
                         help='The full path to the gene list (WBIDs) you would\
                          like to analyse in .csv format')
     parser.add_argument('title', help='Title for your analysis (shouldn\'t\
                         include file extension)',
+                        type=str)
+    parser.add_argument('kind', help='What kind of analysis will be ' +
+                        'performed. One of `tissue`, `phenotype` or `go`',
                         type=str)
     parser.add_argument("-d", '--dictionary', nargs='?', help='Provide a\
                         dictionary to test. If none given, WormBase URL \
@@ -436,7 +478,7 @@ if __name__ == '__main__':
         tdf_name = args.tissue_dictionary
         tissue_df = pd.read_csv(tdf_name)
     else:
-        tissue_df = fetch_dictionary()
+        tissue_df = fetch_dictionary(analysis=args.kind)
 
     if args.q:
         q = args.q
@@ -483,6 +525,7 @@ if __name__ == '__main__':
             print(value)
 
     if save:
-        plot_enrichment_results(df_results, title=title, save=save)
+        plot_enrichment_results(df_results, title=title, save=save,
+                                analysis=args.kind)
 
     sys.exit()
