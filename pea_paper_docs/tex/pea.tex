@@ -49,6 +49,8 @@
 
 % this is required to include graphics
 \usepackage{graphicx}
+% set the figures directory
+\graphicspath{{./figs/}}
 
 % use if you want to put caption to the side of the figure - see example in text
 \usepackage{sidecap}
@@ -227,12 +229,26 @@ in DIOPT, reflecting a mixture of uncertainty and family expansion/reduction.
 For our study, we only accepted homolog candidates with `high' or `moderate' scores
 and we did not insist on a one-to-one relationship between genes.
 
+\begin{figure}[htbp]
+  \renewcommand{\familydefault}{\sfdefault}\normalfont{}
+  \centering
+  \includegraphics[width=\linewidth]{gwas-design.pdf}
+  \caption{Experimental design for human-nematode phenologue identification.
+           We used GWAS candidates from the EBI-NHGRI catalog to identify
+           disease associated genes, then used DIOPT to identify candidate
+           homologs in \cel{}. Homologs were used to run phenotype, gene
+           and tissue ontology enrichment analyses to identify disease
+           phenologues.}
+\label{fig:gwas}
+\end{figure}
+
+
 After we identified worm homologs for each trait, we reassessed how many traits
 still had $>100$ gene candidates, and dropped all traits that had less than this
 for our analysis. We identified 18 traits that met this criteria. The gene
 lists for each of these 18 traits were then analyzed for gene, tissue and
-phenotype enrichment. Tissue enrichment was performed using the WormBase Tissue
-Enrichment Analysis tool (TEA)~\cite{}.
+phenotype enrichment (see~Fig.\ref{fig:gwas}). Tissue enrichment was
+performed using the WormBase Tissue Enrichment Analysis (TEA) tool~\cite{}.
 
 
 \section*{Results}
@@ -310,8 +326,23 @@ We found that Lupus-associated homologs were enriched in `aneuploidy' (7 genes,
 transformation' (6 genes, \qval{1}), and `excess intestinal cells'
 (5 genes, \qval{1}) were also overrepresented, as was `male tail morphology'
 (6 genes, \qval{1}). Finally, the phenotype `nonsense mRNA accumulation' was also
-enriched (5 genes, \qval{1}).
-Meanwhile, TEA suggested that the
+enriched (5 genes, \qval{1}) (see Fig.~\ref{fig:lupus}).
+
+\begin{figure}[htbp]
+  \renewcommand{\familydefault}{\sfdefault}\normalfont{}
+  \centering
+  \includegraphics[width=\linewidth]{systemic-lupus.pdf}
+  \caption{Phenologue identification for systemic lupus erythematosus.
+           \textbf{A} Phenotype Enrichment Analysis. \textbf{B} GO Enrichment
+           Analysis. \textbf{C} Lupus in \cel{} may be best represented by
+           a combination of three phenotypes: Cell proliferation possibly
+           accompanied by aneuploidy; cell fate transformations that may lead
+           to dysmorphias; and a molecular phenotype involving impairment of
+           the Nonsense-Mediated Decay (NMD) pathway.}
+\label{fig:lupus}
+\end{figure}
+
+TEA suggested that the
 `excretory duct cell' (5 genes, \qval{2}) and the `posterior gonad arm' are
 overrepresented in this dataset. We also found that the Pn.p cells P3.p through
 P8.p were enriched in this dataset (5 genes, \qval{1}). GO enrichment pointed
@@ -400,7 +431,19 @@ ciliated neurons. PEA reveals that the ciliated
 neuron transcriptome is enriched for genes that are typically associated with
 `meiotic chromosome segregation' (46 genes, \qval{5}),
 `aneuploidy' (42 genes, \qval{5}) and `spindle defective early embryos' (45
-genes, \qval{2}).
+genes, \qval{2}) (see Fig.~\ref{fig:cilia}).
+
+\begin{figure}[htbp]
+  \renewcommand{\familydefault}{\sfdefault}\normalfont{}
+  \centering
+  \includegraphics[width=\linewidth]{ciliary-transcriptome.pdf}
+  \caption{PEA shows that the ciliary transcriptome is enriched in phenotypes
+  related to cell division. Although this could reflect enrichment of
+  microtubules and microtubule-related genes, the enrichment is at least
+  partially driven by cell-cycle and DNA repair genes.}
+\label{fig:cilia}
+\end{figure}
+
 
 In addition, TEA points at the \cel{} gonad primordium, the somatic gonad
 and early embryonic cells as the sites where genes associated with ciliary neurons
@@ -445,7 +488,7 @@ was enriched more than five-fold above background (\qval{7}) as were vulD, vulC,
 vulE and vulF (\qval{6}). The vulA, vulB2 and vulB1 were
 enriched at slightly lower levels (\qval{5}), whereas the uterine muscles and
 uterine seam cells were enriched more than twice above background levels
-(\qval{2}).
+(\qval{2}) (see Fig.~\ref{fig:egl}).
 Therefore, the Egl phenotype would seem to emerge primarily from defects in the
 HSN, secondarily from defects in the vulva, and only sometimes from defects in the
 uterine seam cells or muscles. It is notable that all vulval cells were not equally
@@ -460,6 +503,25 @@ observations, P7.pa had the largest fold-enrichment of any tissue. In \cel{},
 P7.pa gives rise to vulD and vulC. However, vulF is
 also attached to a set of four additional vulval muscles, vm2. Why
 is vulF less associated with an Egl phenotype?
+
+\begin{figure}[htbp]
+  \renewcommand{\familydefault}{\sfdefault}\normalfont{}
+  \centering
+  \includegraphics[width=\linewidth]{Egl-phenotype.pdf}
+  \caption{The Egl phenotype is a complex phenotype that is the result of
+  interactions between many tissues. To dissect the contributions of individual
+  tissues to generating an Egl phenotype, we obtained all genes annotated with
+  with an Egl term. \textbf{A} We used TEA on the set of Egl genes to identify
+  enriched tissues. \textbf{B} Anatomic diagram showing the tissues that are
+  most enriched in the Egl gene set. Color coding shows the qualitative
+  ordering of enrichment (red-Most enriched, yellow-least enriched). For clarity,
+  not all cells are shown. All vm1 (4 cells) and vm2 (4 cells) muscles are
+  symmetrical arranged around the vulva, but only 2 cells are shown for each.
+  There are two seam cells on the left and right side of the vulva, but only
+  cell on the right is shown. Only cells in the adult are shown.}
+\label{fig:egl}
+\end{figure}
+
 
 \subsubsection*{Quantifying the anatomy-phenotype
                 mapping via Bayesian probabilities}
@@ -558,9 +620,9 @@ at least one of a small number of cells (mainly vul cells, HSN). On the other
 hand, answering whether the expression pattern of a gene includes a particular
 anatomic region or tissue given that the gene has an Egl phenotype is hard to
 do for small tissues or single cells. However, guesses about what functional system
-or broad anatomic region may be affected by an Egl gene can be answered with
-confidence ($\sim70\%$ of the time, the nervous system is the system
-affected by an Egl mutant).
+or broad anatomic region an Egl gene is expressed in can be answered with
+confidence ($\sim70\%$ of the time, an Egl mutant is expressed in
+the nervous system).
 
 \section*{Conclusions}
 

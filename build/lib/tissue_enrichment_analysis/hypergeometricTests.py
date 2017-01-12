@@ -346,7 +346,7 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     # added August 26 2016:
     tissue_ID = 11
     pheno_ID = 19
-    go_ID = 11
+    go_ID = 10
 
     if analysis == 'phenotype':
         hr_labels = df['Tissue'][:n_bars].str[:-pheno_ID-1]

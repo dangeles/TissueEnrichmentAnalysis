@@ -169,7 +169,7 @@ for trait in candidates:
 
     current = list(set(current))
     sel1 = (homologs.HID.isin(current))
-    worm_genes = homologs[sel1 & sel2].WormBaseID
+    worm_genes = homologs[sel1 & sel2].WormBaseID.values
 
     # only run E.A. if there are enough homologs:
     if worm_genes.shape[0] > 100:
@@ -195,40 +195,34 @@ for trait in candidates:
 
         # enrichment analyses:
         df = tea.enrichment_analysis(worm_genes, phenotype_df, show=False)
-        df = df[df.Observed > n_min_obs]
+        df = df[df.Observed > n_min_obs].copy()
         df.to_csv('../output/phenologues_2/pea_' + trait + '.csv', index=False)
         if 'lupus' in trait:
             print('Graphing PEA results for ', trait)
-            fig, ax = plt.subplot()
+            fig, ax = plt.subplots()
             tea.plot_enrichment_results(df, title='../output/lupus_pea',
-                                        save=True)
+                                        save=True, analysis='phenotype')
 
         df = tea.enrichment_analysis(worm_genes, tissue_df, show=False)
-        df = df[df.Observed > n_min_obs]
+        df = df[df.Observed > n_min_obs].copy()
         df.to_csv('../output/disease_tissues_2/tea_' + trait + '.csv',
                   index=False)
         if 'lupus' in trait:
             print('Graphing TEA results for ', trait)
-            fig, ax = plt.subplot()
+            fig, ax = plt.subplots()
             tea.plot_enrichment_results(df, title='../output/lupus_tea',
-                                        save=True)
-            tea.plot_enrichment_results(df, title='../output/lupus_tea',
-                                        save=True)
+                                        save=True, analysis='tissue')
 
         df = tea.enrichment_analysis(worm_genes, go_df, show=False)
-        df = df[df.Observed > n_min_obs]
+        df = df[df.Observed > n_min_obs].copy()
         df.to_csv('../output/disease_go_2/gea_' + trait + '.csv',
                   index=False)
         if 'lupus' in trait:
             print('Graphing GEA results for ', trait)
-            fig, ax = plt.subplot()
+            fig, ax = plt.subplots()
             tea.plot_enrichment_results(df, title='../output/lupus_gea',
-                                        save=True)
-
-            tea.plot_enrichment_results(df, title='../output/lupus_gea',
-                                        save=True)
-
-
+                                        save=True, analysis='go')
+df.head()
 # for trait in diseases:
 #     # get genes associated with trait:
 #     g = all_snps[all_snps.TRAIT == trait]['REPORTED GENE(S)'].values
@@ -290,26 +284,55 @@ df = tea.enrichment_analysis(cilia_genes, tissue_df, show=False)
 df.to_csv(path + 'tea.csv', index=False)
 
 df = tea.enrichment_analysis(cilia_genes, phenotype_df, show=False)
-df.to_csv(path + 'pea.csv', index=False)
+fig, ax = plt.subplots()
+tea.plot_enrichment_results(df, save=True, title='egl_tissue',
+                            dirGraphs='../output/ciliated_neurons', ax=ax,
+                            analysis='phenotype')
+plt.close()
 
 df = tea.enrichment_analysis(cilia_genes, go_df, show=False)
 df.to_csv(path + 'gea.csv', index=False)
 
-ind1 = tissue_traits.term.str.contains('male distal tip cell')
-ind2 = tissue_traits.wbid.isin(cilia_genes)
-aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
-whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-
-print(whatever)
 ###############################################################################
 ###############################################################################
 print('Beginning phenotype-tissue mapping analysis')
 egl_genes = pheno_traits[pheno_traits.term.str.contains('egg laying')].wbid
 len(egl_genes)
 df = tea.enrichment_analysis(egl_genes, tissue_df, show=False)
-df
-ax = tea.plot_enrichment_results(df, save=True, title='egl_tissue',
-                                 dirGraphs='../output/')
+fig, ax = plt.subplots()
+tea.plot_enrichment_results(df, save=True, title='egl_tissue',
+                            dirGraphs='../output/', ax=ax)
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+plt.close()
+
 
 def calculate_cond_probs(phenotype_genes):
     """
