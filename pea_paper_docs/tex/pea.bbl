@@ -1,0 +1,216 @@
+\begin{thebibliography}{10}
+
+\bibitem{Mortazavi2008}
+Mortazavi A, Williams BA, McCue K, Schaeffer L, Wold B (2008) {Mapping and
+  quantifying mammalian transcriptomes by RNA-Seq}.
+\newblock {\em Nature Methods} 5(7):621--628.
+
+\bibitem{Johnson2007}
+Johnson DS, Mortazavi A, Myers RM (2007) {Protein-DNA Interactions}.
+\newblock (June):1497--1503.
+
+\bibitem{TheGeneOntologyConsortium2000a}
+Ashburner M \emph{et~al}. (2000) {Gene Ontology: tool for the unification of
+  biology}.
+\newblock {\em Nature Genetics} 25(1):25--29.
+
+\bibitem{Rhee2008}
+Rhee SY, Wood V, Dolinski K, Draghici S (2008) {Use and misuse of the gene
+  ontology annotations.}
+\newblock {\em Nature reviews. Genetics} 9(7):509--15.
+
+\bibitem{Schindelman2011}
+Schindelman G, Fernandes JS, Bastiani CA, Yook K, Sternberg PW (2011) {Worm
+  Phenotype Ontology: integrating phenotype data within and beyond the C.
+  elegans community.}
+\newblock {\em BMC bioinformatics} 12(1):32.
+
+\bibitem{Lee2003}
+Lee RYN, Sternberg PW (2003) {Building a cell and anatomy ontology of
+  Caenorhabditis elegans}.
+
+\bibitem{Howe2016}
+Howe KL \emph{et~al}. (2016) {WormBase 2016: Expanding to enable helminth
+  genomic research}.
+\newblock {\em Nucleic Acids Research} 44(D1):D774--D780.
+
+\bibitem{Chikina2009}
+Chikina MD, Huttenhower C, Murphy CT, Troyanskaya OG (2009) {Global prediction
+  of tissue-specific gene expression and context-dependent gene networks in
+  Caenorhabditis elegans}.
+\newblock {\em PLoS Computational Biology} 5(6):e1000417.
+
+\bibitem{Mi2013}
+Mi H, Muruganujan A, Thomas PD (2013) {PANTHER in 2013: Modeling the evolution
+  of gene function, and other gene attributes, in the context of phylogenetic
+  trees}.
+\newblock {\em Nucleic Acids Research} 41(D1):D377--D386.
+
+\bibitem{Angeles-Albores2016}
+Angeles-Albores D, {N. Lee} RY, Chan J, Sternberg PW (2016) {Tissue enrichment
+  analysis for C. elegans genomics}.
+\newblock {\em BMC Bioinformatics} 17(1):366.
+
+\bibitem{Sternberg1998}
+Sternberg PW, Han M (1998) {Genetics of RAS signaling in C-elegans}.
+\newblock {\em Trends in Genetics} 14(11):466--472.
+
+\bibitem{Zakany2007}
+Zakany J, Duboule D (2007) {The role of Hox genes during vertebrate limb
+  development}.
+\newblock {\em Current Opinion in Genetics and Development} 17(4):359--366.
+
+\bibitem{McGary2010}
+McGary KL \emph{et~al}. (2010) {Systematic discovery of nonobvious human
+  disease models through orthologous phenotypes.}
+\newblock {\em Proceedings of the National Academy of Sciences of the United
+  States of America} 107(14):6544--6549.
+
+\bibitem{Lehner2013}
+Lehner B (2013) {Genotype to phenotype: lessons from model organisms for human
+  genetics.}
+\newblock {\em Nature reviews. Genetics} 14(3):168--78.
+
+\bibitem{Wang2015}
+Wang J \emph{et~al}. (2015) {Cell-Specific Transcriptional Profiling of
+  Ciliated Sensory Neurons Reveals Regulators of Behavior and Extracellular
+  Vesicle Biogenesis}.
+\newblock {\em Current Biology} 25(24):3232--3238.
+
+\bibitem{Rossum2011}
+Rossum GV \emph{et~al}. (2011) {Python ( programming language )}.
+\newblock {\em Flying} pp. 1--14.
+
+\bibitem{McKinney2011}
+McKinney W (2011) {pandas: a Foundational Python Library for Data Analysis and
+  Statistics}.
+\newblock {\em Python for High Performance and Scientific Computing} pp. 1--9.
+
+\bibitem{Oliphant2007}
+Oliphant TE (2007) {SciPy: Open source scientific tools for Python}.
+\newblock {\em Computing in Science and Engineering} 9:10--20.
+
+\bibitem{Hunter2007}
+Hunter JD (2007) {Matplotlib: A 2D graphics environment}.
+\newblock {\em Computing in Science and Engineering} 9(3):99--104.
+
+\bibitem{Waskom}
+Waskom M \emph{et~al}. (2016) {seaborn: v0.7.0 (January 2016)}.
+
+\bibitem{Perez2007}
+P{\'{e}}rez F, Granger B (2007) {IPython: A System for Interactive Scientific
+  Computing Python: An Open and General- Purpose Environment}.
+\newblock {\em Computing in Science and Engineering} 9(3):21--29.
+
+\bibitem{MacArthur2016}
+MacArthur J \emph{et~al}. (2016) {The new NHGRI-EBI Catalog of published
+  genome-wide association studies (GWAS Catalog).}
+\newblock {\em Nucleic acids research} 45(November 2016):gkw1133.
+
+\bibitem{Hu2011}
+Hu Y \emph{et~al}. (2011) {An integrative approach to ortholog prediction for
+  disease-focused and other functional studies.}
+\newblock {\em BMC bioinformatics} 12:357.
+
+\bibitem{Gaudet2004a}
+Gaudet J, Muttumu S, Horner M, Mango SE (2004) {Whole-genome analysis of
+  temporal gene expression during foregut development}.
+\newblock {\em PLoS Biology} 2(11).
+
+\bibitem{Spencer2011}
+Spencer WC \emph{et~al}. (2011) {A spatial and temporal map of C. elegans gene
+  expression}.
+\newblock {\em Genome Research} 21(2):325--341.
+
+\bibitem{Cinar2005}
+Cinar H, Keles S, Jin Y (2005) {Expression profiling of GABAergic motor neurons
+  in Caenorhabditis elegans}.
+\newblock {\em Current Biology} 15(4):340--346.
+
+\bibitem{Watson2008a}
+Watson JD \emph{et~al}. (2008) {Complementary RNA amplification methods enhance
+  microarray identification of transcripts expressed in the C. elegans nervous
+  system}.
+\newblock {\em BMC Genomics} 9:84.
+
+\bibitem{Pauli2006}
+Pauli F, Liu Y, Kim Ya, Chen PJ, Kim SK (2006) {Chromosomal clustering and GATA
+  transcriptional regulation of intestine-expressed genes in C. elegans.}
+\newblock {\em Development (Cambridge, England)} 133(2):287--295.
+
+\bibitem{Portman2004}
+Portman DS, Emmons SW (2004) {Identification of C. elegans sensory ray genes
+  using whole-genome expression profiling}.
+\newblock {\em Developmental Biology} 270(2):499--512.
+
+\bibitem{Fox2007}
+Fox RM \emph{et~al}. (2007) {The embryonic muscle transcriptome of
+  Caenorhabditis elegans}.
+\newblock {\em Genome Biol} 8(9):R188.
+
+\bibitem{Smith2010}
+Smith CJ \emph{et~al}. (2010) {Time-lapse imaging and cell-specific expression
+  profiling reveal dynamic branching and molecular determinants of a
+  multi-dendritic nociceptor in C. elegans}.
+\newblock {\em Developmental Biology} 345(1):18--33.
+
+\bibitem{Mohan2015}
+Mohan C, Putterman C (2015) {Genetics and pathogenesis of systemic lupus
+  erythematosus and lupus nephritis}.
+\newblock {\em Nature Reviews Nephrology} 11(6):329--341.
+
+\bibitem{Lisnevskaia2014}
+Lisnevskaia L, Murphy G, Isenberg D (2014) {Systemic lupus erythematosus}.
+\newblock {\em The Lancet} 384(9957):1878--1888.
+
+\bibitem{Smolen2016}
+Smolen JS, Aletaha D, McInnes IB (2016) {Rheumatoid arthritis}.
+\newblock {\em The Lancet} 388(10055):2023--2038.
+
+\bibitem{Dougados2013}
+Dougados M \emph{et~al}. (2013) {Prevalence of comorbidities in rheumatoid
+  arthritis and evaluation of their monitoring: results of an international,
+  cross-sectional study (COMORA)}.
+\newblock {\em Annals of the Rheumatic Diseases} 73(1):62--68.
+
+\bibitem{Desai1988}
+Desai C, Garriga G, McIntire SL, Horvitz HR (1988) {A genetic pathway for the
+  development of the Caenorhabditis elegans HSN motor neurons.}
+\newblock {\em Nature} 336(6200):638--646.
+
+\bibitem{Ji2004}
+Ji YJ \emph{et~al}. (2004) {RNT-1, the C. elegans homologue of mammalian RUNX
+  transcription factors, regulates body size and male tail development}.
+\newblock {\em Developmental Biology} 274(2):402--412.
+
+\bibitem{Hofmann2000}
+Hofmann ER, Milstein S, Hengartner MO (2000) {DNA-damage-induced checkpoint
+  pathways in the nematode Caenorhabditis elegans}.
+\newblock {\em Cold Spring Harbor Symposia on Quantitative Biology} 65(Schedl
+  1997):467--473.
+
+\bibitem{Lee2003a}
+Lee MH \emph{et~al}. (2003) {Caenorhabditis elegans dna-2 is involved in DNA
+  repair and is essential for germ-line development}.
+\newblock {\em FEBS Letters} 555(2):250--256.
+
+\bibitem{Bailly2010}
+Bailly AP \emph{et~al}. (2010) {The Caenorhabditis elegans homolog of Gen1/Yen1
+  resolvases links DNA damage signaling to DNA double-strand break repair}.
+\newblock {\em PLoS Genetics} 6(7):1--16.
+
+\bibitem{Li1990}
+Li C, Chalfie M (1990) {Organogenesis in C. elegans: positioning of neurons and
+  muscles in the egg-laying system.}
+\newblock {\em Neuron} 4(5):681--695.
+
+\bibitem{Sulston1977}
+Sulston JE, Horvitz HR (1977) {Post-embryonic cell lineages of the nematode,
+  Caenorhabditis elegans}.
+\newblock {\em Developmental Biology} 56(1):110--156.
+
+\bibitem{Schafer2005}
+Schafer WR (2005) {\em {Egg-laying}}.
+\newblock (WormBook).
+
+\end{thebibliography}
