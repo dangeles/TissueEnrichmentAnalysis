@@ -75,29 +75,6 @@ for f in os.listdir('../input/genesets_golden'):
         run('../input/genesets_golden/', f,
             '../output/tea_goldenset_results/', tissue_df)
 
-# run the fog-2 analysis
-print('\nAnalyzing fog-2 data...')
-for f in os.listdir('../input/fog2'):
-    if f != '':
-        run('../input/fog2/', f, '../output/fog2/pea_', phenotype_df,
-            column='ens_gene')
-        run('../input/fog2/', f, '../output/fog2/go_', go_df,
-            column='ens_gene')
-        run('../input/fog2/', f, '../output/fog2/tea_', tissue_df,
-            column='ens_gene')
-
-# analyze the hypoxia datasets
-print('\nAnalyzing hypoxia datasets...')
-for f in os.listdir('../input/hypoxia'):
-    if f != '':
-        run('../input/hypoxia/', f, '../output/hypoxia/pea_',
-            phenotype_df, column='ens_gene')
-        run('../input/hypoxia/', f, '../output/hypoxia/tea_',
-            tissue_df, column='ens_gene')
-        run('../input/hypoxia/', f, '../output/hypoxia/go_',
-            go_df, column='ens_gene')
-
-
 ###############################################################################
 ###############################################################################
 all_snps = pd.read_csv(gwas_catalog, sep='\t', encoding='ISO-8859-1')
@@ -202,6 +179,7 @@ for trait in candidates:
             fig, ax = plt.subplots()
             tea.plot_enrichment_results(df, title='../output/lupus_pea',
                                         save=True, analysis='phenotype')
+            plt.close()
 
         df = tea.enrichment_analysis(worm_genes, tissue_df, show=False)
         df = df[df.Observed > n_min_obs].copy()
@@ -212,6 +190,7 @@ for trait in candidates:
             fig, ax = plt.subplots()
             tea.plot_enrichment_results(df, title='../output/lupus_tea',
                                         save=True, analysis='tissue')
+            plt.close()
 
         df = tea.enrichment_analysis(worm_genes, go_df, show=False)
         df = df[df.Observed > n_min_obs].copy()
@@ -222,56 +201,7 @@ for trait in candidates:
             fig, ax = plt.subplots()
             tea.plot_enrichment_results(df, title='../output/lupus_gea',
                                         save=True, analysis='go')
-df.head()
-# for trait in diseases:
-#     # get genes associated with trait:
-#     g = all_snps[all_snps.TRAIT == trait]['REPORTED GENE(S)'].values
-#     current = []
-#     for i, gi in enumerate(g):
-#         if type(gi) is not str:
-#             continue
-#         list_of_genes = [x.strip() for x in gi.split(',')]
-#         for x in list_of_genes:
-#             current += [x]
-#
-#     sel1 = homologs.HID.isin(current)
-#     worm_genes = homologs[sel1 & sel2].WormBaseID
-#     print(trait)
-#     # if 'lupus' in trait:
-#         # ind1 = pheno_traits.term.str.contains('nonsense mRNA accumulation')
-#         # ind2 = pheno_traits.wbid.isin(worm_genes)
-#         # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
-#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-#         # print(whatever)
-#         # ind1 = tissue_traits.term.str.contains('excretory duct cell')
-#         # ind2 = tissue_traits.wbid.isin(worm_genes)
-#         # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
-#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-#         # print(whatever)
-#         # ind1 = go_traits.term.str.contains('modification-dependent macromolecule catabolic process')
-#         # ind2 = go_traits.wbid.isin(worm_genes)
-#         # aneuploidy_genes = go_traits[ind1 & ind2].wbid
-#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-#         # print(whatever)
-#     if 'Rheumatoid' in trait:
-#         # ind1 = pheno_traits.term.str.contains('short WBPhenotype:0000324')
-#         # ind2 = pheno_traits.wbid.isin(worm_genes)
-#         # aneuploidy_genes = pheno_traits[ind1 & ind2].wbid
-#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-#         # print(whatever)
-#         # ind1 = tissue_traits.term.str.contains('excretory duct cell')
-#         # ind2 = tissue_traits.wbid.isin(worm_genes)
-#         # aneuploidy_genes = tissue_traits[ind1 & ind2].wbid
-#         # whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-#         # print(whatever)
-#         ind1 = go_traits.term.str.contains('Golgi apparatus')
-#         ind2 = go_traits.wbid.isin(worm_genes)
-#         aneuploidy_genes = go_traits[ind1 & ind2].wbid
-#         whatever = wbids[wbids.wbid.isin(aneuploidy_genes)]
-###############################################################################
-###############################################################################
-# Begin analysis of ciliary neuron transcriptome
-# only analyse stat. sig. genes:
+            plt.close()
 
 print('Beginning analysis of ciliary neuron transcriptome')
 ind = ciliated_df['pval'] < 0.05
@@ -302,35 +232,6 @@ df = tea.enrichment_analysis(egl_genes, tissue_df, show=False)
 fig, ax = plt.subplots()
 tea.plot_enrichment_results(df, save=True, title='egl_tissue',
                             dirGraphs='../output/', ax=ax)
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
-plt.close()
 plt.close()
 
 
@@ -384,20 +285,21 @@ def print_sorted_dict(d):
             print("{0}, {1:.2f}".format(k, v))
 
 egl_given_tissue, tissue_given_egl = calculate_cond_probs(egl_genes)
+print('Printint conditional probabilities....')
+print('------------------')
+print('------------------\n\n')
+print('Prob(egl | tissue)')
 print_sorted_dict(egl_given_tissue)
-
+print('------------------')
+print('------------------\n\n')
+print('Prob(tissue | egl)')
 print_sorted_dict(tissue_given_egl)
 
-for key in tissue_given_egl.keys():
-    if 'vulB1' in key:
-        print(key, tissue_given_egl[key])
-
-eat_genes = pheno_traits[pheno_traits.term.str.contains('eating')].wbid
-len(eat_genes)
-df = tea.enrichment_analysis(eat_genes, tissue_df, show=False)
-df
-
-eat_given_tissue, tissue_given_eat = calculate_cond_probs(eat_genes)
-print_sorted_dict(eat_given_tissue)
-
-print_sorted_dict(tissue_given_eat)
+# for key in tissue_given_egl.keys():
+#     if 'vulB1' in key:
+#         print(key, tissue_given_egl[key])
+#
+#
+# eat_given_tissue, tissue_given_eat = calculate_cond_probs(eat_genes)
+# print_sorted_dict(eat_given_tissue)
+# print_sorted_dict(tissue_given_eat)
