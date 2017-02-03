@@ -85,11 +85,7 @@
 \newcommand{\harthritis}{309}
 \newcommand{\warthritis}{124}
 
-\newcommand{\qval}[1]{
-                      \ensuremath{
-                                  q<10^{-#1}
-                                  }
-                      }
+\newcommand{\qval}[1]{\ensuremath{q<10^{-#1}}}
 
 % more space between rows
 \newcommand{\ra}[1]{\renewcommand{\arraystretch}{#1}}
@@ -126,7 +122,7 @@ Paul W. Sternberg\textsuperscript{1,*}
 The last decade has seen an explosion of techniques capable of genome-wide
 measurements. Some examples of genome-wide tools include
 RNA-seq~\cite{Mortazavi2008} to measure gene expression or
-CHIP-seq~\cite{Johnson2007} to measure protein binding. These tools are capable
+CHIP-seq~\cite{Johnson2007} to measure protein binding to chromatin. These tools are capable
 of generating large quantities of data. Understanding these data, and generating
 hypotheses from them remains challenging. A common approach used to understand
 these datasets is to reduce the dimensionality of the data via enrichment
@@ -161,14 +157,14 @@ between two species---that is to say, common by descent---because knowledge of
 homology often brings with it knowledge of function. Indeed, many
 important gene regulatory networks (GRNs) are conserved between organisms as
 highly diverged as nematodes and humans (for example, see~\cite{Sternberg1998}).
-While genes
-and GRNs may be conserved between species, their outputs often differ however.
-For example, although homeobox genes are known to be important for limb
-formation in many animals~\cite{Zakany2007}, these genes do not form limbs in nematodes.
+While genes and GRNs may be conserved between species, their outputs often differ.
+For example, the gene Pax6 (Eyeless in \emph{Drosophila melanogaster})
+is involved in eye formation in humans and fruit-flies~\cite{Quiring1994}. Although
+nematodes have conserved this gene, they do not have eyes~\cite{Zhang1995,Chisholm1995}.
 The concept of a phenolog has been put forward to explain relationships between
 phenotypes that have the same underlying genetic
 regulatory network~\cite{McGary2010,Lehner2013}.
-Formally, two phenotypes are phenologs of each other if the homologs of the
+Formally, two phenotypes are phenologs of each other if the orthologs of the
 genes that cause a phenotype in an organism cause a second phenotype in another.
 
 To study a clinically relevant disease in a non-human, an appropriate
@@ -182,7 +178,7 @@ reliably identified and studied. A fundamentally different way to establish a
 disease model in \cel{} would be to identify the phenologs of the disease to be
 studied in \cel{} by identifying disease-associated human genes in an unbiased
 manner through genome-wide association studies (GWAS) and identified candidate
-homolog genes in \cel{}. The homologs can be used to identify \cel{} disease
+homolog genes in \cel{}. The orthologs can be used to identify \cel{} disease
 phenologs, which can in turn be used as the basis for screens to identify
 genes that are associated with that phenolog. Approaches similar to this have
 been successfully used in the past to make non-obvious links between phenotypes
@@ -194,9 +190,8 @@ measurements can help elucidate the genetic network underlying a phenotype,
 devising screens to test which genes are functionally important can be difficult.
 A common strategy to study phenotypes that are difficult to screen is to
 select an easier-to-screen phenolog, and to test positive hits for the true
-phenotype of interest
-afterwards~\cite{}. Currently, selection of screening phenotypes is
-performed based on researcher experience.
+phenotype of interest afterwards~\cite{}. Currently, selection of screening
+phenotypes is performed based on researcher experience.
 By formalizing phenotype enrichment analysis as a tool with which to analyze
 gene sets, researchers should be able to formally establish phenologs, which has
 consequences for screen design.
@@ -206,8 +201,8 @@ queries of \cel{} states (be they developmental, such as
 L1, L2, dauer; behavioral states such as awake versus asleep; or other) is that
 they do not
 always have a straightforward interpretation in terms of phenotypes. In these
-situations, researchers must rely on intuition to select a phenotype to screen
-for. As a result, many hits may go unexplored that would prove fruitful. The
+situations, researchers must rely on intuition to select a phenotype for which to
+screen. As a result, many hits may go unexplored that would prove fruitful. The
 question of how to design a screen that is maximally informative is an important
 question that has so far not been addressed within this community.
 
@@ -249,10 +244,10 @@ We used the GWAS EBI-NHGRI catalog~\cite{MacArthur2016} to extract information
 on all genome-wide
 association studies deposited there. We only selected traits that had $>300$
 associated genes. We identified 24 traits that met our criteria. Next, we used
-DIOPT~\cite{Hu2011} to identify candidate homologs for the genes associated with these
-traits. Briefly, DIOPT combines a large number of methods for identifying homologs
+DIOPT~\cite{Hu2011} to identify candidate orthologs for the genes associated with these
+traits. Briefly, DIOPT combines a large number of methods for identifying orthologs
 and returns homolog candidates associated with a compound score. Depending on the score,
-homologs can be considered `high', `moderate' or `low' rank, reflecting confidence
+orthologs can be considered `high', `moderate' or `low' rank, reflecting confidence
 in the homology. Many-to-one and one-to-many homology relationships are allowed
 in DIOPT, reflecting a mixture of uncertainty and family expansion/reduction.
 For our study, we only accepted homolog candidates with `high' or `moderate' scores
@@ -265,14 +260,14 @@ and we did not insist on a one-to-one relationship between genes.
   \caption{Experimental design for human-nematode phenologue identification.
            We used GWAS candidates from the EBI-NHGRI catalog to identify
            disease associated genes, then used DIOPT to identify candidate
-           homologs in \cel{}. Homologs were used to run phenotype, gene
+           orthologs in \cel{}. Orthologs were used to run phenotype, gene
            and tissue ontology enrichment analyses to identify disease
            phenologues.}
 \label{fig:gwas}
 \end{figure}
 
 
-After we identified worm homologs for each trait, we reassessed how many traits
+After we identified worm orthologs for each trait, we reassessed how many traits
 still had $>100$ gene candidates, and dropped all traits that had less than this
 for our analysis. We identified 18 traits that met this criteria. The gene
 lists for each of these 18 traits were then analyzed for gene, tissue and
@@ -313,35 +308,8 @@ contribute to a disease in an unbiased manner. One way to discover gene
 associations in an unbiased manner is to perform GWSA in human populations.
 Therefore, we used the GWAS NHGRI-EBI
 Catalog~\cite{MacArthur2016} to identify genes associated with human diseases. We found the
-best nematode candidate homologs for these genes using DIOPT~\cite{Hu2011} and applied
+best nematode candidate orthologs for these genes using DIOPT~\cite{Hu2011} and applied
 our enrichment suite to each of these gene regulatory networks.
-
-\subsubsection*{Obesity-related traits}
-Obesity-related traits is a category within the GWAS NHGRI-EBI catalog that
-pools studies that have measured obesity and other traits associated with
-obesity, such as heart rate, physical activity, hormone levels, body composition
-and cholesterol levels. Since this category includes many parameters,
-we expected there would be many phenologs. GWAS studies have identified
-\hobesity{} genes associated with these traits. Using DIOPT, we found
-\wobesity{} homologs for these genes. In total, $341/\wobesity{}$ genes had
-at least one phenotype annotation; $548/\wobesity{}$ had at least one gene ontology term
-annotation; and $427/\wobesity{}$ had at least one tissue term annotation.
-
-Top results for obesity-related traits included `acetylcholinesterase inhibitor
-response variant' (38 genes, \qval{6}),
-`neurite morphology variant' (21 genes, \qval{2}),
-and `thin' (31 genes, \qval{2}).
-Terms involving locomotion were significantly enriched, as were terms involving
-body shape and food consumption (\qval{1}). Concomitant with these phenologs was
-a tissue enrichment in neuron-related terms. GO enrichment suggested that these
-genes are participating in `iron ion binding' (40 genes, \qval{20}) and
-`tetrapyrrole binding' (37 genes, \qval{13}).
-
-Tissue and phenotype enrichment therefore suggest that obesity-related traits
-may be studied in \cel{} through neuron physiology and function, specifically
-with respect to acetylcholinesterase inhibitors. Moreover, GO enrichment
-implicates iron and tetrapyrrole binding as metabolic components of
-the obesity-related phenologs in \cel{}.
 
 \subsection*{Systemic lupus erythematosus}
 Systemic lupus is an autoimmune disease that is believed to be polygenic in
@@ -352,11 +320,11 @@ this disorder in \cel{}. To establish phenolog candidates, we obtained
 \hlupus{} genes associated with the disease via GWAS studies, and found
 \wlupus{} homolog candidates in \cel{}.
 
-Lupus-associated homologs were reasonably well annotated. Slightly more than half
+Lupus-associated orthologs were reasonably well annotated. Slightly more than half
 of the genes had at least one phenotype annotation ($76/\wlupus{}$) and almost
 all genes were annotated to at least one tissue or gene ontology term
 ($104/\wlupus{}$ and $115/\wlupus$ genes respectively).
-We found that Lupus-associated homologs were enriched in `aneuploidy' (7 genes,
+We found that Lupus-associated orthologs were enriched in `aneuploidy' (7 genes,
 \qval{1}) and `meiotic chromosome segregation' (8 genes, \qval{1}). `Cell fate
 transformation' (6 genes, \qval{1}), and `excess intestinal cells'
 (5 genes, \qval{1}) were also overrepresented, as was `male tail morphology'
@@ -417,8 +385,8 @@ rheumatoid arthritis, for which we found \warthritis{} worm homolog candidates.
 
 % TODO: Is no tissue enrichment observed bc poor annotations, or because
 % all tissues randomly represented?
-The only phenotype that was enriched for these homologs was `short' (10 genes,
-\qval{4}), even though 64 homologs were associated with at least
+The only phenotype that was enriched for these orthologs was `short' (10 genes,
+\qval{4}), even though 64 orthologs were associated with at least
 one phenotype term. No tissue was enriched in this dataset. Because
 82 genes are annotated to have expression in at least one tissue, the lack of
 enrichment does not reflect ignorance about the sites of expression of these
@@ -441,13 +409,40 @@ Others are molecular motors (\emph{unc-116}) that are broadly expressed througho
 the body of \cel{}. Yet others have known roles in neuron and muscle function,
 such as \emph{ocrl-1} and \emph{cat-4}. The `short' phenotype is a subset of
 the `body length variant' phenotype. Body length in \cel{} can be controlled via
-cell size, shape and number\cite{}; alternatively, cuticle development can alter body
-shape~\cite{}; finally, muscles can alter the effective body length artificially~\cite{}.
+cell size or shape\cite{}; alternatively, cuticle development can alter body
+shape~\cite{}; finally, muscles can alter the effective body length
+due to their contraction state~\cite{}.
 
 % TODO: SO.... ?
 
+\subsubsection*{Obesity-related traits}
+Obesity-related traits is a category within the GWAS NHGRI-EBI catalog that
+pools studies that have measured obesity and other traits associated with
+obesity, such as heart rate, physical activity, hormone levels, body composition
+and cholesterol levels. Since this category includes many parameters,
+we expected there would be many phenologs. GWAS studies have identified
+\hobesity{} genes associated with these traits. Using DIOPT, we found
+\wobesity{} orthologs for these genes. In total, $341/\wobesity{}$ genes had
+at least one phenotype annotation; $548/\wobesity{}$ had at least one gene ontology term
+annotation; and $427/\wobesity{}$ had at least one tissue term annotation.
 
-\subsection*{Ontology Enrichment as an aid for screen design}
+Top results for obesity-related traits included `acetylcholinesterase inhibitor
+response variant' (38 genes, \qval{6}),
+`neurite morphology variant' (21 genes, \qval{2}),
+and `thin' (31 genes, \qval{2}).
+Terms involving locomotion were significantly enriched, as were terms involving
+body shape and food consumption (\qval{1}). Concomitant with these phenologs was
+a tissue enrichment in neuron-related terms. GO enrichment suggested that these
+genes are participating in `iron ion binding' (40 genes, \qval{20}) and
+`tetrapyrrole binding' (37 genes, \qval{13}).
+
+Tissue and phenotype enrichment therefore suggest that obesity-related traits
+may be studied in \cel{} through neuron physiology and function, specifically
+with respect to acetylcholinesterase inhibitors. Moreover, GO enrichment
+implicates iron and tetrapyrrole binding as metabolic components of
+the obesity-related phenologs in \cel{}.
+
+\subsection*{Ontology enrichment as an aid for screen design}
 An additional use for a tool like PEA would be as a tool to help guide and
 design screens to identify genes from an RNA-seq or other genome-wide experiment
 for further study. This would be particularly useful in cases when researchers
@@ -484,9 +479,13 @@ genes, \qval{2}) (see Fig.~\ref{fig:cilia}).
 In addition, TEA points at the \cel{} gonad primordium, the somatic gonad
 and early embryonic cells as the sites where genes associated with ciliary neurons
 are enriched. The `male distal tip cell' is a tissue
-that is overrepresented in this dataset, but `distal tip cell' is not enriched,
-which suggests that structures that are present only in the male tissue are
-overrepresented in this dataset.
+that is overrepresented in this dataset, but `distal tip cell' is not enriched.
+In \cel{} the hermaphrodite distal tip cells (DTCs) and the male DTC are very
+similar to each other in their biological functions (both maintain a stem cell
+niche in the distal gonad). However, the male DTC is non-migratory, whereas the
+hermaphrodite DTCs are migratory. Therefore, the term `male distal tip cell'
+may reflect cellular aspects that are correlated with the non-migratory aspects
+of the DTC biology, such as maintenance of proliferation.
 
 Although one interpretation of the results would be that microtubule genes
 are driving the enrichment of these terms, another possibility is that
@@ -557,7 +556,7 @@ is vulF less associated with an Egl phenotype?
   not all cells are shown. All vm1 (4 cells) and vm2 (4 cells) muscles are
   symmetrical arranged around the vulva, but only 2 cells are shown for each.
   There are two seam cells on the left and right side of the vulva, but only
-  cell on the right is shown. Only cells in the adult are shown.}
+  cell on the right is shown. Only terminally differentiated cells are shown.}
 \label{fig:egl}
 \end{figure}
 
@@ -646,8 +645,9 @@ tissue terms that maximized this probability. The list of terms that maximized t
 probability reflected the results from running TEA on the subset of genes that have
 an Egl phenotype. We also calculated the conditional probability that a gene has
 expression in a tissue term $X$ given that it is annotated with an Egl phenotype
-and we searched for terms that maximized this probability. The terms that maximized
-this probability were `nervous system', `pharynx' (a body part with a lot of neurons),
+and we searched for terms that maximized this probability (see
+Table~\ref{tab:cond_probs}). The terms that maximized this probability were
+`nervous system', `pharynx' (a body part with a lot of neurons),
 `sex organ' and `tail' (a body part with neurons and hypodermis). In general, the
 terms that had a high $P(\text{Egl}|X)$ did not have a high $P(X|\text{Egl})$.
 Additionally, the terms that had a high $P(X|\text{Egl})$ are broad terms that
@@ -681,12 +681,8 @@ such a language, we should be able to computationally suggest to a researcher
 what screens one may wish to perform given a dataset.
 
 
-
 \bibliography{pea-citations}
 \bibliographystyle{pnas2011}
-
-
-
 
 
 \end{document}
