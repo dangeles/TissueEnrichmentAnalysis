@@ -3,49 +3,48 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: pea.aux
 The style file: pnas2011.bst
 Database file #1: pea-citations.bib
-Warning--I didn't find a database entry for ""
 Warning--empty journal in Johnson2007
 Warning--there's a number but no volume in Johnson2007
 Warning--empty journal in Waskom
-You've used 45 entries,
+You've used 51 entries,
             1797 wiz_defined-function locations,
-            777 strings with 15070 characters,
-and the built_in function-call counts, 10072 in all, are:
-= -- 860
-> -- 453
+            817 strings with 16384 characters,
+and the built_in function-call counts, 11415 in all, are:
+= -- 962
+> -- 544
 < -- 2
-+ -- 141
-- -- 96
-* -- 906
-:= -- 1530
-add.period$ -- 88
-call.type$ -- 45
-change.case$ -- 44
++ -- 167
+- -- 116
+* -- 1029
+:= -- 1742
+add.period$ -- 100
+call.type$ -- 51
+change.case$ -- 50
 chr.to.int$ -- 0
-cite$ -- 48
-duplicate$ -- 455
-empty$ -- 970
-format.name$ -- 96
-if$ -- 2137
+cite$ -- 54
+duplicate$ -- 512
+empty$ -- 1085
+format.name$ -- 116
+if$ -- 2419
 int.to.chr$ -- 0
-int.to.str$ -- 45
-missing$ -- 45
-newline$ -- 181
-num.names$ -- 45
-pop$ -- 67
+int.to.str$ -- 51
+missing$ -- 51
+newline$ -- 205
+num.names$ -- 51
+pop$ -- 73
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 224
+skip$ -- 264
 stack$ -- 0
-substring$ -- 879
-swap$ -- 98
+substring$ -- 966
+swap$ -- 110
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 120
-width$ -- 47
-write$ -- 444
-(There were 4 warnings)
+while$ -- 132
+width$ -- 53
+write$ -- 504
+(There were 3 warnings)

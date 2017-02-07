@@ -20,11 +20,9 @@
 \usepackage{booktabs}
 % use adjustwidth environment to exceed text width (see examples in text)
 \usepackage{changepage}
-
 % adjust caption style
 \usepackage[aboveskip=1pt,labelfont=bf,
             labelsep=period,singlelinecheck=off]{caption}
-
 % remove brackets from references
 \makeatletter
 \renewcommand{\@biblabel}[1]{\quad#1.}
@@ -40,18 +38,14 @@
 \renewcommand{\footrule}{\hrule height 2pt \vspace{2mm}}
 % \fancyheadoffset[L]{2.25in}
 % \fancyfootoffset[L]{2.25in}
-
 % use \textcolor{color}{text} for colored text (e.g. highlight to-do areas)
 \usepackage{color}
-
 % define custom colors (this one is for figure captions)
 \definecolor{Gray}{gray}{.25}
-
 % this is required to include graphics
 \usepackage{graphicx}
 % set the figures directory
 \graphicspath{{./figs/}}
-
 % use if you want to put caption to the side of the figure - see example in text
 \usepackage{sidecap}
 % \usepackage[urlcolor  = blue]{hyperref}
@@ -64,7 +58,6 @@
             citecolor = blue,
             anchorcolor = blue]{hyperref}
 
-
 % use for have text wrap around figures
 \usepackage{wrapfig}
 \usepackage[pscoord]{eso-pic}
@@ -75,13 +68,10 @@
 \newcommand{\cel}{\emph{C.~elegans}}
 \newcommand{\fog}{\emph{\mbox{fog-2}}}
 \newcommand{\ecol}{\emph{E.~coli}}
-
 \newcommand{\hobesity}{957}
 \newcommand{\wobesity}{614}
-
 \newcommand{\hlupus}{283}
 \newcommand{\wlupus}{135}
-
 \newcommand{\harthritis}{309}
 \newcommand{\warthritis}{124}
 
@@ -99,9 +89,13 @@
           }
 }
 
-\author{David Angeles-Albores\textsuperscript{1,$\dagger{}$}
+\author{David Angeles-Albores\textsuperscript{1}
 \and{}
-Paul W. Sternberg\textsuperscript{1,*}
+Raymond YN Lee\textsuperscript{1}
+\and{}
+Juancarlos Chan\textsuperscript{1}
+\and{}
+Paul W Sternberg\textsuperscript{1,*}
 }
 
 \begin{document}
@@ -113,8 +107,33 @@ Paul W. Sternberg\textsuperscript{1,*}
 % title
 \maketitle
 
+\textbf{1} Department of Biology and Biological Engineering,
+and Howard Hughes Medical Institute, Caltech, Pasadena, CA, 91125, USA\\
+\textbf{*} Corresponding author. Contact:pws@caltech.edu
 
+\section*{Abstract}
+\bf{}
+Genome-wide experiments have the capacity to generate massive amounts of unbiased
+data about an organism. In order to interpret this data, dimensionality reduction
+techniques are required. One approach is to annotate genes using controlled languages
+and to test experimental datasets for term enrichment using probabilistic methods.
+Although gene, phenotype and anatomy ontologies exist for \cel{}, no unified
+software offers enrichment analyses of all the ontologies using the same methodology.
+Here, we present the WormBase Enrichment Suite, which offers users the
+ability to test all nematode ontologies simultaneously. We show that
+the WormBase Enrichment Suite provides valuable insight into different
+biological problems. Briefly, we show that phenotype enrichment analysis (PEA) can
+help researchers identify disease phenologs, phenotypes that are homologous across species,
+which can inform disease modeling in \cel{}. The WormBase Enrichment Suite
+analysis can also shed light on RNA-seq datasets by showing what
+molecular functions are enriched, which phenotypes these functions are implicated
+in and what tissues are overrepresented in the dataset. Finally, we explore the
+phenotype-anatomy relationship, showing that a small subset of highly specific
+tissues are disproportionately likely to cause an Egl phenotype, but inferring
+tissue expression from an Egl phenotype is limited to the largest tissues.
 ]
+
+
 % now start line numbers
 \nolinenumbers{}
 
@@ -190,11 +209,15 @@ measurements can help elucidate the genetic network underlying a phenotype,
 devising screens to test which genes are functionally important can be difficult.
 A common strategy to study phenotypes that are difficult to screen is to
 select an easier-to-screen phenolog, and to test positive hits for the true
-phenotype of interest afterwards~\cite{}. Currently, selection of screening
-phenotypes is performed based on researcher experience.
-By formalizing phenotype enrichment analysis as a tool with which to analyze
-gene sets, researchers should be able to formally establish phenologs, which has
-consequences for screen design.
+phenotype of interest afterwards. For example, candidate genes to extend the \cel{}
+lifespan can be first screened for using heat shock survival
+genes involved in \cel{} aging
+sensitivity can be identified using stress assays~\cite{Kim2007a,Mehta2009}.
+Currently, selection of screening phenotypes is performed based on researcher
+experience. By formalizing phenotype enrichment analysis as a tool with which to
+analyze gene sets, researchers should be able to formally establish phenologs,
+which has consequences for screen design.
+% eating defects in an ablated strain
 
 An additional problem with genome-wide
 queries of \cel{} states (be they developmental, such as
@@ -210,8 +233,9 @@ To facilitate understanding of large datasets, and to make discovery of
 phenologs easier, we have completed an enrichment tool suite in WormBase
 that allows users to rapidly perform phenotype, tissue and gene ontology
 enrichment analyses (PEA, TEA and GEA respectively) on curated \cel{} ontologies
-using the same methodology for each one. They are located at
-% TODO: include links.
+using the same methodology for each one.
+% They are located at
+% % TODO: include links.
 We applied our tools towards the unbiased discovery of phenologues of
 multigenic, complex diseases including
 % Diseases to study:
@@ -230,14 +254,14 @@ All scripts were implemented in Python 3.5~\cite{Rossum2011}. We used
 pandas~\cite{McKinney2011} and scipy~\cite{Oliphant2007} to write the
 statistical testing framework. Matplotlib~\cite{Hunter2007} and Seaborn~\cite{Waskom}
 libraries are used to generate all plots. Testing was performed using the
-WormBase version XXXXX. The WormBase Enrichment suite can be installed using
+WormBase version WS256. The WormBase Enrichment suite can be installed using
 pip via the command:
 
 \texttt{pip install tissue\_enrichment\_analysis}
 
-A brief tutorial on how to use the command line tool can be found in the SI.
-A brief tutorial on how to interact with the suite using python is available
-as a Jupyter notebook~\cite{Perez2007} in the SI.
+% A brief tutorial on how to use the command line tool can be found in the SI.
+% A brief tutorial on how to interact with the suite using python is available
+% as a Jupyter notebook~\cite{Perez2007} in the SI.
 
 \subsection*{Human disease phenolog identification}
 We used the GWAS EBI-NHGRI catalog~\cite{MacArthur2016} to extract information
@@ -284,10 +308,10 @@ used for TEA~\cite{Angeles-Albores2016}. We generated a dictionary that
 included terms with at
 least 50 annotating genes or more and had a similarity threshold of 0.95 for PEA
 (the total number of terms in the dictionary was 251, annotated by 9,169 genes
- for the version XXXXX);\@ and we generated a
+ for the version WS256);\@ and we generated a
 dictionary that included terms with at least 50 annotating genes or more and
 had a similarity threshold of 0.95 for GEA (the total number of terms in this
-dictionary is 271, annotated by 14,636 genes for the version XXXX).
+dictionary is 271, annotated by 14,636 genes for the version WS256).
 \@ Next, we benchmarked the dictionaries on the same gene
 sets as TEA and obtained enrichment of all the expected
 categories~\cite{Gaudet2004a, Spencer2011, Cinar2005, Watson2008a,
@@ -409,11 +433,10 @@ Others are molecular motors (\emph{unc-116}) that are broadly expressed througho
 the body of \cel{}. Yet others have known roles in neuron and muscle function,
 such as \emph{ocrl-1} and \emph{cat-4}. The `short' phenotype is a subset of
 the `body length variant' phenotype. Body length in \cel{} can be controlled via
-cell size or shape\cite{}; alternatively, cuticle development can alter body
-shape~\cite{}; finally, muscles can alter the effective body length
-due to their contraction state~\cite{}.
+cell size or shape\cite{Wang2002,Nakano2004}; alternatively, cuticle development can alter body
+shape~\cite{Cox1980,Kramer1988}; finally, muscles can alter the effective body
+length due to their contraction state~\cite{Lewis1980}.
 
-% TODO: SO.... ?
 
 \subsubsection*{Obesity-related traits}
 Obesity-related traits is a category within the GWAS NHGRI-EBI catalog that
@@ -679,6 +702,7 @@ the phenotypes that are most overrepresented. An intriguing new direction of
 research would be to create a controlled language for screening methods. With
 such a language, we should be able to computationally suggest to a researcher
 what screens one may wish to perform given a dataset.
+
 
 
 \bibliography{pea-citations}
