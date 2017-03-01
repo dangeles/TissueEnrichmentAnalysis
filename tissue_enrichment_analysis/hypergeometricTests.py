@@ -304,7 +304,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
 
 def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
                             analysis='tissue', n_bars=15, dirGraphs='',
-                            save=True, **kwargs):
+                            save=False, **kwargs):
     """
     A plot function for TEA.
 
@@ -382,8 +382,6 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
             plt.savefig('{0}.{1}'.format(title, ftype), dpi=1200)
 
     return ax
-#    plt.show()
-#    plt.close()
 
 # ==============================================================================
 #
@@ -503,7 +501,7 @@ if __name__ == '__main__':
     df_results = enrichment_analysis(gene_list, tissue_df, alpha=q,
                                      show=False)
 
-    dfname = title+'.csv'
+    dfname = title + '.csv'
     df_results.to_csv(dfname, index=False)
 
     if prnt:
