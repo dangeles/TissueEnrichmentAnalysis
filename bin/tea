@@ -105,6 +105,6 @@ if __name__ == '__main__':
 
     if save:
         hgt.plot_enrichment_results(df_results, title=title, save=save,
-                                    analysis=kind)
+                                    analysis=args.kind)
 
     sys.exit()
