@@ -80,7 +80,7 @@ setup(
   keywords=['tissue enrichment analysis', 'TEA',
             'RNAseq', 'celegans', 'biology'],  # arbitrary keywords
   install_requires=[
-          'matplotlib', 'scipy', 'numpy'
+          'matplotlib', 'scipy', 'numpy', 'pandas', 'seaborn'
       ],
   classifiers=['License :: OSI Approved :: MIT License',
                'Programming Language :: Python :: 3.5'
