@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
 A script to implement a hypergeometric test procedure.
 
@@ -10,8 +9,8 @@ A tissue dictionary
 A control list of gene names
 An experimental list of gene names
 """
+# -*- coding: utf-8 -*-
 import pandas as pd
-import numpy as np
 from scipy import stats
 import os
 import sys
@@ -406,14 +405,14 @@ def fetch_dictionary(analysis='tissue'):
         raise ValueError('analysis must be one of `tissue`, `phenotype`' +
                          ' or `go`')
 
-    url_tissue = 'ftp://caltech.wormbase.org/pub/'
+    url_tissue = 'http://caltech.wormbase.org/TissueEnrichmentAnalysis/'
 
     if analysis == 'tissue':
-        url_tissue += 'TissueEnrichmentAnalysis/anat_dict.csv'
+        url_tissue += 'anatomy_dict.csv'
     elif analysis == 'phenotype':
-        raise ValueError('come back soon for this function')
+        url_tissue += 'phenotype_dict.csv'
     elif analysis == 'go':
-        raise ValueError('come back soon for this function')
+        url_tissue += 'go_dict.csv'
 
     try:
         with contextlib.closing(urlopen(url_tissue)) as conn:
@@ -473,10 +472,10 @@ if __name__ == '__main__':
 
     # optional args
     if args.dictionary:
-        tdf_name = args.tissue_dictionary
-        tissue_df = pd.read_csv(tdf_name)
+        dict_name = args.tissue_dictionary
+        dictionary = pd.read_csv(dict_name)
     else:
-        tissue_df = fetch_dictionary(analysis=args.kind)
+        dictionary = fetch_dictionary(analysis=args.kind)
 
     if args.q:
         q = args.q
@@ -498,7 +497,7 @@ if __name__ == '__main__':
     with open(gl_name, 'r') as f:
         gene_list = [x.strip() for x in f.readlines()]
 
-    df_results = enrichment_analysis(gene_list, tissue_df, alpha=q,
+    df_results = enrichment_analysis(gene_list, dictionary, alpha=q,
                                      show=False)
 
     dfname = title + '.csv'
