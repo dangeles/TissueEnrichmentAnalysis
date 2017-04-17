@@ -115,16 +115,17 @@ and Howard Hughes Medical Institute, Caltech, Pasadena, CA, 91125, USA\\
 \bf{}
 Genome-wide experiments have the capacity to generate massive amounts of unbiased
 data about an organism. In order to interpret this data, dimensionality reduction
-techniques are required. One approach is to annotate genes using controlled languages
-and to test experimental datasets for term enrichment using probabilistic methods.
-Although gene, phenotype and anatomy ontologies exist for \cel{}, no unified
-software offers enrichment analyses of all the ontologies using the same methodology.
+techniques are required. One approach is to annotate genes using unified,
+unambiguous vocabularies and to test experimental datasets for term enrichment
+using probabilistic methods.
+Although gene, phenotype and anatomy ontologies exist for \cel{}, no one
+software offers enrichment analyses of all three ontologies.
 Here, we present the WormBase Enrichment Suite, which offers users the
 ability to test all nematode ontologies simultaneously. We show that
 the WormBase Enrichment Suite provides valuable insight into different
-biological problems. Briefly, we show that phenotype enrichment analysis (PEA) can
-help researchers identify disease phenologs, phenotypes that are homologous across species,
-which can inform disease modeling in \cel{}. The WormBase Enrichment Suite
+biological problems, and that phenotype enrichment analysis (PEA) can
+help researchers identify disease phenologs, phenotypes that are homologous across
+species, which can inform disease modeling in \cel{}. The WormBase Enrichment Suite
 analysis can also shed light on RNA-seq datasets by showing what
 molecular functions are enriched, which phenotypes these functions are implicated
 in and what tissues are overrepresented in the dataset. Finally, we explore the
@@ -259,9 +260,14 @@ pip via the command:
 
 \texttt{pip install tissue\_enrichment\_analysis}
 
-% A brief tutorial on how to use the command line tool can be found in the SI.
-% A brief tutorial on how to interact with the suite using python is available
-% as a Jupyter notebook~\cite{Perez2007} in the SI.
+Enrichment analyses are performed as described in~\cite{Angeles-Albores2016}.
+Briefly, a static dictionary is constructed for each ontology using the
+most recent WormBase release annotation information. This dictionary is generated
+using a trimming algorithm described in~\cite{Angeles-Albores2016} to remove
+terms that are too general and uninformative as well as terms that are very
+specific but do not have many annotations. When the user provides a set of genes
+to test against, we use a hypergeometric model to test whether a given term within
+an ontology is occurring at a greater frequency than expected by random chance.
 
 \subsection*{Human disease phenolog identification}
 We used the GWAS EBI-NHGRI catalog~\cite{MacArthur2016} to extract information
