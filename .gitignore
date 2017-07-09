@@ -50,3 +50,11 @@ build/.DS_Store
 .DS_Store
 
 gene_ontology.csv
+
+*.sketch
+
+pea_paper_docs/input/go_dictionary.csv
+
+pea_paper_docs/paper/figures.sketch
+
+*.sketch
