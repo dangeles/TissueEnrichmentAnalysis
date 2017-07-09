@@ -348,17 +348,17 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     go_ID = 10
 
     if analysis == 'phenotype':
-        hr_labels = df['Tissue'][:n_bars].str[:-pheno_ID-1]
+        df.Tissue = df.Tissue.str[:-pheno_ID-1]
     elif analysis == 'tissue':
-        hr_labels = df['Tissue'][:n_bars].str[:-tissue_ID-1]
+        df.Tissue = df.Tissue.str[:-tissue_ID-1]
     elif analysis == 'go':
-        hr_labels = df['Tissue'][:n_bars].str[:-go_ID-1]
+        df.Tissue = df.Tissue.str[:-go_ID-1]
 
     # plot first n_bars
 
     with sns.axes_style('whitegrid'):
         # with sns.set_context('paper'):
-        ax = sns.barplot(x=df[y][:n_bars], y=hr_labels, ax=ax)
+        ax = sns.barplot(x=df[y][:n_bars], y=df.Tissue[:n_bars], ax=ax)
 
     # fix the plot to prettify it
     ax.set_ylabel('Ontology Terms', fontsize=15)
