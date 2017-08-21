@@ -8,15 +8,15 @@ Warning--there's a number but no volume in Johnson2007
 Warning--empty journal in Waskom
 You've used 51 entries,
             1797 wiz_defined-function locations,
-            817 strings with 16384 characters,
-and the built_in function-call counts, 11415 in all, are:
+            817 strings with 16651 characters,
+and the built_in function-call counts, 11431 in all, are:
 = -- 962
-> -- 544
+> -- 548
 < -- 2
-+ -- 167
-- -- 116
-* -- 1029
-:= -- 1742
++ -- 168
+- -- 117
+* -- 1031
+:= -- 1745
 add.period$ -- 100
 call.type$ -- 51
 change.case$ -- 50
@@ -24,8 +24,8 @@ chr.to.int$ -- 0
 cite$ -- 54
 duplicate$ -- 512
 empty$ -- 1085
-format.name$ -- 116
-if$ -- 2419
+format.name$ -- 117
+if$ -- 2422
 int.to.chr$ -- 0
 int.to.str$ -- 51
 missing$ -- 51
@@ -35,7 +35,7 @@ pop$ -- 73
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 264
+skip$ -- 265
 stack$ -- 0
 substring$ -- 966
 swap$ -- 110

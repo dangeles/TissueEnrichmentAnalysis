@@ -19,7 +19,8 @@ Basic Usage
 Web usage
 ---------
 
-Go to [www.wormbase.org/tea](http://www.wormbase.org/tea), input your gene list and enjoy the results!
+Go to [www.wormbase.org/tea](http://www.wormbase.org/tools/enrichment/tea/tea.cgi),
+input your gene list and enjoy the results!
 
 Within a Python Script
 ----------------------
