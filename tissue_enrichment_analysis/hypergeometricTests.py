@@ -236,15 +236,14 @@ def plot_enrichment_results(df, y='logq', title='', analysis='tissue',
     ftype = kwargs.pop('ftype', 'svg')
 #
     if ax is None:
-        ax = plt.gca()
+        fig, ax = plt.subplots(figsize=(14, 8))
 
     # sort by q value change
     df.sort_values(['Q value', 'Enrichment Fold Change'],
                    ascending=[True, False], inplace=True)
 
     # make a logq bar:
-    if y.lower() == 'logq':
-        df['logq'] = -df['Q value'].apply(np.log10)
+    logq = -df['Q value'].apply(np.log10)
 
     # added August 26 2016:
     tissue_ID = 11
@@ -252,22 +251,22 @@ def plot_enrichment_results(df, y='logq', title='', analysis='tissue',
     go_ID = 10
 
     if analysis == 'phenotype':
-        df.Tissue = df.Term.str[:-pheno_ID-1]
+        yvals = df.Term.str[:-pheno_ID-1]
     elif analysis == 'tissue':
-        df.Tissue = df.Term.str[:-tissue_ID-1]
+        yvals = df.Term.str[:-tissue_ID-1]
     elif analysis == 'go':
-        df.Tissue = df.Term.str[:-go_ID-1]
+        yvals = df.Term.str[:-go_ID-1]
 
     # plot first n_bars
     with sns.axes_style('whitegrid'):
-        ax = sns.barplot(x=df[y][:n_bars], y=df.Term[:n_bars], ax=ax)
+        ax = sns.barplot(x=logq[:n_bars], y=yvals[:n_bars], ax=ax)
 
     # fix the plot to prettify it
     ax.set_ylabel('Terms', fontsize=15)
     if y.lower() != 'logq':
         ax.set_xlabel(y, fontsize=15)
     else:
-        ax.set_xlabel('$\log_{10}{q}$')
+        ax.set_xlabel('$\log_{10}{q}$', fontsize=15)
     ax.tick_params(axis='x', labelsize=13)
     ax.tick_params(axis='y', labelsize=13)
     plt.tight_layout()
