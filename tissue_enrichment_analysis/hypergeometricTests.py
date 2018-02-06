@@ -469,6 +469,7 @@ if __name__ == '__main__':
 
     gl_name = args.gene_list
     title = args.title
+    kind = args.kind
 
     # optional args
     if args.dictionary:
