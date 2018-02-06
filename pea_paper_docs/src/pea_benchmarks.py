@@ -37,7 +37,8 @@ wbids = pd.read_csv('../input/wormbase_ids.txt', sep='\t', header=None,
                     names=['wbid', 'human_read', 'target_id'])
 
 # Ciliary Neuron Transcriptome (from Juan Wang and Maureen Barr)
-ciliated_df = pd.read_excel('~/Downloads/mmc3.xlsx')
+ciliated_df = pd.read_excel('../input/ciliary_neuron_transcriptome_DEseq2.xlsx'
+                            )
 
 # the minimum number of observations to keep for the GWAS enrich. analysis
 # this ensures that only high-scoring results are kept.
