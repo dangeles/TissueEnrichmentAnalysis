@@ -1,11 +1,18 @@
-"""A script to setup the package."""
+"""
+A script to setup the package.
+
+Created on Fri Mar 11 11:27:39 2016
+
+@author: dangeles
+"""
 # -*- coding: utf-8 -*-
+
 from distutils.core import setup
 from setuptools import setup, find_packages
 import os
 import sys
 
-version = '0.16.12'
+version = '0.17.6'
 
 # just type in python setup.py publish and
 # this takes care of publishing to pypi!
@@ -60,7 +67,6 @@ def readme():
     with open('README.rst') as f:
         return f.read()
 
-
 setup(
   name='tissue_enrichment_analysis',
   packages=find_packages(exclude=("tests",)),
@@ -70,8 +76,7 @@ setup(
   author='David Angeles-Albores',
   author_email='dangeles@caltech.edu',
   url='https://github.com/dangeles/TissueEnrichmentAnalysis',  # github repo
-  download_url='https://github.com/dangeles/' +\
-               'TissueEnrichmentAnalysis/tarball/{0}'.format(version),
+  download_url='https://github.com/dangeles/TissueEnrichmentAnalysis/tarball/{0}'.format(version),
   keywords=['tissue enrichment analysis', 'TEA',
             'RNAseq', 'celegans', 'biology'],  # arbitrary keywords
   install_requires=[
