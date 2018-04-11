@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!python
 #-*- coding: utf-8 -*-
 """
 TEA command line script.
@@ -71,7 +71,7 @@ if __name__ == '__main__':
     # reduce wbids to background set:
     if args.background:
         bg = pd.read_csv(args.background, header=None, names=['wbid'])
-        dictionary = dictionary[dictionary.wbid.isin(bg.wbid.values)]
+        dictionary = dictionary[dictionary.wbid.isin(bg.wbid)]
 
     # warn user if the dictionary is empty after subsetting:
     if len(dictionary) == 0:

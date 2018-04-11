@@ -12,6 +12,7 @@ An experimental list of gene names
 # -*- coding: utf-8 -*-
 import pandas as pd
 from scipy import stats
+import numpy as np
 import os
 import sys
 from urllib.request import urlopen
@@ -21,35 +22,10 @@ import contextlib
 def pass_list(user_provided, tissue_dictionary):
     """
     A function to check which genes in provided list are in the dictionary.
-
-    Takes two vectors, user_provided and tissue_dictionary in that order
-    tissue_dictionary is a pandas dataframe that you should know about
-    user_provided is a list of gene names
     """
-    # changed 4 Jan 2017
-    # length = tissue_dictionary.shape[0]  # how many genes in the dict
-    #
-    # # make an empty dataframe
-    # present = pd.DataFrame(index=range(length), columns=['wbid', 'provided'])
-    #
-    # # fill wbid column with all the gene names
-    # present.wbid = tissue_dictionary.wbid
-    #
-    # # go through and pass attendance -- 1 if present, 0 otherwise
-    # for item in user_provided:
-    #     present.provided[present.wbid == item] = 1
-    #
-    # # remove NA's and make them 0
-    # present.provided = present.provided.fillna(0)
     ind = tissue_dictionary.wbid.isin(user_provided)
     present = tissue_dictionary[ind].wbid
-
-    # return df
     return present
-
-# ==============================================================================
-# hgf is short for hypergeometric function
-# ==============================================================================
 
 
 def hgf(gene_list, tissue_df):
@@ -67,24 +43,19 @@ def hgf(gene_list, tissue_df):
     tissue_dictionary should be a pandas df
     """
     # figure out what genes are in the user provided list
-    # present = pass_list(gene_list, tissue_df)
-    # unused = present[present.provided == 0].wbid # 4 Jan 2017
-    # slice out only the genes that were present from the user-provided list
-    # wanted = present.wbid[present.provided == 1]
-    wanted = pass_list(gene_list, tissue_df)
+    # wanted = pass_list(gene_list, tissue_df)
 
     # re-index the dictionary s.t. the wbid is the index
     tissue_df = tissue_df.set_index('wbid')
 
     # number of balls per tissue in the dictionary
-    sums_of_tissues = tissue_df.sum()  # this object can be identified by
-    # the column names of tissues and excludes gene IDs
+    sums_of_tissues = tissue_df.sum()
 
-    # total size of the urn
-    total_balls = tissue_df.sum().sum()  # total labels in the dictionary
+    # total labels in the dictionary
+    total_balls = tissue_df.sum().sum()
 
     # slice out the rows from tissue_dictionary that came from the list
-    wanted_dictionary = tissue_df.loc[wanted]
+    wanted_dictionary = tissue_df.reindex(gene_list)
 
     # get the total number of labels from each tissue
     wanted_sum = wanted_dictionary.sum()
@@ -94,45 +65,35 @@ def hgf(gene_list, tissue_df):
 
     # make a hash with the p-values for enrichment of each tissue.
     p_hash = {}
-    exp_hash = {}  # expected number for each tissue
+    exp_hash = {}
     for i, name in enumerate(tissue_df.columns.values):
         # if the total number of genes is zero, return p= 1 for all tissues
         if picked == 0:
             p_hash[name] = 1
-        else:
-            # if a certain tissue has never been called, don't test it
-            # in certain pathological cases where the list size is small
-            # ie. close to 1, probability of never drawing a given label
-            # can be close to 1, so survival function can be less than 0.05
-            # although the math is right, this behavior is clearly undesirable
-            if wanted_sum[name] == 0:
-                p_hash[name] = 1
-            else:
-                # no. of balls of color name picked
-                # total number of balls in urn
-                # total number of balls of color name in urn
-                # total number of balls picked out
-                n_obs = wanted_sum[name]
-                s_tissue = sums_of_tissues[name]
-                p_hash[name] = stats.hypergeom.sf(n_obs, total_balls, s_tissue,
-                                                  picked)
-                exp_hash[name] = stats.hypergeom.mean(total_balls, s_tissue,
-                                                      picked)
+            continue
+        # if a certain tissue has never been called, don't test it
+        if wanted_sum[name] == 0:
+            p_hash[name] = 1
+            continue
+        # no. of balls of color name picked
+        # total number of balls in urn
+        # total number of balls of color name in urn
+        # total number of balls picked out
+        n_obs = wanted_sum[name]
+        s_tissue = sums_of_tissues[name]
+        p_hash[name] = stats.hypergeom.sf(n_obs, total_balls, s_tissue,
+                                          picked)
+        exp_hash[name] = stats.hypergeom.mean(total_balls, s_tissue,
+                                              picked)
 
     # return the p-values, the genes associated with each tissue and the user
     # provided genes associate with each tissue.
-    return p_hash, exp_hash, wanted_dictionary  # , unused
+    return p_hash, exp_hash, wanted_dictionary
 
 
-# ==============================================================================
-#
-# ==============================================================================
-def benjamin_hochberg_stepup(p_vals):
+def benjamini_hochberg_stepup(p_vals):
     """
     Given a list of p-values, apply FDR correction and return the q values.
-
-    alpha is a scalar FDR value
-    p_vals should be iterable
     """
     # sort the p_values, but keep the index listed
     index = [i[0] for i in sorted(enumerate(p_vals), key=lambda x:x[1])]
@@ -150,55 +111,29 @@ def benjamin_hochberg_stepup(p_vals):
         q_vals[i] = q  # store the q_value
         prev_q = q  # update the previous q_value
 
-    # return q_vals and the index so we can match up each
-    # q_value with its appropriate tissue.
+    # prevent the lowest q value from going to zero
+    if np.sum(q_vals == 0) > 0:
+        # set the min q-value to 10x less than the smallest non-zero value
+        q_vals[np.where(q_vals == 0)] = np.min(q_vals[np.where(q_vals != 0)])/10
+
+    # return q_vals and the index so we can match up each q-value to its index
     return q_vals, index
 
 
-# ==============================================================================
-#
-# ==============================================================================
 def return_enriched_tissues(p_hash, alpha):
-    """
-    A function index p-values to a tissue to prepare for FDR correction.
-
-    Given a hash of p-values
-    (tissue -> p-values)
-    apply an FDR correction and
-    return the q_values that pass
-    significance along with the
-    tissue type.
-    """
+    """A function index p-values and call the FDR function."""
     # initialize a list, a hash and a counter
-    p_values = []
-    index_to_tissue = {}
-    k = 0
-    # go through the p_hash
-    for key, value in p_hash.items():
-        # place each value in the list
-        p_values.append(value)
-        # store hash key in an array at the same index as value is in p_values
-        index_to_tissue[k] = key
-        # add 1 to the index
-        k += 1
+    p_values = list(p_hash.values())
+    keys = list(p_hash.keys())
 
-    # apply FDR, using BH stepup procedure
-    q_values, index = benjamin_hochberg_stepup(p_values)
-
-    # place everything in a hash
-    q_hash = {}
-    for i, value in enumerate(q_values):
-        j = index_to_tissue[index[i]]
-        q_hash[j] = value
-
+    # FDR
+    q_values, index = benjamini_hochberg_stepup(p_values)
+    q_hash = {keys[index[pair[0]]]: pair[1] for pair in enumerate(q_values)}
     return q_hash
-# ==============================================================================
-#
-# ==============================================================================
 
 
-def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
-                        save=False, show=True):
+def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='', save=False,
+                        show=False):
     """
     Execute complete enrichment analysis (hypergeometric test, BH correction).
 
@@ -225,42 +160,10 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
         raise ValueError('gene_list is empty!')
 
     # calculate the enrichment
-    # p_hash, exp_hash, wanted_dic, unused = hgf(gene_list, tissue_df)
     p_hash, exp_hash, wanted_dic = hgf(gene_list, tissue_df)
 
     # FDR correct
     q_hash = return_enriched_tissues(p_hash, alpha)
-
-    # write results to a dataframe.
-    # columns = ['Tissue', 'Expected', 'Observed', 'Enrichment Fold Change',
-    #            'P value', 'Q value']
-    # df_final = pd.DataFrame(index=np.arange(len(q_hash)), columns=columns)
-    #
-    # i = 0
-    # for tissue, qval in q_hash.items():
-    #     if qval < alpha:
-    #
-    #         expected = exp_hash[tissue]
-    #         observed = wanted_dic[tissue].sum()
-    #
-    #         df_final['Tissue'].ix[i] = tissue
-    #         df_final['Expected'].ix[i] = expected
-    #         df_final['Observed'].ix[i] = observed
-    #         if expected != 0:
-    #             df_final['Enrichment Fold Change'].ix[i] = observed/expected
-    #         else:
-    #             df_final['Enrichment Fold Change'].ix[i] = np.inf
-    #         df_final['P value'].ix[i] = p_hash[tissue]
-    #         df_final['Q value'].ix[i] = qval
-    #         i += 1
-    #
-    # df_final.dropna(inplace=True)
-    # df_final['Expected'] = df_final['Expected'].astype(float)
-    # df_final['Observed'] = df_final['Observed'].astype(int)
-    # df_final['Enrichment Fold Change']
-    #  = df_final['Enrichment Fold Change'].astype(float)
-    # df_final['P value'] = df_final['P value'].astype(float)
-    # df_final['Q value'] = df_final['Q value'].astype(float)
 
     # TODO: is there a better way to do this?
     def get_observed(x):
@@ -268,16 +171,15 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
         return wanted_dic[x].sum()
 
     # slight modification
-    # make a dataframe
-    # index will be tissues column
+    # make a dataframe, index will be tissues column
     df_final = pd.DataFrame.from_dict(exp_hash, orient='index')
     # make the tissues their own column:
     df_final.reset_index(level=0, inplace=True)
-    df_final.columns = ['Tissue', 'Expected']
-    df_final['Observed'] = df_final.Tissue.apply(get_observed)  # v. slow
+    df_final.columns = ['Term', 'Expected']
+    df_final['Observed'] = df_final.Term.apply(get_observed)  # v. slow
     df_final['Enrichment Fold Change'] = df_final.Observed/df_final.Expected
-    df_final['P value'] = df_final.Tissue.map(p_hash)
-    df_final['Q value'] = df_final.Tissue.map(q_hash)
+    df_final['P value'] = df_final.Term.map(p_hash)
+    df_final['Q value'] = df_final.Term.map(q_hash)
 
     df_final.dropna(inplace=True)
     df_final.Observed = df_final.Observed.astype(int)
@@ -295,15 +197,11 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='',
     if save:
         df_final.to_csv(aname)
 
-    return df_final  # , unused , p_hash
-# ==============================================================================
-#
-# ==============================================================================
+    return df_final
 
 
-def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
-                            analysis='tissue', n_bars=15, dirGraphs='',
-                            save=False, **kwargs):
+def plot_enrichment_results(df, y='logq', title='', analysis='tissue',
+                            n_bars=15, save=False, **kwargs):
     """
     A plot function for TEA.
 
@@ -336,11 +234,14 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     ftype = kwargs.pop('ftype', 'svg')
 #
     if ax is None:
-        ax = plt.gca()
+        fig, ax = plt.subplots(figsize=(14, 8))
 
     # sort by q value change
     df.sort_values(['Q value', 'Enrichment Fold Change'],
                    ascending=[True, False], inplace=True)
+
+    # make a logq bar:
+    logq = -df['Q value'].apply(np.log10)
 
     # added August 26 2016:
     tissue_ID = 11
@@ -348,43 +249,31 @@ def plot_enrichment_results(df, y='Enrichment Fold Change', title='',
     go_ID = 10
 
     if analysis == 'phenotype':
-        hr_labels = df['Tissue'][:n_bars].str[:-pheno_ID-1]
+        yvals = df.Term.str[:-pheno_ID-1]
     elif analysis == 'tissue':
-        hr_labels = df['Tissue'][:n_bars].str[:-tissue_ID-1]
+        yvals = df.Term.str[:-tissue_ID-1]
     elif analysis == 'go':
-        hr_labels = df['Tissue'][:n_bars].str[:-go_ID-1]
+        yvals = df.Term.str[:-go_ID-1]
 
     # plot first n_bars
-
     with sns.axes_style('whitegrid'):
-        # with sns.set_context('paper'):
-        ax = sns.barplot(x=df[y][:n_bars], y=hr_labels, ax=ax)
+        ax = sns.barplot(x=logq[:n_bars], y=yvals[:n_bars], ax=ax)
 
     # fix the plot to prettify it
-    ax.set_ylabel('Ontology Terms', fontsize=15)
-    ax.set_xlabel(y, fontsize=15)
+    ax.set_ylabel('Terms', fontsize=15)
+    if y.lower() != 'logq':
+        ax.set_xlabel(y, fontsize=15)
+    else:
+        ax.set_xlabel('$\log_{10}{q}$', fontsize=15)
     ax.tick_params(axis='x', labelsize=13)
     ax.tick_params(axis='y', labelsize=13)
     plt.tight_layout()
 
     # save
     if save:
-        if dirGraphs:
-            if not os.path.exists(dirGraphs):
-                os.makedirs(dirGraphs)
-            if dirGraphs[len(dirGraphs)-1] != '/':
-                plt.savefig(dirGraphs+'/{0}.{1}'.format(title, ftype),
-                            dpi=1200)
-            else:
-                plt.savefig(dirGraphs+'{0}.{1}'.format(title, ftype), dpi=1200)
-        else:
-            plt.savefig('{0}.{1}'.format(title, ftype), dpi=1200)
+        plt.savefig('{0}.{1}'.format(title, ftype), dpi=1200)
 
     return ax
-
-# ==============================================================================
-#
-# ==============================================================================
 
 
 def fetch_dictionary(analysis='tissue'):
@@ -430,17 +319,16 @@ def fetch_dictionary(analysis='tissue'):
 if __name__ == '__main__':
 
     import re
-
-    path = './'
-    os.chdir(path)
-
     import argparse
     import matplotlib
     matplotlib.use('Agg')
-    import matplotlib.pyplot as plt
     import seaborn as sns
+
     sns.set_context('paper')
     sns.set_style('whitegrid')
+
+    path = './'
+    os.chdir(path)
 
     defQ = 0.1
 
@@ -465,43 +353,80 @@ if __name__ == '__main__':
                         to print results', action='store_true')
     parser.add_argument('-s', "--save", help='Indicate whether to save your \
                         plot.', action='store_true')
+    parser.add_argument('-b', "--background", help='Provide a background gene \
+                        set as a csv file with a single column without a \
+                        column name. Gene names must be in wbid format.',
+                        type=str)
+    parser.add_argument('-m', "--melted_name", help='Name for gene_to_terms \
+                        file. If none provided, defaults to gene_to_terms.csv',
+                        type=str)
     args = parser.parse_args()
 
     gl_name = args.gene_list
     title = args.title
 
     # optional args
+    # load dictionary:
     if args.dictionary:
         dict_name = args.tissue_dictionary
         dictionary = pd.read_csv(dict_name)
     else:
         dictionary = fetch_dictionary(analysis=args.kind)
 
+    # reduce wbids to background set:
+    if args.background:
+        bg = pd.read_csv(args.background, header=None, names=['wbid'])
+        dictionary = dictionary[dictionary.wbid.isin(bg.wbid)]
+
+    # warn user if the dictionary is empty after subsetting:
+    if len(dictionary) == 0:
+        raise ValueError('Dictionary is empty after subsetting')
+
+    # set threshold
     if args.q:
         q = args.q
     else:
         q = defQ
 
+    # print results
     if args.print:
         prnt = True
     else:
         prnt = False
 
+    # save results
     if args.save:
         save = True
 
     else:
         save = False
 
-    gene_list = []
-    with open(gl_name, 'r') as f:
-        gene_list = [x.strip() for x in f.readlines()]
+    # open gene list:
+    gene_list = pd.read_csv(gl_name, header=None, names=['wbid'])
 
-    df_results = enrichment_analysis(gene_list, dictionary, alpha=q,
-                                     show=False)
+    # perform enrichment analysis:
+    df_results = enrichment_analysis(gene_list.wbid.unique(), dictionary,
+                                     alpha=q, show=False)
 
-    dfname = title + '.csv'
-    df_results.to_csv(dfname, index=False)
+    dfname = title + '.tsv'
+    df_results.to_csv(dfname, index=False, sep='\t')
+
+    # melt dictionary:
+    melted_dict = pd.melt(dictionary, id_vars='wbid', var_name='term',
+                          value_name='found')
+    melted_dict = melted_dict[melted_dict.found == 1]
+
+    # keep only terms that were significant:
+    melted_dict = melted_dict[melted_dict.term.isin(df_results.Term.values)]
+
+    # keep only relevant genes:
+    melted_dict = melted_dict[melted_dict.wbid.isin(gene_list.wbid)]
+
+    # save to file:
+    if args.melted_name:
+        melted_dict.to_csv(args.melted_name, index=False)
+    else:
+        melted_dict.to_csv('gene_to_terms.csv', index=False)
 
     if prnt:
         with open(dfname, 'r') as f:
@@ -513,10 +438,7 @@ if __name__ == '__main__':
                 if re.findall("\d+\.\d+", val):
                     ind = value.index(val)
                     x = float(val)
-                    if x < 10**-6:
-                        value[ind] = '<10^-6'
-                    else:
-                        value[ind] = '{0:.2g}'.format(x)
+                    value[ind] = '{0:.2g}'.format(x)
 
             value = '\t'.join(value)
             print(value)

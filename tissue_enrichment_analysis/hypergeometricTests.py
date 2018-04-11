@@ -55,7 +55,7 @@ def hgf(gene_list, tissue_df):
     total_balls = tissue_df.sum().sum()
 
     # slice out the rows from tissue_dictionary that came from the list
-    wanted_dictionary = tissue_df.loc[gene_list]
+    wanted_dictionary = tissue_df.reindex(gene_list)
 
     # get the total number of labels from each tissue
     wanted_sum = wanted_dictionary.sum()
@@ -121,9 +121,7 @@ def benjamini_hochberg_stepup(p_vals):
 
 
 def return_enriched_tissues(p_hash, alpha):
-    """
-    A function index p-values and call the FDR function.
-    """
+    """A function index p-values and call the FDR function."""
     # initialize a list, a hash and a counter
     p_values = list(p_hash.values())
     keys = list(p_hash.keys())
@@ -355,43 +353,80 @@ if __name__ == '__main__':
                         to print results', action='store_true')
     parser.add_argument('-s', "--save", help='Indicate whether to save your \
                         plot.', action='store_true')
+    parser.add_argument('-b', "--background", help='Provide a background gene \
+                        set as a csv file with a single column without a \
+                        column name. Gene names must be in wbid format.',
+                        type=str)
+    parser.add_argument('-m', "--melted_name", help='Name for gene_to_terms \
+                        file. If none provided, defaults to gene_to_terms.csv',
+                        type=str)
     args = parser.parse_args()
 
     gl_name = args.gene_list
     title = args.title
 
     # optional args
+    # load dictionary:
     if args.dictionary:
         dict_name = args.tissue_dictionary
         dictionary = pd.read_csv(dict_name)
     else:
         dictionary = fetch_dictionary(analysis=args.kind)
 
+    # reduce wbids to background set:
+    if args.background:
+        bg = pd.read_csv(args.background, header=None, names=['wbid'])
+        dictionary = dictionary[dictionary.wbid.isin(bg.wbid.values)]
+
+    # warn user if the dictionary is empty after subsetting:
+    if len(dictionary) == 0:
+        raise ValueError('Dictionary is empty after subsetting')
+
+    # set threshold
     if args.q:
         q = args.q
     else:
         q = defQ
 
+    # print results
     if args.print:
         prnt = True
     else:
         prnt = False
 
+    # save results
     if args.save:
         save = True
 
     else:
         save = False
 
-    gene_list = []
-    with open(gl_name, 'r') as f:
-        gene_list = [x.strip() for x in f.readlines()]
+    # open gene list:
+    gene_list = pd.read_csv(gl_name, header=None, names=['wbid'])
 
-    df_results = enrichment_analysis(gene_list, dictionary, alpha=q,
-                                     show=False)
+    # perform enrichment analysis:
+    df_results = enrichment_analysis(gene_list.wbid.unique(), dictionary,
+                                     alpha=q, show=False)
 
     dfname = title + '.tsv'
     df_results.to_csv(dfname, index=False, sep='\t')
+
+    # melt dictionary:
+    melted_dict = pd.melt(dictionary, id_vars='wbid', var_name='term',
+                          value_name='found')
+    melted_dict = melted_dict[melted_dict.found == 1]
+
+    # keep only terms that were significant:
+    melted_dict = melted_dict[melted_dict.term.isin(df_results.Term.values)]
+
+    # keep only relevant genes:
+    melted_dict = melted_dict[melted_dict.wbid.isin(gene_list.wbid)]
+
+    # save to file:
+    if args.melted_name:
+        melted_dict.to_csv(args.melted_name, index=False)
+    else:
+        melted_dict.to_csv('gene_to_terms.csv', index=False)
 
     if prnt:
         with open(dfname, 'r') as f:
@@ -403,9 +438,6 @@ if __name__ == '__main__':
                 if re.findall("\d+\.\d+", val):
                     ind = value.index(val)
                     x = float(val)
-                    # if x < 10**-64:
-                    #     value[ind] = '<10^-65'
-                    # else:
                     value[ind] = '{0:.2g}'.format(x)
 
             value = '\t'.join(value)
