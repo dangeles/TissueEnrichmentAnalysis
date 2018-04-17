@@ -434,7 +434,7 @@ if __name__ == '__main__':
             printer = f.readlines()
 
         for value in printer:
-            value = value.split(',')
+            value = value.split('\t')
             for val in value:
                 if re.findall("\d+\.\d+", val):
                     ind = value.index(val)
