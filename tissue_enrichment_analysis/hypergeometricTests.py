@@ -184,7 +184,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='', save=False,
     df_final.dropna(inplace=True)
     df_final.Observed = df_final.Observed.astype(int)
 
-    df_final.sort_values('Q value', inplace=True)
+    df_final.sort_values('P value', inplace=True)
 
     df_final = df_final[df_final['Q value'] < alpha]
 
