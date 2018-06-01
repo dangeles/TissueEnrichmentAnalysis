@@ -264,7 +264,7 @@ def plot_enrichment_results(df, y='logq', title='', analysis='tissue',
     if y.lower() != 'logq':
         ax.set_xlabel(y, fontsize=15)
     else:
-        ax.set_xlabel('$\log_{10}{q}$', fontsize=15)
+        ax.set_xlabel('$-\log_{10}{q}$', fontsize=15)
     ax.tick_params(axis='x', labelsize=13)
     ax.tick_params(axis='y', labelsize=13)
     plt.tight_layout()
