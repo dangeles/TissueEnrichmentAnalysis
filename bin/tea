@@ -1,5 +1,6 @@
-#!/usr/bin/env python
-#-*- coding: utf-8 -*-
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
 """
 TEA command line script.
 
@@ -10,6 +11,7 @@ Created on Sun Mar 13 16:33:49 2016
 import os
 import pandas as pd
 import sys
+sys.path.append("/home/raymond/local/src/git/TissueEnrichmentAnalysis")
 import tissue_enrichment_analysis.hypergeometricTests as hgt
 import argparse
 import matplotlib
@@ -53,17 +55,17 @@ if __name__ == '__main__':
                         column name. Gene names must be in wbid format.',
                         type=str)
     parser.add_argument('-m', "--melted_name", help='Name for gene_to_terms \
-                        file. If none provided, defaults to gene_to_terms.csv',
-                        type=str)
+                        file. If none provided, defaults to gene_to_terms.csv', type=str)
     args = parser.parse_args()
 
     gl_name = args.gene_list
     title = args.title
+    kind = args.kind
 
     # optional args
     # load dictionary:
     if args.dictionary:
-        dict_name = args.tissue_dictionary
+        dict_name = args.dictionary
         dictionary = pd.read_csv(dict_name)
     else:
         dictionary = hgt.fetch_dictionary(analysis=args.kind)
@@ -128,7 +130,7 @@ if __name__ == '__main__':
             printer = f.readlines()
 
         for value in printer:
-            value = value.split(',')
+            value = value.split('\t')
             for val in value:
                 if re.findall("\d+\.\d+", val):
                     ind = value.index(val)

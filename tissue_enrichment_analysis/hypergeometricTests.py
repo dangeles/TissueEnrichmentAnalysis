@@ -184,7 +184,7 @@ def enrichment_analysis(gene_list, tissue_df, alpha=0.05, aname='', save=False,
     df_final.dropna(inplace=True)
     df_final.Observed = df_final.Observed.astype(int)
 
-    df_final.sort_values('Q value', inplace=True)
+    df_final.sort_values('P value', inplace=True)
 
     df_final = df_final[df_final['Q value'] < alpha]
 
@@ -264,7 +264,7 @@ def plot_enrichment_results(df, y='logq', title='', analysis='tissue',
     if y.lower() != 'logq':
         ax.set_xlabel(y, fontsize=15)
     else:
-        ax.set_xlabel('$\log_{10}{q}$', fontsize=15)
+        ax.set_xlabel('$-\log_{10}{q}$', fontsize=15)
     ax.tick_params(axis='x', labelsize=13)
     ax.tick_params(axis='y', labelsize=13)
     plt.tight_layout()
@@ -364,6 +364,7 @@ if __name__ == '__main__':
 
     gl_name = args.gene_list
     title = args.title
+    kind = args.kind
 
     # optional args
     # load dictionary:
@@ -433,7 +434,7 @@ if __name__ == '__main__':
             printer = f.readlines()
 
         for value in printer:
-            value = value.split(',')
+            value = value.split('\t')
             for val in value:
                 if re.findall("\d+\.\d+", val):
                     ind = value.index(val)
