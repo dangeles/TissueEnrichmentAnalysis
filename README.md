@@ -35,7 +35,7 @@ A standard call to this library would be as follows:
 
 `tissue_df= tea.fetch_dictionary()`
 
-`df_results= tea.enrichment_analysis(tissue_df, gene_list, aname= 'FileName')`
+`df_results= tea.enrichment_analysis(gene_list, tissue_df, aname= 'FileName')`
 
 `tea.plot_enrichment_results(df_results, title= 'FileName')`
 
